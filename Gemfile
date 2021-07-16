@@ -4,9 +4,11 @@ ruby "~> 2.7"
 
 source "https://rubygems.org" do
   group :test do
+    gem "rake", "~> 13.0.6"
     gem "rspec", "~> 3.0"
+    gem "rubocop-govuk", "~> 4.0.0", require: false
   end
 
-  gem "rake", "~> 13.0.6"
-  gem "rubocop-govuk", "~> 4.0.0", require: false
+  gem "nokogiri", "~> 1.11"
+  gem "zeitwerk", "~> 2.4.2"
 end

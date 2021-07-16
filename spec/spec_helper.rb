@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-require "view_model/version"
+require "view_model"
+require "nokogiri"
+require "samples"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

@@ -1,9 +1,5 @@
 GEM
   specs:
-
-GEM
-  remote: https://rubygems.org/
-  specs:
     activesupport (6.1.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
@@ -19,15 +15,11 @@ GEM
     parallel (1.20.1)
     parser (3.0.1.1)
       ast (~> 2.4.1)
+    racc (1.5.2)
     rack (2.2.3)
     rainbow (3.0.0)
-    rake (13.0.6)
     regexp_parser (2.1.1)
     rexml (3.2.5)
-    rspec (3.10.0)
-      rspec-core (~> 3.10.0)
-      rspec-expectations (~> 3.10.0)
-      rspec-mocks (~> 3.10.0)
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
     rspec-expectations (3.10.1)
@@ -48,12 +40,6 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.6.0)
       parser (>= 3.0.1.1)
-    rubocop-govuk (4.0.0)
-      rubocop (~> 1.15.0)
-      rubocop-ast (~> 1.6.0)
-      rubocop-rails (~> 2.10.0)
-      rubocop-rake (= 0.5.1)
-      rubocop-rspec (~> 2.3.0)
     rubocop-rails (2.10.1)
       activesupport (>= 4.2.0)
       rack (>= 1.1)
@@ -67,15 +53,34 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    nokogiri (1.11.7-x86_64-darwin)
+      racc (~> 1.4)
+    rake (13.0.6)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
+    rubocop-govuk (4.0.0)
+      rubocop (~> 1.15.0)
+      rubocop-ast (~> 1.6.0)
+      rubocop-rails (~> 2.10.0)
+      rubocop-rake (= 0.5.1)
+      rubocop-rspec (~> 2.3.0)
     zeitwerk (2.4.2)
 
 PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  nokogiri (~> 1.11)!
   rake (~> 13.0.6)!
   rspec (~> 3.0)!
   rubocop-govuk (~> 4.0.0)!
+  zeitwerk (~> 2.4.2)!
 
 RUBY VERSION
    ruby 2.7.3p183
