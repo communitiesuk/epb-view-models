@@ -1,7 +1,6 @@
 module ViewModel
   module Cepc31
     class Dec < ViewModel::Cepc31::CommonSchema
-
       def estimated_ac_kw_rating
         nil
       end
