@@ -236,10 +236,6 @@ module ViewModel
         end
       end
 
-      def status
-        date_of_expiry < Time.now ? "EXPIRED" : "ENTERED"
-      end
-
       def country_code
         xpath(%w[Country-Code])
       end
@@ -447,10 +443,6 @@ module ViewModel
 
       def energy_tariff
         xpath(%w[Electricity-Tariff])
-      end
-
-      def all_main_heating_energy_efficiency
-        @xml_doc.search("Main-Heating/Energy-Efficiency-Rating").map(&:content)
       end
 
       def solar_water_heating_flag

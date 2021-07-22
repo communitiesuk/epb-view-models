@@ -219,10 +219,6 @@ module ViewModel
         end
       end
 
-      def status
-        date_of_expiry < Time.now ? "EXPIRED" : "ENTERED"
-      end
-
       def habitable_room_count
         xpath(%w[Habitable-Room-Count])
       end
@@ -443,10 +439,6 @@ module ViewModel
 
       def report_type
         xpath(%w[Report-Type])
-      end
-
-      def all_wall_descriptions
-        @xml_doc.search("Wall/Description").map(&:content)
       end
 
       def all_wall_energy_efficiency_rating

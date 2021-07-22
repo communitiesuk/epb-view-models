@@ -244,10 +244,6 @@ module ViewModel
         end
       end
 
-      def status
-        date_of_expiry < Time.now ? "EXPIRED" : "ENTERED"
-      end
-
       def type_of_assessment
         "SAP"
       end

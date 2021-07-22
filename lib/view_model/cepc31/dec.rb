@@ -1,6 +1,19 @@
 module ViewModel
   module Cepc31
     class Dec < ViewModel::Cepc31::CommonSchema
+
+      def estimated_ac_kw_rating
+        nil
+      end
+
+      def ac_present
+        nil
+      end
+
+      def main_benchmark
+        xpath(%w[OR-Benchmark-Data Main-Benchmark])
+      end
+
       def date_of_expiry
         floor_area =
           xpath(%w[Display-Certificate Technical-Information Floor-Area])
@@ -90,7 +103,7 @@ module ViewModel
       end
 
       def occupancy_level
-        xpath(%w[Benchmarks Benchmark Occupancy-Level])
+        xpath(%w[Occupancy-Level])
       end
 
       def special_energy_uses
@@ -99,6 +112,10 @@ module ViewModel
 
       def asset_rating
         xpath(%w[OR-Previous-Data Asset-Rating])
+      end
+
+      def property_type
+        xpath(%w[Property-Type])
       end
 
       def annual_energy_use_fuel_thermal

@@ -220,10 +220,6 @@ module ViewModel
         }.compact
       end
 
-      def status
-        date_of_expiry < Time.now ? "EXPIRED" : "ENTERED"
-      end
-
       def level
         xpath(%w[Level])
       end
@@ -325,10 +321,6 @@ module ViewModel
 
       def mains_gas
         nil
-      end
-
-      def level
-        xpath(%w[Level])
       end
 
       def main_heating_controls

@@ -214,10 +214,6 @@ module ViewModel
         @xml_doc.search("Main-Heating/Description").map(&:content)
       end
 
-      def status
-        date_of_expiry < Time.now ? "EXPIRED" : "ENTERED"
-      end
-
       def country_code
         xpath(%w[Country-Code])
       end

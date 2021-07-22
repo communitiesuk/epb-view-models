@@ -201,10 +201,6 @@ module ViewModel
         xpath(%w[OR-Benchmark-Data Main-Benchmark])
       end
 
-      def special_energy_uses
-        xpath(%w[Technical-Information Special-Energy-Uses])
-      end
-
       def ac_inspection_commissioned
         xpath(%w[AC-Inspection-Commissioned])
       end

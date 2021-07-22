@@ -1,3 +1,6 @@
+# Needed to use the underscore method
+require "active_support/inflector"
+
 module ViewModel
   module Cepc800
     class AcReport < ViewModel::Cepc800::CommonSchema

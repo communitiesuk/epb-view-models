@@ -1,7 +1,7 @@
 module ViewModel
   class BaseViewModel
-    def initialize(xml)
-      @xml_doc = Nokogiri.XML xml
+    def initialize(xml_doc)
+      @xml_doc = xml_doc
     end
 
     def xpath(queries, node = @xml_doc)
@@ -13,11 +13,6 @@ module ViewModel
         end
       end
       node ? node.content : nil
-    end
-
-    def building_reference_number
-      assessments_address_id_gateway = Gateway::AssessmentsAddressIdGateway.new
-      assessments_address_id_gateway.fetch(assessment_id)[:address_id]
     end
   end
 end

@@ -1,3 +1,5 @@
+require "date"
+
 module ViewModel
   module Cepc800
     class Dec < ViewModel::Cepc800::CommonSchema
@@ -31,10 +33,6 @@ module ViewModel
 
       def current_electricity_co2
         xpath(%w[This-Assessment Electricity-CO2])
-      end
-
-      def current_renewables_co2
-        xpath(%w[This-Assessment Renewables-CO2])
       end
 
       def current_renewables_co2

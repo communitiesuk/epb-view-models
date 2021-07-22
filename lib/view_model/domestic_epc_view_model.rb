@@ -1,3 +1,7 @@
+require "time"
+# Needed to use the underscore method
+require "active_support/inflector"
+
 module ViewModel
   class DomesticEpcViewModel < ViewModel::BaseViewModel
     def improvement_title(node)
@@ -42,6 +46,10 @@ module ViewModel
         .map { |n| n.text.to_i }
     end
 
+    def status
+      Time.parse(date_of_expiry) < Time.now ? "EXPIRED" : "ENTERED"
+    end
+
   private
 
     def fetch_addendum_numbers
@@ -73,7 +81,7 @@ module ViewModel
         nodes_array.map { |node|
           [
             node.name.underscore.to_sym,
-            ActiveRecord::Type::Boolean.new.cast(node.children.text),
+            node.children.text&.to_bool,
           ]
         }.to_h
       end

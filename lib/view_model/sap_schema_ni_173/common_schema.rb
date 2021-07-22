@@ -210,10 +210,6 @@ module ViewModel
         nil
       end
 
-      def status
-        date_of_expiry < Time.now ? "EXPIRED" : "ENTERED"
-      end
-
       def country_code
         xpath(%w[Country-Code])
       end

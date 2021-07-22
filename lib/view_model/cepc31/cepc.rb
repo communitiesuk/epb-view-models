@@ -65,10 +65,6 @@ module ViewModel
         xpath(%w[Energy-Consumption-Current])
       end
 
-      def primary_energy_use
-        nil
-      end
-
       def property_type
         xpath(%w[Property-Type])
       end

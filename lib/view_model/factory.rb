@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "view_model/cepc_wrapper"
-
 module ViewModel
   class Factory
     TYPES_OF_CEPC = %i[
@@ -60,10 +58,13 @@ module ViewModel
       SAP-Schema-NI-12.0
       SAP-Schema-NI-11.2
     ].freeze
-    def create(xml, schema_type, filter_results_for = nil)
+    def create(xml, schema_type, filter_results_for = nil, additional_data = {})
+      # FIXME: Hack to use symbols, we need to update all callers to use symbols instead
+      schema_type = schema_type.to_sym
+
       xml_doc = Nokogiri.XML(xml).remove_namespaces!
 
-      if TYPES_OF_CEPC.include?(schema_type.to_sym)
+      if TYPES_OF_CEPC.include?(schema_type)
         filtered_results =
           if filter_results_for
             xml_doc.at("//*[RRN=\"#{filter_results_for}\"]/ancestor::Report")
@@ -75,24 +76,25 @@ module ViewModel
 
         case report_type
         when "1"
-          ViewModel::DecWrapper.new(filtered_results.to_xml, schema_type)
+          ViewModel::DecWrapper.new(filtered_results, schema_type, additional_data)
         when "2"
-          ViewModel::DecRrWrapper.new(filtered_results.to_xml, schema_type)
+          ViewModel::DecRrWrapper.new(filtered_results, schema_type)
         when "3"
-          ViewModel::CepcWrapper.new(filtered_results.to_xml, schema_type)
+          ViewModel::CepcWrapper.new(filtered_results, schema_type, additional_data)
         when "4"
-          ViewModel::CepcRrWrapper.new(filtered_results.to_xml, schema_type)
+          ViewModel::CepcRrWrapper.new(filtered_results, schema_type)
         when "5"
-          ViewModel::AcReportWrapper.new(filtered_results.to_xml, schema_type)
+          ViewModel::AcReportWrapper.new(filtered_results, schema_type)
         when "6"
-          ViewModel::AcCertWrapper.new(filtered_results.to_xml, schema_type)
+          ViewModel::AcCertWrapper.new(filtered_results, schema_type)
         else
           raise ArgumentError, "Invalid CEPC report type"
         end
-      elsif TYPES_OF_RD_SAP.include?(schema_type.to_sym)
-        ViewModel::RdSapWrapper.new(xml_doc.to_xml, schema_type)
-      elsif TYPES_OF_SAP.include?(schema_type.to_sym)
-        ViewModel::SapWrapper.new(xml_doc.to_xml, schema_type)
+      elsif TYPES_OF_RD_SAP.include?(schema_type)
+        ViewModel::RdSapWrapper.new(xml_doc, schema_type, additional_data)
+      elsif TYPES_OF_SAP.include?(schema_type)
+        report_type = xml_doc.at("Report-Type")&.content
+        ViewModel::SapWrapper.new(xml_doc, schema_type, report_type, additional_data)
       end
     end
   end

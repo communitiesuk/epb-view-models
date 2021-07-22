@@ -1,5 +1,5 @@
 module ViewModel
-  module Cep31
+  module Cepc31
     class DecRr < ViewModel::Cepc31::CommonSchema
       def date_of_expiry
         floor_area = xpath(%w[Advisory-Report Technical-Information Floor-Area])
