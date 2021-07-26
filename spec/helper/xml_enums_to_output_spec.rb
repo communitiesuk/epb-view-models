@@ -1,6 +1,6 @@
 RSpec.shared_context "common" do
-  before do
-    @enum_built_form = {
+  let(:enum_built_form) do
+    {
       "1" => "Detached",
       "2" => "Semi-Detached",
       "3" => "End-Terrace",
@@ -9,7 +9,9 @@ RSpec.shared_context "common" do
       "6" => "Enclosed Mid-Terrace",
       "NR" => "Not Recorded",
     }
-    @enum_rdsap_main_fuel = {
+  end
+  let(:enum_rdsap_main_fuel) do
+    {
       "0" =>
         "To be used only when there is no heating/hot-water system or data is from a community network",
       "1" =>
@@ -65,7 +67,9 @@ RSpec.shared_context "common" do
       "58" => "biodiesel from vegetable oil only (community)",
       "99" => "from heat network data (community)",
     }
-    @enum_sap_main_fuel = {
+  end
+  let(:enum_sap_main_fuel) do
+    {
       "1" => "Gas: mains gas",
       "2" => "Gas: bulk LPG",
       "3" => "Gas: bottled LPG",
@@ -130,7 +134,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
 
     context "when the XML does have the specified node" do
       it "returns the string when you pass as the argument" do
-        @enum_built_form.each do |key, value|
+        enum_built_form.each do |key, value|
           response = helper.xml_value_to_string(key)
           expect(response).to eq(value)
         end
@@ -196,7 +200,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
     end
 
     it "and the value is in the lookup it return the expected string" do
-      @enum_rdsap_main_fuel.each do |key, value|
+      enum_rdsap_main_fuel.each do |key, value|
         response = helper.main_fuel_rdsap(key)
         expect(response).to eq(value)
       end
@@ -217,7 +221,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
     end
 
     it "and the value is in the lookup it return the expected string" do
-      @enum_sap_main_fuel.each do |key, value|
+      enum_sap_main_fuel.each do |key, value|
         response = helper.main_fuel_sap(key)
         expect(response).to eq(value)
       end
