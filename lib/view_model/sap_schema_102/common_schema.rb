@@ -393,10 +393,6 @@ module ViewModel
         xpath(%w[Wind-Turbines-Count])
       end
 
-      def unheated_corridor_length
-        xpath(%w[Unheated-Corridor-Length])
-      end
-
       def all_main_heating_descriptions
         @xml_doc.search("Main-Heating/Description").map(&:content)
       end

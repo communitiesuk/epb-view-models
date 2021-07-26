@@ -15,7 +15,7 @@ module Helper
           heating_cost_current,
           hot_water_cost_current,
         ].compact.map { |value| BigDecimal(value) }.sum
-      "%.2f" % estimated_cost
+      sprintf("%.2f", estimated_cost)
     end
 
     def potential_saving(
@@ -32,7 +32,7 @@ module Helper
         ].compact.map { |value| BigDecimal(value) }.sum
       potential_saving = BigDecimal(estimated_cost) - potential_saving_sum
 
-      "%.2f" % potential_saving
+      sprintf("%.2f", potential_saving)
     end
   end
 end

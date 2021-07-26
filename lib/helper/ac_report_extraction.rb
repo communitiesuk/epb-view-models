@@ -11,7 +11,7 @@ module Helper
       node ? node.content : nil
     end
 
-    def checklist_values(checklist, skip_state = false)
+    def checklist_values(checklist, skip_state: false)
       results =
         checklist&.element_children&.map { |node|
           next if xpath(%w[Flag], node).nil? && !skip_state
@@ -119,7 +119,7 @@ module Helper
               node,
             ),
           compressor_control:
-            checklist_values(node.at("ACI-Cooling-Plant-Refrigeration"), true)[
+            checklist_values(node.at("ACI-Cooling-Plant-Refrigeration"), skip_state: true)[
               :compressor_control
             ],
           refrigerant_leak:
