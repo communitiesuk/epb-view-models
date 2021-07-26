@@ -26,6 +26,10 @@ module ViewModel
       @recommendation_report.to_hash
     end
 
+    def get_view_model
+      view_model
+    end
+
   private
 
     def build_view_model(xml_doc, schema_type, report_type)

@@ -22,9 +22,12 @@ module ViewModel
       @report.to_hash
     end
 
-    # FIXME: Need some refactoring, the report type should be abstracted (AC/DEC/CEPC)
     def get_report_type
       view_model.report_type
+    end
+
+    def get_view_model
+      view_model
     end
 
   private
