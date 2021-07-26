@@ -59,7 +59,7 @@ module ViewModel
       SAP-Schema-NI-11.2
     ].freeze
     def create(xml, schema_type, filter_results_for = nil, additional_data = {})
-      # FIXME: Hack to use symbols, we need to update all callers to use symbols instead
+      # Hack to use symbols, we need to update all callers to use symbols instead
       schema_type = schema_type.to_sym
 
       xml_doc = Nokogiri.XML(xml).remove_namespaces!

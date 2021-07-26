@@ -3,24 +3,24 @@ require_relative "../xml_view_test_helper"
 RSpec.describe ViewModel::DecSummaryWrapper do
   # You should only need to add to this list to test new CEPC schema
   supported_schema = [
-    { schema_name: :"CEPC-8.0.0", xml: Samples.xml("CEPC-8.0.0", "dec") },
-    { schema_name: :"CEPC-NI-8.0.0", xml: Samples.xml("CEPC-NI-8.0.0", "dec") },
+    { schema_name: "CEPC-8.0.0", xml: Samples.xml("CEPC-8.0.0", "dec") },
+    { schema_name: "CEPC-NI-8.0.0", xml: Samples.xml("CEPC-NI-8.0.0", "dec") },
     {
-      schema_name: :"CEPC-7.1",
+      schema_name: "CEPC-7.1",
       xml: Samples.xml(:"CEPC-7.1", "dec"),
       replace: {
         "UPRN-000000000001": "",
       },
     },
     {
-      schema_name: :"CEPC-7.0",
+      schema_name: "CEPC-7.0",
       xml: Samples.xml("CEPC-7.0", "dec"),
       replace: {
         "UPRN-000000000001": "",
       },
     },
     {
-      schema_name: :"CEPC-6.0",
+      schema_name: "CEPC-6.0",
       xml: Samples.xml("CEPC-6.0", "dec"),
       replace: {
         "UPRN-000000000001": "",
