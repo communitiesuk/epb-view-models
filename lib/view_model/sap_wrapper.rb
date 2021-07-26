@@ -1,8 +1,9 @@
 module ViewModel
   class SapWrapper
-    attr_reader :view_model
+    attr_reader :view_model, :schema_type
 
     def initialize(xml_doc, schema_type, report_type = "3", additional_data = {})
+      @schema_type = schema_type
       @view_model = build_view_model(xml_doc, schema_type, report_type)
       @summary = Presenter::Sap::Summary.new(view_model)
       @report = Presenter::Sap::Report.new(view_model, schema_type, additional_data)

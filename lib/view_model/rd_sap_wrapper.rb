@@ -1,8 +1,9 @@
 module ViewModel
   class RdSapWrapper
-    attr_reader :view_model
+    attr_reader :view_model, :schema_type
 
     def initialize(xml_doc, schema_type, additional_data = {})
+      @schema_type = schema_type
       @view_model = build_view_model(xml_doc, schema_type)
       @summary = Presenter::RdSap::Summary.new(view_model)
       @report = Presenter::RdSap::Report.new(view_model, schema_type, additional_data)
