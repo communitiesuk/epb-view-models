@@ -8,7 +8,7 @@ version changes.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'epb-view-models'
+gem 'epb_view_models'
 ```
 
 And then execute:
@@ -17,7 +17,8 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install epb-view-models
+    $ gem build epb_view_models.gemspec
+    $ gem install epb_view_models-<version>.gem  
 
 ## Usage
 
