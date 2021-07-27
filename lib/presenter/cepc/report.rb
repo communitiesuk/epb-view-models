@@ -73,8 +73,11 @@ module Presenter
         if @additional_data.key?(:created_at)
           report[:lodgement_datetime] = @additional_data[:created_at].strftime("%F %H:%M:%S")
         end
-        if @additional_data.key?(:address_id) && @additional_data[:address_id].include?("UPRN")
-          report[:building_reference_number] = @additional_data[:address_id]
+        if @additional_data.key?(:address_id)
+          report[:building_reference_number] =
+            if @additional_data[:address_id].include?("UPRN")
+              @additional_data[:address_id]
+            end
         end
         if @additional_data.key?(:postcode_region)
           report[:region] = @additional_data[:postcode_region]
