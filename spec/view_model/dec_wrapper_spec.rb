@@ -217,6 +217,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-8.0.0",
           type: "dec-large-building",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
             total_floor_area: "9000",
           },
@@ -225,6 +226,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-8.0.0",
           type: "dec",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
           },
         },
@@ -232,6 +234,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-NI-8.0.0",
           type: "dec",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
             postcode: "BT0 0AA",
             estimated_aircon_kw_rating: nil,
@@ -241,6 +244,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-7.1",
           type: "dec-ni",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
             postcode: "BT0 0AA",
             estimated_aircon_kw_rating: nil,
@@ -250,6 +254,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-7.0",
           type: "dec",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
           },
         },
@@ -257,6 +262,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-7.0",
           type: "dec-ni",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
             postcode: "BT0 0AA",
           },
@@ -265,6 +271,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-6.0",
           type: "dec",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
           },
         },
@@ -272,6 +279,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-6.0",
           type: "dec-ni",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
             postcode: "BT0 0AA",
           },
@@ -280,6 +288,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-5.1",
           type: "dec",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
           },
         },
@@ -287,6 +296,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-5.1",
           type: "dec-ni",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
             postcode: "BT0 0AA",
           },
@@ -295,6 +305,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-5.0",
           type: "dec",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
           },
         },
@@ -302,6 +313,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-5.0",
           type: "dec-ni",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
             postcode: "BT0 0AA",
           },
@@ -310,6 +322,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-4.0",
           type: "dec",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
           },
         },
@@ -317,6 +330,7 @@ RSpec.describe ViewModel::DecWrapper do
           schema: "CEPC-4.0",
           type: "dec-ni",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
             postcode: "BT0 0AA",
           },
@@ -330,6 +344,7 @@ RSpec.describe ViewModel::DecWrapper do
             estimated_aircon_kw_rating
           ],
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             aircon_present: "N",
             date_of_expiry: "2020-12-31",
           },
@@ -343,6 +358,7 @@ RSpec.describe ViewModel::DecWrapper do
             estimated_aircon_kw_rating
           ],
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             aircon_present: "N",
             date_of_expiry: "2020-12-31",
             postcode: "BT0 0AA",
