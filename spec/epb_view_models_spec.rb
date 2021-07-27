@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe ViewModel do
+RSpec.describe EpbViewModels do
   it "has a version number" do
-    expect(ViewModel::VERSION).not_to be nil
+    expect(EpbViewModels::VERSION).not_to be nil
   end
 end

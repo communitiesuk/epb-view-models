@@ -4,7 +4,7 @@ require "zeitwerk"
 loader = Zeitwerk::Loader.for_gem
 loader.setup
 
-module ViewModel
+module EpbViewModels
   VERSION = "0.1.0"
 end
 
