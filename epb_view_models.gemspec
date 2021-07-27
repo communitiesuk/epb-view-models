@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "lib/view_model/version"
+require_relative "lib/epb_view_models"
 
 Gem::Specification.new do |spec|
-  spec.name          = "epb-view-models"
+  spec.name          = "epb_view_models"
   spec.version       = ViewModel::VERSION
   spec.authors       = ["MHCLG Energy Performance of Buildings"]
   spec.email         = ["mhclg.digital-services@communities.gov.uk"]

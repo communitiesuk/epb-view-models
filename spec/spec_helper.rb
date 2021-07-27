@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "view_model"
+require "epb_view_models"
 require "nokogiri"
 require "samples"
 

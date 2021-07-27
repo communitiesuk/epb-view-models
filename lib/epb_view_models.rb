@@ -5,6 +5,7 @@ loader = Zeitwerk::Loader.for_gem
 loader.setup
 
 module ViewModel
+  VERSION = "0.1.0"
 end
 
 # Monkey patching to avoid using ActiveRecord::Type::Boolean.new.cast
