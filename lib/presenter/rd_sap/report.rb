@@ -16,7 +16,7 @@ module Presenter
 
       def report_from_assessment_xml
         {
-          assessment_id: @view_model.assessment_id,
+          assessment_id: Helper::RrnHelper.hash_rrn(@view_model.assessment_id),
           inspection_date: @view_model.date_of_assessment,
           lodgement_date: @view_model.date_of_registration,
           address1: @view_model.address_line1,
@@ -192,8 +192,19 @@ module Presenter
       def report_from_additional_data
         report = {}
 
-        if @additional_data.key?(:address_id)
+        if @additional_data.key?(:date_registered)
+          report[:lodgement_date] = @additional_data[:date_registered].strftime("%F")
+        end
+        if @additional_data.key?(:created_at)
+          report[:lodgement_datetime] = @additional_data[:created_at].strftime("%F %H:%M:%S")
+        end
+        if @additional_data.key?(:address_id) && @additional_data[:address_id].include?("UPRN")
           report[:building_reference_number] = @additional_data[:address_id]
+        end
+        if @additional_data.key?(:postcode_region)
+          report[:region] = @additional_data[:postcode_region]
+        elsif @additional_data.key?(:outcode_region)
+          report[:region] = @additional_data[:outcode_region]
         end
 
         report

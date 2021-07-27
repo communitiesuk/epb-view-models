@@ -316,13 +316,36 @@ RSpec.describe ViewModel::RdSapWrapper do
 
   context "when calling to_report" do
     let(:schemas) do
-      [
-        { schema: "RdSAP-Schema-20.0.0" },
-        { schema: "RdSAP-Schema-19.0" },
-        { schema: "RdSAP-Schema-18.0" },
-        { schema: "RdSAP-Schema-17.1" },
-        { schema: "RdSAP-Schema-17.0" },
-      ]
+      [{
+        schema: "RdSAP-Schema-20.0.0",
+        different_fields: {
+          assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+        },
+      },
+       {
+         schema: "RdSAP-Schema-19.0",
+         different_fields: {
+           assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+         },
+       },
+       {
+         schema: "RdSAP-Schema-18.0",
+         different_fields: {
+           assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+         },
+       },
+       {
+         schema: "RdSAP-Schema-17.1",
+         different_fields: {
+           assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+         },
+       },
+       {
+         schema: "RdSAP-Schema-17.0",
+         different_fields: {
+           assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+         },
+       }]
     end
 
     let(:assertion) do

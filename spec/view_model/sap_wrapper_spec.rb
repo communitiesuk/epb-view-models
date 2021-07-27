@@ -936,18 +936,21 @@ RSpec.describe ViewModel::SapWrapper do
         {
           schema: "SAP-Schema-18.0.0",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
           },
         },
         {
           schema: "SAP-Schema-17.1",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
           },
         },
         {
           schema: "SAP-Schema-17.0",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
           },
         },
@@ -955,6 +958,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-16.3",
           type: "sap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
             tenure: nil,
             environment_impact_potential: "93",
@@ -966,6 +970,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-16.3",
           type: "rdsap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             report_type: "2",
             construction_age_band: "England and Wales: before 1900",
             transaction_type: "not sale or rental",
@@ -994,6 +999,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-16.2",
           type: "sap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
             tenure: nil,
             environment_impact_potential: "93",
@@ -1005,6 +1011,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-16.2",
           type: "rdsap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             report_type: "2",
             construction_age_band: "England and Wales: before 1900",
             transaction_type: "not sale or rental",
@@ -1033,6 +1040,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-16.1",
           type: "sap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
             tenure: nil,
             environment_impact_potential: "93",
@@ -1044,6 +1052,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-16.1",
           type: "rdsap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             report_type: "2",
             construction_age_band: "England and Wales: before 1900",
             transaction_type: "not sale or rental",
@@ -1072,6 +1081,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-16.0",
           type: "sap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
             tenure: nil,
             environment_impact_potential: "93",
@@ -1083,6 +1093,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-16.0",
           type: "rdsap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             report_type: "2",
             construction_age_band: "England and Wales: before 1900",
             transaction_type: "not sale or rental",
@@ -1112,6 +1123,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-15.0",
           type: "sap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
             tenure: nil,
             environment_impact_potential: "93",
@@ -1123,6 +1135,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-15.0",
           type: "rdsap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             report_type: "2",
             construction_age_band: "England and Wales: before 1900",
             transaction_type: "not sale or rental",
@@ -1152,6 +1165,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-14.2",
           type: "sap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
             tenure: nil,
             environment_impact_potential: "93",
@@ -1165,6 +1179,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-14.2",
           type: "rdsap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             report_type: "2",
             construction_age_band: "England and Wales: before 1900",
             transaction_type: "not sale or rental",
@@ -1196,6 +1211,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-14.1",
           type: "sap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
             tenure: nil,
             environment_impact_potential: "93",
@@ -1214,6 +1230,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-14.1",
           type: "rdsap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             report_type: "2",
             construction_age_band: "England and Wales: before 1900",
             transaction_type: "not sale or rental",
@@ -1245,6 +1262,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-14.0",
           type: "sap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
             tenure: nil,
             environment_impact_potential: "93",
@@ -1262,6 +1280,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-14.0",
           type: "rdsap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             report_type: "2",
             construction_age_band: "England and Wales: before 1900",
             transaction_type: "not sale or rental",
@@ -1293,6 +1312,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-13.0",
           type: "sap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
             tenure: nil,
             environment_impact_potential: "93",
@@ -1310,6 +1330,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-13.0",
           type: "rdsap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             report_type: "2",
             construction_age_band: "England and Wales: before 1900",
             transaction_type: "not sale or rental",
@@ -1341,6 +1362,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-12.0",
           type: "sap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
             tenure: nil,
             environment_impact_potential: "93",
@@ -1359,6 +1381,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-12.0",
           type: "rdsap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             report_type: "2",
             construction_age_band: "England and Wales: before 1900",
             transaction_type: "not sale or rental",
@@ -1391,6 +1414,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-11.2",
           type: "sap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
             tenure: nil,
             environment_impact_potential: "93",
@@ -1410,6 +1434,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-11.2",
           type: "rdsap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             tenure: nil,
             multi_glaze_proportion: nil,
             transaction_type: nil,
@@ -1442,6 +1467,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-11.0",
           type: "sap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             extension_count: nil,
             tenure: nil,
             environment_impact_potential: "93",
@@ -1461,6 +1487,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-11.0",
           type: "rdsap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             tenure: nil,
             multi_glaze_proportion: nil,
             transaction_type: nil,
@@ -1493,6 +1520,7 @@ RSpec.describe ViewModel::SapWrapper do
           schema: "SAP-Schema-10.2",
           type: "rdsap",
           different_fields: {
+            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             tenure: nil,
             environment_impact_potential: "70",
             multi_glaze_proportion: nil,

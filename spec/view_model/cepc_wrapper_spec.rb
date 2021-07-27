@@ -111,58 +111,92 @@ RSpec.describe ViewModel::CepcWrapper do
 
   context "when calling to_report" do
     let(:schemas) do
-      [
-        { schema: "CEPC-8.0.0", type: "cepc" },
-        { schema: "CEPC-NI-8.0.0", type: "cepc" },
-        { schema: "CEPC-7.1", type: "cepc" },
-        {
-          schema: "CEPC-7.0",
-          type: "cepc",
-          unsupported_fields: %i[primary_energy_value],
+      [{
+        schema: "CEPC-8.0.0",
+        type: "cepc",
+        different_fields: {
+          assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
         },
-        {
-          schema: "CEPC-6.0",
-          type: "cepc",
-          unsupported_fields: %i[primary_energy_value],
-        },
-        {
-          schema: "CEPC-5.1",
-          type: "cepc",
-          unsupported_fields: %i[primary_energy_value],
-        },
-        {
-          schema: "CEPC-5.0",
-          type: "cepc",
-          unsupported_fields: %i[primary_energy_value],
-        },
-        {
-          schema: "CEPC-4.0",
-          type: "cepc",
-          unsupported_fields: %i[
-            primary_energy_value
-            transaction_type
-            standard_emissions
-            building_emissions
-            target_emissions
-            typical_emissions
-          ],
-        },
-        {
-          schema: "CEPC-3.1",
-          type: "cepc",
-          unsupported_fields: %i[
-            primary_energy_value
-            transaction_type
-            standard_emissions
-            building_emissions
-            target_emissions
-            typical_emissions
-            aircon_kw_rating
-            estimated_aircon_kw_rating
-            ac_inspection_commissioned
-          ],
-        },
-      ]
+      },
+       {
+         schema: "CEPC-NI-8.0.0",
+         type: "cepc",
+         different_fields: {
+           assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+         },
+       },
+       {
+         schema: "CEPC-7.1",
+         type: "cepc",
+         different_fields: {
+           assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+         },
+       },
+       {
+         schema: "CEPC-7.0",
+         type: "cepc",
+         unsupported_fields: %i[primary_energy_value],
+         different_fields: {
+           assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+         },
+       },
+       {
+         schema: "CEPC-6.0",
+         type: "cepc",
+         unsupported_fields: %i[primary_energy_value],
+         different_fields: {
+           assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+         },
+       },
+       {
+         schema: "CEPC-5.1",
+         type: "cepc",
+         unsupported_fields: %i[primary_energy_value],
+         different_fields: {
+           assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+         },
+       },
+       {
+         schema: "CEPC-5.0",
+         type: "cepc",
+         unsupported_fields: %i[primary_energy_value],
+         different_fields: {
+           assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+         },
+       },
+       {
+         schema: "CEPC-4.0",
+         type: "cepc",
+         unsupported_fields: %i[
+           primary_energy_value
+           transaction_type
+           standard_emissions
+           building_emissions
+           target_emissions
+           typical_emissions
+         ],
+         different_fields: {
+           assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+         },
+       },
+       {
+         schema: "CEPC-3.1",
+         type: "cepc",
+         unsupported_fields: %i[
+           primary_energy_value
+           transaction_type
+           standard_emissions
+           building_emissions
+           target_emissions
+           typical_emissions
+           aircon_kw_rating
+           estimated_aircon_kw_rating
+           ac_inspection_commissioned
+         ],
+         different_fields: {
+           assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+         },
+       }]
     end
 
     let(:assertion) do
