@@ -12,43 +12,41 @@ module Helper
     end
 
     def checklist_values(checklist, skip_state: false)
-      results =
-        checklist&.element_children&.map { |node|
-          next if xpath(%w[Flag], node).nil? && !skip_state
+      return {} if checklist.nil? || checklist.element_children.nil?
 
-          checklist_item = node.name.underscore.to_sym
-          if skip_state
-            { checklist_item => { note: xpath(%w[Note], node) } }
-          else
-            {
-              checklist_item => {
-                state: xpath(%w[Flag], node) == "Yes",
-                note: xpath(%w[Note], node),
-              },
-            }
-          end
-        }&.compact.inject(&:merge)
+      checklist.element_children.map { |node|
+        next if xpath(%w[Flag], node).nil? && !skip_state
 
-      results.nil? ? {} : results
-    end
-
-    def checklist_values_with_guidance(checklist)
-      results =
-        checklist&.element_children&.map { |node|
-          next if xpath(%w[Flag], node).nil?
-
-          checklist_item = node.name.underscore.to_sym
-
+        checklist_item = node.name.underscore.to_sym
+        if skip_state
+          { checklist_item => { note: xpath(%w[Note], node) } }
+        else
           {
             checklist_item => {
               state: xpath(%w[Flag], node) == "Yes",
               note: xpath(%w[Note], node),
-              guidance: xpath(%w[Text], node),
             },
           }
-        }&.compact.inject(&:merge)
+        end
+      }.compact.inject(&:merge)
+    end
 
-      results.nil? ? {} : results
+    def checklist_values_with_guidance(checklist)
+      return {} if checklist.nil? || checklist.element_children.nil?
+
+      checklist.element_children.map { |node|
+        next if xpath(%w[Flag], node).nil?
+
+        checklist_item = node.name.underscore.to_sym
+
+        {
+          checklist_item => {
+            state: xpath(%w[Flag], node) == "Yes",
+            note: xpath(%w[Note], node),
+            guidance: xpath(%w[Text], node),
+          },
+        }
+      }.compact.inject(&:merge)
     end
 
     def guidance(guidance_elements)
