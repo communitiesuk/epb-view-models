@@ -58,10 +58,6 @@ module ViewModel
       end
 
       def primary_energy_use
-        xpath(%w[Energy-Consumption-Current])
-      end
-
-      def primary_energy_use
         nil
       end
 

@@ -393,10 +393,6 @@ module ViewModel
         nil
       end
 
-      def unheated_corridor_length
-        xpath(%w[Unheated-Corridor-Length])
-      end
-
       def built_form
         xpath(%w[Built-Form])
       end

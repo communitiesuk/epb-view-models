@@ -491,10 +491,6 @@ module ViewModel
           .map(&:content)
       end
 
-      def transaction_type
-        nil
-      end
-
       def main_dwelling_construction_age_band_or_year
         sap_building_parts =
           @xml_doc.xpath("//SAP-Building-Parts/SAP-Building-Part")

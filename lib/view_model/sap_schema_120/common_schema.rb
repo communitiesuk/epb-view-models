@@ -392,10 +392,6 @@ module ViewModel
         xpath(%w[Wind-Turbines-Count])
       end
 
-      def unheated_corridor_length
-        xpath(%w[Unheated-Corridor-Length])
-      end
-
       def all_main_heating_descriptions
         @xml_doc.search("Main-Heating/Description").map(&:content)
       end
@@ -492,10 +488,6 @@ module ViewModel
 
       def floor_height
         @xml_doc.search("Storey-Height").map(&:content)
-      end
-
-      def all_main_heating_energy_efficiency
-        @xml_doc.search("Main-Heating/Energy-Efficiency-Rating").map(&:content)
       end
 
       def all_main_heating_controls_energy_efficiency

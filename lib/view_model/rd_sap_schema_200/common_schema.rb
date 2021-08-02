@@ -297,10 +297,6 @@ module ViewModel
         @xml_doc.search("Secondary-Heating/Description").map(&:content)
       end
 
-      def all_main_heating_controls_descriptions
-        @xml_doc.search("Main-Heating-Controls/Description").map(&:content)
-      end
-
       def all_sap_floor_dimensions
         @xml_doc.search("SAP-Floor-Dimension").select(&:element?).map { |node|
           { total_floor_area: xpath(%w[Total-Floor-Area], node).to_f }

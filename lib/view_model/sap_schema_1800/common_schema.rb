@@ -353,10 +353,6 @@ module ViewModel
         nil
       end
 
-      def level
-        xpath(%w[Level])
-      end
-
       def main_heating_controls
         xpath(%w[Main-Heating-Controls Description])
       end

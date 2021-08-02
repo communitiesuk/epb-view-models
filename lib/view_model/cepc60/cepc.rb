@@ -54,10 +54,6 @@ module ViewModel
       end
 
       def other_fuel_description
-        nil
-      end
-
-      def other_fuel_description
         xpath(%w[Other-Fuel-Description])
       end
 
