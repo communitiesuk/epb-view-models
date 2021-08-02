@@ -4,7 +4,7 @@ SHELL := /bin/bash
 .PHONY: help install test format
 
 help: ## Print help documentation
-	@echo -e "Makefile Help for epb-auth-tools"
+	@echo -e "Makefile Help for epb-view-models"
 	@cat $(MAKEFILE_LIST) | grep -E '^[a-zA-Z_-]+:.*?## .*$$' | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 install: ## Install required libraries and setup
