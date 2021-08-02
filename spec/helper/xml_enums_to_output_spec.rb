@@ -1,4 +1,4 @@
-RSpec.shared_context "common" do
+RSpec.shared_context "with common node values" do
   let(:enum_built_form) do
     {
       "1" => "Detached",
@@ -122,7 +122,7 @@ end
 RSpec.describe Helper::XmlEnumsToOutput do
   let(:helper) { described_class }
 
-  include_context("common")
+  include_context("with common node values")
 
   context "when a Built-Form XML value is passed to the BUILT_FORM enum" do
     context "and the XML does not have the specified node" do
@@ -141,16 +141,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       end
     end
 
-    context "when the XML contains any other value outside of the enum" do
-      it "returns nil for Open Data Communities" do
-        response = helper.xml_value_to_string({ "hello": 20 })
-        expect(response).to be_nil
-      end
+    it "returns nil for any other value outside of the enum given a hash" do
+      response = helper.xml_value_to_string({ "hello": 20 })
+      expect(response).to be_nil
+    end
 
-      it "returns nil for Open Data Communities" do
-        response = helper.xml_value_to_string("Any other value")
-        expect(response).to be_nil
-      end
+    it "returns nil for any other value outside of the enum given a string" do
+      response = helper.xml_value_to_string("Any other value")
+      expect(response).to be_nil
     end
   end
 
