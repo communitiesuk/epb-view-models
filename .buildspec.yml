@@ -6,6 +6,7 @@ phases:
       ruby: 2.7
   pre_build:
     commands:
+      - gem install bundler:2.2.21
       - make install
   build:
     commands:
