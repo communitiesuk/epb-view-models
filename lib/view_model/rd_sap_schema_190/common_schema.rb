@@ -514,6 +514,10 @@ module ViewModel
         end
         nil
       end
+
+      def cylinder_insul_thickness
+        xpath(%w[Cylinder-Insulation-Thickness])
+      end
     end
   end
 end

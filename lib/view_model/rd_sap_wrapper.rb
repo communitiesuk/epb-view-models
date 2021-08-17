@@ -18,6 +18,10 @@ module ViewModel
       @summary.to_hash
     end
 
+    def to_hash_ni
+      @report.to_hash_ni
+    end
+
     def to_report
       @report.to_hash
     end

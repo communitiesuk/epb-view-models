@@ -274,6 +274,75 @@ RSpec.describe ViewModel::RdSapWrapper do
       end
     end
 
+    describe ".to_hash_ni" do
+      let(:schemas) do
+        [
+          { schema: "RdSAP-Schema-20.0.0" },
+          {
+            schema: "RdSAP-Schema-19.0",
+            different_buried_fields: {
+              address: {
+                address_id: "LPRN-0000000000",
+              },
+            },
+            different_fields: {
+              addendum: {
+                addendum_number: [1],
+              },
+              lzc_energy_sources: [11],
+            },
+          },
+          {
+            schema: "RdSAP-Schema-18.0",
+            different_buried_fields: {
+              address: {
+                address_id: "LPRN-0000000000",
+              },
+            },
+            different_fields: {
+              addendum: {
+                stone_walls: true,
+                system_build: true,
+              },
+              lzc_energy_sources: [11, 12],
+            },
+          },
+          {
+            schema: "RdSAP-Schema-17.1",
+            different_buried_fields: {
+              address: {
+                address_id: "LPRN-0000000000",
+              },
+            },
+            different_fields: {
+              addendum: nil,
+            },
+          },
+          {
+            schema: "RdSAP-Schema-17.0",
+            different_buried_fields: {
+              address: {
+                address_id: "LPRN-0000000000",
+              },
+            },
+            different_fields: {
+              addendum: nil,
+            },
+          },
+        ]
+      end
+
+      let(:assertion) do
+        {
+          cylinder_insul_thickness: "12"
+        }
+      end
+
+      it "reads the appropriate values" do
+        test_xml_doc(schemas, assertion, :to_hash_ni)
+      end
+    end
+
     describe ".to_recommendation_report" do
       let(:schemas) do
         [
@@ -703,6 +772,62 @@ RSpec.describe ViewModel::RdSapWrapper do
 
       it "read the appropriate values" do
         test_xml_doc(schemas, assertion)
+      end
+    end
+
+    describe ".to_hash_ni" do
+      let(:schemas) do
+        [
+          {
+            schema: "RdSAP-Schema-NI-20.0.0",
+            unsupported_fields: %i[improvement_summary],
+            different_buried_fields: {
+              address: {
+                address_id: "UPRN-000000000000",
+              },
+            },
+          },
+          {
+            schema: "RdSAP-Schema-NI-19.0",
+            different_fields: {
+              addendum: {
+                stone_walls: true,
+                system_build: true,
+              },
+              lzc_energy_sources: [11],
+            },
+          },
+          {
+            schema: "RdSAP-Schema-NI-18.0",
+            different_fields: {
+              addendum: {
+                addendum_number: [1],
+              },
+              lzc_energy_sources: [11, 12],
+            },
+          },
+          {
+            schema: "RdSAP-Schema-NI-17.4",
+            different_fields: {
+              addendum: {
+                addendum_number: [1, 8],
+                stone_walls: true,
+                system_build: true,
+              },
+            },
+          },
+          { schema: "RdSAP-Schema-NI-17.3" },
+        ]
+      end
+
+      let(:assertion) do
+        {
+          cylinder_insul_thickness: "12"
+        }
+      end
+
+      it "reads the appropriate values" do
+        test_xml_doc(schemas, assertion, :to_hash_ni)
       end
     end
 

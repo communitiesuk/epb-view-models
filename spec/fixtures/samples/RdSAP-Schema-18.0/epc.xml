@@ -255,6 +255,7 @@
           <Water-Heating-Fuel>26</Water-Heating-Fuel>
           <Immersion-Heating-Type>NA</Immersion-Heating-Type>
           <Cylinder-Size>1</Cylinder-Size>
+          <Cylinder-Insulation-Thickness>12</Cylinder-Insulation-Thickness>
           <Has-Fixed-Air-Conditioning>false</Has-Fixed-Air-Conditioning>
           <Instantaneous-WWHRS>
             <Rooms-With-Bath-And-Or-Shower>1</Rooms-With-Bath-And-Or-Shower>
