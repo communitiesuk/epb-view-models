@@ -17,6 +17,11 @@ module ViewModel
       def construction_year
         xpath(%w[Construction-Year])
       end
+
+      def cylinder_insul_thickness
+        xpath(%w[Hot-Water-Store-Insulation-Thickness])
+      end
+
     end
   end
 end

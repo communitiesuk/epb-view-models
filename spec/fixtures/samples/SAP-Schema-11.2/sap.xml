@@ -230,7 +230,7 @@
             <SAP05:Hot-Water-Store-Size>140</SAP05:Hot-Water-Store-Size>
             <SAP05:Hot-Water-Store-Heat-Loss-Source>3</SAP05:Hot-Water-Store-Heat-Loss-Source>
             <SAP05:Hot-Water-Store-Insulation-Type>1</SAP05:Hot-Water-Store-Insulation-Type>
-            <SAP05:Hot-Water-Store-Insulation-Thickness>50</SAP05:Hot-Water-Store-Insulation-Thickness>
+            <SAP05:Hot-Water-Store-Insulation-Thickness>40</SAP05:Hot-Water-Store-Insulation-Thickness>
             <SAP05:Is-Primary-Pipework-Insulated>true</SAP05:Is-Primary-Pipework-Insulated>
             <SAP05:Has-Cylinder-Thermostat>true</SAP05:Has-Cylinder-Thermostat>
             <SAP05:Is-Cylinder-In-Heated-Space>true</SAP05:Is-Cylinder-In-Heated-Space>

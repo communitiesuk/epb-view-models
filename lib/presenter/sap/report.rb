@@ -12,7 +12,17 @@ module Presenter
           .merge(report_from_additional_data)
       end
 
+      def to_hash_ni
+        report_from_ni_assessment_xml
+      end
+
     private
+
+      def report_from_ni_assessment_xml
+        {
+          cylinder_insul_thickness: @view_model.cylinder_insul_thickness,
+        }
+      end
 
       def report_from_assessment_xml
         {

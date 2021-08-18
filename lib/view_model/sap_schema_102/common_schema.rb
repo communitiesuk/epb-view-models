@@ -486,6 +486,11 @@ module ViewModel
           .search("Main-Heating/Environmental-Efficiency-Rating")
           .map(&:content)
       end
+
+      def cylinder_insul_thickness
+        xpath(%w[Cylinder-Insulation-Thickness])
+      end
+
     end
   end
 end

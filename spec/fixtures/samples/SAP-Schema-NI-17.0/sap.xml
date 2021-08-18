@@ -241,6 +241,7 @@
             <SAP:Water-Heating-Code>901</SAP:Water-Heating-Code>
             <SAP:Water-Fuel-Type>1</SAP:Water-Fuel-Type>
             <SAP:Has-Hot-Water-Cylinder>false</SAP:Has-Hot-Water-Cylinder>
+            <SAP:Hot-Water-Store-Insulation-Thickness>40</SAP:Hot-Water-Store-Insulation-Thickness>
             <SAP:Secondary-Heating-Category>1</SAP:Secondary-Heating-Category>
             <SAP:Thermal-Store>1</SAP:Thermal-Store>
             <SAP:Has-Fixed-Air-Conditioning>false

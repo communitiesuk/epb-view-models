@@ -286,6 +286,7 @@
             <Water-Heating-Code>901</Water-Heating-Code>
             <Water-Heating-Fuel>10</Water-Heating-Fuel>
             <Cylinder-Size>1</Cylinder-Size>
+            <Cylinder-Insulation-Thickness>25</Cylinder-Insulation-Thickness>
           </SAP-Heating>
           <SAP-Energy-Source>
             <Meter-Type>2</Meter-Type>

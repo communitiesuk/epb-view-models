@@ -207,6 +207,7 @@
 			<SAP-Heating>
 				<Water-Heating-Code>950</Water-Heating-Code>
 				<Secondary-Heating-Category>1</Secondary-Heating-Category>
+				<Hot-Water-Store-Insulation-Thickness>40</Hot-Water-Store-Insulation-Thickness>
 				<Main-Heating-Details>
 					<Main-Heating>
 						<Main-Heating-Number>2</Main-Heating-Number>

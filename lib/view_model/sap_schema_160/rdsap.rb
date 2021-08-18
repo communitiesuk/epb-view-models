@@ -68,6 +68,11 @@ module ViewModel
       def energy_tariff
         xpath(%w[Meter-Type])
       end
+
+      def cylinder_insul_thickness
+        xpath(%w[Cylinder-Insulation-Thickness])
+      end
+
     end
   end
 end

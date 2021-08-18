@@ -295,7 +295,7 @@
             <Immersion-Heating-Type>2</Immersion-Heating-Type>
             <Cylinder-Size>3</Cylinder-Size>
             <Cylinder-Insulation-Type>2</Cylinder-Insulation-Type>
-            <Cylinder-Insulation-Thickness>50</Cylinder-Insulation-Thickness>
+            <Cylinder-Insulation-Thickness>25</Cylinder-Insulation-Thickness>
             <Main-Heating-Data-Source>2</Main-Heating-Data-Source>
             <SAP-Main-Heating-Code>402</SAP-Main-Heating-Code>
             <Heat-Emitter-Type>0</Heat-Emitter-Type>
