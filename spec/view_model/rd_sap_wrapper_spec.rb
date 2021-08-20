@@ -378,7 +378,7 @@ RSpec.describe ViewModel::RdSapWrapper do
           low_energy_lighting: "100",
           low_energy_fixed_lighting_outlets_count: "16",
           main_fuel: "mains gas (not community)",
-          mainheat_description:  "Boiler and radiators, anthracite, Boiler and radiators, mains gas",
+          mainheat_description: "Boiler and radiators, anthracite, Boiler and radiators, mains gas",
           mainheat_energy_eff: "Average",
           mainheat_env_eff: "Very Poor",
           mainheatc_energy_eff: "Good",
@@ -902,7 +902,7 @@ RSpec.describe ViewModel::RdSapWrapper do
 
       let(:assertion) do
         {
-          cylinder_insul_thickness: "12"
+          cylinder_insul_thickness: "12",
         }
       end
 
