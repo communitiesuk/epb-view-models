@@ -20,6 +20,28 @@ module Presenter
 
       def report_from_ni_assessment_xml
         {
+          address1: @view_model.address_line1,
+          address2: @view_model.address_line2,
+          address3: @view_model.address_line3,
+          built_form:
+            Helper::XmlEnumsToOutput.xml_value_to_string(@view_model.built_form),
+          co2_emiss_curr_perfloor_area:
+            @view_model.co2_emissions_current_per_floor_area,
+          co2_emissions_current: @view_model.current_carbon_emission,
+          co2_emissions_potential: @view_model.potential_carbon_emission,
+          construction_age_band:
+            Helper::XmlEnumsToOutput.construction_age_band_lookup(
+              @view_model.main_dwelling_construction_age_band_or_year,
+              @schema_type,
+              @view_model.report_type,
+              ),
+          current_energy_efficiency: @view_model.current_energy_rating.to_s.chomp,
+          current_energy_rating:
+            Helper::EnergyBandCalculator.domestic(
+              @view_model.current_energy_rating,
+              ),
+          energy_consumption_current: @view_model.primary_energy_use,
+          energy_consumption_potential: @view_model.energy_consumption_potential,
           cylinder_insul_thickness: @view_model.cylinder_insul_thickness,
         }
       end
