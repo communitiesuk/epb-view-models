@@ -580,7 +580,6 @@ module ViewModel
         xpath(%w[Cylinder-Insulation-Thickness])
       end
 
-
       def cylinder_insulation_type
         xpath(%w[Cylinder-Insulation-Type])
       end
