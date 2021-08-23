@@ -76,8 +76,6 @@ module ViewModel
       def cylinder_insulation_type
         xpath(%w[Cylinder-Insulation-Type])
       end
-
-
     end
   end
 end

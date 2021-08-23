@@ -25,7 +25,6 @@ module ViewModel
       def cylinder_insulation_type
         xpath(%w[Hot-Water-Store-Insulation-Type])
       end
-
     end
   end
 end

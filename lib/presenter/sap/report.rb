@@ -34,12 +34,12 @@ module Presenter
               @view_model.main_dwelling_construction_age_band_or_year,
               @schema_type,
               @view_model.report_type,
-              ),
+            ),
           current_energy_efficiency: @view_model.current_energy_rating.to_s.chomp,
           current_energy_rating:
             Helper::EnergyBandCalculator.domestic(
               @view_model.current_energy_rating,
-              ),
+            ),
           energy_consumption_current: @view_model.primary_energy_use,
           energy_consumption_potential: @view_model.energy_consumption_potential,
           cylinder_insul_thickness: @view_model.cylinder_insul_thickness,
