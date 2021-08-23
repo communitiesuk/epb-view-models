@@ -13,7 +13,7 @@ module Presenter
       end
 
       def to_hash_ni
-        report_from_ni_assessment_xml.merge(report_from_additional_data)
+        report_from_ni_assessment_xml
       end
 
     private
