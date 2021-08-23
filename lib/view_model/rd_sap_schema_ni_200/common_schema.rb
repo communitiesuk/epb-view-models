@@ -567,13 +567,14 @@ module ViewModel
         nil
       end
 
+      def cylinder_insulation_type
+        xpath(%w[Cylinder-Insulation-Type])
+      end
+
       def cylinder_insul_thickness
         xpath(%w[Cylinder-Insulation-Thickness])
       end
 
-      def cylinder_insulation_type
-        xpath(%w[Cylinder-Insulation-Type])
-      end
     end
   end
 end

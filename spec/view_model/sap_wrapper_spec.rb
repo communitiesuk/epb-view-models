@@ -1250,6 +1250,7 @@ RSpec.describe ViewModel::SapWrapper do
                 number_open_fireplaces: "0",
                 built_form: "Semi-Detached",
                 floor_level: nil,
+                cylinder_insulation_type:"1",
               },
             },
             {
@@ -1282,6 +1283,7 @@ RSpec.describe ViewModel::SapWrapper do
                 photo_supply: "0",
                 solar_water_heating_flag: "N",
                 flat_storey_count: "3",
+                cylinder_insulation_type: "2",
               },
             },
             {
@@ -1299,6 +1301,7 @@ RSpec.describe ViewModel::SapWrapper do
                 built_form: "Semi-Detached",
                 mainheat_description: "Gas boiler",
                 floor_level: nil,
+                cylinder_insulation_type:"1",
               },
             },
             {
@@ -1348,6 +1351,7 @@ RSpec.describe ViewModel::SapWrapper do
                 built_form: "Semi-Detached",
                 mainheat_description: "Gas boiler",
                 floor_level: nil,
+                cylinder_insulation_type:"1",
               },
             },
             {
@@ -1398,6 +1402,7 @@ RSpec.describe ViewModel::SapWrapper do
                 mainheat_description: "Gas boiler",
                 floor_level: nil,
                 total_floor_area: "98",
+                cylinder_insulation_type:"1",
               },
             },
             {
@@ -1450,6 +1455,7 @@ RSpec.describe ViewModel::SapWrapper do
                 floor_level: nil,
                 total_floor_area: "98",
                 co2_emiss_curr_perfloor_area: nil,
+                cylinder_insulation_type:"1",
               },
             },
             {
@@ -1502,6 +1508,7 @@ RSpec.describe ViewModel::SapWrapper do
                 floor_level: nil,
                 total_floor_area: "98",
                 co2_emiss_curr_perfloor_area: nil,
+                cylinder_insulation_type:"1",
               },
             },
             {
@@ -1594,9 +1601,8 @@ RSpec.describe ViewModel::SapWrapper do
             current_energy_rating: "e",
             energy_consumption_current: "230",
             energy_consumption_potential: "88",
-
-
-            cylinder_insul_thickness: "40"
+            cylinder_insul_thickness: "40",
+            cylinder_insulation_type: "2"
           }
         end
 
@@ -3710,7 +3716,6 @@ RSpec.describe ViewModel::SapWrapper do
               low_energy_fixed_lighting_outlets_count: nil,
               heat_loss_corridor: "no corridor",
               mainheat_description: "Gas boiler",
-              extension_count: "0",
               main_fuel: "Solid fuel: dual fuel appliance (mineral and wood)",
               total_floor_area: "98",
               glazed_area: "Normal",
@@ -3739,6 +3744,7 @@ RSpec.describe ViewModel::SapWrapper do
               floor_level: nil,
               total_floor_area: "98",
               co2_emiss_curr_perfloor_area: nil,
+              cylinder_insulation_type: "1",
             },
           },
           {
@@ -3792,9 +3798,8 @@ RSpec.describe ViewModel::SapWrapper do
           current_energy_rating: "e",
           energy_consumption_current: "230",
           energy_consumption_potential: "88",
-
-
-          cylinder_insul_thickness: "40"
+          cylinder_insul_thickness: "40",
+          cylinder_insulation_type: "2",
         }
       end
 
