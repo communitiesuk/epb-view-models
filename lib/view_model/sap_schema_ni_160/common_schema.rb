@@ -178,7 +178,7 @@ module ViewModel
       end
 
       def tenure
-        xpath(%w[Tenure])
+        nil
       end
 
       def transaction_type
@@ -276,7 +276,7 @@ module ViewModel
       end
 
       def glazed_area
-        nil
+        xpath(%w[Glazed-Area])
       end
 
       def habitable_room_count

@@ -272,7 +272,7 @@ module ViewModel
       end
 
       def glazed_area
-        nil
+        xpath(%w[Glazed-Area])
       end
 
       def habitable_room_count

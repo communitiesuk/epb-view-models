@@ -69,6 +69,14 @@ module ViewModel
         xpath(%w[Cylinder-Insulation-Thickness])
       end
 
+      def low_energy_lighting
+        nil
+      end
+
+      def multiple_glazed_proportion
+        xpath(%w[Multiple-Glazed-Proportion])
+      end
+
       def cylinder_insulation_type
         xpath(%w[Cylinder-Insulation-Type])
       end

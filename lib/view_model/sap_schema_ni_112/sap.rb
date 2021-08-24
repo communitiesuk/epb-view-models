@@ -12,6 +12,10 @@ module ViewModel
       def cylinder_size
         xpath(%w[Hot-Water-Store-Size])
       end
+
+      def mechanical_ventilation
+        xpath(%w[Mechanical-Ventilation])
+      end
     end
   end
 end

@@ -65,6 +65,10 @@ module ViewModel
         xpath(%w[Cylinder-Insulation-Thickness])
       end
 
+      def glazed_area
+        xpath(%w[Glazed-Area])
+      end
+
       def cylinder_insulation_type
         xpath(%w[Cylinder-Insulation-Type])
       end

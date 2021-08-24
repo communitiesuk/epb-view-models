@@ -57,10 +57,6 @@ module ViewModel
         xpath(%w[Solar-Water-Heating])
       end
 
-      def mechanical_ventilation
-        xpath(%w[Mechanical-Ventilation])
-      end
-
       def floor_height
         @xml_doc.search("Room-Height").map(&:content)
       end
@@ -75,6 +71,10 @@ module ViewModel
 
       def cylinder_insul_thickness
         xpath(%w[Cylinder-Insulation-Thickness])
+      end
+
+      def glazed_area
+        xpath(%w[Glazed-Area])
       end
 
       def cylinder_insulation_type

@@ -224,6 +224,13 @@
       <SAP:SAP-Data>
         <HIP:Schema-Version>LIG-16.1</HIP:Schema-Version>
         <HIP:SAP-Property-Details>
+          <HIP:SAP-Flat-Details>
+            <HIP:Level>1</HIP:Level>
+            <HIP:Flat-Location>01</HIP:Flat-Location>
+            <HIP:Storey-Count>3</HIP:Storey-Count>
+            <HIP:Heat-Loss-Corridor>0</HIP:Heat-Loss-Corridor>
+            <HIP:Top-Storey>Y</HIP:Top-Storey>
+          </HIP:SAP-Flat-Details>
           <HIP:Property-Type>0</HIP:Property-Type>
           <HIP:Built-Form>3</HIP:Built-Form>
           <HIP:Extensions-Count>1</HIP:Extensions-Count>

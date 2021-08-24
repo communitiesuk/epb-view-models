@@ -199,6 +199,13 @@
       <SAP-Data>
         <Schema-Version>LIG-16.1</Schema-Version>
         <SAP-Property-Details>
+          <SAP-Flat-Details>
+            <Flat-Location>01</Flat-Location>
+            <Storey-Count>3</Storey-Count>
+            <Heat-Loss-Corridor>0</Heat-Loss-Corridor>
+            <Top-Storey>Y</Top-Storey>
+            <Floor-Heat-Loss>1</Floor-Heat-Loss>
+          </SAP-Flat-Details>
           <Property-Type>0</Property-Type>
           <Built-Form>3</Built-Form>
           <Extensions-Count>1</Extensions-Count>
