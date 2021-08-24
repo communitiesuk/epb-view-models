@@ -526,6 +526,10 @@ module ViewModel
       def cylinder_size
         xpath(%w[Cylinder-Size])
       end
+
+      def has_cylinder_thermostat
+        xpath(%w[Cylinder-Thermostat])
+      end
     end
   end
 end

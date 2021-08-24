@@ -255,6 +255,7 @@
           <Cylinder-Size>1</Cylinder-Size>
           <Cylinder-Insulation-Thickness>12</Cylinder-Insulation-Thickness>
           <Cylinder-Insulation-Type>1</Cylinder-Insulation-Type>
+          <Cylinder-Thermostat>Y</Cylinder-Thermostat>
           <Has-Fixed-Air-Conditioning>false</Has-Fixed-Air-Conditioning>
           <Instantaneous-WWHRS>
             <Rooms-With-Bath-And-Or-Shower>1</Rooms-With-Bath-And-Or-Shower>
