@@ -1002,6 +1002,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size: "1",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -1042,6 +1043,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size: "1",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -1075,6 +1077,7 @@ RSpec.describe ViewModel::SapWrapper do
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
               report_type: "3",
+
             },
           },
           {
@@ -1082,6 +1085,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size: "1",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -1122,6 +1126,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size: "1",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -1163,6 +1168,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size: "1",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -1207,6 +1213,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size: "3",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -1240,6 +1247,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               extension_count: nil,
               tenure: nil,
+              cylinder_size:"140",
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
               report_type: "3",
@@ -1258,6 +1266,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size: "3",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -1291,6 +1300,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "sap",
             different_fields: {
               extension_count: nil,
+              cylinder_size: "140",
               tenure: nil,
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
@@ -1309,6 +1319,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size: "3",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -1341,6 +1352,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "sap",
             different_fields: {
               extension_count: nil,
+              cylinder_size: "140",
               tenure: nil,
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
@@ -1359,6 +1371,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size: "3",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -1391,6 +1404,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "sap",
             different_fields: {
               extension_count: nil,
+              cylinder_size: "140",
               tenure: nil,
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
@@ -1410,6 +1424,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size: "3",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -1443,6 +1458,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "sap",
             different_fields: {
               extension_count: nil,
+              cylinder_size: "140",
               tenure: nil,
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
@@ -1463,6 +1479,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size: "3",
               tenure: nil,
               multi_glaze_proportion: nil,
               transaction_type: nil,
@@ -1496,6 +1513,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "sap",
             different_fields: {
               extension_count: nil,
+              cylinder_size: "140",
               tenure: nil,
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
@@ -1516,6 +1534,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size:"3",
               tenure: nil,
               multi_glaze_proportion: nil,
               transaction_type: nil,
@@ -1549,6 +1568,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size: "3",
               tenure: nil,
               environment_impact_potential: "70",
               multi_glaze_proportion: nil,
@@ -1598,11 +1618,12 @@ RSpec.describe ViewModel::SapWrapper do
           co2_emissions_potential: "1.4",
           construction_age_band: "1750",
           current_energy_efficiency: "50",
+          cylinder_insul_thickness: "40",
+          cylinder_insulation_type: "2",
+          cylinder_size: "110",
           current_energy_rating: "e",
           energy_consumption_current: "230",
           energy_consumption_potential: "88",
-          cylinder_insul_thickness: "40",
-          cylinder_insulation_type: "2",
         }
       end
 
@@ -3732,6 +3753,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "sap",
             different_fields: {
               extension_count: nil,
+              cylinder_size: "140",
               tenure: nil,
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
@@ -3752,6 +3774,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              cylinder_size: "3",
               tenure: nil,
               multi_glaze_proportion: nil,
               transaction_type: nil,
@@ -3795,10 +3818,11 @@ RSpec.describe ViewModel::SapWrapper do
           construction_age_band: "1750",
           current_energy_efficiency: "50",
           current_energy_rating: "e",
-          energy_consumption_current: "230",
-          energy_consumption_potential: "88",
           cylinder_insul_thickness: "40",
           cylinder_insulation_type: "2",
+          cylinder_size: "1",
+          energy_consumption_current: "230",
+          energy_consumption_potential: "88",
         }
       end
 

@@ -502,6 +502,10 @@ module ViewModel
       def cylinder_insulation_type
         xpath(%w[Hot-Water-Store-Insulation-Type])
       end
+
+      def cylinder_size
+        xpath(%w[Hot-Water-Store-Size])
+      end
     end
   end
 end

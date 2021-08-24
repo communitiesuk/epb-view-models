@@ -211,6 +211,7 @@
         <Secondary-Heating-Category>1</Secondary-Heating-Category>
         <Hot-Water-Store-Insulation-Thickness>40</Hot-Water-Store-Insulation-Thickness>
         <Hot-Water-Store-Insulation-Type>2</Hot-Water-Store-Insulation-Type>
+        <Hot-Water-Store-Size>1</Hot-Water-Store-Size>
         <Main-Heating-Details>
           <Main-Heating>
             <Main-Heating-Number>1</Main-Heating-Number>

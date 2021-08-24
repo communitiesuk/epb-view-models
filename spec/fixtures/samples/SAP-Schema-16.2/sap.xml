@@ -249,6 +249,7 @@
             <SAP:Has-Hot-Water-Cylinder>false</SAP:Has-Hot-Water-Cylinder>
             <SAP:Hot-Water-Store-Insulation-Thickness>40</SAP:Hot-Water-Store-Insulation-Thickness>
             <SAP:Hot-Water-Store-Insulation-Type>2</SAP:Hot-Water-Store-Insulation-Type>
+            <SAP:Hot-Water-Store-Size>110</SAP:Hot-Water-Store-Size>
             <SAP:Secondary-Heating-Category>1</SAP:Secondary-Heating-Category>
             <SAP:Thermal-Store>1</SAP:Thermal-Store>
             <SAP:Has-Fixed-Air-Conditioning>false</SAP:Has-Fixed-Air-Conditioning>
