@@ -41,6 +41,7 @@ module Presenter
             ),
           cylinder_insul_thickness: @view_model.cylinder_insul_thickness,
           cylinder_insulation_type: @view_model.cylinder_insulation_type,
+          cylinder_size: @view_model.cylinder_size,
           energy_consumption_current: @view_model.primary_energy_use,
           energy_consumption_potential: @view_model.energy_consumption_potential,
           energy_tariff:

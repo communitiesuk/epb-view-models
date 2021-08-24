@@ -574,6 +574,10 @@ module ViewModel
       def cylinder_insul_thickness
         xpath(%w[Cylinder-Insulation-Thickness])
       end
+
+      def cylinder_size
+        xpath(%w[Cylinder-Size])
+      end
     end
   end
 end

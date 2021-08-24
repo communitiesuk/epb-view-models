@@ -522,6 +522,10 @@ module ViewModel
       def cylinder_insulation_type
         xpath(%w[Cylinder-Insulation-Type])
       end
+
+      def cylinder_size
+        xpath(%w[Cylinder-Size])
+      end
     end
   end
 end
