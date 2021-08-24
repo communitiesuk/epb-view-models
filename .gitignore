@@ -6,6 +6,8 @@
 /pkg/
 /spec/reports/
 /tmp/
+.DS_Store
+dump.rdb
 
 # rspec failure tracking
 .rspec_status
