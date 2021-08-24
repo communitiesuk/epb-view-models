@@ -1247,7 +1247,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               extension_count: nil,
               tenure: nil,
-              cylinder_size:"140",
+              cylinder_size: "140",
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
               report_type: "3",
@@ -1534,7 +1534,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
-              cylinder_size:"3",
+              cylinder_size: "3",
               tenure: nil,
               multi_glaze_proportion: nil,
               transaction_type: nil,

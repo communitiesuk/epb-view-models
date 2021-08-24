@@ -17,7 +17,6 @@ module ViewModel
         xpath(%w[Hot-Water-Store-Insulation-Type])
       end
 
-
       def cylinder_size
         xpath(%w[Hot-Water-Store-Size])
       end
