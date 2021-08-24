@@ -861,44 +861,10 @@ RSpec.describe ViewModel::RdSapWrapper do
     describe ".to_hash_ni" do
       let(:schemas) do
         [
-          {
-            schema: "RdSAP-Schema-NI-20.0.0",
-            unsupported_fields: %i[improvement_summary],
-            different_buried_fields: {
-              address: {
-                address_id: "UPRN-000000000000",
-              },
-            },
-          },
-          {
-            schema: "RdSAP-Schema-NI-19.0",
-            different_fields: {
-              addendum: {
-                stone_walls: true,
-                system_build: true,
-              },
-              lzc_energy_sources: [11],
-            },
-          },
-          {
-            schema: "RdSAP-Schema-NI-18.0",
-            different_fields: {
-              addendum: {
-                addendum_number: [1],
-              },
-              lzc_energy_sources: [11, 12],
-            },
-          },
-          {
-            schema: "RdSAP-Schema-NI-17.4",
-            different_fields: {
-              addendum: {
-                addendum_number: [1, 8],
-                stone_walls: true,
-                system_build: true,
-              },
-            },
-          },
+          { schema: "RdSAP-Schema-NI-20.0.0" },
+          { schema: "RdSAP-Schema-NI-19.0" },
+          { schema: "RdSAP-Schema-NI-18.0" },
+          { schema: "RdSAP-Schema-NI-17.4" },
           { schema: "RdSAP-Schema-NI-17.3" },
         ]
       end
