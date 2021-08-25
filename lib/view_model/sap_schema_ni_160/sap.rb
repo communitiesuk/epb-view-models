@@ -38,7 +38,6 @@ module ViewModel
         xpath(%w[Mechanical-Vent-System-Index-Number])
       end
 
-
       def mechanical_vent_data_source
         xpath(%w[Mechanical-Ventilation-Data-Source])
       end

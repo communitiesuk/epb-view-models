@@ -88,7 +88,6 @@ module ViewModel
       def mechanical_vent_data_source
         nil
       end
-
     end
   end
 end

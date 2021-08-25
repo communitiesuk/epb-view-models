@@ -32,7 +32,6 @@ module ViewModel
       def mechanical_vent_data_source
         xpath(%w[Mechanical-Ventilation-Data-Source])
       end
-
     end
   end
 end
