@@ -24,6 +24,10 @@ module ViewModel
       def has_cylinder_thermostat
         xpath(%w[Has-Cylinder-Thermostat])
       end
+
+      def mech_vent_sys_index_number
+        xpath(%w[Mechanical-Vent-System-Index-Number])
+      end
     end
   end
 end

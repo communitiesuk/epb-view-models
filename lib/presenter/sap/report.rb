@@ -140,6 +140,7 @@ module Presenter
               @schema_type,
               @view_model.report_type,
             ),
+          mech_vent_sys_index_number: @view_model.mech_vent_sys_index_number,
           multi_glaze_proportion: @view_model.multiple_glazed_proportion,
           number_habitable_rooms: @view_model.habitable_room_count,
           number_heated_rooms: @view_model.heated_room_count,

@@ -97,6 +97,10 @@ module ViewModel
       def has_cylinder_thermostat
         nil
       end
+
+      def mech_vent_sys_index_number
+        nil
+      end
     end
   end
 end

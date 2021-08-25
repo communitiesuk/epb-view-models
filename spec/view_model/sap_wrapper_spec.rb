@@ -1003,6 +1003,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              mech_vent_sys_index_number: nil,
               cylinder_size: "1",
               has_cylinder_thermostat: nil,
               report_type: "2",
@@ -1045,6 +1046,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              mech_vent_sys_index_number: nil,
               has_cylinder_thermostat: nil,
               cylinder_size: "1",
               report_type: "2",
@@ -1087,6 +1089,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              mech_vent_sys_index_number: nil,
               has_cylinder_thermostat: nil,
               cylinder_size: "1",
               report_type: "2",
@@ -1130,6 +1133,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               cylinder_insul_thickness: "25",
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               cylinder_size: "1",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -1173,6 +1177,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               cylinder_insul_thickness: "25",
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               cylinder_size: "1",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -1209,7 +1214,6 @@ RSpec.describe ViewModel::SapWrapper do
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
               report_type: "3",
-              number_open_fireplaces: nil,
               mainheat_description: "Gas boiler",
             },
           },
@@ -1218,6 +1222,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              mech_vent_sys_index_number: nil,
               has_cylinder_thermostat: nil,
               cylinder_size: "3",
               report_type: "2",
@@ -1272,6 +1277,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              mech_vent_sys_index_number: nil,
               has_cylinder_thermostat: nil,
               cylinder_size: "3",
               report_type: "2",
@@ -1326,6 +1332,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              mech_vent_sys_index_number: nil,
               has_cylinder_thermostat: nil,
               cylinder_size: "3",
               report_type: "2",
@@ -1379,6 +1386,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              mech_vent_sys_index_number: nil,
               has_cylinder_thermostat: nil,
               cylinder_size: "3",
               report_type: "2",
@@ -1433,6 +1441,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               cylinder_insul_thickness: "25",
               cylinder_size: "3",
               report_type: "2",
@@ -1489,6 +1498,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               cylinder_insul_thickness: "25",
               cylinder_size: "3",
               tenure: nil,
@@ -1545,6 +1555,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               cylinder_insul_thickness: "25",
               cylinder_size: "3",
               tenure: nil,
@@ -1580,6 +1591,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               cylinder_insul_thickness: "25",
               cylinder_size: "3",
               tenure: nil,
@@ -1676,6 +1688,7 @@ RSpec.describe ViewModel::SapWrapper do
           mainheatc_env_eff: "N/A",
           mains_gas_flag: nil,
           mechanical_ventilation: nil,
+          mech_vent_sys_index_number: "500249",
           multi_glaze_proportion: "50",
           number_habitable_rooms: nil,
           number_heated_rooms: nil,
@@ -1955,7 +1968,6 @@ RSpec.describe ViewModel::SapWrapper do
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
               report_type: "3",
-              number_open_fireplaces: nil,
               mainheat_description: "Gas boiler",
             },
           },
@@ -3414,6 +3426,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               built_form: "End-Terrace",
               co2_emiss_curr_perfloor_area: "56",
               construction_age_band: "England and Wales: before 1900",
@@ -3454,6 +3467,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               built_form: "End-Terrace",
               co2_emiss_curr_perfloor_area: "56",
               construction_age_band: "England and Wales: before 1900",
@@ -3494,6 +3508,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               built_form: "End-Terrace",
               co2_emiss_curr_perfloor_area: "56",
               construction_age_band: "England and Wales: before 1900",
@@ -3547,6 +3562,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               cylinder_insul_thickness: "25",
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -3589,6 +3605,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               cylinder_insul_thickness: "25",
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -3632,6 +3649,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               cylinder_insul_thickness: "25",
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -3677,6 +3695,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               built_form: "End-Terrace",
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               cylinder_insul_thickness: "25",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -3719,7 +3738,6 @@ RSpec.describe ViewModel::SapWrapper do
               transaction_type: "marketed sale",
               low_energy_lighting: "100",
               low_energy_fixed_light_count: "8",
-              number_open_fireplaces: nil,
               built_form: "Detached",
               floor_level: "1",
             },
@@ -3730,6 +3748,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               built_form: "End-Terrace",
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               cylinder_insul_thickness: "25",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -3772,7 +3791,6 @@ RSpec.describe ViewModel::SapWrapper do
               transaction_type: "marketed sale",
               low_energy_lighting: "100",
               low_energy_fixed_light_count: "8",
-              number_open_fireplaces: nil,
               built_form: "Detached",
               floor_level: "1",
             },
@@ -3783,6 +3801,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               built_form: "End-Terrace",
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               cylinder_insul_thickness: "25",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -3825,7 +3844,6 @@ RSpec.describe ViewModel::SapWrapper do
               transaction_type: "marketed sale",
               low_energy_lighting: "100",
               low_energy_fixed_light_count: "8",
-              number_open_fireplaces: nil,
               built_form: "Detached",
               floor_level: "1",
             },
@@ -3836,6 +3854,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               built_form: "End-Terrace",
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               cylinder_insul_thickness: "25",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -3878,7 +3897,6 @@ RSpec.describe ViewModel::SapWrapper do
               transaction_type: "marketed sale",
               low_energy_lighting: "100",
               low_energy_fixed_light_count: "8",
-              number_open_fireplaces: nil,
               built_form: "Detached",
               floor_level: "1",
               total_floor_area: "98",
@@ -3889,6 +3907,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               built_form: "End-Terrace",
               cylinder_insul_thickness: "25",
               report_type: "2",
@@ -3947,6 +3966,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               cylinder_insul_thickness: "25",
               has_cylinder_thermostat: nil,
+              mech_vent_sys_index_number: nil,
               cylinder_size: "3",
               tenure: nil,
               multi_glaze_proportion: nil,
@@ -4035,6 +4055,7 @@ RSpec.describe ViewModel::SapWrapper do
           mainheatc_env_eff: "N/A",
           mains_gas_flag: nil,
           mechanical_ventilation: nil,
+          mech_vent_sys_index_number: "500249",
           multi_glaze_proportion: "50",
           number_habitable_rooms: nil,
           number_heated_rooms: nil,
@@ -4412,7 +4433,6 @@ RSpec.describe ViewModel::SapWrapper do
               extension_count: nil,
               multi_glaze_proportion: nil,
               mainheat_description: "Gas boiler",
-              number_open_fireplaces: nil,
             },
           },
           {
@@ -4460,7 +4480,6 @@ RSpec.describe ViewModel::SapWrapper do
               extension_count: nil,
               multi_glaze_proportion: nil,
               mainheat_description: "Gas boiler",
-              number_open_fireplaces: nil,
             },
           },
           {
@@ -4508,7 +4527,6 @@ RSpec.describe ViewModel::SapWrapper do
               extension_count: nil,
               multi_glaze_proportion: nil,
               mainheat_description: "Gas boiler",
-              number_open_fireplaces: nil,
             },
           },
           {
@@ -4557,7 +4575,6 @@ RSpec.describe ViewModel::SapWrapper do
               extension_count: nil,
               multi_glaze_proportion: nil,
               mainheat_description: "Gas boiler",
-              number_open_fireplaces: nil,
             },
           },
           {

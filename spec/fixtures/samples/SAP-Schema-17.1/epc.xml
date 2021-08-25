@@ -277,6 +277,7 @@
 				<Pressure-Test>1</Pressure-Test>
 				<Sheltered-Sides-Count>3</Sheltered-Sides-Count>
 				<Ventilation-Type>8</Ventilation-Type>
+				<Mechanical-Vent-System-Index-Number>500249</Mechanical-Vent-System-Index-Number>
 			</SAP-Ventilation>
       <SAP-Opening-Types>
         <SAP-Opening-Type>

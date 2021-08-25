@@ -348,6 +348,21 @@
               <SAP:U-Value>0.87</SAP:U-Value>
             </SAP:SAP-Opening-Type>
           </SAP:SAP-Opening-Types>
+          <SAP:SAP-Ventilation>
+            <SAP:Open-Fireplaces-Count>0</SAP:Open-Fireplaces-Count>
+            <SAP:Open-Flues-Count>0</SAP:Open-Flues-Count>
+            <SAP:Fans-Vents-Count>4</SAP:Fans-Vents-Count>
+            <SAP:Flueless-Gas-Fires-Count>0</SAP:Flueless-Gas-Fires-Count>
+            <SAP:Pressure-Test>4</SAP:Pressure-Test>
+            <SAP:Ground-Floor-Type>1</SAP:Ground-Floor-Type>
+            <SAP:Wall-Type>2</SAP:Wall-Type>
+            <SAP:Has-Draught-Lobby>false</SAP:Has-Draught-Lobby>
+            <SAP:DraughtStripping>100</SAP:DraughtStripping>
+            <SAP:Sheltered-Sides-Count>1</SAP:Sheltered-Sides-Count>
+            <SAP:Ventilation-Type>1</SAP:Ventilation-Type>
+            <SAP:Mechanical-Vent-Specific-Fan-Power>0.0</SAP:Mechanical-Vent-Specific-Fan-Power>
+            <SAP:Mechanical-Vent-System-Index-Number>500249</SAP:Mechanical-Vent-System-Index-Number>
+          </SAP:SAP-Ventilation>
           <SAP:SAP-Flat-Details>
             <SAP:Level>1</SAP:Level>
           </SAP:SAP-Flat-Details>
