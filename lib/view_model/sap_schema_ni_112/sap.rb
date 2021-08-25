@@ -13,8 +13,8 @@ module ViewModel
         xpath(%w[Hot-Water-Store-Size])
       end
 
-      def mechanical_ventilation
-        xpath(%w[Mechanical-Ventilation])
+      def has_cylinder_thermostat
+        xpath(%w[Has-Cylinder-Thermostat])
       end
     end
   end

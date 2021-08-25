@@ -253,6 +253,7 @@
             <SAP:Secondary-Heating-Category>1</SAP:Secondary-Heating-Category>
             <SAP:Thermal-Store>1</SAP:Thermal-Store>
             <SAP:Has-Fixed-Air-Conditioning>false</SAP:Has-Fixed-Air-Conditioning>
+            <SAP:Has-Cylinder-Thermostat>true</SAP:Has-Cylinder-Thermostat>
             <SAP:Has-Solar-Panel>false</SAP:Has-Solar-Panel>
             <SAP:Main-Heating-Details>
               <SAP:Main-Heating>

@@ -258,6 +258,7 @@
             <SAP:Thermal-Store>1</SAP:Thermal-Store>
             <SAP:Has-Fixed-Air-Conditioning>false</SAP:Has-Fixed-Air-Conditioning>
             <SAP:Has-Solar-Panel>false</SAP:Has-Solar-Panel>
+            <SAP:Has-Cylinder-Thermostat>true</SAP:Has-Cylinder-Thermostat>
             <SAP:Main-Heating-Details>
               <SAP:Main-Heating>
                 <SAP:Main-Heating-Number>1</SAP:Main-Heating-Number>

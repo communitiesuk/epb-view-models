@@ -152,6 +152,7 @@
           </SAP05:Air-Tightness>
           <SAP05:Has-Fixed-Air-Conditioning>false</SAP05:Has-Fixed-Air-Conditioning>
           <SAP05:Has-Hot-Water-Cylinder>true</SAP05:Has-Hot-Water-Cylinder>
+
           <SAP05:Has-Heated-Separate-Conservatory>false</SAP05:Has-Heated-Separate-Conservatory>
         </SAP05:Property-Summary>
         <SAP05:Energy-Use>

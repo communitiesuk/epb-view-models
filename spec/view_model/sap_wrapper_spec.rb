@@ -1004,6 +1004,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               cylinder_insul_thickness: "25",
               cylinder_size: "1",
+              has_cylinder_thermostat: nil,
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -1044,6 +1045,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              has_cylinder_thermostat: nil,
               cylinder_size: "1",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -1085,6 +1087,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              has_cylinder_thermostat: nil,
               cylinder_size: "1",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -1126,6 +1129,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              has_cylinder_thermostat: nil,
               cylinder_size: "1",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -1168,6 +1172,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              has_cylinder_thermostat: nil,
               cylinder_size: "1",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -1213,6 +1218,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              has_cylinder_thermostat: nil,
               cylinder_size: "3",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -1266,6 +1272,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              has_cylinder_thermostat: nil,
               cylinder_size: "3",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -1319,6 +1326,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              has_cylinder_thermostat: nil,
               cylinder_size: "3",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -1371,6 +1379,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              has_cylinder_thermostat: nil,
               cylinder_size: "3",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -1423,6 +1432,7 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-12.0",
             type: "rdsap",
             different_fields: {
+              has_cylinder_thermostat: nil,
               cylinder_insul_thickness: "25",
               cylinder_size: "3",
               report_type: "2",
@@ -1478,6 +1488,7 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-11.2",
             type: "rdsap",
             different_fields: {
+              has_cylinder_thermostat: nil,
               cylinder_insul_thickness: "25",
               cylinder_size: "3",
               tenure: nil,
@@ -1533,6 +1544,7 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-11.0",
             type: "rdsap",
             different_fields: {
+              has_cylinder_thermostat: nil,
               cylinder_insul_thickness: "25",
               cylinder_size: "3",
               tenure: nil,
@@ -1567,6 +1579,7 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-10.2",
             type: "rdsap",
             different_fields: {
+              has_cylinder_thermostat: nil,
               cylinder_insul_thickness: "25",
               cylinder_size: "3",
               tenure: nil,
@@ -1692,6 +1705,7 @@ RSpec.describe ViewModel::SapWrapper do
           windows_description: "Glass window",
           windows_energy_eff: "N/A",
           windows_env_eff: "N/A",
+          has_cylinder_thermostat: "true",
         }
       end
 
@@ -3399,6 +3413,8 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-NI-17.2",
             type: "rdsap",
             different_fields: {
+              extension_count: nil,
+              has_cylinder_thermostat: nil,
               built_form: "End-Terrace",
               co2_emiss_curr_perfloor_area: "56",
               construction_age_band: "England and Wales: before 1900",
@@ -3438,6 +3454,8 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-NI-17.1",
             type: "rdsap",
             different_fields: {
+              extension_count: nil,
+              has_cylinder_thermostat: nil,
               built_form: "End-Terrace",
               co2_emiss_curr_perfloor_area: "56",
               construction_age_band: "England and Wales: before 1900",
@@ -3477,6 +3495,8 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-NI-17.0",
             type: "rdsap",
             different_fields: {
+              extension_count: nil,
+              has_cylinder_thermostat: nil,
               built_form: "End-Terrace",
               co2_emiss_curr_perfloor_area: "56",
               construction_age_band: "England and Wales: before 1900",
@@ -3529,6 +3549,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              has_cylinder_thermostat: nil,
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -3570,6 +3591,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              has_cylinder_thermostat: nil,
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -3612,6 +3634,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              has_cylinder_thermostat: nil,
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
               transaction_type: "not sale or rental",
@@ -3656,6 +3679,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               built_form: "End-Terrace",
+              has_cylinder_thermostat: nil,
               cylinder_insul_thickness: "25",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -3708,6 +3732,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               built_form: "End-Terrace",
+              has_cylinder_thermostat:nil,
               cylinder_insul_thickness: "25",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -3760,6 +3785,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               built_form: "End-Terrace",
+              has_cylinder_thermostat:nil,
               cylinder_insul_thickness: "25",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -3812,6 +3838,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               built_form: "End-Terrace",
+              has_cylinder_thermostat:nil,
               cylinder_insul_thickness: "25",
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -3864,6 +3891,7 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-NI-12.0",
             type: "rdsap",
             different_fields: {
+              has_cylinder_thermostat:nil,
               built_form: "End-Terrace",
               cylinder_insul_thickness: "25",
               report_type: "2",
@@ -3921,6 +3949,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               cylinder_insul_thickness: "25",
+              has_cylinder_thermostat:nil,
               cylinder_size: "3",
               tenure: nil,
               multi_glaze_proportion: nil,
@@ -4038,6 +4067,7 @@ RSpec.describe ViewModel::SapWrapper do
           windows_description: "Glass window",
           windows_energy_eff: "N/A",
           windows_env_eff: "N/A",
+          has_cylinder_thermostat: "true",
         }
       end
 
