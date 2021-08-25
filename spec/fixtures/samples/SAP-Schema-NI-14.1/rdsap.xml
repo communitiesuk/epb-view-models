@@ -301,6 +301,7 @@
             <Water-Heating-Fuel>10</Water-Heating-Fuel>
             <Cylinder-Size>1</Cylinder-Size>
             <Cylinder-Insulation-Thickness>25</Cylinder-Insulation-Thickness>
+            <Cylinder-Thermostat>Y</Cylinder-Thermostat>
             <Cylinder-Insulation-Type>2</Cylinder-Insulation-Type>
           </SAP-Heating>
           <SAP-Energy-Source>

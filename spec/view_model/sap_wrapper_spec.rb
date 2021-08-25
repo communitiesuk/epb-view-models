@@ -3455,7 +3455,7 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-NI-17.2",
             type: "rdsap",
             different_fields: {
-              has_cylinder_thermostat: nil,
+              has_cylinder_thermostat: "Y",
               mech_vent_sys_index_number: nil,
               built_form: "End-Terrace",
               co2_emiss_curr_perfloor_area: "56",
@@ -3499,7 +3499,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               mechanical_vent_data_source: nil,
-              has_cylinder_thermostat: nil,
+              has_cylinder_thermostat: "Y",
               mech_vent_sys_index_number: nil,
               built_form: "End-Terrace",
               co2_emiss_curr_perfloor_area: "56",
@@ -3542,7 +3542,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               mechanical_vent_data_source: nil,
-              has_cylinder_thermostat: nil,
+              has_cylinder_thermostat: "Y",
               mech_vent_sys_index_number: nil,
               built_form: "End-Terrace",
               co2_emiss_curr_perfloor_area: "56",
@@ -3646,7 +3646,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               mechanical_vent_data_source: nil,
               cylinder_insul_thickness: "25",
-              has_cylinder_thermostat: nil,
+              has_cylinder_thermostat: "Y",
               mech_vent_sys_index_number: nil,
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -3694,7 +3694,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               mechanical_vent_data_source: nil,
               cylinder_insul_thickness: "25",
-              has_cylinder_thermostat: nil,
+              has_cylinder_thermostat: "Y",
               mech_vent_sys_index_number: nil,
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
@@ -3742,7 +3742,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               mechanical_vent_data_source: nil,
               built_form: "End-Terrace",
-              has_cylinder_thermostat: nil,
+              has_cylinder_thermostat: "Y",
               mech_vent_sys_index_number: nil,
               cylinder_insul_thickness: "25",
               report_type: "2",
@@ -3797,7 +3797,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               mechanical_vent_data_source: nil,
               built_form: "End-Terrace",
-              has_cylinder_thermostat: nil,
+              has_cylinder_thermostat: "Y",
               mech_vent_sys_index_number: nil,
               cylinder_insul_thickness: "25",
               report_type: "2",
@@ -3852,7 +3852,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               mechanical_vent_data_source: nil,
               built_form: "End-Terrace",
-              has_cylinder_thermostat: nil,
+              has_cylinder_thermostat: "Y",
               mech_vent_sys_index_number: nil,
               cylinder_insul_thickness: "25",
               report_type: "2",
@@ -3907,7 +3907,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               built_form: "End-Terrace",
               mechanical_vent_data_source: nil,
-              has_cylinder_thermostat: nil,
+              has_cylinder_thermostat: "Y",
               mech_vent_sys_index_number: nil,
               cylinder_insul_thickness: "25",
               report_type: "2",
@@ -3962,7 +3962,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               mechanical_vent_data_source: nil,
-              has_cylinder_thermostat: nil,
+              has_cylinder_thermostat: "Y",
               mech_vent_sys_index_number: nil,
               built_form: "End-Terrace",
               cylinder_insul_thickness: "25",
@@ -4022,7 +4022,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               mechanical_vent_data_source: nil,
               cylinder_insul_thickness: "25",
-              has_cylinder_thermostat: nil,
+              has_cylinder_thermostat: "Y",
               mech_vent_sys_index_number: nil,
               cylinder_size: "3",
               tenure: nil,

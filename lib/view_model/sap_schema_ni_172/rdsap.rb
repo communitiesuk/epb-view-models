@@ -86,7 +86,7 @@ module ViewModel
       end
 
       def has_cylinder_thermostat
-        nil
+        xpath(%w[Cylinder-Thermostat])
       end
 
       def mech_vent_sys_index_number
