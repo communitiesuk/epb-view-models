@@ -3637,6 +3637,7 @@ RSpec.describe ViewModel::SapWrapper do
               mainheat_description: "Gas boiler",
               mechanical_vent_data_source: "1",
               cylinder_size: nil,
+              cylinder_insulation_type: nil,
             },
           },
           {
@@ -3671,6 +3672,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               cylinder_size: nil,
+              cylinder_insulation_type: nil,
             },
           },
           {
