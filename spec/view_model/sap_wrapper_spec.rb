@@ -3101,14 +3101,24 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-NI-16.0",
             type: "sap",
             unsupported_fields: %i[tenure],
-          }.merge(is_ni_pre_17).deep_merge(has_single_lzc_energy_source),
+          }.merge(is_ni_pre_17).deep_merge(has_single_lzc_energy_source)
+            .deep_merge({
+              different_fields: {
+                cylinder_size: nil,
+              },
+            }),
           {
             schema: "SAP-Schema-NI-16.0",
             type: "rdsap",
             unsupported_fields: %i[tenure],
           }.deep_merge(is_rdsap)
             .deep_merge(is_ni_rdsap)
-            .deep_merge(has_several_addendum_types),
+            .deep_merge(has_several_addendum_types)
+            .deep_merge({
+              different_fields: {
+                cylinder_size: nil,
+              },
+            }),
           { schema: "SAP-Schema-NI-15.0", type: "sap" }.merge(is_ni_pre_17)
             .deep_merge(has_single_lzc_energy_source),
           {
@@ -3626,6 +3636,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "3",
               mainheat_description: "Gas boiler",
               mechanical_vent_data_source: "1",
+              cylinder_size: nil,
             },
           },
           {
@@ -3659,6 +3670,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_heated_rooms: "5",
               photo_supply: "0",
               solar_water_heating_flag: "N",
+              cylinder_size: nil,
             },
           },
           {

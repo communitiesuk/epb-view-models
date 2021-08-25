@@ -325,7 +325,6 @@
             </HIP:Main-Heating-Details>
             <HIP:Water-Heating-Code>901</HIP:Water-Heating-Code>
             <HIP:Water-Heating-Fuel>26</HIP:Water-Heating-Fuel>
-            <HIP:Cylinder-Size>1</HIP:Cylinder-Size>
             <HIP:Cylinder-Insulation-Thickness>25</HIP:Cylinder-Insulation-Thickness>
             <HIP:Cylinder-Insulation-Type>2</HIP:Cylinder-Insulation-Type>
             <HIP:Has-Fixed-Air-Conditioning>false
