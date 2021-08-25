@@ -80,7 +80,6 @@ module ViewModel
       def has_cylinder_thermostat
         nil
       end
-
     end
   end
 end
