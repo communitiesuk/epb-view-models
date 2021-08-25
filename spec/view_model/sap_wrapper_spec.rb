@@ -3599,7 +3599,7 @@ RSpec.describe ViewModel::SapWrapper do
             different_fields: {
               mechanical_vent_data_source: nil,
               cylinder_insul_thickness: "25",
-              has_cylinder_thermostat: nil,
+              has_cylinder_thermostat: "Y",
               mech_vent_sys_index_number: nil,
               report_type: "2",
               construction_age_band: "England and Wales: before 1900",
