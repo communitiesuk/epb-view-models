@@ -169,6 +169,7 @@ module Presenter
             ),
           solar_water_heating_flag: @view_model.solar_water_heating_flag,
           tenure: Helper::XmlEnumsToOutput.tenure(@view_model.tenure),
+          thermal_store: nil,
           total_floor_area: @view_model.total_floor_area,
           transaction_type:
             Helper::XmlEnumsToOutput.transaction_type(

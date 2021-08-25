@@ -278,10 +278,57 @@ RSpec.describe ViewModel::RdSapWrapper do
       let(:schemas) do
         [
           { schema: "RdSAP-Schema-20.0.0" },
-          { schema: "RdSAP-Schema-19.0" },
-          { schema: "RdSAP-Schema-18.0" },
-          { schema: "RdSAP-Schema-17.1" },
-          { schema: "RdSAP-Schema-17.0" },
+          {
+            schema: "RdSAP-Schema-19.0",
+            different_buried_fields: {
+              address: {
+                address_id: "LPRN-0000000000",
+              },
+            },
+            different_fields: {
+              addendum: {
+                addendum_number: [1],
+              },
+              lzc_energy_sources: [11],
+            },
+          },
+          {
+            schema: "RdSAP-Schema-18.0",
+            different_buried_fields: {
+              address: {
+                address_id: "LPRN-0000000000",
+              },
+            },
+            different_fields: {
+              addendum: {
+                stone_walls: true,
+                system_build: true,
+              },
+              lzc_energy_sources: [11, 12],
+            },
+          },
+          {
+            schema: "RdSAP-Schema-17.1",
+            different_buried_fields: {
+              address: {
+                address_id: "LPRN-0000000000",
+              },
+            },
+            different_fields: {
+              addendum: nil,
+            },
+          },
+          {
+            schema: "RdSAP-Schema-17.0",
+            different_buried_fields: {
+              address: {
+                address_id: "LPRN-0000000000",
+              },
+            },
+            different_fields: {
+              addendum: nil,
+            },
+          },
         ]
       end
 
@@ -363,6 +410,7 @@ RSpec.describe ViewModel::RdSapWrapper do
           sheating_env_eff: "N/A",
           solar_water_heating_flag: "N",
           tenure: "Owner-occupied",
+          thermal_store: nil,
           total_floor_area: "55",
           transaction_type: "marketed sale",
           unheated_corridor_length: "10",
@@ -540,7 +588,6 @@ RSpec.describe ViewModel::RdSapWrapper do
           floor_level: "01",
           solar_water_heating_flag: "N",
           mechanical_ventilation: "natural",
-          mech_vent_sys_index_number: nil,
           floor_height: "2.45",
           main_fuel: "mains gas (not community)",
           floor_description: "Suspended, no insulation (assumed)",
@@ -903,6 +950,7 @@ RSpec.describe ViewModel::RdSapWrapper do
           sheating_env_eff: "N/A",
           solar_water_heating_flag: "N",
           tenure: "Owner-occupied",
+          thermal_store: nil,
           total_floor_area: "55",
           transaction_type: "marketed sale",
           unheated_corridor_length: "10",
