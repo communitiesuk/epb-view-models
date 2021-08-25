@@ -996,6 +996,7 @@ RSpec.describe ViewModel::SapWrapper do
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
               report_type: "3",
+              mechanical_vent_data_source: "1",
             },
           },
           {
@@ -1028,6 +1029,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_heated_rooms: "5",
               photo_supply: "0",
               solar_water_heating_flag: "N",
+              mechanical_vent_data_source: nil,
             },
           },
           {
@@ -1039,6 +1041,7 @@ RSpec.describe ViewModel::SapWrapper do
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
               report_type: "3",
+              mechanical_vent_data_source: "1",
             },
           },
           {
@@ -1071,6 +1074,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_heated_rooms: "5",
               photo_supply: "0",
               solar_water_heating_flag: "N",
+              mechanical_vent_data_source: nil,
             },
           },
           {
@@ -1082,6 +1086,7 @@ RSpec.describe ViewModel::SapWrapper do
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
               report_type: "3",
+              mechanical_vent_data_source: "1",
             },
           },
           {
@@ -1114,6 +1119,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_heated_rooms: "5",
               photo_supply: "0",
               solar_water_heating_flag: "N",
+              mechanical_vent_data_source: nil,
             },
           },
           {
@@ -1125,6 +1131,7 @@ RSpec.describe ViewModel::SapWrapper do
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
               report_type: "3",
+              mechanical_vent_data_source: "1",
             },
           },
           {
@@ -1158,6 +1165,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_heated_rooms: "5",
               photo_supply: "0",
               solar_water_heating_flag: "N",
+              mechanical_vent_data_source: nil,
             },
           },
           {
@@ -1169,6 +1177,7 @@ RSpec.describe ViewModel::SapWrapper do
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
               report_type: "3",
+              mechanical_vent_data_source: "1",
             },
           },
           {
@@ -1202,6 +1211,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_heated_rooms: "5",
               photo_supply: "0",
               solar_water_heating_flag: "N",
+              mechanical_vent_data_source: nil,
             },
           },
           {
@@ -1250,6 +1260,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
+              mechanical_vent_data_source: nil,
             },
           },
           {
@@ -1306,6 +1317,8 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               cylinder_insulation_type: "2",
+              mechanical_vent_data_source: nil,
+
             },
           },
           {
@@ -1360,6 +1373,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
+              mechanical_vent_data_source: nil,
             },
           },
           {
@@ -1414,6 +1428,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
+              mechanical_vent_data_source: nil,
             },
           },
           {
@@ -1470,6 +1485,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
+              mechanical_vent_data_source: nil,
             },
           },
           {
@@ -1527,6 +1543,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
+              mechanical_vent_data_source: nil,
             },
           },
           {
@@ -1584,6 +1601,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
+              mechanical_vent_data_source: nil,
             },
           },
           {
@@ -1627,6 +1645,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
+              mechanical_vent_data_source: nil,
             },
           },
         ]
@@ -1689,6 +1708,7 @@ RSpec.describe ViewModel::SapWrapper do
           mains_gas_flag: nil,
           mechanical_ventilation: nil,
           mech_vent_sys_index_number: "500249",
+          mechanical_vent_data_source: "3",
           multi_glaze_proportion: "50",
           number_habitable_rooms: nil,
           number_heated_rooms: nil,
@@ -3451,6 +3471,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "2",
               solar_water_heating_flag: "N",
               transaction_type: "not sale or rental",
+              mechanical_vent_data_source: nil,
             },
           },
           {
@@ -3460,12 +3481,14 @@ RSpec.describe ViewModel::SapWrapper do
               extension_count: nil,
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
+              mechanical_vent_data_source: "1",
             },
           },
           {
             schema: "SAP-Schema-NI-17.1",
             type: "rdsap",
             different_fields: {
+              mechanical_vent_data_source: nil,
               has_cylinder_thermostat: nil,
               mech_vent_sys_index_number: nil,
               built_form: "End-Terrace",
@@ -3501,12 +3524,14 @@ RSpec.describe ViewModel::SapWrapper do
               extension_count: nil,
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
+              mechanical_vent_data_source: "1",
             },
           },
           {
             schema: "SAP-Schema-NI-17.0",
             type: "rdsap",
             different_fields: {
+              mechanical_vent_data_source: nil,
               has_cylinder_thermostat: nil,
               mech_vent_sys_index_number: nil,
               built_form: "End-Terrace",
@@ -3542,6 +3567,7 @@ RSpec.describe ViewModel::SapWrapper do
               extension_count: nil,
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
+              mechanical_vent_data_source: "1",
             },
           },
           {
@@ -3554,12 +3580,14 @@ RSpec.describe ViewModel::SapWrapper do
               multi_glaze_proportion: nil,
               report_type: "3",
               mainheat_description: "Gas boiler",
+              mechanical_vent_data_source: "1",
             },
           },
           {
             schema: "SAP-Schema-NI-16.1",
             type: "rdsap",
             different_fields: {
+              mechanical_vent_data_source: nil,
               cylinder_insul_thickness: "25",
               has_cylinder_thermostat: nil,
               mech_vent_sys_index_number: nil,
@@ -3597,12 +3625,14 @@ RSpec.describe ViewModel::SapWrapper do
               multi_glaze_proportion: nil,
               report_type: "3",
               mainheat_description: "Gas boiler",
+              mechanical_vent_data_source: "1",
             },
           },
           {
             schema: "SAP-Schema-NI-16.0",
             type: "rdsap",
             different_fields: {
+              mechanical_vent_data_source: nil,
               cylinder_insul_thickness: "25",
               has_cylinder_thermostat: nil,
               mech_vent_sys_index_number: nil,
@@ -3641,12 +3671,14 @@ RSpec.describe ViewModel::SapWrapper do
               multi_glaze_proportion: nil,
               report_type: "3",
               mainheat_description: "Gas boiler",
+              mechanical_vent_data_source: "1",
             },
           },
           {
             schema: "SAP-Schema-NI-15.0",
             type: "rdsap",
             different_fields: {
+              mechanical_vent_data_source: nil,
               cylinder_insul_thickness: "25",
               has_cylinder_thermostat: nil,
               mech_vent_sys_index_number: nil,
@@ -3687,12 +3719,14 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "3",
               number_open_fireplaces: "0",
               mainheat_description: "Gas boiler",
+              mechanical_vent_data_source: "1",
             },
           },
           {
             schema: "SAP-Schema-NI-14.2",
             type: "rdsap",
             different_fields: {
+              mechanical_vent_data_source: nil,
               built_form: "End-Terrace",
               has_cylinder_thermostat: nil,
               mech_vent_sys_index_number: nil,
@@ -3740,12 +3774,14 @@ RSpec.describe ViewModel::SapWrapper do
               low_energy_fixed_light_count: "8",
               built_form: "Detached",
               floor_level: "1",
+              mechanical_vent_data_source: "1",
             },
           },
           {
             schema: "SAP-Schema-NI-14.1",
             type: "rdsap",
             different_fields: {
+              mechanical_vent_data_source: nil,
               built_form: "End-Terrace",
               has_cylinder_thermostat: nil,
               mech_vent_sys_index_number: nil,
@@ -3793,12 +3829,14 @@ RSpec.describe ViewModel::SapWrapper do
               low_energy_fixed_light_count: "8",
               built_form: "Detached",
               floor_level: "1",
+              mechanical_vent_data_source: "1",
             },
           },
           {
             schema: "SAP-Schema-NI-14.0",
             type: "rdsap",
             different_fields: {
+              mechanical_vent_data_source: nil,
               built_form: "End-Terrace",
               has_cylinder_thermostat: nil,
               mech_vent_sys_index_number: nil,
@@ -3846,6 +3884,7 @@ RSpec.describe ViewModel::SapWrapper do
               low_energy_fixed_light_count: "8",
               built_form: "Detached",
               floor_level: "1",
+              mechanical_vent_data_source: "1",
             },
           },
           {
@@ -3853,6 +3892,7 @@ RSpec.describe ViewModel::SapWrapper do
             type: "rdsap",
             different_fields: {
               built_form: "End-Terrace",
+              mechanical_vent_data_source: nil,
               has_cylinder_thermostat: nil,
               mech_vent_sys_index_number: nil,
               cylinder_insul_thickness: "25",
@@ -3900,12 +3940,14 @@ RSpec.describe ViewModel::SapWrapper do
               built_form: "Detached",
               floor_level: "1",
               total_floor_area: "98",
+              mechanical_vent_data_source: "1",
             },
           },
           {
             schema: "SAP-Schema-NI-12.0",
             type: "rdsap",
             different_fields: {
+              mechanical_vent_data_source: nil,
               has_cylinder_thermostat: nil,
               mech_vent_sys_index_number: nil,
               built_form: "End-Terrace",
@@ -3964,6 +4006,7 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-NI-11.2",
             type: "rdsap",
             different_fields: {
+              mechanical_vent_data_source: nil,
               cylinder_insul_thickness: "25",
               has_cylinder_thermostat: nil,
               mech_vent_sys_index_number: nil,
@@ -4056,6 +4099,7 @@ RSpec.describe ViewModel::SapWrapper do
           mains_gas_flag: nil,
           mechanical_ventilation: nil,
           mech_vent_sys_index_number: "500249",
+          mechanical_vent_data_source: "3",
           multi_glaze_proportion: "50",
           number_habitable_rooms: nil,
           number_heated_rooms: nil,

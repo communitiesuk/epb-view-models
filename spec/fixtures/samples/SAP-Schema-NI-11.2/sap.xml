@@ -554,6 +554,7 @@
             <SAP05:Ventilation-Type>1</SAP05:Ventilation-Type>
             <SAP05:Mechanical-Vent-Specific-Fan-Power>0.0</SAP05:Mechanical-Vent-Specific-Fan-Power>
             <SAP05:Mechanical-Vent-System-Index-Number>500249</SAP05:Mechanical-Vent-System-Index-Number>
+            <SAP05:Mechanical-Ventilation-Data-Source>3</SAP05:Mechanical-Ventilation-Data-Source>
           </SAP05:SAP-Ventilation>
         </SAP05:SAP-Property-Details>
       </SAP05:SAP05-Data>

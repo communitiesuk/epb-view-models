@@ -315,6 +315,7 @@
         <Sheltered-Sides-Count>3</Sheltered-Sides-Count>
         <Ventilation-Type>8</Ventilation-Type>
         <Mechanical-Vent-System-Index-Number>500249</Mechanical-Vent-System-Index-Number>
+        <Mechanical-Ventilation-Data-Source>3</Mechanical-Ventilation-Data-Source>
       </SAP-Ventilation>
       <SAP-Opening-Types>
         <SAP-Opening-Type>

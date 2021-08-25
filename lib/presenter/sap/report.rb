@@ -141,6 +141,7 @@ module Presenter
               @view_model.report_type,
             ),
           mech_vent_sys_index_number: @view_model.mech_vent_sys_index_number,
+          mechanical_vent_data_source: @view_model.mechanical_vent_data_source,
           multi_glaze_proportion: @view_model.multiple_glazed_proportion,
           number_habitable_rooms: @view_model.habitable_room_count,
           number_heated_rooms: @view_model.heated_room_count,

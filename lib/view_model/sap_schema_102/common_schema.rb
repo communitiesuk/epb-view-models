@@ -506,6 +506,10 @@ module ViewModel
       def mech_vent_sys_index_number
         nil
       end
+
+      def mechanical_vent_data_source
+        nil
+      end
     end
   end
 end
