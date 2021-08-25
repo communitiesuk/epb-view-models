@@ -3413,7 +3413,6 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-NI-17.2",
             type: "rdsap",
             different_fields: {
-              extension_count: nil,
               has_cylinder_thermostat: nil,
               built_form: "End-Terrace",
               co2_emiss_curr_perfloor_area: "56",
@@ -3454,7 +3453,6 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-NI-17.1",
             type: "rdsap",
             different_fields: {
-              extension_count: nil,
               has_cylinder_thermostat: nil,
               built_form: "End-Terrace",
               co2_emiss_curr_perfloor_area: "56",
@@ -3495,7 +3493,6 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-NI-17.0",
             type: "rdsap",
             different_fields: {
-              extension_count: nil,
               has_cylinder_thermostat: nil,
               built_form: "End-Terrace",
               co2_emiss_curr_perfloor_area: "56",
