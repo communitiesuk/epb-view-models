@@ -93,7 +93,6 @@ module ViewModel
         nil
       end
 
-
       def thermal_store
         nil
       end
