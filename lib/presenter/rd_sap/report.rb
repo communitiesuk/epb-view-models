@@ -25,7 +25,7 @@ module Presenter
           address3: @view_model.address_line3,
           built_form:
             Helper::XmlEnumsToOutput.xml_value_to_string(@view_model.built_form),
-          co2_emiss_curr_per_floor_area:
+          co2_emiss_curr_perfloor_area:
             @view_model.co2_emissions_current_per_floor_area,
           co2_emissions_current: @view_model.current_carbon_emission,
           co2_emissions_potential: @view_model.potential_carbon_emission,
@@ -105,7 +105,7 @@ module Presenter
               @view_model.lighting_environmental_efficiency_rating,
             ),
           low_energy_lighting: @view_model.low_energy_lighting,
-          low_energy_fixed_lighting_outlets_count:
+          low_energy_fixed_light_count:
             @view_model.low_energy_fixed_lighting_outlets_count,
           main_fuel:
             Helper::XmlEnumsToOutput.main_fuel_rdsap(@view_model.main_fuel_type),
