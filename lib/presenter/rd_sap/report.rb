@@ -181,6 +181,7 @@ module Presenter
               @view_model.transaction_type,
             ),
           unheated_corridor_length: @view_model.unheated_corridor_length,
+          ventilation_type: nil,
           walls_description: @view_model.all_wall_descriptions.first,
           walls_energy_eff:
             Helper::XmlEnumsToOutput.energy_rating_string(
