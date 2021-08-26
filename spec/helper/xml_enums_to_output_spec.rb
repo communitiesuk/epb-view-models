@@ -654,4 +654,12 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(described_class.cepc_transaction_type("12")).to eq("12")
     end
   end
+
+  context "when the Ventilation Type xml value is passed to the ventilation type enum" do
+    it "and the value is in the lookup, it returns the expected string" do
+      expect(described_class.ventilation_type("1")).to eq("natural with intermittent extract fans")
+      expect(described_class.ventilation_type("5")).to eq("mechanical extract, centralised (MEV c)")
+      expect(described_class.ventilation_type("10")).to eq("natural with intermittent extract fans and passive vents")
+    end
+  end
 end

@@ -227,6 +227,19 @@ module Helper
       "6" => "Voluntary (No legal requirement for an EPC).",
       "7" => "Not recorded.",
     }.freeze
+    VENTILATION_TYPE = {
+      "1" => "natural with intermittent extract fans",
+      "2" => "natural with passive vents",
+      "3" => "positive input from loft",
+      "4" => "positive input from outside",
+      "5" => "mechanical extract, centralised (MEV c)",
+      "6" => "mechanical extract, decentralised (MEV dc)",
+      "7" => "balanced without heat recovery (MV)",
+      "8" => "balanced with heat recovery (MVHR)",
+      "9" => "natural with intermittent extract fans and/or passive vents.  For backwards compatibility only, do not use.",
+      "10" => "natural with intermittent extract fans and passive vents",
+    }
+
 
     def self.xml_value_to_string(number)
       BUILT_FORM[number]
@@ -400,6 +413,10 @@ module Helper
 
     def self.is_sap(report_type)
       report_type == "3"
+    end
+
+    def self.ventilation_type(value)
+      VENTILATION_TYPE[value]
     end
 
     private_class_method :is_rdsap, :is_sap
