@@ -3704,6 +3704,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               cylinder_size: nil,
               cylinder_insulation_type: nil,
+              thermal_store: nil,
             },
           },
           {
@@ -4427,6 +4428,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               mechanical_ventilation: "natural",
               glazed_area: "Normal",
+              thermal_store: nil,
             },
           },
           {
