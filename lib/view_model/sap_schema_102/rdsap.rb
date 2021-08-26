@@ -61,6 +61,10 @@ module ViewModel
       def energy_tariff
         xpath(%w[Meter-Type])
       end
+
+      def has_cylinder_thermostat
+        xpath(%w[Cylinder-Thermostat])
+      end
     end
   end
 end
