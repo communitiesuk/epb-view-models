@@ -278,57 +278,10 @@ RSpec.describe ViewModel::RdSapWrapper do
       let(:schemas) do
         [
           { schema: "RdSAP-Schema-20.0.0" },
-          {
-            schema: "RdSAP-Schema-19.0",
-            different_buried_fields: {
-              address: {
-                address_id: "LPRN-0000000000",
-              },
-            },
-            different_fields: {
-              addendum: {
-                addendum_number: [1],
-              },
-              lzc_energy_sources: [11],
-            },
-          },
-          {
-            schema: "RdSAP-Schema-18.0",
-            different_buried_fields: {
-              address: {
-                address_id: "LPRN-0000000000",
-              },
-            },
-            different_fields: {
-              addendum: {
-                stone_walls: true,
-                system_build: true,
-              },
-              lzc_energy_sources: [11, 12],
-            },
-          },
-          {
-            schema: "RdSAP-Schema-17.1",
-            different_buried_fields: {
-              address: {
-                address_id: "LPRN-0000000000",
-              },
-            },
-            different_fields: {
-              addendum: nil,
-            },
-          },
-          {
-            schema: "RdSAP-Schema-17.0",
-            different_buried_fields: {
-              address: {
-                address_id: "LPRN-0000000000",
-              },
-            },
-            different_fields: {
-              addendum: nil,
-            },
-          },
+          { schema: "RdSAP-Schema-19.0" },
+          { schema: "RdSAP-Schema-18.0" },
+          { schema: "RdSAP-Schema-17.1" },
+          { schema: "RdSAP-Schema-17.0" },
         ]
       end
 
