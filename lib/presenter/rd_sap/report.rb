@@ -33,6 +33,7 @@ module Presenter
             Helper::XmlEnumsToOutput.construction_age_band_lookup(
               @view_model.property_age_band,
               @schema_type,
+              @view_model.report_type,
             ),
           current_energy_efficiency: @view_model.current_energy_rating.to_s.chomp,
           current_energy_rating:
@@ -46,7 +47,10 @@ module Presenter
           energy_consumption_current: @view_model.primary_energy_use,
           energy_consumption_potential: @view_model.energy_consumption_potential,
           energy_tariff:
-            Helper::XmlEnumsToOutput.energy_tariff(@view_model.meter_type),
+            Helper::XmlEnumsToOutput.energy_tariff(
+              @view_model.meter_type,
+              @view_model.report_type,
+            ),
           environment_impact_current: @view_model.environmental_impact_current,
           environment_impact_potential:
             @view_model.environmental_impact_potential,
@@ -130,6 +134,7 @@ module Presenter
             Helper::XmlEnumsToOutput.mechanical_ventilation(
               @view_model.mechanical_ventilation,
               @schema_type,
+              @report_type,
             ),
           mech_vent_sys_index_number: nil,
           mechanical_vent_data_source: nil,
@@ -213,6 +218,7 @@ module Presenter
             Helper::XmlEnumsToOutput.construction_age_band_lookup(
               @view_model.main_dwelling_construction_age_band_or_year,
               @schema_type,
+              @view_model.report_type,
             ),
           current_energy_rating:
             Helper::EnergyBandCalculator.domestic(
@@ -339,13 +345,17 @@ module Presenter
               @view_model.all_wall_env_energy_efficiency_rating.first,
             ),
           energy_tariff:
-            Helper::XmlEnumsToOutput.energy_tariff(@view_model.meter_type),
+            Helper::XmlEnumsToOutput.energy_tariff(
+              @view_model.meter_type,
+              @view_model.report_type,
+            ),
           floor_level: @view_model.floor_level,
           solar_water_heating_flag: @view_model.solar_water_heating_flag,
           mechanical_ventilation:
             Helper::XmlEnumsToOutput.mechanical_ventilation(
               @view_model.mechanical_ventilation,
               @schema_type,
+              @view_model.report_type,
             ),
           floor_height: @view_model.floor_height.first,
           main_fuel:

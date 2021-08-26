@@ -117,6 +117,8 @@ RSpec.shared_context "with common node values" do
       "99" => "Community heating schemes: special fuel",
     }
   end
+  let(:rdsap_report_type) { "2" }
+  let(:sap_report_type) { "3" }
 end
 
 RSpec.describe Helper::XmlEnumsToOutput do
@@ -172,17 +174,23 @@ RSpec.describe Helper::XmlEnumsToOutput do
 
   context "when the Energy-Tariff XML value is passed to the ENERGY_TARIFF enum" do
     it "finds the value in the enum and returns the correct string value" do
-      expect(described_class.energy_tariff("1", 2)).to eq("dual")
-      expect(described_class.energy_tariff("1", 3)).to eq(
+      expect(described_class.energy_tariff("1", rdsap_report_type)).to eq(
+        "dual",
+      )
+      expect(described_class.energy_tariff("1", sap_report_type)).to eq(
         "standard tariff",
       )
-      expect(described_class.energy_tariff("ND", 3)).to eq(
+      expect(described_class.energy_tariff("ND", sap_report_type)).to eq(
         "not applicable",
+      )
+      expect(described_class.energy_tariff("ND", rdsap_report_type)).to eq(
+        "ND",
       )
     end
 
     it "does not find the value in the enum and returns the same value" do
-      expect(described_class.energy_tariff("test")).to eq("test")
+      expect(described_class.energy_tariff("test", rdsap_report_type)).to eq("test")
+      expect(described_class.energy_tariff("test", sap_report_type)).to eq("test")
     end
   end
 
@@ -312,141 +320,249 @@ RSpec.describe Helper::XmlEnumsToOutput do
   end
 
   context "when the Construction-Age-Band xml value is passed to the construction age band enum" do
-    it "and the value is in the lookup, it returns the expected string" do
+    it "returns the expected description for RdSAP exclusive schemas" do
       expect(
         described_class.construction_age_band_lookup(
           "A",
           "RdSAP-Schema-20.0.0",
+          rdsap_report_type,
         ),
       ).to eq("England and Wales: before 1900")
+
       expect(
         described_class.construction_age_band_lookup(
           "B",
           "RdSAP-Schema-18.0",
+          rdsap_report_type,
         ),
       ).to eq("England and Wales: 1900-1929")
+
       expect(
         described_class.construction_age_band_lookup(
           "C",
           "RdSAP-Schema-17.1",
+          rdsap_report_type,
         ),
       ).to eq("England and Wales: 1930-1949")
+    end
+
+    it "returns the expected description for K values" do
       expect(
         described_class.construction_age_band_lookup(
           "K",
           "SAP-Schema-18.0.0",
+          sap_report_type,
         ),
       ).to eq("England and Wales: 2007-2011")
       expect(
         described_class.construction_age_band_lookup(
           "K",
+          "SAP-Schema-18.0.0",
+          rdsap_report_type,
+        ),
+      ).to eq("England and Wales: 2007-2011")
+
+      expect(
+        described_class.construction_age_band_lookup(
+          "K",
           "SAP-Schema-16.3",
+          rdsap_report_type,
         ),
       ).to eq("England and Wales: 2007 onwards")
       expect(
         described_class.construction_age_band_lookup(
           "K",
+          "SAP-Schema-16.3",
+          sap_report_type,
+        ),
+      ).to eq("England and Wales: 2007 onwards")
+
+      expect(
+        described_class.construction_age_band_lookup(
+          "K",
           "SAP-Schema-12.0",
-          2,
+          rdsap_report_type,
         ),
       ).to eq("Post-2006")
       expect(
         described_class.construction_age_band_lookup(
           "K",
           "SAP-Schema-12.0",
-          3,
+          sap_report_type,
         ),
       ).to eq("England and Wales: 2007 onwards")
+
       expect(
         described_class.construction_age_band_lookup(
           "K",
           "SAP-Schema-10.2",
+          rdsap_report_type,
+        ),
+      ).to eq("England and Wales: 2007-2011")
+      expect(
+        described_class.construction_age_band_lookup(
+          "K",
+          "SAP-Schema-10.2",
+          sap_report_type,
+        ),
+      ).to eq("England and Wales: 2007-2011")
+
+      expect(
+        described_class.construction_age_band_lookup(
+          "K",
+          "RdSAP-Schema-20.0.0",
+          rdsap_report_type,
         ),
       ).to eq("England and Wales: 2007-2011")
       expect(
         described_class.construction_age_band_lookup(
           "K",
           "RdSAP-Schema-20.0.0",
+          sap_report_type,
         ),
       ).to eq("England and Wales: 2007-2011")
-      expect(
-        described_class.construction_age_band_lookup(
-          "NR",
-          "SAP-Schema-16.1",
-          2,
-        ),
-      ).to eq("Not recorded")
+    end
+
+    it "returns the expected description for L values" do
       expect(
         described_class.construction_age_band_lookup(
           "L",
           "SAP-Schema-18.0.0",
+          rdsap_report_type,
         ),
       ).to eq("England and Wales: 2012 onwards")
-      expect(
-        described_class.construction_age_band_lookup(
-          "0",
-          "SAP-Schema-16.3",
-          2,
-        ),
-      ).to eq("Not applicable")
-    end
 
-    it "returns the xml value if the entered value is not in the lookup" do
-      expect(
-        described_class.construction_age_band_lookup(
-          "NR",
-          "SAP-Schema-16.0",
-          2,
-        ),
-      ).to eq("NR")
-      expect(
-        described_class.construction_age_band_lookup(
-          "NR",
-          "SAP-Schema-16.3",
-          3,
-        ),
-      ).to eq("NR")
       expect(
         described_class.construction_age_band_lookup(
           "L",
           "SAP-Schema-16.3",
+          rdsap_report_type,
         ),
       ).to eq("L")
       expect(
         described_class.construction_age_band_lookup(
+          "L",
+          "SAP-Schema-16.3",
+          sap_report_type,
+        ),
+      ).to eq("L")
+    end
+
+    it "returns the expected description for NR values" do
+      expect(
+        described_class.construction_age_band_lookup(
+          "NR",
+          "SAP-Schema-16.1",
+          rdsap_report_type,
+        ),
+      ).to eq("Not recorded")
+      expect(
+        described_class.construction_age_band_lookup(
+          "NR",
+          "SAP-Schema-16.1",
+          sap_report_type,
+        ),
+      ).to eq("NR")
+
+      expect(
+        described_class.construction_age_band_lookup(
+          "NR",
+          "SAP-Schema-16.0",
+          rdsap_report_type,
+        ),
+      ).to eq("NR")
+    end
+
+    it "returns the expected description for 0 values" do
+      expect(
+        described_class.construction_age_band_lookup(
           "0",
           "SAP-Schema-17.0",
+          rdsap_report_type,
         ),
       ).to eq("0")
       expect(
         described_class.construction_age_band_lookup(
           "0",
+          "SAP-Schema-17.0",
+          sap_report_type,
+        ),
+      ).to eq("0")
+
+      expect(
+        described_class.construction_age_band_lookup(
+          "0",
           "SAP-Schema-16.3",
-          3,
+          rdsap_report_type,
+        ),
+      ).to eq("Not applicable")
+      expect(
+        described_class.construction_age_band_lookup(
+          "0",
+          "SAP-Schema-16.3",
+          sap_report_type,
+        ),
+      ).to eq("0")
+
+      expect(
+        described_class.construction_age_band_lookup(
+          "0",
+          "SAP-Schema-10.2",
+          rdsap_report_type,
         ),
       ).to eq("0")
       expect(
         described_class.construction_age_band_lookup(
           "0",
           "SAP-Schema-10.2",
+          sap_report_type,
         ),
       ).to eq("0")
+    end
+
+    it "returns the expected description for empty values" do
       expect(
         described_class.construction_age_band_lookup(
           nil,
           "SAP-Schema-18.0.0",
+          rdsap_report_type,
         ),
       ).to be_nil
       expect(
         described_class.construction_age_band_lookup(
+          nil,
+          "SAP-Schema-18.0.0",
+          sap_report_type,
+        ),
+      ).to be_nil
+
+      expect(
+        described_class.construction_age_band_lookup(
           "Any other content",
           "RdSAP-Schema-20.0.0",
+          rdsap_report_type,
         ),
       ).to eq("Any other content")
       expect(
         described_class.construction_age_band_lookup(
+          "Any other content",
+          "RdSAP-Schema-20.0.0",
+          sap_report_type,
+        ),
+      ).to eq("Any other content")
+
+      expect(
+        described_class.construction_age_band_lookup(
           "",
           "RdSAP-Schema-20.0.0",
+          rdsap_report_type,
+        ),
+      ).to be_nil
+      expect(
+        described_class.construction_age_band_lookup(
+          "",
+          "RdSAP-Schema-20.0.0",
+          sap_report_type,
         ),
       ).to be_nil
     end
@@ -483,12 +599,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
         described_class.mechanical_ventilation(
           nil,
           "RdSAP-Schema-20.0.0",
+          rdsap_report_type,
         ),
       ).to be_nil
       expect(
         described_class.mechanical_ventilation(
           "Any other value",
           "RdSAP-Schema-20.0.0",
+          rdsap_report_type,
         ),
       ).to eq("Any other value")
     end
@@ -498,26 +616,28 @@ RSpec.describe Helper::XmlEnumsToOutput do
         described_class.mechanical_ventilation(
           "0",
           "RdSAP-Schema-20.0.0",
+          rdsap_report_type,
         ),
       ).to eq("natural")
       expect(
         described_class.mechanical_ventilation(
           "2",
           "RdSAP-Schema-20.0.0",
+          rdsap_report_type,
         ),
       ).to eq("mechanical, extract only")
       expect(
         described_class.mechanical_ventilation(
           "0",
           "SAP-Schema-11.2",
-          2,
+          rdsap_report_type,
         ),
       ).to eq("none")
       expect(
         described_class.mechanical_ventilation(
           "2",
           "SAP-Schema-11.2",
-          2,
+          rdsap_report_type,
         ),
       ).to eq("mechanical - non recovering")
     end

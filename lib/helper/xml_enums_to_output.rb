@@ -236,12 +236,13 @@ module Helper
       RATINGS[value]
     end
 
-    def self.energy_tariff(value, report_type = "2")
-      case report_type.to_s
-      when "3"
+    def self.energy_tariff(value, report_type)
+      if is_sap(report_type)
         SAP_ENERGY_TARIFF[value] || value
-      when "2"
+      elsif is_rdsap(report_type)
         RDSAP_ENERGY_TARIFF[value] || value
+      else
+        value
       end
     end
 
@@ -266,14 +267,14 @@ module Helper
     end
 
     def self.transaction_type(value, report_type = "2")
-      if report_type.to_s == "2" && value.to_i >= 12
+      if is_rdsap(report_type) && value.to_i >= 12
         TRANSACTION_TYPE["#{value}RdSAP"]
       else
         TRANSACTION_TYPE[value] || value
       end
     end
 
-    def self.construction_age_band_lookup(value, schema_type, report_type = 0)
+    def self.construction_age_band_lookup(value, schema_type, report_type)
       types_of_sap_pre17 = %w[
         SAP-Schema-16.3
         SAP-Schema-16.2
@@ -344,7 +345,7 @@ module Helper
         RdSAP-Schema-NI-17.3
       ]
 
-      if value == "K" && schema_type == "SAP-Schema-12.0" && report_type == 2
+      if value == "K" && schema_type == "SAP-Schema-12.0" && is_rdsap(report_type)
         return CONSTRUCTION_AGE_BAND["K-12.0"]
       end
 
@@ -353,15 +354,14 @@ module Helper
       end
 
       if value == "NR" &&
-          !schemes_that_use_not_recorded.include?(schema_type) ||
-          report_type == 3
+          (!schemes_that_use_not_recorded.include?(schema_type) || is_sap(report_type))
         return value
       end
 
       return value if value == "L" && !schemes_that_use_l.include?(schema_type)
 
-      if value == "0" && !schemes_that_use_0.include?(schema_type) ||
-          report_type == 3
+      if value == "0" &&
+          (!schemes_that_use_0.include?(schema_type) || is_sap(report_type))
         return value
       end
 
@@ -376,14 +376,14 @@ module Helper
       HEAT_LOSS_CORRIDOR[value] || value
     end
 
-    def self.mechanical_ventilation(value, schema_type, report_type = 0)
+    def self.mechanical_ventilation(value, schema_type, report_type)
       types_of_sap_pre12 = %w[
         SAP-Schema-11.2
         SAP-Schema-11.0
         SAP-Schema-10.2
       ].freeze
 
-      if types_of_sap_pre12.include?(schema_type) && report_type == 2
+      if types_of_sap_pre12.include?(schema_type) && is_rdsap(report_type)
         return MECHANICAL_VENTILATION["#{value}-pre12.0"]
       end
 
@@ -393,5 +393,15 @@ module Helper
     def self.cepc_transaction_type(value)
       CEPC_TRANSACTION_TYPE[value] || value
     end
+
+    def self.is_rdsap(report_type)
+      report_type == "2"
+    end
+
+    def self.is_sap(report_type)
+      report_type == "3"
+    end
+
+    private_class_method :is_rdsap, :is_sap
   end
 end
