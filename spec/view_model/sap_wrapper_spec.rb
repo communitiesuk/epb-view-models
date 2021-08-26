@@ -997,6 +997,7 @@ RSpec.describe ViewModel::SapWrapper do
               multi_glaze_proportion: nil,
               report_type: "3",
               mechanical_vent_data_source: "1",
+              thermal_store: "1",
             },
           },
           {
@@ -1030,6 +1031,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
             },
           },
           {
@@ -1042,6 +1044,7 @@ RSpec.describe ViewModel::SapWrapper do
               multi_glaze_proportion: nil,
               report_type: "3",
               mechanical_vent_data_source: "1",
+              thermal_store: "1",
             },
           },
           {
@@ -1075,6 +1078,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
             },
           },
           {
@@ -1087,6 +1091,7 @@ RSpec.describe ViewModel::SapWrapper do
               multi_glaze_proportion: nil,
               report_type: "3",
               mechanical_vent_data_source: "1",
+              thermal_store: "1",
             },
           },
           {
@@ -1120,6 +1125,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
             },
           },
           {
@@ -1132,6 +1138,7 @@ RSpec.describe ViewModel::SapWrapper do
               multi_glaze_proportion: nil,
               report_type: "3",
               mechanical_vent_data_source: "1",
+              thermal_store: "1",
             },
           },
           {
@@ -1166,6 +1173,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
             },
           },
           {
@@ -1178,6 +1186,7 @@ RSpec.describe ViewModel::SapWrapper do
               multi_glaze_proportion: nil,
               report_type: "3",
               mechanical_vent_data_source: "1",
+              thermal_store: "1",
             },
           },
           {
@@ -1212,6 +1221,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
             },
           },
           {
@@ -1225,6 +1235,7 @@ RSpec.describe ViewModel::SapWrapper do
               multi_glaze_proportion: nil,
               report_type: "3",
               mainheat_description: "Gas boiler",
+              thermal_store: "1",
             },
           },
           {
@@ -1261,6 +1272,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
             },
           },
           {
@@ -1281,6 +1293,7 @@ RSpec.describe ViewModel::SapWrapper do
               built_form: "Semi-Detached",
               floor_level: nil,
               cylinder_insulation_type: "1",
+              thermal_store: "1",
             },
           },
           {
@@ -1318,6 +1331,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               cylinder_insulation_type: "2",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
 
             },
           },
@@ -1338,6 +1352,7 @@ RSpec.describe ViewModel::SapWrapper do
               mainheat_description: "Gas boiler",
               floor_level: nil,
               cylinder_insulation_type: "1",
+              thermal_store: "1",
             },
           },
           {
@@ -1374,6 +1389,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
             },
           },
           {
@@ -1393,6 +1409,7 @@ RSpec.describe ViewModel::SapWrapper do
               mainheat_description: "Gas boiler",
               floor_level: nil,
               cylinder_insulation_type: "1",
+              thermal_store: "1",
             },
           },
           {
@@ -1429,6 +1446,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
             },
           },
           {
@@ -1449,6 +1467,7 @@ RSpec.describe ViewModel::SapWrapper do
               floor_level: nil,
               total_floor_area: "98",
               cylinder_insulation_type: "1",
+              thermal_store: "1",
             },
           },
           {
@@ -1486,6 +1505,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
             },
           },
           {
@@ -1507,6 +1527,7 @@ RSpec.describe ViewModel::SapWrapper do
               total_floor_area: "98",
               co2_emiss_curr_perfloor_area: nil,
               cylinder_insulation_type: "1",
+              thermal_store: "1",
             },
           },
           {
@@ -1544,6 +1565,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
             },
           },
           {
@@ -1565,6 +1587,7 @@ RSpec.describe ViewModel::SapWrapper do
               total_floor_area: "98",
               co2_emiss_curr_perfloor_area: nil,
               cylinder_insulation_type: "1",
+              thermal_store: "1",
             },
           },
           {
@@ -1602,6 +1625,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
             },
           },
           {
@@ -1646,6 +1670,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
             },
           },
         ]
@@ -1728,6 +1753,7 @@ RSpec.describe ViewModel::SapWrapper do
           sheating_env_eff: "N/A",
           solar_water_heating_flag: nil,
           tenure: "Owner-occupied",
+          thermal_store: "2",
           total_floor_area: "69",
           transaction_type: "marketed sale",
           unheated_corridor_length: nil,
@@ -1976,6 +2002,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_heated_rooms: "5",
               photo_supply: "0",
               solar_water_heating_flag: "N",
+              thermal_store: nil,
             },
           },
           {
@@ -3482,6 +3509,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               transaction_type: "not sale or rental",
               mechanical_vent_data_source: nil,
+              thermal_store: nil,
             },
           },
           {
@@ -3525,6 +3553,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "2",
               solar_water_heating_flag: "N",
               transaction_type: "not sale or rental",
+              thermal_store: nil,
             },
           },
           {
@@ -3568,6 +3597,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "2",
               solar_water_heating_flag: "N",
               transaction_type: "not sale or rental",
+              thermal_store: nil,
             },
           },
           {
@@ -3623,6 +3653,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_heated_rooms: "5",
               photo_supply: "0",
               solar_water_heating_flag: "N",
+              thermal_store: nil,
             },
           },
           {
@@ -3719,6 +3750,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_heated_rooms: "5",
               photo_supply: "0",
               solar_water_heating_flag: "N",
+              thermal_store: nil,
             },
           },
           {
@@ -3771,6 +3803,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
+              thermal_store: nil,
             },
           },
           {
@@ -3826,6 +3859,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               number_open_fireplaces: "2",
+              thermal_store: nil,
             },
           },
           {
@@ -3881,6 +3915,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               number_open_fireplaces: "2",
+              thermal_store: nil,
             },
           },
           {
@@ -3936,6 +3971,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               number_open_fireplaces: "2",
+              thermal_store: nil,
             },
           },
           {
@@ -3993,6 +4029,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               number_open_fireplaces: "2",
+              thermal_store: nil,
             },
           },
           {
@@ -4051,6 +4088,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
+              thermal_store: nil,
             },
           },
         ]
@@ -4132,6 +4170,7 @@ RSpec.describe ViewModel::SapWrapper do
           sheating_energy_eff: "N/A",
           sheating_env_eff: "N/A",
           solar_water_heating_flag: nil,
+          thermal_store: "1",
           tenure: "Owner-occupied",
           total_floor_area: "69",
           transaction_type: "marketed sale",

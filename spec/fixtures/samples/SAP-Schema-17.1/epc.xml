@@ -211,6 +211,7 @@
 				<Hot-Water-Store-Insulation-Type>2</Hot-Water-Store-Insulation-Type>
 				<Has-Cylinder-Thermostat>true</Has-Cylinder-Thermostat>
 				<Hot-Water-Store-Size>110</Hot-Water-Store-Size>
+				<Thermal-Store>2</Thermal-Store>
 				<Main-Heating-Details>
 					<Main-Heating>
 						<Main-Heating-Number>2</Main-Heating-Number>

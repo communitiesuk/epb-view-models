@@ -578,6 +578,10 @@ module ViewModel
       def mechanical_vent_data_source
         xpath(%w[Mechanical-Ventilation-Data-Source])
       end
+
+      def thermal_store
+        xpath(%w[Thermal-Store])
+      end
     end
   end
 end

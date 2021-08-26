@@ -510,6 +510,10 @@ module ViewModel
       def mechanical_vent_data_source
         nil
       end
+
+      def thermal_store
+        nil
+      end
     end
   end
 end

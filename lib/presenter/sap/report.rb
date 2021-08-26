@@ -177,6 +177,7 @@ module Presenter
               @view_model.secondary_heating_environmental_efficiency_rating,
             ),
           solar_water_heating_flag: @view_model.solar_water_heating_flag,
+          thermal_store: @view_model.thermal_store,
           tenure: Helper::XmlEnumsToOutput.tenure(@view_model.tenure),
           total_floor_area: @view_model.total_floor_area,
           transaction_type:
