@@ -96,7 +96,6 @@ module ViewModel
       def ventilation_type
         nil
       end
-
     end
   end
 end

@@ -238,8 +238,7 @@ module Helper
       "8" => "balanced with heat recovery (MVHR)",
       "9" => "natural with intermittent extract fans and/or passive vents.  For backwards compatibility only, do not use.",
       "10" => "natural with intermittent extract fans and passive vents",
-    }
-
+    }.freeze
 
     def self.xml_value_to_string(number)
       BUILT_FORM[number]

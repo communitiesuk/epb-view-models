@@ -1241,7 +1241,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "3",
               mainheat_description: "Gas boiler",
               thermal_store: "1",
-              ventilation_type: "natural with intermittent extract fans"
+              ventilation_type: "natural with intermittent extract fans",
             },
           },
           {
