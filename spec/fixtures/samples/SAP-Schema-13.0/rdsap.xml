@@ -296,6 +296,7 @@
             <Cylinder-Size>3</Cylinder-Size>
             <Cylinder-Insulation-Type>2</Cylinder-Insulation-Type>
             <Cylinder-Insulation-Thickness>25</Cylinder-Insulation-Thickness>
+            <Cylinder-Thermostat>Y</Cylinder-Thermostat>
             <Main-Heating-Data-Source>2</Main-Heating-Data-Source>
             <SAP-Main-Heating-Code>402</SAP-Main-Heating-Code>
             <Heat-Emitter-Type>0</Heat-Emitter-Type>

@@ -332,6 +332,7 @@
             <HIP:Cylinder-Size>1</HIP:Cylinder-Size>
             <HIP:Cylinder-Insulation-Type>2</HIP:Cylinder-Insulation-Type>
             <HIP:Cylinder-Insulation-Thickness>25</HIP:Cylinder-Insulation-Thickness>
+            <HIP:Cylinder-Thermostat>Y</HIP:Cylinder-Thermostat>
             <HIP:Has-Fixed-Air-Conditioning>false
             </HIP:Has-Fixed-Air-Conditioning>
             <HIP:WWHRS>
