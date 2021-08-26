@@ -1032,6 +1032,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -1079,6 +1080,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -1126,6 +1128,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -1174,6 +1177,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -1222,6 +1226,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -1236,6 +1241,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "3",
               mainheat_description: "Gas boiler",
               thermal_store: "1",
+              ventilation_type: "natural with intermittent extract fans"
             },
           },
           {
@@ -1273,6 +1279,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -1294,6 +1301,7 @@ RSpec.describe ViewModel::SapWrapper do
               floor_level: nil,
               cylinder_insulation_type: "1",
               thermal_store: "1",
+              ventilation_type: "natural with intermittent extract fans",
             },
           },
           {
@@ -1332,7 +1340,7 @@ RSpec.describe ViewModel::SapWrapper do
               cylinder_insulation_type: "2",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
-
+              ventilation_type: nil,
             },
           },
           {
@@ -1353,6 +1361,7 @@ RSpec.describe ViewModel::SapWrapper do
               floor_level: nil,
               cylinder_insulation_type: "1",
               thermal_store: "1",
+              ventilation_type: "natural with intermittent extract fans",
             },
           },
           {
@@ -1390,6 +1399,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -1410,6 +1420,7 @@ RSpec.describe ViewModel::SapWrapper do
               floor_level: nil,
               cylinder_insulation_type: "1",
               thermal_store: "1",
+              ventilation_type: "natural with intermittent extract fans",
             },
           },
           {
@@ -1447,6 +1458,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -1468,6 +1480,7 @@ RSpec.describe ViewModel::SapWrapper do
               total_floor_area: "98",
               cylinder_insulation_type: "1",
               thermal_store: "1",
+              ventilation_type: "natural with intermittent extract fans",
             },
           },
           {
@@ -1506,6 +1519,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -1528,6 +1542,7 @@ RSpec.describe ViewModel::SapWrapper do
               co2_emiss_curr_perfloor_area: nil,
               cylinder_insulation_type: "1",
               thermal_store: "1",
+              ventilation_type: "natural with intermittent extract fans",
             },
           },
           {
@@ -1566,6 +1581,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -1588,6 +1604,7 @@ RSpec.describe ViewModel::SapWrapper do
               co2_emiss_curr_perfloor_area: nil,
               cylinder_insulation_type: "1",
               thermal_store: "1",
+              ventilation_type: "natural with intermittent extract fans",
             },
           },
           {
@@ -1626,6 +1643,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -1671,6 +1689,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
         ]
@@ -1757,6 +1776,7 @@ RSpec.describe ViewModel::SapWrapper do
           total_floor_area: "69",
           transaction_type: "marketed sale",
           unheated_corridor_length: nil,
+          ventilation_type: "balanced with heat recovery (MVHR)",
           walls_description: "Brick walls",
           walls_energy_eff: "N/A",
           walls_env_eff: "N/A",
@@ -3510,6 +3530,7 @@ RSpec.describe ViewModel::SapWrapper do
               transaction_type: "not sale or rental",
               mechanical_vent_data_source: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -3554,6 +3575,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               transaction_type: "not sale or rental",
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -3598,6 +3620,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               transaction_type: "not sale or rental",
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -3621,6 +3644,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "3",
               mainheat_description: "Gas boiler",
               mechanical_vent_data_source: "1",
+
             },
           },
           {
@@ -3654,6 +3678,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -3705,6 +3730,7 @@ RSpec.describe ViewModel::SapWrapper do
               cylinder_size: nil,
               cylinder_insulation_type: nil,
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -3752,6 +3778,7 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -3805,6 +3832,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -3861,6 +3889,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               number_open_fireplaces: "2",
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -3917,6 +3946,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               number_open_fireplaces: "2",
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -3973,6 +4003,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               number_open_fireplaces: "2",
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -4031,6 +4062,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               number_open_fireplaces: "2",
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
           {
@@ -4052,6 +4084,7 @@ RSpec.describe ViewModel::SapWrapper do
               total_floor_area: "98",
               co2_emiss_curr_perfloor_area: nil,
               cylinder_insulation_type: "1",
+              ventilation_type: "natural with intermittent extract fans",
             },
           },
           {
@@ -4090,6 +4123,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
               thermal_store: nil,
+              ventilation_type: nil,
             },
           },
         ]
@@ -4126,6 +4160,7 @@ RSpec.describe ViewModel::SapWrapper do
           floor_level: "1",
           glazed_area: nil,
           glazed_type: nil,
+          has_cylinder_thermostat: "true",
           heat_loss_corridor: nil,
           heating_cost_current: "365.98",
           heating_cost_potential: "250.34",
@@ -4176,6 +4211,7 @@ RSpec.describe ViewModel::SapWrapper do
           total_floor_area: "69",
           transaction_type: "marketed sale",
           unheated_corridor_length: nil,
+          ventilation_type: "balanced with heat recovery (MVHR)",
           walls_description: "Brick walls",
           walls_energy_eff: "N/A",
           walls_env_eff: "N/A",
@@ -4183,7 +4219,7 @@ RSpec.describe ViewModel::SapWrapper do
           windows_description: "Glass window",
           windows_energy_eff: "N/A",
           windows_env_eff: "N/A",
-          has_cylinder_thermostat: "true",
+
         }
       end
 

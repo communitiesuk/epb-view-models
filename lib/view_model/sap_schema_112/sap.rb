@@ -54,6 +54,10 @@ module ViewModel
       def thermal_store
         xpath(%w[Thermal-Store])
       end
+
+      def ventilation_type
+        xpath(%w[Ventilation-Type])
+      end
     end
   end
 end

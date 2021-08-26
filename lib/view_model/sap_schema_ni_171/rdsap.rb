@@ -92,6 +92,11 @@ module ViewModel
       def thermal_store
         nil
       end
+
+      def ventilation_type
+        nil
+      end
+
     end
   end
 end
