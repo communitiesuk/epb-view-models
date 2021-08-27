@@ -586,6 +586,8 @@ module ViewModel
       def ventilation_type
         xpath(%w[Ventilation-Type])
       end
+
+
     end
   end
 end

@@ -506,6 +506,11 @@ module ViewModel
           .search("Property-Summary/Floor/Environmental-Efficiency-Rating")
           .map(&:content)
       end
+
+
+      def water_heating_code
+        xpath(%w[Water-Heating-Code])
+      end
     end
   end
 end

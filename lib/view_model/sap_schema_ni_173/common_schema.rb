@@ -510,6 +510,10 @@ module ViewModel
       def ventilation_type
         xpath(%w[Ventilation-Type])
       end
+
+      def water_heating_code
+        xpath(%w[Water-Heating-Code])
+      end
     end
   end
 end

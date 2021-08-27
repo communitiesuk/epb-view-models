@@ -498,6 +498,10 @@ module ViewModel
           .search("Main-Heating-Controls/Environmental-Efficiency-Rating")
           .map(&:content)
       end
+
+      def water_heating_code
+        xpath(%w[Water-Heating-Code])
+      end
     end
   end
 end

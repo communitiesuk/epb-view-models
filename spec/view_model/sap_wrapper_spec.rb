@@ -998,6 +998,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "3",
               mechanical_vent_data_source: "1",
               thermal_store: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -1033,6 +1034,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -1046,6 +1048,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "3",
               mechanical_vent_data_source: "1",
               thermal_store: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -1081,6 +1084,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -1094,6 +1098,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "3",
               mechanical_vent_data_source: "1",
               thermal_store: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -1129,6 +1134,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -1142,6 +1148,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "3",
               mechanical_vent_data_source: "1",
               thermal_store: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -1178,6 +1185,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -1191,6 +1199,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "3",
               mechanical_vent_data_source: "1",
               thermal_store: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -1227,6 +1236,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -1242,6 +1252,7 @@ RSpec.describe ViewModel::SapWrapper do
               mainheat_description: "Gas boiler",
               thermal_store: "1",
               ventilation_type: "natural with intermittent extract fans",
+              water_heating_code: "901",
             },
           },
           {
@@ -1280,6 +1291,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "903",
             },
           },
           {
@@ -1302,6 +1314,7 @@ RSpec.describe ViewModel::SapWrapper do
               cylinder_insulation_type: "1",
               thermal_store: "1",
               ventilation_type: "natural with intermittent extract fans",
+              water_heating_code: "901",
             },
           },
           {
@@ -1341,6 +1354,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "903",
             },
           },
           {
@@ -1362,6 +1376,7 @@ RSpec.describe ViewModel::SapWrapper do
               cylinder_insulation_type: "1",
               thermal_store: "1",
               ventilation_type: "natural with intermittent extract fans",
+              water_heating_code: "901",
             },
           },
           {
@@ -1400,6 +1415,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "903",
             },
           },
           {
@@ -1421,6 +1437,7 @@ RSpec.describe ViewModel::SapWrapper do
               cylinder_insulation_type: "1",
               thermal_store: "1",
               ventilation_type: "natural with intermittent extract fans",
+              water_heating_code: "901",
             },
           },
           {
@@ -1459,6 +1476,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "903",
             },
           },
           {
@@ -1481,6 +1499,7 @@ RSpec.describe ViewModel::SapWrapper do
               cylinder_insulation_type: "1",
               thermal_store: "1",
               ventilation_type: "natural with intermittent extract fans",
+              water_heating_code: "901",
             },
           },
           {
@@ -1520,6 +1539,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "903",
             },
           },
           {
@@ -1543,6 +1563,7 @@ RSpec.describe ViewModel::SapWrapper do
               cylinder_insulation_type: "1",
               thermal_store: "1",
               ventilation_type: "natural with intermittent extract fans",
+              water_heating_code: "901",
             },
           },
           {
@@ -1582,6 +1603,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "903",
             },
           },
           {
@@ -1605,6 +1627,7 @@ RSpec.describe ViewModel::SapWrapper do
               cylinder_insulation_type: "1",
               thermal_store: "1",
               ventilation_type: "natural with intermittent extract fans",
+              water_heating_code: "901",
             },
           },
           {
@@ -1644,6 +1667,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "903",
             },
           },
           {
@@ -1690,6 +1714,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "903",
             },
           },
         ]
@@ -1780,6 +1805,7 @@ RSpec.describe ViewModel::SapWrapper do
           walls_description: "Brick walls",
           walls_energy_eff: "N/A",
           walls_env_eff: "N/A",
+          water_heating_code: "950",
           wind_turbine_count: "0",
           windows_description: "Glass window",
           windows_energy_eff: "N/A",
@@ -3496,6 +3522,7 @@ RSpec.describe ViewModel::SapWrapper do
               extension_count: nil,
               construction_age_band: "England and Wales: 2007-2011",
               multi_glaze_proportion: nil,
+              water_heating_code: "999",
             },
           },
           {
@@ -3531,6 +3558,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -3541,6 +3569,7 @@ RSpec.describe ViewModel::SapWrapper do
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
               mechanical_vent_data_source: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -3576,6 +3605,7 @@ RSpec.describe ViewModel::SapWrapper do
               transaction_type: "not sale or rental",
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -3586,6 +3616,7 @@ RSpec.describe ViewModel::SapWrapper do
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
               mechanical_vent_data_source: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -3621,6 +3652,7 @@ RSpec.describe ViewModel::SapWrapper do
               transaction_type: "not sale or rental",
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -3631,6 +3663,7 @@ RSpec.describe ViewModel::SapWrapper do
               environment_impact_potential: "93",
               multi_glaze_proportion: nil,
               mechanical_vent_data_source: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -3644,6 +3677,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "3",
               mainheat_description: "Gas boiler",
               mechanical_vent_data_source: "1",
+              water_heating_code: "901",
 
             },
           },
@@ -3679,6 +3713,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -3694,6 +3729,7 @@ RSpec.describe ViewModel::SapWrapper do
               mechanical_vent_data_source: "1",
               cylinder_size: nil,
               cylinder_insulation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -3731,6 +3767,7 @@ RSpec.describe ViewModel::SapWrapper do
               cylinder_insulation_type: nil,
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -3744,6 +3781,7 @@ RSpec.describe ViewModel::SapWrapper do
               report_type: "3",
               mainheat_description: "Gas boiler",
               mechanical_vent_data_source: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -3779,6 +3817,7 @@ RSpec.describe ViewModel::SapWrapper do
               solar_water_heating_flag: "N",
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -3794,6 +3833,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_open_fireplaces: "0",
               mainheat_description: "Gas boiler",
               mechanical_vent_data_source: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -3833,6 +3873,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -3851,6 +3892,7 @@ RSpec.describe ViewModel::SapWrapper do
               built_form: "Detached",
               floor_level: "1",
               mechanical_vent_data_source: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -3890,6 +3932,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_open_fireplaces: "2",
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -3908,6 +3951,7 @@ RSpec.describe ViewModel::SapWrapper do
               built_form: "Detached",
               floor_level: "1",
               mechanical_vent_data_source: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -3947,6 +3991,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_open_fireplaces: "2",
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -3965,6 +4010,7 @@ RSpec.describe ViewModel::SapWrapper do
               built_form: "Detached",
               floor_level: "1",
               mechanical_vent_data_source: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -4004,6 +4050,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_open_fireplaces: "2",
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -4023,6 +4070,7 @@ RSpec.describe ViewModel::SapWrapper do
               floor_level: "1",
               total_floor_area: "98",
               mechanical_vent_data_source: "1",
+              water_heating_code: "901",
             },
           },
           {
@@ -4063,6 +4111,7 @@ RSpec.describe ViewModel::SapWrapper do
               number_open_fireplaces: "2",
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "901",
             },
           },
           {
@@ -4085,6 +4134,7 @@ RSpec.describe ViewModel::SapWrapper do
               co2_emiss_curr_perfloor_area: nil,
               cylinder_insulation_type: "1",
               ventilation_type: "natural with intermittent extract fans",
+              water_heating_code: "901",
             },
           },
           {
@@ -4124,6 +4174,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               thermal_store: nil,
               ventilation_type: nil,
+              water_heating_code: "903",
             },
           },
         ]
@@ -4215,6 +4266,7 @@ RSpec.describe ViewModel::SapWrapper do
           walls_description: "Brick walls",
           walls_energy_eff: "N/A",
           walls_env_eff: "N/A",
+          water_heating_code: "906",
           wind_turbine_count: "0",
           windows_description: "Glass window",
           windows_energy_eff: "N/A",
