@@ -582,6 +582,8 @@ module ViewModel
       def has_cylinder_thermostat
         xpath(%w[Cylinder-Thermostat])
       end
+
+
     end
   end
 end

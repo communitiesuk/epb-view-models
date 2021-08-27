@@ -530,6 +530,10 @@ module ViewModel
       def has_cylinder_thermostat
         xpath(%w[Cylinder-Thermostat])
       end
+
+      def water_heating_code
+        xpath(%w[Water-Heating-Code])
+      end
     end
   end
 end
