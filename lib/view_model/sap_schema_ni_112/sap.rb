@@ -32,6 +32,10 @@ module ViewModel
       def ventilation_type
         xpath(%w[Ventilation-Type])
       end
+
+      def water_heating_fuel
+        xpath(%w[Water-Fuel-Type])
+      end
     end
   end
 end

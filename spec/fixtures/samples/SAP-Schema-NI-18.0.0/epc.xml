@@ -208,6 +208,7 @@
     <SAP-Property-Details>
       <SAP-Heating>
         <Water-Heating-Code>906</Water-Heating-Code>
+        <Water-Fuel-Type>1</Water-Fuel-Type>
         <Secondary-Heating-Category>1</Secondary-Heating-Category>
         <Hot-Water-Store-Insulation-Thickness>40</Hot-Water-Store-Insulation-Thickness>
         <Hot-Water-Store-Insulation-Type>2</Hot-Water-Store-Insulation-Type>

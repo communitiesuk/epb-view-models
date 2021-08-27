@@ -216,7 +216,7 @@
       <Additional-Allowable-Electricity-Generation>10</Additional-Allowable-Electricity-Generation>
       <SAP-Heating>
         <Water-Heating-Code>950</Water-Heating-Code>
-        <Water-Fuel-Type>99</Water-Fuel-Type>
+        <Water-Fuel-Type>1</Water-Fuel-Type>
         <Has-Hot-Water-Cylinder>false</Has-Hot-Water-Cylinder>
         <Secondary-Heating-Category>1</Secondary-Heating-Category>
         <Secondary-Heating-Data-Source>3</Secondary-Heating-Data-Source>

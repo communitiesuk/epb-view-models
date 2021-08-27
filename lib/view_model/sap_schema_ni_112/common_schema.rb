@@ -235,10 +235,6 @@ module ViewModel
         xpath(%w[Secondary-Fuel-Type])
       end
 
-      def water_heating_fuel
-        xpath(%w[Water-Fuel-Type])
-      end
-
       def type_of_assessment
         case xpath(%w[Report-Type]).to_i
         when 1

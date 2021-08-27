@@ -110,6 +110,10 @@ module ViewModel
         nil
       end
 
+      def water_heating_fuel
+        xpath(%w[Water-Heating-Fuel])
+      end
+
       def ventilation_type
         nil
       end
