@@ -192,6 +192,7 @@ module Presenter
               @view_model.all_wall_env_energy_efficiency_rating.first,
             ),
           water_heating_code: @view_model.water_heating_code,
+          water_heating_fuel: @view_model.water_heating_fuel,
           wind_turbine_count: @view_model.wind_turbine_count,
           windows_description: @view_model.window_description,
           windows_energy_eff:
