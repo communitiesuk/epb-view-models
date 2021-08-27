@@ -661,5 +661,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(described_class.ventilation_type("5")).to eq("mechanical extract, centralised (MEV c)")
       expect(described_class.ventilation_type("10")).to eq("natural with intermittent extract fans and passive vents")
     end
+
+    it 'returns the default value for 9' do
+      expect(described_class.ventilation_type("9")).to eq("natural with intermittent extract fans and/or passive vents.  For backwards compatibility only, do not use.")
+    end
+
+    it 'returns a truncated version of 9 for SAP-NI schemas' do
+      expect(described_class.ventilation_type("9", "SAP-Schema-NI-16.1")).to eq("natural with intermittent extract fans and/or passive vents")
+      expect(described_class.ventilation_type("9", "SAP-Schema-NI-13.0")).to eq("natural with intermittent extract fans and/or passive vents")
+    end
   end
 end

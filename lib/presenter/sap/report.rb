@@ -185,7 +185,7 @@ module Presenter
               @view_model.transaction_type,
               @view_model.report_type,
             ),
-          ventilation_type: Helper::XmlEnumsToOutput.ventilation_type(@view_model.ventilation_type),
+          ventilation_type: Helper::XmlEnumsToOutput.ventilation_type(@view_model.ventilation_type, @schema_type),
           unheated_corridor_length: @view_model.unheated_corridor_length,
           water_heating_code: @view_model.water_heating_code,
           walls_description: @view_model.all_wall_descriptions.first,
