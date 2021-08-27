@@ -240,8 +240,6 @@ module Helper
       "10" => "natural with intermittent extract fans and passive vents",
     }.freeze
 
-
-
     def self.xml_value_to_string(number)
       BUILT_FORM[number]
     end
@@ -427,11 +425,10 @@ module Helper
         SAP-Schema-NI-13.0
       ].freeze
 
-
       if ni_sap.include?(schema_type) && value == "9"
         VENTILATION_TYPE[value].split(".").first
-        else
-          VENTILATION_TYPE[value]
+      else
+        VENTILATION_TYPE[value]
       end
     end
 
