@@ -487,7 +487,6 @@ module ViewModel
           .map(&:content)
       end
 
-
       def water_heating_code
         xpath(%w[Water-Heating-Code])
       end
