@@ -192,7 +192,7 @@ module Presenter
               @view_model.all_wall_env_energy_efficiency_rating.first,
             ),
           water_heating_code: @view_model.water_heating_code,
-            wind_turbine_count: @view_model.wind_turbine_count,
+          wind_turbine_count: @view_model.wind_turbine_count,
           windows_description: @view_model.window_description,
           windows_energy_eff:
             Helper::XmlEnumsToOutput.energy_rating_string(
@@ -202,7 +202,6 @@ module Presenter
             Helper::XmlEnumsToOutput.energy_rating_string(
               @view_model.window_environmental_efficiency_rating,
             ),
-
 
         }
       end
