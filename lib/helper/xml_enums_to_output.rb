@@ -240,6 +240,17 @@ module Helper
       "10" => "natural with intermittent extract fans and passive vents",
     }.freeze
 
+    CYLINDER_INSULATION_THICKNESS = {
+      "12" => "12 mm",
+      "25" => "25 mm",
+      "38" => "38 mm",
+      "50" => "50 mm",
+      "80" => "80 mm",
+      "120" => "120 mm",
+      "160" => "160 mm",
+
+    }.freeze
+
     def self.xml_value_to_string(number)
       BUILT_FORM[number]
     end
@@ -404,6 +415,14 @@ module Helper
 
     def self.cepc_transaction_type(value)
       CEPC_TRANSACTION_TYPE[value] || value
+    end
+
+    def self.cylinder_insulation_thickness(value, report_type = "2")
+      if is_rdsap(report_type)
+        CYLINDER_INSULATION_THICKNESS[value]
+      else
+        value
+      end
     end
 
     def self.is_rdsap(report_type)

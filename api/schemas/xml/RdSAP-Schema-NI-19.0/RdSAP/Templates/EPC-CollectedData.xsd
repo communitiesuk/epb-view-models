@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.epbniregister.com/xsd/rdsap" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.epbniregister.com/xsd/rdsap" elementFormDefault="qualified" attributeFormDefault="unqualified" version="LIG-NI-19.0">
+<xs:schema xmlns="http://www.epbniregister.com/xsd/rdsap" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://www.epbniregister.com/xsd/rdsap" elementFormDefault="qualified" attributeFormDefault="unqualified" version="LIG-NI-19.0">
 	<xs:include schemaLocation="../UDT/SAP-Domains.xsd"/>
 	<xs:element name="SAP-Data" type="SAP-Data"/>
 	<xs:complexType name="SAP-Data">
@@ -17,7 +18,7 @@
 				<xs:annotation>
 					<xs:documentation>The building type of the Property e.g. Detached, Semi-Detached, Terrace etc.
 
-Together with the Property Type, the Build Form produces a structured description of the property.</xs:documentation>
+						Together with the Property Type, the Build Form produces a structured description of the property.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Multiple-Glazed-Proportion" type="Percentage" minOccurs="0">
@@ -48,9 +49,9 @@ Together with the Property Type, the Build Form produces a structured descriptio
 			</xs:element>
 			<xs:element name="Habitable-Room-Count" type="Count">
 				<xs:annotation>
-					<xs:documentation>Count of the number of habitable rooms within the property. 
+					<xs:documentation>Count of the number of habitable rooms within the property.
 
-This is the number of Reception Rooms (including Living Rooms, Sitting Rooms, Dining Rooms), Bedrooms, Study and similar rooms but excludes hall, stairs, kitchen, utility rooms, bathrooms, cloakrooms, en-suites and similar rooms.</xs:documentation>
+						This is the number of Reception Rooms (including Living Rooms, Sitting Rooms, Dining Rooms), Bedrooms, Study and similar rooms but excludes hall, stairs, kitchen, utility rooms, bathrooms, cloakrooms, en-suites and similar rooms.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Heated-Room-Count" type="Count">
@@ -82,14 +83,14 @@ This is the number of Reception Rooms (including Living Rooms, Sitting Rooms, Di
 				<xs:annotation>
 					<xs:documentation>The number of Open Fireplaces in the Property.
 
-An Open Fireplace is a fireplace that still allows air to pass between the inside of the Property and the outside.</xs:documentation>
+						An Open Fireplace is a fireplace that still allows air to pass between the inside of the Property and the outside.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Property-Type" type="PropertyTypeCode">
 				<xs:annotation>
 					<xs:documentation>Describes the type of property such as House, Flat, Mansion, Maisonette etc.
 
-This is actually the type differentiator for Property but only a limited number of property types, notably Apartment and Apartment Block, have any specific characteristics and warrant their own definition.</xs:documentation>
+						This is actually the type differentiator for Property but only a limited number of property types, notably Apartment and Apartment Block, have any specific characteristics and warrant their own definition.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Solar-Water-Heating" type="Flag">
@@ -191,8 +192,8 @@ This is actually the type differentiator for Property but only a limited number 
 		<xs:annotation>
 			<xs:documentation>Details of the significant building parts that comprise the main habitable building in the property. The main habitable area generally consists of a single main building but can over time be extended to include extensions such as new wings and additional storeys.
 
-For the purpose of calculating the overall Energy Assessment for the property details of each distinct Building Part, such as its construction, have to be gathered because different materials have different insulation ratings (obviously) which affects the overall rating.
-</xs:documentation>
+				For the purpose of calculating the overall Energy Assessment for the property details of each distinct Building Part, such as its construction, have to be gathered because different materials have different insulation ratings (obviously) which affects the overall rating.
+			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="SAP-Integral-Conservatory" type="SAP-Integral-Conservatory" minOccurs="0"/>
@@ -564,7 +565,7 @@ For the purpose of calculating the overall Energy Assessment for the property de
 	<xs:complexType name="SAP-Deselected-Improvements">
 		<xs:annotation>
 			<xs:documentation>There are 22 possible improvement measures, designated from A to V. This must record measures deselected by DEA
-(A to V is the full set, only E, N, U and V are considered at the moment for new build).</xs:documentation>
+				(A to V is the full set, only E, N, U and V are considered at the moment for new build).</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Deselected-Improvement-Measure" type="SAP-ImprovementMeasureCode" maxOccurs="unbounded"/>
@@ -674,7 +675,7 @@ For the purpose of calculating the overall Energy Assessment for the property de
 						<xs:element name="Emitter-Temperature" type="EmitterTemperatureCode" minOccurs="0">
 							<xs:annotation>
 								<xs:documentation>0, 1, 3 or 4 applicable to condensing boilers and heat pumps.
-Other systems NA.</xs:documentation>
+									Other systems NA.</xs:documentation>
 							</xs:annotation>
 						</xs:element>
 						<xs:element name="MCS-Installed-Heat-Pump" type="xs:boolean" minOccurs="0">
@@ -716,7 +717,7 @@ Other systems NA.</xs:documentation>
 			<xs:element name="Peak-Power" type="Measurement">
 				<xs:annotation>
 					<xs:documentation>Peak kW of photovoltaics (PVs) (kWp).
-If the total peak power has been apportioned between different dwellings within the same building, this is the kWp ascribed to the dwelling being assessed.</xs:documentation>
+						If the total peak power has been apportioned between different dwellings within the same building, this is the kWp ascribed to the dwelling being assessed.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Orientation" type="SAP-CompassDirectionCode">

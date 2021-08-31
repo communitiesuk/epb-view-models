@@ -258,8 +258,8 @@
         <Water-Heating-Fuel>26</Water-Heating-Fuel>
         <Immersion-Heating-Type>NA</Immersion-Heating-Type>
         <Cylinder-Size>1</Cylinder-Size>
-        <Cylinder-Insulation-Thickness>12</Cylinder-Insulation-Thickness>
          <Cylinder-Insulation-Type>1</Cylinder-Insulation-Type>
+        <Cylinder-Insulation-Thickness>12</Cylinder-Insulation-Thickness>
         <Cylinder-Thermostat>Y</Cylinder-Thermostat>
         <Has-Fixed-Air-Conditioning>false</Has-Fixed-Air-Conditioning>
         <Instantaneous-WWHRS>
