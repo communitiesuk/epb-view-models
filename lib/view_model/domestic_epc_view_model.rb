@@ -50,6 +50,10 @@ module ViewModel
       Time.parse(date_of_expiry) < Time.now ? "EXPIRED" : "ENTERED"
     end
 
+    def water_heating_code
+      xpath(%w[Water-Heating-Code])
+    end
+
   private
 
     def fetch_addendum_numbers

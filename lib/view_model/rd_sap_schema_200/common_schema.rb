@@ -346,10 +346,6 @@ module ViewModel
         xpath(%w[Floor-Heat-Loss])
       end
 
-      def water_heating_code
-        xpath(%w[Water-Heating-Code])
-      end
-
       def immersion_heating_type
         xpath(%w[Immersion-Heating-Type])
       end

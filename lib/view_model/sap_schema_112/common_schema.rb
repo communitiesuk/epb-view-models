@@ -503,10 +503,6 @@ module ViewModel
         end
         nil
       end
-
-      def water_heating_code
-        xpath(%w[Water-Heating-Code])
-      end
     end
   end
 end
