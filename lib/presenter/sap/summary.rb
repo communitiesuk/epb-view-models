@@ -150,7 +150,7 @@ module Presenter
           wind_turbine_count: @view_model.wind_turbine_count,
           unheated_corridor_length: @view_model.unheated_corridor_length,
           built_form:
-            Helper::XmlEnumsToOutput.xml_value_to_string(@view_model.built_form),
+            Helper::XmlEnumsToOutput.built_form_string(@view_model.built_form),
           mainheat_description:
             @view_model.all_main_heating_descriptions.join(", "),
           extensions_count:

@@ -7,7 +7,7 @@ module Presenter::Export
       view[:assessment_id] = @view_model.assessment_id
       view[:assessor] = assessor
       view[:built_form] =
-        enum_value(:xml_value_to_string, @view_model.built_form)
+        enum_value(:built_form_string, @view_model.built_form)
       view[:co2_emissions_current_per_floor_area] =
         @view_model.co2_emissions_current_per_floor_area.to_i
       view[:construction_age_band] =

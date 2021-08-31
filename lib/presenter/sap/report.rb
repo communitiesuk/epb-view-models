@@ -24,7 +24,7 @@ module Presenter
           address2: @view_model.address_line2,
           address3: @view_model.address_line3,
           built_form:
-            Helper::XmlEnumsToOutput.xml_value_to_string(@view_model.built_form),
+            Helper::XmlEnumsToOutput.built_form_string(@view_model.built_form),
           co2_emiss_curr_perfloor_area:
             @view_model.co2_emissions_current_per_floor_area,
           co2_emissions_current: @view_model.current_carbon_emission,
@@ -320,7 +320,7 @@ module Presenter
             ),
           photo_supply: @view_model.photovoltaic_roof_area_percent,
           built_form:
-            Helper::XmlEnumsToOutput.xml_value_to_string(@view_model.built_form),
+            Helper::XmlEnumsToOutput.built_form_string(@view_model.built_form),
           mainheat_description:
             @view_model.all_main_heating_descriptions.join(", "),
           report_type: @view_model.report_type,

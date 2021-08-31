@@ -251,7 +251,7 @@ module Helper
 
     }.freeze
 
-    def self.xml_value_to_string(number)
+    def self.built_form_string(number)
       BUILT_FORM[number]
     end
 

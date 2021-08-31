@@ -129,7 +129,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
   context "when a Built-Form XML value is passed to the BUILT_FORM enum" do
     context "and the XML does not have the specified node" do
       it "returns nil for Open Data Communities" do
-        response = helper.xml_value_to_string(nil)
+        response = helper.built_form_string(nil)
         expect(response).to be_nil
       end
     end
@@ -137,19 +137,19 @@ RSpec.describe Helper::XmlEnumsToOutput do
     context "when the XML does have the specified node" do
       it "returns the string when you pass as the argument" do
         enum_built_form.each do |key, value|
-          response = helper.xml_value_to_string(key)
+          response = helper.built_form_string(key)
           expect(response).to eq(value)
         end
       end
     end
 
     it "returns nil for any other value outside of the enum given a hash" do
-      response = helper.xml_value_to_string({ "hello": 20 })
+      response = helper.built_form_string({ "hello": 20 })
       expect(response).to be_nil
     end
 
     it "returns nil for any other value outside of the enum given a string" do
-      response = helper.xml_value_to_string("Any other value")
+      response = helper.built_form_string("Any other value")
       expect(response).to be_nil
     end
   end
