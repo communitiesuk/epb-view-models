@@ -404,9 +404,10 @@ module Helper
         SAP-Schema-11.2
         SAP-Schema-11.0
         SAP-Schema-10.2
+        SAP-Schema-NI-11.2
       ].freeze
 
-      if types_of_sap_pre12.include?(schema_type) && is_rdsap(report_type)
+      if types_of_sap_pre12.include?(schema_type.to_s) && is_rdsap(report_type)
         return MECHANICAL_VENTILATION["#{value}-pre12.0"]
       end
 

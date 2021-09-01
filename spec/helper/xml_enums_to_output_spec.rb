@@ -640,6 +640,13 @@ RSpec.describe Helper::XmlEnumsToOutput do
           rdsap_report_type,
         ),
       ).to eq("mechanical - non recovering")
+      expect(
+        described_class.mechanical_ventilation(
+          "0",
+          "SAP-Schema-NI-11.2",
+          rdsap_report_type,
+          ),
+        ).to eq("none")
     end
   end
 
