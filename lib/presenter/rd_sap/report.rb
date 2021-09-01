@@ -134,7 +134,7 @@ module Presenter
             Helper::XmlEnumsToOutput.mechanical_ventilation(
               @view_model.mechanical_ventilation,
               @schema_type,
-              @report_type,
+              @view_model.report_type,
             ),
           mech_vent_sys_index_number: nil,
           mechanical_vent_data_source: nil,

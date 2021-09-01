@@ -3,7 +3,7 @@ require "active_support/core_ext/hash/deep_merge"
 
 RSpec.describe ViewModel::SapWrapper do
   it "returns the expect error without a valid schema type" do
-    expect { described_class.new "", "invalid" }.to raise_error(
+    expect { described_class.new "", "invalid".to_sym }.to raise_error(
       ArgumentError,
     ).with_message "Unsupported schema type"
   end
@@ -11,29 +11,20 @@ RSpec.describe ViewModel::SapWrapper do
   context "when general schemas are parsed" do
     context "when parsing a HCR report" do
       it "raises an error with SAP-16.3" do
-        xml = Nokogiri.XML Samples.xml "SAP-Schema-16.3", "sap"
-        xml.xpath("//*[local-name() = 'Report-Type']").first.content = "1"
-
         expect {
-          described_class.new xml.to_s, "SAP-Schema-16.3"
+          described_class.new "", :"SAP-Schema-16.3", "1"
         }.to raise_error(ArgumentError).with_message "Unsupported schema type"
       end
 
       it "raises an error with SAP-16.2" do
-        xml = Nokogiri.XML Samples.xml "SAP-Schema-16.2", "sap"
-        xml.xpath("//*[local-name() = 'Report-Type']").first.content = "1"
-
         expect {
-          described_class.new xml.to_s, "SAP-Schema-16.2"
+          described_class.new "", :"SAP-Schema-16.2", "1"
         }.to raise_error(ArgumentError).with_message "Unsupported schema type"
       end
 
       it "raises an error with SAP-16.1" do
-        xml = Nokogiri.XML Samples.xml "SAP-Schema-16.1", "sap"
-        xml.xpath("//*[local-name() = 'Report-Type']").first.content = "1"
-
         expect {
-          described_class.new(xml.to_s, "SAP-Schema-16.1")
+          described_class.new "", :"SAP-Schema-16.1", "1"
         }.to raise_error(ArgumentError).with_message "Unsupported schema type"
       end
     end

@@ -645,8 +645,8 @@ RSpec.describe Helper::XmlEnumsToOutput do
           "0",
           "SAP-Schema-NI-11.2",
           rdsap_report_type,
-          ),
-        ).to eq("none")
+        ),
+      ).to eq("none")
     end
   end
 
