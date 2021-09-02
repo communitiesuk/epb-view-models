@@ -39,5 +39,24 @@ module Helper
         "g"
       end
     end
+
+    def self.dec(number)
+      case number
+      when proc { |n| n <= 25 }
+        "a"
+      when 26..50
+        "b"
+      when 51..75
+        "c"
+      when 76..100
+        "d"
+      when 101..125
+        "e"
+      when 126..150
+        "f"
+      else
+        "g"
+      end
+    end
   end
 end
