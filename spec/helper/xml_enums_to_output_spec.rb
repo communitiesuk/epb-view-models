@@ -662,6 +662,25 @@ RSpec.describe Helper::XmlEnumsToOutput do
     end
   end
 
+  context "when the Cylinder-Insulation-Thickness/Hot-Water-Store-Insulation-Thickness xml value is passed to the cylinder_insulation_thickness enum" do
+    it "does not find a value in the enum and returns nil if RdSAP or value if SAP" do
+      expect(described_class.cylinder_insulation_thickness(nil)).to be_nil
+      expect(
+        described_class.cylinder_insulation_thickness("Any other value", "3"),
+        ).to eq("Any other value")
+    end
+
+    it "and the Cylinder-Insulation-Thickness value is in the lookup, it returns the expected string" do
+      expect(described_class.cylinder_insulation_thickness("25")).to eq("25 mm")
+      expect(described_class.cylinder_insulation_thickness("160")).to eq("160 mm")
+    end
+
+    it "and the Hot-Water-Store-Insulation-Thickness value is in the lookup, it returns the expected string" do
+      expect(described_class.cylinder_insulation_thickness("25", "3")).to eq("25")
+      expect(described_class.cylinder_insulation_thickness("160", "3")).to eq("160")
+    end
+  end
+
   context "when the Ventilation Type xml value is passed to the ventilation type enum" do
     it "and the value is in the lookup, it returns the expected string" do
       expect(described_class.ventilation_type("1")).to eq("natural with intermittent extract fans")
@@ -705,7 +724,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
     end
 
     it "and the value is nil, it returns nil" do
-      expect(described_class.water_heating_fuel(nil, "SAP-Schema-16.3".to_sym, "3")).to eq(nil)
+      expect(described_class.water_heating_fuel(nil, "SAP-Schema-16.3".to_sym, "3")).to be_nil
     end
 
   end
