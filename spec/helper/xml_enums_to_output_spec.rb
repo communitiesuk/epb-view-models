@@ -678,4 +678,35 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(described_class.ventilation_type("9", "SAP-Schema-NI-13.0")).to eq("natural with intermittent extract fans and/or passive vents")
     end
   end
+
+  context "when the Water-Heating-Fuel/Water-Fuel-Type xml value is passed to the water heating fuel enum" do
+    it "and the value for Water-Heating-Fuel is in the RdSAP schema, it returns the expected string" do
+      expect(described_class.water_heating_fuel("2", "RdSAP-Schema-20.0.0".to_sym)).to eq("LPG - this is for backwards compatibility only and should not be used")
+      expect(described_class.water_heating_fuel("7", "RdSAP-Schema-18.0".to_sym)).to eq("bulk wood pellets")
+      expect(described_class.water_heating_fuel("7", "RdSAP-Schema-NI-17.3".to_sym)).to eq("bulk wood pellets")
+    end
+
+    it "and the value for Water-Fuel-Type is in the SAP schema, it returns the expected string" do
+      expect(described_class.water_heating_fuel("7", "SAP-Schema-17.0".to_sym, "3")).to eq("Gas: biogas")
+      expect(described_class.water_heating_fuel("1", "SAP-Schema-16.3".to_sym, "3")).to eq("Gas: mains gas")
+      expect(described_class.water_heating_fuel("1", "SAP-Schema-NI-18.0.0".to_sym, "3")).to eq("Gas: mains gas")
+    end
+
+    it "and the value for Water-Heating-Fuel is in the SAP schema, and it is an RdSAP report_type, it returns the expected string" do
+      expect(described_class.water_heating_fuel("1", "SAP-Schema-15.0".to_sym, "2")).to eq("mains gas - this is for backwards compatibility only and should not be used")
+      expect(described_class.water_heating_fuel("4", "SAP-Schema-15.0".to_sym, "2")).to eq("oil - this is for backwards compatibility only and should not be used")
+      expect(described_class.water_heating_fuel("4", "SAP-Schema-NI-15.0".to_sym, "2")).to eq("oil - this is for backwards compatibility only and should not be used")
+    end
+
+    it "and the value for Water-Heating-Fuel is in the SAP Schema 14.2 and older, and it is an RdSAP report_type" do
+      expect(described_class.water_heating_fuel("1", "SAP-Schema-14.2".to_sym, "2")).to eq("mains gas")
+      expect(described_class.water_heating_fuel("4", "SAP-Schema-13.0".to_sym, "2")).to eq("oil")
+      expect(described_class.water_heating_fuel("4", "SAP-Schema-NI-13.0".to_sym, "2")).to eq("oil")
+    end
+
+    it "and the value is nil, it returns nil" do
+      expect(described_class.water_heating_fuel(nil, "SAP-Schema-16.3".to_sym, "3")).to eq(nil)
+    end
+
+  end
 end

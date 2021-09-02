@@ -197,7 +197,11 @@ module Presenter
             Helper::XmlEnumsToOutput.energy_rating_string(
               @view_model.all_wall_env_energy_efficiency_rating.first,
             ),
-          water_heating_fuel: @view_model.water_heating_fuel,
+          water_heating_fuel: Helper::XmlEnumsToOutput.water_heating_fuel(
+            @view_model.water_heating_fuel,
+            @schema_type,
+            @view_model.report_type,
+            ),
           wind_turbine_count: @view_model.wind_turbine_count,
           windows_description: @view_model.window_description,
           windows_energy_eff:

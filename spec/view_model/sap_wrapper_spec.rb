@@ -1026,7 +1026,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "26",
+              water_heating_fuel: "mains gas (not community)",
             },
           },
           {
@@ -1077,7 +1077,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "26",
+              water_heating_fuel: "mains gas (not community)",
             },
           },
           {
@@ -1128,7 +1128,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "26",
+              water_heating_fuel: "mains gas (not community)",
             },
           },
           {
@@ -1180,7 +1180,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "26",
+              water_heating_fuel: "mains gas (not community)",
             },
           },
           {
@@ -1232,7 +1232,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "26",
+              water_heating_fuel: "mains gas (not community)",
             },
           },
           {
@@ -1288,7 +1288,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "903",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
             },
           },
           {
@@ -1352,7 +1352,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "903",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
 
             },
           },
@@ -1415,7 +1415,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "903",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
             },
           },
           {
@@ -1477,7 +1477,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "903",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
             },
           },
           {
@@ -1541,7 +1541,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "903",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
             },
           },
           {
@@ -1606,7 +1606,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "903",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
             },
           },
           {
@@ -1671,7 +1671,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "903",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
             },
           },
           {
@@ -1719,7 +1719,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "903",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
             },
           },
         ]
@@ -1811,7 +1811,7 @@ RSpec.describe ViewModel::SapWrapper do
           walls_energy_eff: "N/A",
           walls_env_eff: "N/A",
           water_heating_code: "950",
-          water_heating_fuel: "1",
+          water_heating_fuel: "Gas: mains gas",
           wind_turbine_count: "0",
           windows_description: "Glass window",
           windows_energy_eff: "N/A",
@@ -3565,7 +3565,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "26",
+              water_heating_fuel: "mains gas (not community)",
             },
           },
           {
@@ -3613,7 +3613,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "26",
+              water_heating_fuel: "mains gas (not community)",
             },
           },
           {
@@ -3661,7 +3661,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "26",
+              water_heating_fuel: "mains gas (not community)",
             },
           },
           {
@@ -3723,7 +3723,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "26",
+              water_heating_fuel: "mains gas (not community)",
             },
           },
           {
@@ -3778,7 +3778,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "26",
+              water_heating_fuel: "mains gas (not community)",
             },
           },
           {
@@ -3829,7 +3829,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "26",
+              water_heating_fuel: "mains gas (not community)",
             },
           },
           {
@@ -3886,7 +3886,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
             },
           },
           {
@@ -3946,7 +3946,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
             },
           },
           {
@@ -4006,7 +4006,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
             },
           },
           {
@@ -4066,7 +4066,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
             },
           },
           {
@@ -4128,7 +4128,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "901",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
             },
           },
           {
@@ -4192,7 +4192,7 @@ RSpec.describe ViewModel::SapWrapper do
               thermal_store: nil,
               ventilation_type: nil,
               water_heating_code: "903",
-              water_heating_fuel: "10",
+              water_heating_fuel: "electricity",
             },
           },
         ]
@@ -4285,7 +4285,7 @@ RSpec.describe ViewModel::SapWrapper do
           walls_energy_eff: "N/A",
           walls_env_eff: "N/A",
           water_heating_code: "906",
-          water_heating_fuel: "1",
+          water_heating_fuel: "Gas: mains gas",
           wind_turbine_count: "0",
           windows_description: "Glass window",
           windows_energy_eff: "N/A",
