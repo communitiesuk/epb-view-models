@@ -251,27 +251,19 @@ module Helper
     RDSAP_WATER_HEATING_FUEL = {
       "0" => "To be used only when there is no heating/hot-water system or data is from a community network",
       "1" => "mains gas - this is for backwards compatibility only and should not be used",
-      "1-pre14.2-sap" => "mains gas",
       "2" => "LPG - this is for backwards compatibility only and should not be used",
-      "2-pre14.2-sap" => "LPG",
       "3" => "bottled LPG",
       "4" => "oil - this is for backwards compatibility only and should not be used",
-      "4-pre14.2-sap" => "oil",
       "5" => "anthracite",
       "6" => "wood logs",
       "7" => "bulk wood pellets",
       "8" => "wood chips" ,
       "9" => "dual fuel - mineral + wood",
       "10" => "electricity - this is for backwards compatibility only and should not be used",
-      "10-pre14.2-sap" => "electricity",
       "11" => "waste combustion - this is for backwards compatibility only and should not be used",
-      "11-pre14.2-sap" => "waste combustion",
       "12" => "biomass - this is for backwards compatibility only and should not be used",
-      "12-pre14.2-sap" => "biomass",
       "13" => "biogas - landfill - this is for backwards compatibility only and should not be used",
-      "13-pre14.2-sap" => "biogas - landfill",
       "14" => "house coal - this is for backwards compatibility only and should not be used",
-      "14-pre14.2-sap" => "house coal",
       "15" => "smokeless coal",
       "16" => "wood pellets in bags for secondary heating",
       "17" => "LPG special condition",
@@ -300,6 +292,15 @@ module Helper
       "57" => "heat from boilers using biodiesel from any biomass source (community)",
       "58" => "biodiesel from vegetable oil only (community)",
       "99" => "from heat network data (community)"
+    }.freeze
+    RDSAP_WATER_HEATING_FUEL_PRE_143 = {
+      "1-pre14.3-sap" => "mains gas",
+      "4-pre14.3-sap" => "oil",
+      "10-pre14.3-sap" => "electricity",
+      "11-pre14.3-sap" => "waste combustion",
+      "12-pre14.3-sap" => "biomass",
+      "13-pre14.3-sap" => "biogas - landfill",
+      "14-pre14.3-sap" => "house coal",
     }.freeze
     SAP_WATER_HEATING_FUEL = {
       "1" => "Gas: mains gas",
@@ -618,7 +619,7 @@ module Helper
         SAP_WATER_HEATING_FUEL[value]
       elsif sap.include?(schema_type) && is_rdsap(report_type)
         if pre143_sap.include?(schema_type)
-          RDSAP_WATER_HEATING_FUEL["#{value}-pre14.2-sap"]
+          RDSAP_WATER_HEATING_FUEL_PRE_143["#{value}-pre14.3-sap"] || RDSAP_WATER_HEATING_FUEL[value]
         else
         RDSAP_WATER_HEATING_FUEL[value]
         end

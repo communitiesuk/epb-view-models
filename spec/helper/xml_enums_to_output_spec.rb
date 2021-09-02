@@ -720,6 +720,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
     it "and the value for Water-Heating-Fuel is in the SAP Schema 14.2 and older, and it is an RdSAP report_type" do
       expect(described_class.water_heating_fuel("1", "SAP-Schema-14.2".to_sym, "2")).to eq("mains gas")
       expect(described_class.water_heating_fuel("4", "SAP-Schema-13.0".to_sym, "2")).to eq("oil")
+      expect(described_class.water_heating_fuel("5", "SAP-Schema-13.0".to_sym, "2")).to eq("anthracite")
       expect(described_class.water_heating_fuel("4", "SAP-Schema-NI-13.0".to_sym, "2")).to eq("oil")
     end
 
