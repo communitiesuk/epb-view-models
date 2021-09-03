@@ -15,6 +15,7 @@ module Helper
       "4" => "Mid-Terrace",
       "5" => "Enclosed End-Terrace",
       "6" => "Enclosed Mid-Terrace",
+      "7" => "Linked Detached",
       "NR" => "Not Recorded",
     }.freeze
     SAP_ENERGY_TARIFF = {
@@ -168,6 +169,7 @@ module Helper
       "4" =>
         "rental (private) - this is for backwards compatibility only and should not be used",
       "5" => "not sale or rental",
+      "ni_5" => "None of the above",
       "6" => "new dwelling",
       "7" =>
         "not recorded - this is for backwards compatibility only and should not be used",
@@ -257,7 +259,7 @@ module Helper
       "5" => "anthracite",
       "6" => "wood logs",
       "7" => "bulk wood pellets",
-      "8" => "wood chips" ,
+      "8" => "wood chips",
       "9" => "dual fuel - mineral + wood",
       "10" => "electricity - this is for backwards compatibility only and should not be used",
       "11" => "waste combustion - this is for backwards compatibility only and should not be used",
@@ -291,7 +293,7 @@ module Helper
       "56" => "heat from boilers that can use mineral oil or biodiesel (community)",
       "57" => "heat from boilers using biodiesel from any biomass source (community)",
       "58" => "biodiesel from vegetable oil only (community)",
-      "99" => "from heat network data (community)"
+      "99" => "from heat network data (community)",
     }.freeze
     RDSAP_WATER_HEATING_FUEL_PRE_143 = {
       "1-pre14.3-sap" => "mains gas",
@@ -344,7 +346,7 @@ module Helper
       "74" => "appliances able to use mineral oil or liquid biofuel",
       "75" => "B30K",
       "76" => "bioethanol from any biomass source",
-      "99" => "Community heating schemes: special fuel"
+      "99" => "Community heating schemes: special fuel",
     }.freeze
 
     def self.built_form_string(number)
@@ -385,9 +387,26 @@ module Helper
       TENURE[value] || value
     end
 
-    def self.transaction_type(value, report_type = "2")
+    def self.transaction_type(value, report_type = "2", schema_type = "")
+      types_of_ni = %w[
+        RdSAP-Schema-NI-20.0.0
+        RdSAP-Schema-NI-19.0
+        RdSAP-Schema-NI-18.0
+        RdSAP-Schema-NI-17.4
+        RdSAP-Schema-NI-17.3
+        SAP-Schema-NI-16.1
+        SAP-Schema-NI-17.0
+        SAP-Schema-NI-17.1
+        SAP-Schema-NI-17.2
+        SAP-Schema-NI-17.3
+        SAP-Schema-NI-17.4
+        SAP-Schema-NI-18.0.0
+      ]
+
       if is_rdsap(report_type) && value.to_i >= 12
         TRANSACTION_TYPE["#{value}RdSAP"]
+      elsif types_of_ni.include?(schema_type) && value.to_i == 5
+        TRANSACTION_TYPE["ni_5"]
       else
         TRANSACTION_TYPE[value] || value
       end
@@ -621,7 +640,7 @@ module Helper
         if pre143_sap.include?(schema_type)
           RDSAP_WATER_HEATING_FUEL_PRE_143["#{value}-pre14.3-sap"] || RDSAP_WATER_HEATING_FUEL[value]
         else
-        RDSAP_WATER_HEATING_FUEL[value]
+          RDSAP_WATER_HEATING_FUEL[value]
         end
       end
     end

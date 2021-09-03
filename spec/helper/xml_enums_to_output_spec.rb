@@ -309,6 +309,8 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(described_class.transaction_type("3", "3")).to eq(
         "rental (social) - this is for backwards compatibility only and should not be used",
       )
+
+      expect(described_class.transaction_type("5", "2")).to eq("not sale or rental")
       expect(described_class.transaction_type("12", "3")).to eq(
         "Stock condition survey",
       )
@@ -316,6 +318,13 @@ RSpec.describe Helper::XmlEnumsToOutput do
         "RHI application",
       )
       expect(described_class.transaction_type("13", "3")).to eq("13")
+
+      # expect(described_class.transaction_type("5", "2",  "RdSAP-Schema-NI-20.0.0")).to eq("None of the above")
+    end
+
+    it "return the divergent value for 5 for some types of NI schemas" do
+      expect(described_class.transaction_type("5", "2", "RdSAP-Schema-NI-20.0.0")).to eq("None of the above")
+      expect(described_class.transaction_type("5", "3", "SAP-Schema-NI-17.0")).to eq("None of the above")
     end
   end
 
@@ -667,7 +676,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(described_class.cylinder_insulation_thickness(nil)).to be_nil
       expect(
         described_class.cylinder_insulation_thickness("Any other value", "3"),
-        ).to eq("Any other value")
+      ).to eq("Any other value")
     end
 
     it "and the Cylinder-Insulation-Thickness value is in the lookup, it returns the expected string" do
@@ -727,6 +736,5 @@ RSpec.describe Helper::XmlEnumsToOutput do
     it "and the value is nil, it returns nil" do
       expect(described_class.water_heating_fuel(nil, "SAP-Schema-16.3".to_sym, "3")).to be_nil
     end
-
   end
 end

@@ -184,6 +184,7 @@ module Presenter
             Helper::XmlEnumsToOutput.transaction_type(
               @view_model.transaction_type,
               @view_model.report_type,
+              @schema_type,
             ),
           ventilation_type: Helper::XmlEnumsToOutput.ventilation_type(@view_model.ventilation_type, @schema_type),
           unheated_corridor_length: @view_model.unheated_corridor_length,
@@ -201,7 +202,7 @@ module Presenter
             @view_model.water_heating_fuel,
             @schema_type,
             @view_model.report_type,
-            ),
+          ),
           wind_turbine_count: @view_model.wind_turbine_count,
           windows_description: @view_model.window_description,
           windows_energy_eff:

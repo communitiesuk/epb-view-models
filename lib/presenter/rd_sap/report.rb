@@ -179,6 +179,8 @@ module Presenter
           transaction_type:
             Helper::XmlEnumsToOutput.transaction_type(
               @view_model.transaction_type,
+              @view_model.report_type,
+              @schema_type,
             ),
           unheated_corridor_length: @view_model.unheated_corridor_length,
           ventilation_type: nil,
