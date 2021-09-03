@@ -10,7 +10,7 @@ RSpec.shared_context "with common node values" do
       "NR" => "Not Recorded",
     }
   end
-  let(:enum_rdsap_main_fuel) do
+  let(:enum_rdsap_fuel_type) do
     {
       "0" =>
         "To be used only when there is no heating/hot-water system or data is from a community network",
@@ -68,7 +68,7 @@ RSpec.shared_context "with common node values" do
       "99" => "from heat network data (community)",
     }
   end
-  let(:enum_sap_main_fuel) do
+  let(:enum_sap_fuel_type) do
     {
       "1" => "Gas: mains gas",
       "2" => "Gas: bulk LPG",
@@ -194,41 +194,44 @@ RSpec.describe Helper::XmlEnumsToOutput do
     end
   end
 
-  context "when the Main-Fuel-Type XML value is passed to the RDSAP_MAIN_FUEL enum" do
+  context "when the Main-Fuel-Type XML value is passed to the RDSAP_FUEL_TYPE enum" do
     it "does not find a value in the enum and returns nil" do
-      expect(described_class.main_fuel_rdsap(nil)).to be_nil
-      expect(described_class.main_fuel_rdsap("hello")).to be_nil
+      expect(described_class.fuel_type(nil, :"SAP-Schema-16.3", rdsap_report_type )).to be_nil
+      expect(described_class.fuel_type("hello", :"SAP-Schema-16.3", rdsap_report_type)).to be_nil
     end
 
     it "returns nil if the value is not the correct type" do
-      expect(described_class.main_fuel_rdsap({ "hello": 1 })).to be_nil
-      expect(described_class.main_fuel_rdsap(1)).to be_nil
+      expect(described_class.fuel_type("100", :"SAP-Schema-16.3", "2")).to be_nil
+      expect(described_class.fuel_type(1)).to be_nil
     end
 
-    it "and the value is in the lookup it return the expected string" do
-      enum_rdsap_main_fuel.each do |key, value|
-        response = helper.main_fuel_rdsap(key)
+    it "returns rapeseed oil if the schema is  is not the correct type" do
+      expect(described_class.fuel_type("36", :"SAP-Schema-16.3", "2")).to eq("rapeseed oil")
+    end
+
+    it "and the value is in the lookup it returns the expected string" do
+      enum_rdsap_fuel_type.each do |key, value|
+        response = helper.fuel_type(key, :"SAP-Schema-17.0")
         expect(response).to eq(value)
       end
     end
   end
 
-  context "when the Main-Fuel-Type XML value is passed to the SAP_MAIN_FUEL enum" do
+  context "when the Main-Fuel-Type XML value is passed to the SAP_FUEL_TYPE enum" do
     it "does not find a value in the enum and returns nil" do
-      expect(described_class.main_fuel_sap(nil)).to be_nil
+      expect(described_class.fuel_type(nil)).to be_nil
       expect(
-        described_class.main_fuel_sap("any other value"),
-      ).to be_nil
+        described_class.fuel_type("any other value", :"SAP-Schema-16.3", sap_report_type)).to be_nil
     end
 
     it "returns nil if the value is not the correct type" do
-      expect(described_class.main_fuel_sap({ "hello": 1 })).to be_nil
-      expect(described_class.main_fuel_sap(1)).to be_nil
+      expect(described_class.fuel_type("100", :"SAP-Schema-16.3", "3")).to be_nil
+      expect(described_class.fuel_type(1)).to be_nil
     end
 
     it "and the value is in the lookup it return the expected string" do
-      enum_sap_main_fuel.each do |key, value|
-        response = helper.main_fuel_sap(key)
+      enum_sap_fuel_type.each do |key, value|
+        response = helper.fuel_type(key, :"SAP-Schema-16.3", "3")
         expect(response).to eq(value)
       end
     end
@@ -709,32 +712,32 @@ RSpec.describe Helper::XmlEnumsToOutput do
 
   context "when the Water-Heating-Fuel/Water-Fuel-Type xml value is passed to the water heating fuel enum" do
     it "and the value for Water-Heating-Fuel is in the RdSAP schema, it returns the expected string" do
-      expect(described_class.water_heating_fuel("2", "RdSAP-Schema-20.0.0".to_sym)).to eq("LPG - this is for backwards compatibility only and should not be used")
-      expect(described_class.water_heating_fuel("7", "RdSAP-Schema-18.0".to_sym)).to eq("bulk wood pellets")
-      expect(described_class.water_heating_fuel("7", "RdSAP-Schema-NI-17.3".to_sym)).to eq("bulk wood pellets")
+      expect(described_class.fuel_type("2", "RdSAP-Schema-20.0.0".to_sym)).to eq("LPG - this is for backwards compatibility only and should not be used")
+      expect(described_class.fuel_type("7", "RdSAP-Schema-18.0".to_sym)).to eq("bulk wood pellets")
+      expect(described_class.fuel_type("7", "RdSAP-Schema-NI-17.3".to_sym)).to eq("bulk wood pellets")
     end
 
     it "and the value for Water-Fuel-Type is in the SAP schema, it returns the expected string" do
-      expect(described_class.water_heating_fuel("7", "SAP-Schema-17.0".to_sym, "3")).to eq("Gas: biogas")
-      expect(described_class.water_heating_fuel("1", "SAP-Schema-16.3".to_sym, "3")).to eq("Gas: mains gas")
-      expect(described_class.water_heating_fuel("1", "SAP-Schema-NI-18.0.0".to_sym, "3")).to eq("Gas: mains gas")
+      expect(described_class.fuel_type("7", "SAP-Schema-17.0".to_sym, "3")).to eq("Gas: biogas")
+      expect(described_class.fuel_type("1", "SAP-Schema-16.3".to_sym, "3")).to eq("Gas: mains gas")
+      expect(described_class.fuel_type("1", "SAP-Schema-NI-18.0.0".to_sym, "3")).to eq("Gas: mains gas")
     end
 
     it "and the value for Water-Heating-Fuel is in the SAP schema, and it is an RdSAP report_type, it returns the expected string" do
-      expect(described_class.water_heating_fuel("1", "SAP-Schema-15.0".to_sym, "2")).to eq("mains gas - this is for backwards compatibility only and should not be used")
-      expect(described_class.water_heating_fuel("4", "SAP-Schema-15.0".to_sym, "2")).to eq("oil - this is for backwards compatibility only and should not be used")
-      expect(described_class.water_heating_fuel("4", "SAP-Schema-NI-15.0".to_sym, "2")).to eq("oil - this is for backwards compatibility only and should not be used")
+      expect(described_class.fuel_type("1", "SAP-Schema-15.0".to_sym, "2")).to eq("mains gas - this is for backwards compatibility only and should not be used")
+      expect(described_class.fuel_type("4", "SAP-Schema-15.0".to_sym, "2")).to eq("oil - this is for backwards compatibility only and should not be used")
+      expect(described_class.fuel_type("4", "SAP-Schema-NI-15.0".to_sym, "2")).to eq("oil - this is for backwards compatibility only and should not be used")
     end
 
     it "and the value for Water-Heating-Fuel is in the SAP Schema 14.2 and older, and it is an RdSAP report_type" do
-      expect(described_class.water_heating_fuel("1", "SAP-Schema-14.2".to_sym, "2")).to eq("mains gas")
-      expect(described_class.water_heating_fuel("4", "SAP-Schema-13.0".to_sym, "2")).to eq("oil")
-      expect(described_class.water_heating_fuel("5", "SAP-Schema-13.0".to_sym, "2")).to eq("anthracite")
-      expect(described_class.water_heating_fuel("4", "SAP-Schema-NI-13.0".to_sym, "2")).to eq("oil")
+      expect(described_class.fuel_type("1", "SAP-Schema-14.2".to_sym, "2")).to eq("mains gas")
+      expect(described_class.fuel_type("4", "SAP-Schema-13.0".to_sym, "2")).to eq("oil")
+      expect(described_class.fuel_type("5", "SAP-Schema-13.0".to_sym, "2")).to eq("anthracite")
+      expect(described_class.fuel_type("4", "SAP-Schema-NI-13.0".to_sym, "2")).to eq("oil")
     end
 
     it "and the value is nil, it returns nil" do
-      expect(described_class.water_heating_fuel(nil, "SAP-Schema-16.3".to_sym, "3")).to be_nil
+      expect(described_class.fuel_type(nil, "SAP-Schema-16.3".to_sym, "3")).to be_nil
     end
   end
 end

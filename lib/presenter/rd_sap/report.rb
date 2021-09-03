@@ -108,7 +108,9 @@ module Presenter
           low_energy_fixed_light_count:
             @view_model.low_energy_fixed_lighting_outlets_count,
           main_fuel:
-            Helper::XmlEnumsToOutput.main_fuel_rdsap(@view_model.main_fuel_type),
+            Helper::XmlEnumsToOutput.fuel_type(@view_model.main_fuel_type,
+                                               @schema_type,
+                                               @view_model.report_type,),
           mainheat_description:
             @view_model.all_main_heating_descriptions.join(", "),
           mainheat_energy_eff:
@@ -194,7 +196,7 @@ module Presenter
               @view_model.all_wall_env_energy_efficiency_rating.first,
             ),
           water_heating_code: @view_model.water_heating_code,
-          water_heating_fuel: Helper::XmlEnumsToOutput.water_heating_fuel(
+          water_heating_fuel: Helper::XmlEnumsToOutput.fuel_type(
             @view_model.water_heating_fuel,
             @schema_type,
             @view_model.report_type,
@@ -368,7 +370,9 @@ module Presenter
             ),
           floor_height: @view_model.floor_height.first,
           main_fuel:
-            Helper::XmlEnumsToOutput.main_fuel_rdsap(@view_model.main_fuel_type),
+            Helper::XmlEnumsToOutput.fuel_type(@view_model.main_fuel_type,
+                                               @schema_type,
+                                               @view_model.report_type,),
           floor_description: @view_model.all_floor_descriptions.first,
           floor_energy_eff:
             Helper::XmlEnumsToOutput.energy_rating_string(
