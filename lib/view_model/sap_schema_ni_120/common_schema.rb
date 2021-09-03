@@ -186,7 +186,7 @@ module ViewModel
       end
 
       def tenure
-        xpath(%w[Tenure])
+        nil
       end
 
       def transaction_type
