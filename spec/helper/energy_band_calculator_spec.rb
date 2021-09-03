@@ -11,11 +11,13 @@ RSpec.describe "Helper::EnergyBandCalculator" do
     it "returns a band of A+ for a rating of -1" do
       expect(Helper::EnergyBandCalculator.commercial(-1)).to eq "a+"
     end
-  end
 
-  context "when calculating a DEC operational rating" do
-    it "returns a band of A for a rating of -1" do
-      expect(Helper::EnergyBandCalculator.dec(-1)).to eq "a"
+    it "returns a band of A for a rating of 0" do
+      expect(Helper::EnergyBandCalculator.commercial(0)).to eq "a"
+    end
+
+    it "returns a band of B for a rating of 50" do
+      expect(Helper::EnergyBandCalculator.commercial(50)).to eq "b"
     end
   end
 end

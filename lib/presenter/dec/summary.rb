@@ -30,7 +30,7 @@ module Presenter
             date: @view_model.current_assessment_date,
             energy_efficiency_rating: @view_model.energy_efficiency_rating,
             energy_efficiency_band:
-              Helper::EnergyBandCalculator.dec(
+              Helper::EnergyBandCalculator.commercial(
                 @view_model.energy_efficiency_rating.to_i,
               ),
             heating_co2: @view_model.current_heating_co2,
