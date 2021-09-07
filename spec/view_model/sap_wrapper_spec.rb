@@ -1666,7 +1666,7 @@ RSpec.describe ViewModel::SapWrapper do
               energy_tariff: "Single",
               mechanical_ventilation: "none",
               floor_height: "2.45",
-              main_fuel: "Solid fuel: dual fuel appliance (mineral and wood)",
+              main_fuel: "electricity",
               number_habitable_rooms: "4",
               number_heated_rooms: "4",
               photo_supply: "0",
@@ -1677,7 +1677,6 @@ RSpec.describe ViewModel::SapWrapper do
               ventilation_type: nil,
               water_heating_code: "903",
               water_heating_fuel: "electricity",
-              main_fuel: "electricity",
             },
           },
           {
@@ -2103,7 +2102,7 @@ RSpec.describe ViewModel::SapWrapper do
               heat_loss_corridor: "no corridor",
               mainheat_description: "Gas boiler",
               extension_count: "0",
-              main_fuel: "Solid fuel: dual fuel appliance (mineral and wood)",
+              main_fuel: "electricity",
               glazed_area: "Normal",
               glazed_type: "double glazing installed during or after 2002",
               number_habitable_rooms: "4",
@@ -2111,7 +2110,6 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
-              main_fuel: "electricity",
             },
           },
           {
@@ -2155,7 +2153,7 @@ RSpec.describe ViewModel::SapWrapper do
               heat_loss_corridor: "no corridor",
               mainheat_description: "Gas boiler",
               extension_count: "0",
-              main_fuel: "Solid fuel: dual fuel appliance (mineral and wood)",
+              main_fuel: "electricity",
               glazed_area: "Normal",
               glazed_type: "double glazing installed during or after 2002",
               number_habitable_rooms: "4",
@@ -2163,7 +2161,6 @@ RSpec.describe ViewModel::SapWrapper do
               photo_supply: "0",
               solar_water_heating_flag: "N",
               flat_storey_count: "3",
-              main_fuel: "electricity",
             },
           },
           {
@@ -4735,7 +4732,7 @@ RSpec.describe ViewModel::SapWrapper do
               floor_level: nil,
               floor_height: "2.45",
               extension_count: "1",
-              main_fuel: "Solid fuel: dual fuel appliance (mineral and wood)",
+              main_fuel: "electricity",
               glazed_type: "double glazing installed during or after 2002",
               number_habitable_rooms: "5",
               number_heated_rooms: "5",
@@ -4745,7 +4742,6 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               glazed_area: "Normal",
               heat_loss_corridor: "no corridor",
-              main_fuel: "electricity",
             },
           },
           {
@@ -4783,7 +4779,7 @@ RSpec.describe ViewModel::SapWrapper do
               floor_level: nil,
               floor_height: "2.45",
               extension_count: "1",
-              main_fuel: "Solid fuel: dual fuel appliance (mineral and wood)",
+              main_fuel: "electricity",
               glazed_type: "double glazing installed during or after 2002",
               number_habitable_rooms: "5",
               number_heated_rooms: "5",
@@ -4793,7 +4789,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               glazed_area: "Normal",
               heat_loss_corridor: "no corridor",
-              main_fuel: "electricity",
+
             },
           },
           {
@@ -4833,7 +4829,7 @@ RSpec.describe ViewModel::SapWrapper do
               floor_level: nil,
               floor_height: "2.45",
               extension_count: "1",
-              main_fuel: "Solid fuel: dual fuel appliance (mineral and wood)",
+              main_fuel: "electricity",
               glazed_type: "double glazing installed during or after 2002",
               number_habitable_rooms: "5",
               number_heated_rooms: "5",
@@ -4843,7 +4839,7 @@ RSpec.describe ViewModel::SapWrapper do
               flat_storey_count: "3",
               glazed_area: "Normal",
               heat_loss_corridor: "no corridor",
-              main_fuel: "electricity",
+
             },
           },
           {
