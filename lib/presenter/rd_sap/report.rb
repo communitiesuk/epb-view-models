@@ -25,7 +25,7 @@ module Presenter
           address3: @view_model.address_line3,
           built_form:
             Helper::XmlEnumsToOutput.built_form_string(@view_model.built_form),
-          co2_emiss_curr_perfloor_area:
+          co2_emiss_curr_per_floor_area:
             @view_model.co2_emissions_current_per_floor_area,
           co2_emissions_current: @view_model.current_carbon_emission,
           co2_emissions_potential: @view_model.potential_carbon_emission,
@@ -101,16 +101,13 @@ module Presenter
               @view_model.lighting_energy_efficiency_rating,
             ),
           lighting_env_eff:
-            Helper::XmlEnumsToOutput.energy_rating_string(
-              @view_model.lighting_environmental_efficiency_rating,
-            ),
+            Helper::XmlEnumsToOutput.energy_rating_string(@view_model.lighting_environmental_efficiency_rating),
           low_energy_lighting: @view_model.low_energy_lighting,
-          low_energy_fixed_light_count:
+          low_energy_fixed_lighting_count:
             @view_model.low_energy_fixed_lighting_outlets_count,
-          main_fuel:
-            Helper::XmlEnumsToOutput.fuel_type(@view_model.main_fuel_type,
-                                               @schema_type,
-                                               @view_model.report_type,),
+          main_fuel: Helper::XmlEnumsToOutput.fuel_type(@view_model.main_fuel_type,
+                                                        @schema_type,
+                                                        @view_model.report_type),
           mainheat_description:
             @view_model.all_main_heating_descriptions.join(", "),
           mainheat_energy_eff:
@@ -372,7 +369,7 @@ module Presenter
           main_fuel:
             Helper::XmlEnumsToOutput.fuel_type(@view_model.main_fuel_type,
                                                @schema_type,
-                                               @view_model.report_type,),
+                                               @view_model.report_type),
           floor_description: @view_model.all_floor_descriptions.first,
           floor_energy_eff:
             Helper::XmlEnumsToOutput.energy_rating_string(
