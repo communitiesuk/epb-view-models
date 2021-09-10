@@ -40,7 +40,7 @@ module Presenter
             Helper::EnergyBandCalculator.domestic(
               @view_model.current_energy_rating,
             ),
-          cylinder_insul_thickness: Helper::XmlEnumsToOutput.cylinder_insulation_thickness(@view_model.cylinder_insul_thickness),
+          cylinder_insul_thickness: @view_model.cylinder_insul_thickness,
           cylinder_insulation_type: @view_model.cylinder_insulation_type,
           cylinder_size: @view_model.cylinder_size,
           has_cylinder_thermostat: @view_model.has_cylinder_thermostat == "Y" ? "true" : "false",

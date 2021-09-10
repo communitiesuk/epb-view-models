@@ -322,7 +322,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       )
       expect(described_class.transaction_type("13", "3")).to eq("13")
 
-      # expect(described_class.transaction_type("5", "2",  "RdSAP-Schema-NI-20.0.0")).to eq("None of the above")
+      expect(described_class.transaction_type("5", "2", "RdSAP-Schema-NI-20.0.0")).to eq("None of the above")
     end
 
     it "return the divergent value for 5 for some types of NI schemas" do
