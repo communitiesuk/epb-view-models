@@ -97,6 +97,34 @@ module Helper
       "0" => "Not applicable",
       "NR" => "Not recorded",
     }.freeze
+    CONSTRUCTION_AGE_BAND_NI = {
+      "A" => "Northern Ireland: before 1919",
+      "A-12.0" => "Pre-1900",
+      "B" => "Northern Ireland: 1919-1929",
+      "B-12.0" => "1900-1929",
+      "C" => "Northern Ireland: 1930-1949",
+      "C-12.0" => "1930-1949",
+      "D" => "Northern Ireland: 1950-1973",
+      "D-12.0" => "1950-1966",
+      "E" => "Northern Ireland: 1974-1977",
+      "E-12.0" => "1967-1975",
+      "F" => "Northern Ireland: 1978-1985",
+      "F-12.0" => "1976-1982",
+      "G" => "Northern Ireland: 1986-1991",
+      "G-12.0" => "1983-1990",
+      "H" => "Northern Ireland: 1992-1999",
+      "H-12.0" => "1991-1995",
+      "I" => "Northern Ireland: 2000-2006",
+      "I-12.0" => "1996-2002",
+      "J" => "Northern Ireland: not applicable",
+      "J-12.0" => "2003-2006",
+      "K-RdSAP-NI" => "Northern Ireland: 2007-2013",
+      "K-SAP-NI" => "Northern Ireland: 2007 onwards",
+      "K-12.0" => "Post-2006",
+      "L" => "Northern Ireland: 2014 onwards",
+      "0" => "Not applicable",
+      "NR" => "Not recorded",
+    }.freeze
     PROPERTY_TYPE = {
       "0" => "House",
       "1" => "Bungalow",
@@ -327,11 +355,6 @@ module Helper
         RdSAP-Schema-18.0
         RdSAP-Schema-17.1
         RdSAP-Schema-17.0
-        RdSAP-Schema-NI-20.0.0
-        RdSAP-Schema-NI-19.0
-        RdSAP-Schema-NI-18.0
-        RdSAP-Schema-NI-17.4
-        RdSAP-Schema-NI-17.3
       ]
 
       schemes_that_use_l = %w[
@@ -343,11 +366,6 @@ module Helper
         RdSAP-Schema-18.0
         RdSAP-Schema-17.1
         RdSAP-Schema-17.0
-        RdSAP-Schema-NI-20.0.0
-        RdSAP-Schema-NI-19.0
-        RdSAP-Schema-NI-18.0
-        RdSAP-Schema-NI-17.4
-        RdSAP-Schema-NI-17.3
       ]
 
       schemes_that_use_0 = %w[
@@ -366,12 +384,53 @@ module Helper
         RdSAP-Schema-18.0
         RdSAP-Schema-17.1
         RdSAP-Schema-17.0
+      ]
+
+      sap_schemas_ni = %w[
+        SAP-Schema-NI-18.0.0
+        SAP-Schema-NI-17.4
+        SAP-Schema-NI-17.3
+        SAP-Schema-NI-17.2
+        SAP-Schema-NI-17.1
+        SAP-Schema-NI-17.0
+        SAP-Schema-NI-16.1
+        SAP-Schema-NI-16.0
+        SAP-Schema-NI-15.0
+        SAP-Schema-NI-14.2
+        SAP-Schema-NI-14.1
+        SAP-Schema-NI-14.0
+        SAP-Schema-NI-13.0
+      ]
+
+      rdsap_schemas_ni = %w[
         RdSAP-Schema-NI-20.0.0
         RdSAP-Schema-NI-19.0
         RdSAP-Schema-NI-18.0
         RdSAP-Schema-NI-17.4
         RdSAP-Schema-NI-17.3
       ]
+
+      ni_schemas_pre_12 = %w[
+        SAP-Schema-NI-12.0
+        SAP-Schema-NI-11.2
+      ]
+
+      if value == "K" && rdsap_schemas_ni.include?(schema_type)
+        return CONSTRUCTION_AGE_BAND_NI["K-RdSAP-NI"]
+      end
+
+      if value == "K" && sap_schemas_ni.include?(schema_type)
+        return CONSTRUCTION_AGE_BAND_NI["K-SAP-NI"]
+      end
+
+      if sap_schemas_ni.include?(schema_type) || rdsap_schemas_ni.include?(schema_type)
+        return CONSTRUCTION_AGE_BAND_NI[value]
+      end
+
+      if ni_schemas_pre_12.include?(schema_type)
+        key = (value == "0" ? value : "#{value}-12.0")
+        return CONSTRUCTION_AGE_BAND_NI[key]
+      end
 
       if value == "K" && schema_type == "SAP-Schema-12.0" && is_rdsap(report_type)
         return CONSTRUCTION_AGE_BAND["K-12.0"]

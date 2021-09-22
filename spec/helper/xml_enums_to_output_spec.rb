@@ -577,6 +577,78 @@ RSpec.describe Helper::XmlEnumsToOutput do
           sap_report_type,
         ),
       ).to be_nil
+      end
+  end
+  context "when the Construction-Age-Band xml value from an NI schema is passed to the construction age band enum" do
+
+    it "returns the expected values for NI Post SAP 12" do
+      expect(
+        described_class.construction_age_band_lookup(
+          "A",
+          "SAP-Schema-NI-18.0.0",
+          sap_report_type,
+          ),
+        ).to eq("Northern Ireland: before 1919")
+    end
+
+    it "returns the expected values for NI Post RdSAP 12" do
+      expect(
+        described_class.construction_age_band_lookup(
+          "A",
+          "RdSAP-Schema-NI-20.0.0",
+          rdsap_report_type,
+          ),
+        ).to eq("Northern Ireland: before 1919")
+    end
+
+    it "returns the expected values for NI Pre SAP 12" do
+      expect(
+        described_class.construction_age_band_lookup(
+          "A",
+          "SAP-Schema-NI-12.0",
+          rdsap_report_type,
+          ),
+        ).to eq("Pre-1900")
+    end
+
+    it "returns the expected values for NI SAP K" do
+      expect(
+        described_class.construction_age_band_lookup(
+          "K",
+          "SAP-Schema-NI-18.0.0",
+          rdsap_report_type,
+          ),
+        ).to eq("Northern Ireland: 2007 onwards")
+    end
+
+    it "returns the expected values for NI RdSAP K" do
+      expect(
+        described_class.construction_age_band_lookup(
+          "K",
+          "RdSAP-Schema-NI-20.0.0",
+          rdsap_report_type,
+          ),
+        ).to eq("Northern Ireland: 2007-2013")
+    end
+
+    it "returns the expected values for NI SAP pre 12 K" do
+      expect(
+        described_class.construction_age_band_lookup(
+          "K",
+          "SAP-Schema-NI-12.0",
+          rdsap_report_type,
+          ),
+        ).to eq("Post-2006")
+    end
+
+    it "returns the expected values for 0 for NI SAP pre 12.0" do
+      expect(
+        described_class.construction_age_band_lookup(
+          "0",
+          "SAP-Schema-NI-12.0",
+          rdsap_report_type,
+          ),
+        ).to eq("Not applicable")
     end
   end
 
