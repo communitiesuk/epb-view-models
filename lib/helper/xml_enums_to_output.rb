@@ -423,13 +423,13 @@ module Helper
         return CONSTRUCTION_AGE_BAND_NI["K-SAP-NI"]
       end
 
-      if sap_schemas_ni.include?(schema_type) || rdsap_schemas_ni.include?(schema_type)
-        return CONSTRUCTION_AGE_BAND_NI[value]
-      end
-
       if ni_schemas_pre_12.include?(schema_type)
         key = (value == "0" ? value : "#{value}-12.0")
         return CONSTRUCTION_AGE_BAND_NI[key]
+      end
+
+      if sap_schemas_ni.include?(schema_type) || rdsap_schemas_ni.include?(schema_type)
+        return CONSTRUCTION_AGE_BAND_NI[value]
       end
 
       if value == "K" && schema_type == "SAP-Schema-12.0" && is_rdsap(report_type)
@@ -598,13 +598,14 @@ module Helper
       if rdsap.include?(schema_type)
         RDSAP_FUEL_TYPE[value]
       elsif sap.include?(schema_type) && is_sap(report_type)
-         SAP_FUEL_TYPE[value]
+        SAP_FUEL_TYPE[value]
       elsif sap.include?(schema_type) && is_rdsap(report_type)
         if includes_rapeseed_oil.include?(schema_type) && value == "36"
           return RDSAP_FUEL_TYPE["#{value}-rapeseed-oil"]
         end
+
         if pre143_sap.include?(schema_type)
-          return RDSAP_FUEL_TYPE_PRE_143["#{value}-pre14.3-sap"] || RDSAP_FUEL_TYPE[value]
+          RDSAP_FUEL_TYPE_PRE_143["#{value}-pre14.3-sap"] || RDSAP_FUEL_TYPE[value]
         else
           RDSAP_FUEL_TYPE[value]
         end
