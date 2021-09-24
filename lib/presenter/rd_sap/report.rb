@@ -31,7 +31,7 @@ module Presenter
           co2_emissions_potential: @view_model.potential_carbon_emission,
           construction_age_band:
             Helper::XmlEnumsToOutput.construction_age_band_lookup(
-              @view_model.property_age_band,
+              @view_model.main_dwelling_construction_age_band_or_year,
               @schema_type,
               @view_model.report_type,
             ),

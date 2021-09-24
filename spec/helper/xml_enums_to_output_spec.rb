@@ -363,14 +363,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "K",
-          "SAP-Schema-18.0.0",
+          :"SAP-Schema-18.0.0",
           sap_report_type,
         ),
       ).to eq("England and Wales: 2007-2011")
       expect(
         described_class.construction_age_band_lookup(
           "K",
-          "SAP-Schema-18.0.0",
+          :"SAP-Schema-18.0.0",
           rdsap_report_type,
         ),
       ).to eq("England and Wales: 2007-2011")
@@ -378,14 +378,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "K",
-          "SAP-Schema-16.3",
+          :"SAP-Schema-16.3",
           rdsap_report_type,
         ),
       ).to eq("England and Wales: 2007 onwards")
       expect(
         described_class.construction_age_band_lookup(
           "K",
-          "SAP-Schema-16.3",
+          :"SAP-Schema-16.3",
           sap_report_type,
         ),
       ).to eq("England and Wales: 2007 onwards")
@@ -393,14 +393,15 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "K",
-          "SAP-Schema-12.0",
+          :"SAP-Schema-12.0",
           rdsap_report_type,
         ),
       ).to eq("Post-2006")
+
       expect(
         described_class.construction_age_band_lookup(
           "K",
-          "SAP-Schema-12.0",
+          :"SAP-Schema-12.0",
           sap_report_type,
         ),
       ).to eq("England and Wales: 2007 onwards")
@@ -408,14 +409,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "K",
-          "SAP-Schema-10.2",
+          :"SAP-Schema-10.2",
           rdsap_report_type,
         ),
       ).to eq("England and Wales: 2007-2011")
       expect(
         described_class.construction_age_band_lookup(
           "K",
-          "SAP-Schema-10.2",
+          :"SAP-Schema-10.2",
           sap_report_type,
         ),
       ).to eq("England and Wales: 2007-2011")
@@ -423,14 +424,15 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "K",
-          "RdSAP-Schema-20.0.0",
+          :"RdSAP-Schema-20.0.0",
           rdsap_report_type,
         ),
       ).to eq("England and Wales: 2007-2011")
+
       expect(
         described_class.construction_age_band_lookup(
           "K",
-          "RdSAP-Schema-20.0.0",
+          :"RdSAP-Schema-20.0.0",
           sap_report_type,
         ),
       ).to eq("England and Wales: 2007-2011")
@@ -440,7 +442,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "L",
-          "SAP-Schema-18.0.0",
+          :"SAP-Schema-18.0.0",
           rdsap_report_type,
         ),
       ).to eq("England and Wales: 2012 onwards")
@@ -448,14 +450,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "L",
-          "SAP-Schema-16.3",
+          :"SAP-Schema-16.3",
           rdsap_report_type,
         ),
       ).to eq("L")
       expect(
         described_class.construction_age_band_lookup(
           "L",
-          "SAP-Schema-16.3",
+          :"SAP-Schema-16.3",
           sap_report_type,
         ),
       ).to eq("L")
@@ -465,14 +467,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "NR",
-          "SAP-Schema-16.1",
+          :"SAP-Schema-16.1",
           rdsap_report_type,
         ),
       ).to eq("Not recorded")
       expect(
         described_class.construction_age_band_lookup(
           "NR",
-          "SAP-Schema-16.1",
+          :"SAP-Schema-16.1",
           sap_report_type,
         ),
       ).to eq("NR")
@@ -480,7 +482,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "NR",
-          "SAP-Schema-16.0",
+          :"SAP-Schema-16.0",
           rdsap_report_type,
         ),
       ).to eq("NR")
@@ -490,14 +492,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "0",
-          "SAP-Schema-17.0",
+          :"SAP-Schema-17.0",
           rdsap_report_type,
         ),
       ).to eq("0")
       expect(
         described_class.construction_age_band_lookup(
           "0",
-          "SAP-Schema-17.0",
+          :"SAP-Schema-17.0",
           sap_report_type,
         ),
       ).to eq("0")
@@ -505,14 +507,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "0",
-          "SAP-Schema-16.3",
+          :"SAP-Schema-16.3",
           rdsap_report_type,
         ),
       ).to eq("Not applicable")
       expect(
         described_class.construction_age_band_lookup(
           "0",
-          "SAP-Schema-16.3",
+          :"SAP-Schema-16.3",
           sap_report_type,
         ),
       ).to eq("0")
@@ -520,14 +522,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "0",
-          "SAP-Schema-10.2",
+          :"SAP-Schema-10.2",
           rdsap_report_type,
         ),
       ).to eq("0")
       expect(
         described_class.construction_age_band_lookup(
           "0",
-          "SAP-Schema-10.2",
+          :"SAP-Schema-10.2",
           sap_report_type,
         ),
       ).to eq("0")
@@ -537,14 +539,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           nil,
-          "SAP-Schema-18.0.0",
+          :"SAP-Schema-18.0.0",
           rdsap_report_type,
         ),
       ).to be_nil
       expect(
         described_class.construction_age_band_lookup(
           nil,
-          "SAP-Schema-18.0.0",
+          :"SAP-Schema-18.0.0",
           sap_report_type,
         ),
       ).to be_nil
@@ -552,14 +554,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "Any other content",
-          "RdSAP-Schema-20.0.0",
+          :"RdSAP-Schema-20.0.0",
           rdsap_report_type,
         ),
       ).to eq("Any other content")
       expect(
         described_class.construction_age_band_lookup(
           "Any other content",
-          "RdSAP-Schema-20.0.0",
+          :"RdSAP-Schema-20.0.0",
           sap_report_type,
         ),
       ).to eq("Any other content")
@@ -567,14 +569,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "",
-          "RdSAP-Schema-20.0.0",
+          :"RdSAP-Schema-20.0.0",
           rdsap_report_type,
         ),
       ).to be_nil
       expect(
         described_class.construction_age_band_lookup(
           "",
-          "RdSAP-Schema-20.0.0",
+          :"RdSAP-Schema-20.0.0",
           sap_report_type,
         ),
       ).to be_nil
@@ -586,7 +588,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "A",
-          "SAP-Schema-NI-18.0.0",
+          :"SAP-Schema-NI-18.0.0",
           sap_report_type,
         ),
       ).to eq("Northern Ireland: before 1919")
@@ -596,17 +598,27 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "A",
-          "RdSAP-Schema-NI-20.0.0",
+          :"RdSAP-Schema-NI-20.0.0",
           rdsap_report_type,
         ),
       ).to eq("Northern Ireland: before 1919")
+    end
+
+    it "returns the expected values for NI Post RdSAP 12 for L" do
+      expect(
+        described_class.construction_age_band_lookup(
+          "L",
+          :"RdSAP-Schema-NI-20.0.0",
+          rdsap_report_type,
+          ),
+        ).to eq("Northern Ireland: 2014 onwards")
     end
 
     it "returns the expected values for NI Pre SAP 12" do
       expect(
         described_class.construction_age_band_lookup(
           "A",
-          "SAP-Schema-NI-12.0",
+          :"SAP-Schema-NI-12.0",
           rdsap_report_type,
         ),
       ).to eq("Pre-1900")
@@ -616,7 +628,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "K",
-          "SAP-Schema-NI-18.0.0",
+          :"SAP-Schema-NI-18.0.0",
           rdsap_report_type,
         ),
       ).to eq("Northern Ireland: 2007 onwards")
@@ -626,7 +638,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "K",
-          "RdSAP-Schema-NI-20.0.0",
+          :"RdSAP-Schema-NI-20.0.0",
           rdsap_report_type,
         ),
       ).to eq("Northern Ireland: 2007-2013")
@@ -636,7 +648,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "K",
-          "SAP-Schema-NI-12.0",
+          :"SAP-Schema-NI-12.0",
           rdsap_report_type,
         ),
       ).to eq("Post-2006")
@@ -646,10 +658,30 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.construction_age_band_lookup(
           "0",
-          "SAP-Schema-NI-12.0",
+          :"SAP-Schema-NI-12.0",
           rdsap_report_type,
         ),
       ).to eq("Not applicable")
+    end
+
+    it "returns the expected values for 1750 for NI SAP pre 12.0" do
+      expect(
+        described_class.construction_age_band_lookup(
+          "1750",
+          :"SAP-Schema-NI-12.0",
+          rdsap_report_type,
+          ),
+        ).to eq("1750")
+    end
+
+    it "returns the expected values for 1750 for NI SAP" do
+      expect(
+        described_class.construction_age_band_lookup(
+          "1750",
+          :"SAP-Schema-NI-18.0.0",
+          rdsap_report_type,
+          ),
+        ).to eq("1750")
     end
   end
 

@@ -331,7 +331,7 @@ module Helper
     end
 
     def self.construction_age_band_lookup(value, schema_type, report_type)
-      types_of_sap_pre17 = %w[
+      types_of_sap_pre17 = %i[
         SAP-Schema-16.3
         SAP-Schema-16.2
         SAP-Schema-16.1
@@ -346,7 +346,7 @@ module Helper
         SAP-Schema-11.0
       ].freeze
 
-      schemes_that_use_not_recorded = %w[
+      schemes_that_use_not_recorded = %i[
         SAP-Schema-16.3
         SAP-Schema-16.2
         SAP-Schema-16.1
@@ -357,7 +357,7 @@ module Helper
         RdSAP-Schema-17.0
       ]
 
-      schemes_that_use_l = %w[
+      schemes_that_use_l = %i[
         SAP-Schema-18.0.0
         SAP-Schema-17.1
         SAP-Schema-17.0
@@ -368,7 +368,7 @@ module Helper
         RdSAP-Schema-17.0
       ]
 
-      schemes_that_use_0 = %w[
+      schemes_that_use_0 = %i[
         SAP-Schema-16.3
         SAP-Schema-16.2
         SAP-Schema-16.1
@@ -386,7 +386,7 @@ module Helper
         RdSAP-Schema-17.0
       ]
 
-      sap_schemas_ni = %w[
+      sap_schemas_ni = %i[
         SAP-Schema-NI-18.0.0
         SAP-Schema-NI-17.4
         SAP-Schema-NI-17.3
@@ -402,7 +402,7 @@ module Helper
         SAP-Schema-NI-13.0
       ]
 
-      rdsap_schemas_ni = %w[
+      rdsap_schemas_ni = %i[
         RdSAP-Schema-NI-20.0.0
         RdSAP-Schema-NI-19.0
         RdSAP-Schema-NI-18.0
@@ -410,29 +410,29 @@ module Helper
         RdSAP-Schema-NI-17.3
       ]
 
-      ni_schemas_pre_12 = %w[
+      ni_schemas_pre_12 = %i[
         SAP-Schema-NI-12.0
         SAP-Schema-NI-11.2
       ]
 
       if value == "K" && rdsap_schemas_ni.include?(schema_type)
-        return CONSTRUCTION_AGE_BAND_NI["K-RdSAP-NI"]
+        return CONSTRUCTION_AGE_BAND_NI["K-RdSAP-NI"] || value
       end
 
       if value == "K" && sap_schemas_ni.include?(schema_type)
-        return CONSTRUCTION_AGE_BAND_NI["K-SAP-NI"]
+        return CONSTRUCTION_AGE_BAND_NI["K-SAP-NI"] || value
       end
 
       if ni_schemas_pre_12.include?(schema_type)
         key = (value == "0" ? value : "#{value}-12.0")
-        return CONSTRUCTION_AGE_BAND_NI[key]
+        return CONSTRUCTION_AGE_BAND_NI[key] || value
       end
 
       if sap_schemas_ni.include?(schema_type) || rdsap_schemas_ni.include?(schema_type)
-        return CONSTRUCTION_AGE_BAND_NI[value]
+        return CONSTRUCTION_AGE_BAND_NI[value] || value
       end
 
-      if value == "K" && schema_type == "SAP-Schema-12.0" && is_rdsap(report_type)
+      if value == "K" && schema_type == :"SAP-Schema-12.0" && is_rdsap(report_type)
         return CONSTRUCTION_AGE_BAND["K-12.0"]
       end
 
