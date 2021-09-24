@@ -610,8 +610,8 @@ RSpec.describe Helper::XmlEnumsToOutput do
           "L",
           :"RdSAP-Schema-NI-20.0.0",
           rdsap_report_type,
-          ),
-        ).to eq("Northern Ireland: 2014 onwards")
+        ),
+      ).to eq("Northern Ireland: 2014 onwards")
     end
 
     it "returns the expected values for NI Pre SAP 12" do
@@ -670,8 +670,8 @@ RSpec.describe Helper::XmlEnumsToOutput do
           "1750",
           :"SAP-Schema-NI-12.0",
           rdsap_report_type,
-          ),
-        ).to eq("1750")
+        ),
+      ).to eq("1750")
     end
 
     it "returns the expected values for 1750 for NI SAP" do
@@ -680,8 +680,8 @@ RSpec.describe Helper::XmlEnumsToOutput do
           "1750",
           :"SAP-Schema-NI-18.0.0",
           rdsap_report_type,
-          ),
-        ).to eq("1750")
+        ),
+      ).to eq("1750")
     end
   end
 
