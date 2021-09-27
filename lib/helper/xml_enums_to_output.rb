@@ -163,7 +163,7 @@ module Helper
       "6" => "mechanical extract, decentralised (MEV dc)",
       "7" => "balanced without heat recovery (MV)",
       "8" => "balanced with heat recovery (MVHR)",
-      "9" => "natural with intermittent extract fans and/or passive vents.  For backwards compatibility only, do not use.",
+      "9" => "natural with intermittent extract fans and/or passive vents. For backwards compatibility only, do not use.",
       "10" => "natural with intermittent extract fans and passive vents",
     }.freeze
     CYLINDER_INSULATION_THICKNESS = {
@@ -306,7 +306,7 @@ module Helper
     end
 
     def self.transaction_type(value, report_type = "2", schema_type = "")
-      types_of_ni = %w[
+      types_of_ni = %i[
         RdSAP-Schema-NI-20.0.0
         RdSAP-Schema-NI-19.0
         RdSAP-Schema-NI-18.0
@@ -464,14 +464,13 @@ module Helper
     end
 
     def self.mechanical_ventilation(value, schema_type, report_type)
-      types_of_sap_pre12 = %w[
+      types_of_sap_pre12 = %i[
         SAP-Schema-11.2
         SAP-Schema-11.0
         SAP-Schema-10.2
         SAP-Schema-NI-11.2
       ].freeze
-
-      if types_of_sap_pre12.include?(schema_type.to_s) && is_rdsap(report_type)
+      if types_of_sap_pre12.include?(schema_type) && is_rdsap(report_type)
         return MECHANICAL_VENTILATION["#{value}-pre12.0"]
       end
 
@@ -499,7 +498,7 @@ module Helper
     end
 
     def self.ventilation_type(value, schema_type = "")
-      ni_sap = %w[
+      ni_sap = %i[
         SAP-Schema-NI-16.1
         SAP-Schema-NI-16.0
         SAP-Schema-NI-15.0

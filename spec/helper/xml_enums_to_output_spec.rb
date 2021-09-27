@@ -323,12 +323,12 @@ RSpec.describe Helper::XmlEnumsToOutput do
       )
       expect(described_class.transaction_type("13", "3")).to eq("13")
 
-      expect(described_class.transaction_type("5", "2", "RdSAP-Schema-NI-20.0.0")).to eq("None of the above")
+      expect(described_class.transaction_type("5", "2", :"RdSAP-Schema-NI-20.0.0")).to eq("None of the above")
     end
 
     it "return the divergent value for 5 for some types of NI schemas" do
-      expect(described_class.transaction_type("5", "2", "RdSAP-Schema-NI-20.0.0")).to eq("None of the above")
-      expect(described_class.transaction_type("5", "3", "SAP-Schema-NI-17.0")).to eq("None of the above")
+      expect(described_class.transaction_type("5", "2", :"RdSAP-Schema-NI-20.0.0")).to eq("None of the above")
+      expect(described_class.transaction_type("5", "3", :"SAP-Schema-NI-17.0")).to eq("None of the above")
     end
   end
 
@@ -715,14 +715,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.mechanical_ventilation(
           nil,
-          "RdSAP-Schema-20.0.0",
+          :"RdSAP-Schema-20.0.0",
           rdsap_report_type,
         ),
       ).to be_nil
       expect(
         described_class.mechanical_ventilation(
           "Any other value",
-          "RdSAP-Schema-20.0.0",
+          :"RdSAP-Schema-20.0.0",
           rdsap_report_type,
         ),
       ).to eq("Any other value")
@@ -732,35 +732,35 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(
         described_class.mechanical_ventilation(
           "0",
-          "RdSAP-Schema-20.0.0",
+          :"RdSAP-Schema-20.0.0",
           rdsap_report_type,
         ),
       ).to eq("natural")
       expect(
         described_class.mechanical_ventilation(
           "2",
-          "RdSAP-Schema-20.0.0",
+          :"RdSAP-Schema-20.0.0",
           rdsap_report_type,
         ),
       ).to eq("mechanical, extract only")
       expect(
         described_class.mechanical_ventilation(
           "0",
-          "SAP-Schema-11.2",
+          :"SAP-Schema-11.2",
           rdsap_report_type,
         ),
       ).to eq("none")
       expect(
         described_class.mechanical_ventilation(
           "2",
-          "SAP-Schema-11.2",
+          :"SAP-Schema-11.2",
           rdsap_report_type,
         ),
       ).to eq("mechanical - non recovering")
       expect(
         described_class.mechanical_ventilation(
           "0",
-          "SAP-Schema-NI-11.2",
+          :"SAP-Schema-NI-11.2",
           rdsap_report_type,
         ),
       ).to eq("none")
@@ -806,12 +806,12 @@ RSpec.describe Helper::XmlEnumsToOutput do
     end
 
     it "returns the default value for 9" do
-      expect(described_class.ventilation_type("9")).to eq("natural with intermittent extract fans and/or passive vents.  For backwards compatibility only, do not use.")
+      expect(described_class.ventilation_type("9")).to eq("natural with intermittent extract fans and/or passive vents. For backwards compatibility only, do not use.")
     end
 
     it "returns a truncated version of 9 for SAP-NI schemas" do
-      expect(described_class.ventilation_type("9", "SAP-Schema-NI-16.1")).to eq("natural with intermittent extract fans and/or passive vents")
-      expect(described_class.ventilation_type("9", "SAP-Schema-NI-13.0")).to eq("natural with intermittent extract fans and/or passive vents")
+      expect(described_class.ventilation_type("9", :"SAP-Schema-NI-16.1")).to eq("natural with intermittent extract fans and/or passive vents")
+      expect(described_class.ventilation_type("9", :"SAP-Schema-NI-13.0")).to eq("natural with intermittent extract fans and/or passive vents")
     end
   end
 
