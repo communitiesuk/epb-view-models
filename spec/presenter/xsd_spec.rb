@@ -15,9 +15,12 @@ RSpec.describe Presenter::Xsd do
                      "4" => "Mid-Terrace",
                      "5" => "Enclosed End-Terrace",
                      "6" => "Enclosed Mid-Terrace" }
-      expect(enums).to be_a(Array)
-      expect(enums.length).to eq(1)
-      expect(enums.first).to eq(built_form)
+      # expect(enums).to be_a(Array)
+      # expect(enums.length).to eq(1)
+      # expect(enums.first).to eq(built_form)
+
+      expect(enums["SAP-Schema-18.0.0/SAP/UDT/SAP-Domains.xsd"]).to eq(built_form)
+      # TODO: expect(export.get_enums_by_type("SAP-BuiltFormCode")["SAP-Schema-18.0.0"]).to eq(built_form)
     end
   end
 end
