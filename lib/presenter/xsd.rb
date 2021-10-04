@@ -5,6 +5,7 @@ module Presenter
       @xsd_files = get_files(xsd_dir_path)
     end
 
+
     def get_enums_by_type(simple_type)
       arr = []
       xpath = "//xs:simpleType[@name='#{simple_type}']//xs:enumeration"
@@ -20,8 +21,7 @@ module Presenter
       arr
     end
 
-  private
-
+    private
     def get_files(xsd_dir_path)
       Dir.glob(xsd_dir_path)
     end
