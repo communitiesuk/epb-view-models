@@ -10,5 +10,6 @@ source "https://rubygems.org" do
   end
 
   gem "nokogiri", "~> 1.11"
+  gem "rexml", "~> 3.2", ">= 3.2.5"
   gem "zeitwerk", "~> 2.4.2"
 end

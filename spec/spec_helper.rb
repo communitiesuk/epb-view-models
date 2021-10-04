@@ -3,6 +3,7 @@
 require "epb_view_models"
 require "nokogiri"
 require "samples"
+require "rexml/document"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
