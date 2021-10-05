@@ -15,9 +15,35 @@ RSpec.describe Presenter::Xsd do
                      "4" => "Mid-Terrace",
                      "5" => "Enclosed End-Terrace",
                      "6" => "Enclosed Mid-Terrace" }
-      expect(enums).to be_a(Array)
-      expect(enums.length).to eq(1)
-      expect(enums.first).to eq(built_form)
+      expect(enums["SAP-Schema-18.0.0"]).to eq(built_form)
+    end
+  end
+
+  context "when traversing all the xsd for RdSAP type " do
+    let(:export) { described_class.new(xsd_dir_path: "api/schemas/xml/RdSAP**/RdSAP/UDT/SAP-Domains.xsd") }
+
+    let(:enums) { export.get_enums_by_type("SAP-BuiltFormCode") }
+
+    it "extracts a hash of the enums for a Rdsap 17 node" do
+      built_form = { "1" => "Detached",
+                     "2" => "Semi-Detached",
+                     "3" => "End-Terrace",
+                     "4" => "Mid-Terrace",
+                     "5" => "Enclosed End-Terrace",
+                     "6" => "Enclosed Mid-Terrace",
+                     "NR" => "Not Recorded" }
+      expect(enums["RdSAP-Schema-17.0"]).to eq(built_form)
+    end
+
+    it "extracts a hash of the enums for a Rdsap 18 node" do
+      built_form = { "1" => "Detached",
+                     "2" => "Semi-Detached",
+                     "3" => "End-Terrace",
+                     "4" => "Mid-Terrace",
+                     "5" => "Enclosed End-Terrace",
+                     "6" => "Enclosed Mid-Terrace",
+                     "NR" => "Not Recorded" }
+      expect(enums["RdSAP-Schema-18.0"]).to eq(built_form)
     end
   end
 end
