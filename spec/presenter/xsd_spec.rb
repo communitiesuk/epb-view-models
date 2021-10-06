@@ -48,6 +48,58 @@ RSpec.describe Presenter::Xsd do
       end
     end
 
+    describe "#unique_enums" do
+      it "returns and array of unique enum hashes" do
+        built_form = [{ "1" => "Detached",
+                        "2" => "Semi-Detached",
+                        "3" => "End-Terrace",
+                        "4" => "Mid-Terrace",
+                        "5" => "Enclosed End-Terrace",
+                        "6" => "Enclosed Mid-Terrace",
+                        "NR" => "Not Recorded" }]
+        expect(export.unique_enums("SAP-BuiltFormCode")).to eq(built_form)
+      end
+    end
+
+    describe "#variation_between_schema_versions?" do
+      it "returns false if there are no variations between schema versions" do
+        enums_hash =
+          { "RdSAP-Schema-NI-19.0" => { "1" => "Detached",
+                                        "2" => "Semi-Detached",
+                                        "3" => "End-Terrace",
+                                        "4" => "Mid-Terrace",
+                                        "5" => "Enclosed End-Terrace",
+                                        "6" => "Enclosed Mid-Terrace",
+                                        "NR" => "Not Recorded" },
+            "RdSAP-Schema-NI-20.0.0" => { "1" => "Detached",
+                                          "2" => "Semi-Detached",
+                                          "3" => "End-Terrace",
+                                          "4" => "Mid-Terrace",
+                                          "5" => "Enclosed End-Terrace",
+                                          "6" => "Enclosed Mid-Terrace",
+                                          "NR" => "Not Recorded" } }
+
+        expect(export.variation_between_schema_versions?(enums_hash)).to eq(false)
+      end
+
+      it "returns true if there are variations between schema versions" do
+        enums_hash =
+          { "RdSAP-Schema-NI-19.0" => { "1" => "Detached",
+                                        "2" => "Semi-Detached",
+                                        "3" => "End-Terrace",
+                                        "4" => "Mid-Terrace",
+                                        "5" => "Enclosed End-Terrace",
+                                        "6" => "Enclosed Mid-Terrace" },
+            "RdSAP-Schema-NI-20.0.0" => { "1" => "Detached",
+                                          "2" => "Semi-Detached",
+                                          "3" => "End-Terrace",
+                                          "4" => "Mid-Terrace",
+                                          "5" => "Enclosed End-Terrace",
+                                          "6" => "Enclosed Mid-Terrace",
+                                          "NR" => "Not Recorded" } }
+
+        expect(export.variation_between_schema_versions?(enums_hash)).to eq(true)
+      end
     end
   end
 end

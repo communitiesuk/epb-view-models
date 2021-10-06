@@ -23,6 +23,22 @@ module Presenter
       hash
     end
 
+    def unique_enums(simple_type)
+      uniq_enums = []
+      enums = get_enums_by_type(simple_type).values
+
+      enums.each_with_index do |_hash, i|
+        if i.positive? && (enums[i].to_a != enums[i + 1].to_a)
+          uniq_enums << enums[i]
+        end
+      end
+      uniq_enums
+    end
+
+    def variation_between_schema_versions?(enums_hash)
+      enums_hash.values.flatten.uniq.count != 1
+    end
+
   private
 
     def schema_version(file_name)
