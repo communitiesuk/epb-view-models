@@ -1,11 +1,6 @@
 RSpec.describe Presenter::Xsd do
   context "when reading data from a specific xsd for processing" do
     let(:export) { described_class.new(assessment_type: "SAP", xsd_dir_path: "api/schemas/xml/SAP-Schema-18.0.0/SAP/UDT/") }
-
-    # it "reads all xsd files from the API directory" do
-    #   expect(export.read_files).to be_a(Array)
-    #   expect(export.read_files).to include(match(/Domains.xsd/))
-    # end
     let(:enums) { export.get_enums_by_type("SAP-BuiltFormCode") }
 
     it "extracts a hash of the enums for a particular node" do
