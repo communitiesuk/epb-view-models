@@ -52,6 +52,8 @@ module Presenter
         sap_xsd_files
       when "RdSAP"
         rdsap_xsd_files
+      when "CEPC"
+        cepc_xsd_files
       end
     end
 
