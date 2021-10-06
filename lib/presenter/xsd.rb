@@ -1,9 +1,7 @@
 module Presenter
   class Xsd
-    attr_reader :xsd_dir_path
-
-    def initialize(xsd_dir_path: "api/schemas/xml/*/*-Domains.xsd")
-      # @schema_type = schema_type
+    def initialize(assessment_type:, xsd_dir_path: "api/schemas/xml/*/")
+      @assessment_type = assessment_type
       @xsd_dir_path = xsd_dir_path
     end
 
@@ -17,12 +15,10 @@ module Presenter
           desc_path = "#{xpath}[@value='#{e.value}']//xs:annotation//xs:documentation"
           enums_hash.merge!(e.value => REXML::XPath.first(doc, desc_path).children.first)
         end
-        schema_version = schema_version(file_name)
+
         next if enums_hash.empty?
 
-        enums_for_schema_version = { schema_version => enums_hash }
-        hash.merge!(enums_for_schema_version)
-        # hash[schema_version(file_name).to_sym] = enums_hash
+        hash[schema_version(file_name)] = enums_hash
       end
       hash
     end
@@ -30,13 +26,33 @@ module Presenter
   private
 
     def schema_version(file_name)
-      file_name.delete_prefix("api/schemas/xml/").split("/").first
-      # need some custom logic for SAP-Schema-10.2 - SAP-Schema-18.0.0
-      # if includes("EPC-Domains")
+      schema_version = file_name.delete_prefix("api/schemas/xml/").split("/").first
+      sap_defnied_in_rdsap_dir?(file_name) ? "#{schema_version}/SAP" : schema_version
     end
 
     def xsd_files
-      Dir.glob(@xsd_dir_path)
+      case @assessment_type
+      when "SAP"
+        sap_xsd_files
+      when "RdSAP"
+        rdsap_xsd_files
+      end
+    end
+
+    def sap_xsd_files
+      Dir.glob("#{@xsd_dir_path}*-Domains.xsd")
+    end
+
+    def rdsap_xsd_files
+      Dir.glob("#{@xsd_dir_path}SAP-Domains.xsd")
+    end
+
+    def cepc_xsd_files
+      Dir.glob("#{@xsd_dir_path}Reported-Data.xsd")
+    end
+
+    def sap_defnied_in_rdsap_dir?(file_name)
+      @assessment_type == "SAP" && file_name.end_with?("SAP-Domains.xsd")
     end
   end
 end
