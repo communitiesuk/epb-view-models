@@ -1,5 +1,7 @@
 module Gateway
   class XsdFilesGateway
+    class XsdFilesNotFoundError < StandardError; end
+
     attr_reader :simple_type, :assessment_type, :xsd_dir_path
 
     def initialize(simple_type:, assessment_type:, xsd_dir_path: "api/schemas/xml/*/")
@@ -14,14 +16,17 @@ module Gateway
     end
 
     def xsd_files
-      case assessment_type
-      when "SAP"
-        sap_xsd_files
-      when "RdSAP"
-        rdsap_xsd_files
-      when "CEPC"
-        cepc_xsd_files
-      end
+      files = case assessment_type
+              when "SAP"
+                sap_xsd_files
+              when "RdSAP"
+                rdsap_xsd_files
+              when "CEPC"
+                cepc_xsd_files
+              end
+      raise XsdFilesNotFoundError, "No xsd files were found in #{xsd_dir_path} directory" if files.empty?
+
+      files
     end
 
   private

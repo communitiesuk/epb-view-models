@@ -1,5 +1,7 @@
 module Presenter
   class Xsd
+    class NodeNotFoundError < StandardError; end
+
     def get_enums_by_type(simple_type:, assessment_type:, xsd_dir_path: "api/schemas/xml/*/")
       xsd_files_gateway = Gateway::XsdFilesGateway.new(simple_type: simple_type, assessment_type: assessment_type, xsd_dir_path: xsd_dir_path)
 
@@ -18,6 +20,8 @@ module Presenter
 
         hash[xsd_files_gateway.schema_version(file)] = enums_hash
       end
+      raise NodeNotFoundError, "Node #{simple_type} was not found in any of the xsd files in #{xsd_dir_path} directory" if hash.empty?
+
       hash
     end
 

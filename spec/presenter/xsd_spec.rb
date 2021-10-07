@@ -13,6 +13,19 @@ RSpec.describe Presenter::Xsd do
                      "6" => "Enclosed Mid-Terrace" }
       expect(enums["SAP-Schema-18.0.0/SAP"]).to eq(built_form)
     end
+
+    it "raises an error when a node is not defined in the xsd files" do
+      expect {
+        export.get_enums_by_type(
+          simple_type: "UnicornCode",
+          assessment_type: "SAP",
+          xsd_dir_path: "api/schemas/xml/SAP-Schema-18.0.0/SAP/UDT/",
+        )
+      }.to raise_error(
+        described_class::NodeNotFoundError,
+        "Node UnicornCode was not found in any of the xsd files in api/schemas/xml/SAP-Schema-18.0.0/SAP/UDT/ directory",
+      )
+    end
   end
 
   context "when traversing all the xsd for RdSAP type " do

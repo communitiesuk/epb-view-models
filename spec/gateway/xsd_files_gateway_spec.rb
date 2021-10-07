@@ -7,6 +7,17 @@ RSpec.describe Gateway::XsdFilesGateway do
     expect(gateway.xsd_dir_path).to eq("api/schemas/xml/*/")
   end
 
+  describe "#xsd_files" do
+    it "raises an error when it cannot find a path" do
+      gateway = described_class.new(xsd_dir_path: "path/that/doesnt/exist", simple_type: "SomeNodeName", assessment_type: "SAP")
+
+      expect { gateway.xsd_files }.to raise_error(
+        described_class::XsdFilesNotFoundError,
+        "No xsd files were found in path/that/doesnt/exist directory",
+      )
+    end
+  end
+
   describe "#schema_version" do
     it "retruns schema version for a file" do
       file = "api/schemas/xml/CEPC-8.0.0/Reports/Reported-Data.xsd"
