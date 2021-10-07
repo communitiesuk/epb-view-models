@@ -1,15 +1,13 @@
 module Presenter
   class Xsd
-    def initialize(assessment_type:, xsd_dir_path: "api/schemas/xml/*/")
-      @assessment_type = assessment_type
-      @xsd_dir_path = xsd_dir_path
-    end
+    def get_enums_by_type(simple_type:, assessment_type:, xsd_dir_path: "api/schemas/xml/*/")
+      xsd_files_gateway = Gateway::XsdFilesGateway.new(simple_type: simple_type, assessment_type: assessment_type, xsd_dir_path: xsd_dir_path)
 
-    def get_enums_by_type(simple_type)
       hash = {}
       xpath = "//xs:simpleType[@name='#{simple_type}']//xs:enumeration"
-      xsd_files.each do |file_name|
-        doc = REXML::Document.new(File.read(file_name))
+
+      xsd_files_gateway.xsd_files.each do |file|
+        doc = REXML::Document.new(File.read(file))
         enums_hash = {}
         REXML::XPath.each(doc, "#{xpath}/@value") do |e|
           desc_path = "#{xpath}[@value='#{e.value}']//xs:annotation//xs:documentation"
@@ -18,14 +16,14 @@ module Presenter
 
         next if enums_hash.empty?
 
-        hash[schema_version(file_name)] = enums_hash
+        hash[xsd_files_gateway.schema_version(file)] = enums_hash
       end
       hash
     end
 
-    def unique_enums(simple_type)
+    def unique_enums(simple_type:, assessment_type:, xsd_dir_path: "api/schemas/xml/*/")
       uniq_enums = []
-      enums = get_enums_by_type(simple_type).values
+      enums = get_enums_by_type(simple_type: simple_type, assessment_type: assessment_type, xsd_dir_path: xsd_dir_path).values
 
       enums.each_with_index do |_hash, i|
         if i.positive? && (enums[i].to_a != enums[i + 1].to_a)
@@ -37,40 +35,6 @@ module Presenter
 
     def variation_between_schema_versions?(enums_hash)
       enums_hash.values.flatten.uniq.count != 1
-    end
-
-  private
-
-    def schema_version(file_name)
-      schema_version = file_name.delete_prefix("api/schemas/xml/").split("/").first
-      sap_defnied_in_rdsap_dir?(file_name) ? "#{schema_version}/SAP" : schema_version
-    end
-
-    def xsd_files
-      case @assessment_type
-      when "SAP"
-        sap_xsd_files
-      when "RdSAP"
-        rdsap_xsd_files
-      when "CEPC"
-        cepc_xsd_files
-      end
-    end
-
-    def sap_xsd_files
-      Dir.glob("#{@xsd_dir_path}*-Domains.xsd")
-    end
-
-    def rdsap_xsd_files
-      Dir.glob("#{@xsd_dir_path}SAP-Domains.xsd")
-    end
-
-    def cepc_xsd_files
-      Dir.glob("#{@xsd_dir_path}Reported-Data.xsd")
-    end
-
-    def sap_defnied_in_rdsap_dir?(file_name)
-      @assessment_type == "SAP" && file_name.end_with?("SAP-Domains.xsd")
     end
   end
 end
