@@ -1,7 +1,5 @@
 module Gateway
   class XsdFilesGateway
-    class XsdFilesNotFoundError < StandardError; end
-
     attr_reader :simple_type, :assessment_type, :xsd_dir_path
 
     def initialize(simple_type:, assessment_type:, xsd_dir_path: "api/schemas/xml/*/")
@@ -24,7 +22,7 @@ module Gateway
               when "CEPC"
                 cepc_xsd_files
               end
-      raise XsdFilesNotFoundError, "No xsd files were found in #{xsd_dir_path} directory" if files.empty?
+      raise Boundary::XsdFilesNotFound, "No xsd files were found in #{xsd_dir_path} directory" if files.empty?
 
       files
     end

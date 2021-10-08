@@ -40,7 +40,7 @@ RSpec.describe Helper::RrnHelper do
 
     context "with an invalid RRN" do
       describe "too short: 123-5678-1234-5678-1234" do
-        it "raises an RrnNotValid error" do
+        it "raises an RrnNotValid boundary" do
           expect {
             described_class.normalise_rrn_format "123-5678-1234-5678-1234"
           }.to raise_exception(Helper::RrnHelper::RrnNotValid)
@@ -48,7 +48,7 @@ RSpec.describe Helper::RrnHelper do
       end
 
       describe "too long: 1234-5678-1234-5678-12345" do
-        it "raises an RrnNotValid error" do
+        it "raises an RrnNotValid boundary" do
           expect {
             described_class.normalise_rrn_format "1234-5678-1234-5678-12345"
           }.to raise_exception(Helper::RrnHelper::RrnNotValid)
@@ -56,7 +56,7 @@ RSpec.describe Helper::RrnHelper do
       end
 
       describe "with letters: 1234-AbCd-1234-5678-1234" do
-        it "raises an RrnNotValid error" do
+        it "raises an RrnNotValid boundary" do
           expect {
             described_class.normalise_rrn_format "1234-AbCd-1234-5678-1234"
           }.to raise_exception(Helper::RrnHelper::RrnNotValid)
@@ -64,7 +64,7 @@ RSpec.describe Helper::RrnHelper do
       end
 
       describe "Some words: This is nothing like an RRN" do
-        it "raises an RrnNotValid error" do
+        it "raises an RrnNotValid boundary" do
           expect {
             described_class.normalise_rrn_format "This is nothing like an RRN"
           }.to raise_exception(Helper::RrnHelper::RrnNotValid)
@@ -72,7 +72,7 @@ RSpec.describe Helper::RrnHelper do
       end
 
       describe "Empty" do
-        it "raises an RrnNotValid error" do
+        it "raises an RrnNotValid boundary" do
           expect { described_class.normalise_rrn_format "" }.to raise_error(
             Helper::RrnHelper::RrnNotValid,
           )
@@ -80,7 +80,7 @@ RSpec.describe Helper::RrnHelper do
       end
 
       describe "All the dashes" do
-        it "raises an RrnNotValid error" do
+        it "raises an RrnNotValid boundary" do
           expect {
             described_class.normalise_rrn_format "---------------------------------"
           }.to raise_error(Helper::RrnHelper::RrnNotValid)

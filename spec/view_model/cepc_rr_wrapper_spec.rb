@@ -213,7 +213,7 @@ RSpec.describe ViewModel::CepcRrWrapper do
     end
   end
 
-  it "returns the expect error without a valid schema type" do
+  it "returns the expect boundary without a valid schema type" do
     expect { described_class.new "", "invalid" }.to raise_error(
       ArgumentError,
     ).with_message "Unsupported schema type"

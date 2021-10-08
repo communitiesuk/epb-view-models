@@ -8,11 +8,11 @@ RSpec.describe Gateway::XsdFilesGateway do
   end
 
   describe "#xsd_files" do
-    it "raises an error when it cannot find a path" do
+    it "raises an boundary when it cannot find a path" do
       gateway = described_class.new(xsd_dir_path: "path/that/doesnt/exist", simple_type: "SomeNodeName", assessment_type: "SAP")
 
       expect { gateway.xsd_files }.to raise_error(
-        described_class::XsdFilesNotFoundError,
+                                        Boundary::XsdFilesNotFound,
         "No xsd files were found in path/that/doesnt/exist directory",
       )
     end

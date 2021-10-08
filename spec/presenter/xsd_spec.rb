@@ -14,7 +14,7 @@ RSpec.describe Presenter::Xsd do
       expect(enums["SAP-Schema-18.0.0/SAP"]).to eq(built_form)
     end
 
-    it "raises an error when a node is not defined in the xsd files" do
+    it "raises an boundary when a node is not defined in the xsd files" do
       expect {
         export.get_enums_by_type(
           simple_type: "UnicornCode",
@@ -22,7 +22,7 @@ RSpec.describe Presenter::Xsd do
           xsd_dir_path: "api/schemas/xml/SAP-Schema-18.0.0/SAP/UDT/",
         )
       }.to raise_error(
-        described_class::NodeNotFoundError,
+        Boundary::NodeNotFound,
         "Node UnicornCode was not found in any of the xsd files in api/schemas/xml/SAP-Schema-18.0.0/SAP/UDT/ directory",
       )
     end
@@ -33,7 +33,7 @@ RSpec.describe Presenter::Xsd do
 
     describe "#get_enums_by_type" do
       it "raises an errors for an incorrect path" do
-        expect { export.get_enums_by_type(simple_type: "TransactionType", assessment_type: "RdSAP", xsd_dir_path: "api/schemas/xml/*/") }.to raise_error(described_class::XsdFilesNotFound)
+        expect { export.get_enums_by_type(simple_type: "TransactionType", assessment_type: "RdSAP", xsd_dir_path: "api/schemas/xml/*/") }.to raise_error(Boundary::XsdFilesNotFound)
       end
 
       it "extracts a hash of the enums for a Rdsap 17 node" do
