@@ -32,6 +32,10 @@ RSpec.describe Presenter::Xsd do
     let(:enums) { export.get_enums_by_type(simple_type: "SAP-BuiltFormCode", assessment_type: "RdSAP", xsd_dir_path: "api/schemas/xml/RdSAP**/RdSAP/UDT/") }
 
     describe "#get_enums_by_type" do
+      it "raises an errors for an incorrect path" do
+        expect { export.get_enums_by_type(simple_type: "TransactionType", assessment_type: "RdSAP", xsd_dir_path: "api/schemas/xml/*/") }.to raise_error(described_class::XsdFilesNotFound)
+      end
+
       it "extracts a hash of the enums for a Rdsap 17 node" do
         built_form = { "1" => "Detached",
                        "2" => "Semi-Detached",

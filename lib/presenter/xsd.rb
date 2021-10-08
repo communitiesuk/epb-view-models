@@ -2,24 +2,33 @@ module Presenter
   class Xsd
     class NodeNotFoundError < StandardError; end
 
+    class XsdFilesNotFound < StandardError; end
+
     def get_enums_by_type(simple_type:, assessment_type:, xsd_dir_path: "api/schemas/xml/*/")
       xsd_files_gateway = Gateway::XsdFilesGateway.new(simple_type: simple_type, assessment_type: assessment_type, xsd_dir_path: xsd_dir_path)
+
+      begin
+        xsd_files = xsd_files_gateway.xsd_files
+      rescue Gateway::XsdFilesGateway::XsdFilesNotFoundError => e
+        raise XsdFilesNotFound, e.message.to_s
+      end
 
       hash = {}
       xpath = "//xs:simpleType[@name='#{simple_type}']//xs:enumeration"
 
-      xsd_files_gateway.xsd_files.each do |file|
+      xsd_files.each do |file|
         doc = REXML::Document.new(File.read(file))
         enums_hash = {}
-        REXML::XPath.each(doc, "#{xpath}/@value") do |e|
-          desc_path = "#{xpath}[@value='#{e.value}']//xs:annotation//xs:documentation"
-          enums_hash.merge!(e.value => REXML::XPath.first(doc, desc_path).children.first)
+        REXML::XPath.each(doc, "#{xpath}/@value") do |node|
+          desc_path = "#{xpath}[@value='#{node.value}']//xs:annotation//xs:documentation"
+          enums_hash.merge!(node.value => REXML::XPath.first(doc, desc_path).children.first)
         end
 
         next if enums_hash.empty?
 
         hash[xsd_files_gateway.schema_version(file)] = enums_hash
       end
+
       raise NodeNotFoundError, "Node #{simple_type} was not found in any of the xsd files in #{xsd_dir_path} directory" if hash.empty?
 
       hash
