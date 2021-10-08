@@ -1,4 +1,4 @@
-module Gateway
+module ViewModelGateway
   class XsdFilesGateway
     attr_reader :simple_type, :assessment_type, :xsd_dir_path
 

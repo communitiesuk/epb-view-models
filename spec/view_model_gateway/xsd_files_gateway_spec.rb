@@ -1,4 +1,4 @@
-RSpec.describe Gateway::XsdFilesGateway do
+RSpec.describe ViewModelGateway::XsdFilesGateway do
   subject(:gateway) { described_class.new(simple_type: "SomeNodeName", assessment_type: "RdSAP") }
 
   it "initializes with simple_type, assessment_type and xsd_dir_path" do
@@ -12,7 +12,7 @@ RSpec.describe Gateway::XsdFilesGateway do
       gateway = described_class.new(xsd_dir_path: "path/that/doesnt/exist", simple_type: "SomeNodeName", assessment_type: "SAP")
 
       expect { gateway.xsd_files }.to raise_error(
-                                        Boundary::XsdFilesNotFound,
+        Boundary::XsdFilesNotFound,
         "No xsd files were found in path/that/doesnt/exist directory",
       )
     end
