@@ -5,8 +5,8 @@ module Presenter
 
       begin
         xsd_files = xsd_files_gateway.xsd_files
-      rescue Boundary::XsdFilesNotFound => e
-        raise Boundary::XsdFilesNotFound, e.message.to_s
+      rescue ViewModelBoundary::XsdFilesNotFound => e
+        raise ViewModelBoundary::XsdFilesNotFound, e.message.to_s
       end
 
       hash = {}
@@ -25,7 +25,7 @@ module Presenter
         hash[xsd_files_gateway.schema_version(file)] = enums_hash
       end
 
-      raise Boundary::NodeNotFound, "Node #{simple_type} was not found in any of the xsd files in #{xsd_dir_path} directory" if hash.empty?
+      raise ViewModelBoundary::NodeNotFound, "Node #{simple_type} was not found in any of the xsd files in #{xsd_dir_path} directory" if hash.empty?
 
       hash
     end

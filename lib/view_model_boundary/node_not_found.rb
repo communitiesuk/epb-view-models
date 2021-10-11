@@ -1,3 +1,3 @@
-module Boundary
+module ViewModelBoundary
   class NodeNotFound < StandardError; end
 end

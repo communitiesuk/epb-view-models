@@ -2,7 +2,7 @@ require_relative "../xml_view_test_helper"
 require "active_support/core_ext/hash/deep_merge"
 
 RSpec.describe ViewModel::SapWrapper do
-  it "returns the expect boundary without a valid schema type" do
+  it "returns the expect view_model_boundary without a valid schema type" do
     expect { described_class.new "", "invalid".to_sym }.to raise_error(
       ArgumentError,
     ).with_message "Unsupported schema type"
@@ -10,19 +10,19 @@ RSpec.describe ViewModel::SapWrapper do
 
   context "when general schemas are parsed" do
     context "when parsing a HCR report" do
-      it "raises an boundary with SAP-16.3" do
+      it "raises an view_model_boundary with SAP-16.3" do
         expect {
           described_class.new "", :"SAP-Schema-16.3", "1"
         }.to raise_error(ArgumentError).with_message "Unsupported schema type"
       end
 
-      it "raises an boundary with SAP-16.2" do
+      it "raises an view_model_boundary with SAP-16.2" do
         expect {
           described_class.new "", :"SAP-Schema-16.2", "1"
         }.to raise_error(ArgumentError).with_message "Unsupported schema type"
       end
 
-      it "raises an boundary with SAP-16.1" do
+      it "raises an view_model_boundary with SAP-16.1" do
         expect {
           described_class.new "", :"SAP-Schema-16.1", "1"
         }.to raise_error(ArgumentError).with_message "Unsupported schema type"
