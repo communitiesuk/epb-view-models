@@ -1,6 +1,6 @@
 module Presenter
   class Xsd
-    def get_enums_by_type(simple_type:, assessment_type:, xsd_dir_path: "/api/schemas/xml/*/")
+    def get_enums_by_type(simple_type:, assessment_type:, xsd_dir_path: "/api/schemas/xml/**/")
       xsd_files_gateway = ViewModelGateway::XsdFilesGateway.new(simple_type: simple_type, assessment_type: assessment_type, xsd_dir_path: xsd_dir_path)
 
       begin
