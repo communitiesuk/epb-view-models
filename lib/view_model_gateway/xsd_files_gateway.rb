@@ -1,6 +1,6 @@
 module ViewModelGateway
   class XsdFilesGateway
-    attr_reader :simple_type, :assessment_type, :xsd_dir_path
+    attr_reader :simple_type, :assessment_type, :xsd_dir_path, :glob_path
 
     def initialize(simple_type:, assessment_type:, xsd_dir_path: "/api/schemas/xml/*/")
       @simple_type = simple_type
@@ -17,16 +17,16 @@ module ViewModelGateway
     end
 
     def xsd_files
-      files = case assessment_type
-              when "SAP"
+      files = case assessment_type.downcase
+              when "sap"
                 sap_xsd_files
-              when "RdSAP"
+              when "rdsap"
                 rdsap_xsd_files
-              when "CEPC"
+              when "cepc"
                 cepc_xsd_files
               end
 
-      raise Boundary::XsdFilesNotFound, "No xsd files were found in #{@dir_path + xsd_dir_path} directory" if files.nil? || files.empty?
+      raise Boundary::XsdFilesNotFound, "No xsd files were found in #{@glob_path} directory" if files.nil? || files.empty?
 
       files
     end
@@ -38,15 +38,18 @@ module ViewModelGateway
     end
 
     def sap_xsd_files
-      Dir.glob("#{@dir_path + xsd_dir_path}*-Domains.xsd")
+      @glob_path = "#{@dir_path + xsd_dir_path}*-Domains.xsd"
+      Dir.glob(@glob_path)
     end
 
     def rdsap_xsd_files
-      Dir.glob("#{@dir_path + xsd_dir_path}SAP-Domains.xsd")
+      @glob_path = "#{@dir_path + xsd_dir_path}*-Domains.xsd"
+      Dir.glob(@glob_path)
     end
 
     def cepc_xsd_files
-      Dir.glob("#{@dir_path + xsd_dir_path}Reported-Data.xsd")
+      @glob_path = "#{@dir_path + xsd_dir_path}Reported-Data.xsd"
+      Dir.glob(@glob_path)
     end
   end
 end

@@ -13,7 +13,7 @@ RSpec.describe ViewModelGateway::XsdFilesGateway do
 
       expect { gateway.xsd_files }.to raise_error(
         Boundary::XsdFilesNotFound,
-        "No xsd files were found in #{Dir.pwd}/path/that/doesnt/exist directory",
+        /No xsd files were found in #{Dir.pwd}/,
       )
     end
   end
