@@ -22,7 +22,8 @@ module ViewModelGateway
               when "CEPC"
                 cepc_xsd_files
               end
-      raise Boundary::XsdFilesNotFound, "No xsd files were found in #{xsd_dir_path} directory" if files.empty?
+
+      raise Boundary::XsdFilesNotFound, "No xsd files were found in #{xsd_dir_path} directory" if files.empty? || files.nil?
 
       files
     end
