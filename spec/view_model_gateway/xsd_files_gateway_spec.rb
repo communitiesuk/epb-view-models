@@ -4,7 +4,7 @@ RSpec.describe ViewModelGateway::XsdFilesGateway do
   it "initializes with simple_type, assessment_type and xsd_dir_path" do
     expect(gateway.simple_type).to eq("SomeNodeName")
     expect(gateway.assessment_type).to eq("RdSAP")
-    expect(gateway.xsd_dir_path).to eq("/api/schemas/xml/*/")
+    expect(gateway.xsd_dir_path).to eq("/api/schemas/xml/**/")
   end
 
   describe "#xsd_files" do

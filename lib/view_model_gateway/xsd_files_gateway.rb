@@ -2,7 +2,7 @@ module ViewModelGateway
   class XsdFilesGateway
     attr_reader :simple_type, :assessment_type, :xsd_dir_path, :glob_path
 
-    def initialize(simple_type:, assessment_type:, xsd_dir_path: "/api/schemas/xml/*/")
+    def initialize(simple_type:, assessment_type:, xsd_dir_path: "/api/schemas/xml/**/")
       @simple_type = simple_type
       @assessment_type = assessment_type
       @xsd_dir_path = xsd_dir_path
