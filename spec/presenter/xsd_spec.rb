@@ -2,7 +2,10 @@ RSpec.describe Presenter::Xsd do
   let(:export) { described_class.new }
 
   context "when reading data from a specific xsd for processing" do
-    let(:enums) { export.get_enums_by_type(ViewModelDomain::XsdArguments.new(simple_type: "SAP-BuiltFormCode", assessment_type: "SAP", xsd_dir_path: "/api/schemas/xml/SAP-Schema-18.0.0/SAP/UDT/")) }
+    let(:enums) do
+      export.get_enums_by_type(ViewModelDomain::XsdArguments.new(simple_type: "SAP-BuiltFormCode",
+                                                                 assessment_type: "SAP", xsd_dir_path: "/api/schemas/xml/SAP-Schema-18.0.0/SAP/UDT/*-Domains.xsd"))
+    end
 
     it "extracts a hash of the enums for a particular node" do
       built_form = { "1" => "Detached",
@@ -20,22 +23,22 @@ RSpec.describe Presenter::Xsd do
           ViewModelDomain::XsdArguments.new(
             simple_type: "UnicornCode",
             assessment_type: "SAP",
-            xsd_dir_path: "/api/schemas/xml/SAP-Schema-18.0.0/SAP/UDT/",
+            xsd_dir_path: "/api/schemas/xml/SAP-Schema-18.0.0/SAP/UDT/*-Domains.xsd",
           ),
         )
       }.to raise_error(
         ViewModelBoundary::NodeNotFound,
-        "Node UnicornCode was not found in any of the xsd files in /api/schemas/xml/SAP-Schema-18.0.0/SAP/UDT/ directory",
+        /Node UnicornCode was not found in any of the xsd files in /,
       )
     end
   end
 
   context "when traversing all the xsd for RdSAP type " do
-    let(:enums) { export.get_enums_by_type(ViewModelDomain::XsdArguments.new(simple_type: "SAP-BuiltFormCode", assessment_type: "RdSAP", xsd_dir_path: "/api/schemas/xml/RdSAP**/RdSAP/UDT/")) }
+    let(:enums) { export.get_enums_by_type(ViewModelDomain::XsdArguments.new(simple_type: "SAP-BuiltFormCode", assessment_type: "RdSAP", xsd_dir_path: "/api/schemas/xml/RdSAP**/RdSAP/UDT/*-Domains.xsd")) }
 
     describe "#get_enums_by_type" do
       it "raises an errors for an incorrect path" do
-        expect { export.get_enums_by_type(ViewModelDomain::XsdArguments.new(simple_type: "TransactionType", assessment_type: "RdSAP", xsd_dir_path: "/api/schemas/xml/*/")) }.to raise_error(ViewModelBoundary::XsdFilesNotFound)
+        expect { export.get_enums_by_type(ViewModelDomain::XsdArguments.new(simple_type: "TransactionType", assessment_type: "RdSAP", xsd_dir_path: "/test/schemas/xml/*/")) }.to raise_error(ViewModelBoundary::XsdFilesNotFound)
       end
 
       it "extracts a hash of the enums for a Rdsap 17 node" do
@@ -70,7 +73,7 @@ RSpec.describe Presenter::Xsd do
                         "5" => "Enclosed End-Terrace",
                         "6" => "Enclosed Mid-Terrace",
                         "NR" => "Not Recorded" }]
-        expect(export.unique_enums(ViewModelDomain::XsdArguments.new(simple_type: "SAP-BuiltFormCode", assessment_type: "RdSAP", xsd_dir_path: "/api/schemas/xml/RdSAP**/RdSAP/UDT/"))).to eq(built_form)
+        expect(export.unique_enums(ViewModelDomain::XsdArguments.new(simple_type: "SAP-BuiltFormCode", assessment_type: "RdSAP", xsd_dir_path: "/api/schemas/xml/RdSAP**/RdSAP/UDT/*-Domains.xsd"))).to eq(built_form)
       end
     end
 
@@ -117,7 +120,7 @@ RSpec.describe Presenter::Xsd do
   end
 
   context "when traversing all the xsd for CEPC type" do
-    let(:enums) { export.get_enums_by_type(ViewModelDomain::XsdArguments.new(simple_type: "TransactionType", assessment_type: "CEPC", xsd_dir_path: "/api/schemas/xml/CEPC-8.0.0/Reports/")) }
+    let(:enums) { export.get_enums_by_type(ViewModelDomain::XsdArguments.new(simple_type: "TransactionType", assessment_type: "CEPC", xsd_dir_path: "/api/schemas/xml/CEPC-8.0.0/Reports/Reported-Data.xsd")) }
 
     describe "#get_enums_by_type" do
       it "extracts a hash of the enums for a CEPC-8.0.0" do
