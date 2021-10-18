@@ -28,7 +28,7 @@ RSpec.describe Presenter::Xsd do
         )
       }.to raise_error(
         ViewModelBoundary::NodeNotFound,
-        /Node UnicornCode was not found in any of the xsd files in /,
+        /Node UnicornCode was not found in any of the files in /,
       )
     end
   end
@@ -124,7 +124,7 @@ RSpec.describe Presenter::Xsd do
 
     describe "#get_enums_by_type" do
       it "extracts a hash of the enums for a CEPC-8.0.0" do
-        transation_types = {
+        transaction_types = {
           "1" => "Mandatory issue (Marketed sale).",
           "2" => "Mandatory issue (Non-marketed sale).",
           "3" => "Mandatory issue (Property on construction).",
@@ -133,8 +133,38 @@ RSpec.describe Presenter::Xsd do
           "6" => "Voluntary (No legal requirement for an EPC).",
           "7" => "Not recorded.",
         }
-        expect(enums["CEPC-8.0.0"]).to eq(transation_types)
+        expect(enums["CEPC-8.0.0"]).to eq(transaction_types)
       end
+    end
+  end
+
+  context "when the enum is stored in XML rather than an xsd" do
+    let(:enums) do
+      export.get_enums_by_type(ViewModelDomain::XsdArguments.new(simple_type: "//Transaction-Type", assessment_type: "RdSAP",
+                                                                 xsd_dir_path: "/api/schemas/xml/RdSAP-Schema-20.0.0/RdSAP/ExternalDefinitions.xml"))
+    end
+
+    let (:sorted_enums){
+      enums["RdSAP-Schema-20.0.0"].sort_by { |k, _v| k.to_i }.to_h
+    }
+
+    it "extract the values for using nokogiri for transaction type in RdSAP" do
+      transaction_types = {
+        "1" => "Marketed sale",
+        "2" => "Non-marketed sale",
+        "5" => "None of the above",
+        "6" => "New dwelling",
+        "8" => "Rental",
+        "9" => "Assessment for Green Deal",
+        "10" => "Following Green Deal",
+        "11" => "FiT application",
+        "12" => "RHI application",
+        "13" => "ECO assessment",
+        "14" => "Stock condition survey",
+      }
+
+
+      expect(sorted_enums).to eq(transaction_types)
     end
   end
 end

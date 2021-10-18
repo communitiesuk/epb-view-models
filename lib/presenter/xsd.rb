@@ -10,22 +10,19 @@ module Presenter
       end
 
       hash = {}
-      xpath = "//xs:simpleType[@name='#{domain_arguments.simple_type}']//xs:enumeration"
 
       xsd_files.each do |file|
-        doc = REXML::Document.new(File.read(file))
-        enums_hash = {}
-        REXML::XPath.each(doc, "#{xpath}/@value") do |node|
-          desc_path = "#{xpath}[@value='#{node.value}']//xs:annotation//xs:documentation"
-          enums_hash.merge!(node.value => REXML::XPath.first(doc, desc_path).children.first)
-        end
+
+        enums_hash = File.extname(file).downcase == ".xsd" ? read_xsd(file, domain_arguments.simple_type ) : read_xml(file, domain_arguments.simple_type)
 
         next if enums_hash.empty?
 
         hash[xsd_files_gateway.schema_version(file)] = enums_hash
       end
 
-      raise ViewModelBoundary::NodeNotFound, "Node #{domain_arguments.simple_type} was not found in any of the xsd files in #{domain_arguments.xsd_dir_path} directory" if hash.empty?
+
+
+      raise ViewModelBoundary::NodeNotFound, "Node #{domain_arguments.simple_type} was not found in any of the files in #{domain_arguments.xsd_dir_path} directory" if hash.empty?
 
       hash
     end
@@ -45,5 +42,30 @@ module Presenter
     def variation_between_schema_versions?(enums_hash)
       enums_hash.values.flatten.uniq.count != 1
     end
+
+    private
+
+    def read_xsd(file_name, simple_type)
+      xpath = "//xs:simpleType[@name='#{simple_type}']//xs:enumeration"
+      doc = REXML::Document.new(File.read(file_name))
+      enums_hash = {}
+      REXML::XPath.each(doc, "#{xpath}/@value") do |node|
+        desc_path = "#{xpath}[@value='#{node.value}']//xs:annotation//xs:documentation"
+        enums_hash.merge!(node.value => REXML::XPath.first(doc, desc_path).children.first)
+      end
+      enums_hash
+    end
+
+    def read_xml(file_name, node_name)
+      doc = Nokogiri.XML(File.read(file_name))
+      enums_hash = {}
+
+      doc.xpath(node_name).each do |node|
+        enums_hash.merge!(node.xpath("Transaction-Code").children.text => node.xpath("Transaction-Text").children.text)
+      end
+
+      enums_hash
+    end
+
   end
 end
