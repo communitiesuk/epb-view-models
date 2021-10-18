@@ -141,12 +141,13 @@ RSpec.describe Presenter::Xsd do
   context "when the enum is stored in XML rather than an xsd" do
     let(:enums) do
       export.get_enums_by_type(ViewModelDomain::XsdArguments.new(simple_type: "//Transaction-Type", assessment_type: "RdSAP",
-                                                                 xsd_dir_path: "/api/schemas/xml/RdSAP-Schema-20.0.0/RdSAP/ExternalDefinitions.xml"))
+                                                                 xsd_dir_path: "/api/schemas/xml/RdSAP-Schema-20.0.0/RdSAP/ExternalDefinitions.xml",
+                                                                 node_hash: { "Transaction-Code" => "Transaction-Text" }))
     end
 
-    let (:sorted_enums){
+    let(:sorted_enums) do
       enums["RdSAP-Schema-20.0.0"].sort_by { |k, _v| k.to_i }.to_h
-    }
+    end
 
     it "extract the values for using nokogiri for transaction type in RdSAP" do
       transaction_types = {
@@ -162,7 +163,6 @@ RSpec.describe Presenter::Xsd do
         "13" => "ECO assessment",
         "14" => "Stock condition survey",
       }
-
 
       expect(sorted_enums).to eq(transaction_types)
     end

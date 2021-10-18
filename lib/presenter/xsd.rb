@@ -12,15 +12,12 @@ module Presenter
       hash = {}
 
       xsd_files.each do |file|
-
-        enums_hash = File.extname(file).downcase == ".xsd" ? read_xsd(file, domain_arguments.simple_type ) : read_xml(file, domain_arguments.simple_type)
+        enums_hash = File.extname(file).downcase == ".xsd" ? read_xsd(file, domain_arguments.simple_type) : read_xml(file, domain_arguments.simple_type, domain_arguments.node_hash)
 
         next if enums_hash.empty?
 
         hash[xsd_files_gateway.schema_version(file)] = enums_hash
       end
-
-
 
       raise ViewModelBoundary::NodeNotFound, "Node #{domain_arguments.simple_type} was not found in any of the files in #{domain_arguments.xsd_dir_path} directory" if hash.empty?
 
@@ -43,7 +40,7 @@ module Presenter
       enums_hash.values.flatten.uniq.count != 1
     end
 
-    private
+  private
 
     def read_xsd(file_name, simple_type)
       xpath = "//xs:simpleType[@name='#{simple_type}']//xs:enumeration"
@@ -56,16 +53,16 @@ module Presenter
       enums_hash
     end
 
-    def read_xml(file_name, node_name)
+    def read_xml(file_name, node_name, node_hash)
       doc = Nokogiri.XML(File.read(file_name))
       enums_hash = {}
 
       doc.xpath(node_name).each do |node|
-        enums_hash.merge!(node.xpath("Transaction-Code").children.text => node.xpath("Transaction-Text").children.text)
+
+        enums_hash.merge!(node.xpath(node_hash.keys[0].to_s).children.text => node.xpath(node_hash.values[0]).children.text)
       end
 
       enums_hash
     end
-
   end
 end
