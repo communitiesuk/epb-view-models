@@ -15,7 +15,7 @@ module ViewModelGateway
     def schema_version(file)
       api_path_start = file.index(API_PATH) + API_PATH.length
       schema_version = file[api_path_start..].split("/").first
-      sap_defnied_in_rdsap_dir?(file) ? "#{schema_version}/SAP" : schema_version
+      sap_defined_in_rdsap_dir?(file) ? "#{schema_version}/SAP" : schema_version
     end
 
     def xsd_files
@@ -39,7 +39,7 @@ module ViewModelGateway
 
   private
 
-    def sap_defnied_in_rdsap_dir?(file)
+    def sap_defined_in_rdsap_dir?(file)
       assessment_type == "SAP" && file.end_with?("SAP-Domains.xsd")
     end
 
