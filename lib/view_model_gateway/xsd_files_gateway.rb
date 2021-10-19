@@ -29,7 +29,8 @@ module ViewModelGateway
                   cepc_xsd_files
                 end
               else
-                Dir.glob("#{@dir_path}#{@xsd_dir_path}")
+                @glob_path = "#{@dir_path}#{@xsd_dir_path}"
+                Dir.glob(@glob_path)
               end
 
       raise ViewModelBoundary::XsdFilesNotFound, "No xsd files were found in #{@glob_path} directory" if files.nil? || files.empty?

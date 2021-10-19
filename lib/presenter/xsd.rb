@@ -58,7 +58,6 @@ module Presenter
       enums_hash = {}
 
       doc.xpath(node_name).each do |node|
-
         enums_hash.merge!(node.xpath(node_hash.keys[0].to_s).children.text => node.xpath(node_hash.values[0]).children.text)
       end
 
