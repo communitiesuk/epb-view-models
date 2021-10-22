@@ -49,19 +49,23 @@ module Presenter
         init!
       end
 
-      def start_element(name, attrs = [])
+      def start_element_namespace(name, attrs = nil, _prefix = nil, _uri = nil, _namespace = nil)
         @source_position << name
         @output_position << as_key(name) unless is_base?(name)
         @is_excluding = true if @excludes.include?(name)
         @is_including = true if @includes.include?(name)
-        @attrs = attrs
+        super
         if encountered_position? || at_list_node_item?
           set_up_list
         end
         write_encounter
       end
 
-      def end_element(name)
+      def start_element(_name, attrs = nil)
+        @attrs = attrs
+      end
+
+      def end_element_namespace(name, _prefix = nil, _uri = nil)
         @source_position.pop
         @output_position.pop unless is_base?(name)
         @is_excluding = false if @excludes.include?(name)

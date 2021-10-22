@@ -161,4 +161,17 @@ RSpec.describe Presenter::Xml::Parser do
       expect(parser.parse(xml)).to eq expected
     end
   end
+
+  context "with namespaced nodes" do
+    let(:parser) { described_class.new }
+
+    it "ignores namespaces when mapping" do
+      xml = "<Prefix:Root><Prefix:Id>123</Prefix:Id><Prefix:Name>name with a prefix</Prefix:Name></Prefix:Root>"
+      expected = {
+        "id" => 123,
+        "name" => "name with a prefix",
+      }
+      expect(parser.parse(xml)).to eq expected
+    end
+  end
 end
