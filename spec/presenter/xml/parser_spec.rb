@@ -141,4 +141,24 @@ RSpec.describe Presenter::Xml::Parser do
       expect(parser.parse(xml)).to eq expected
     end
   end
+
+  context "with list nodes specified that are nested within other lists" do
+    let(:parser) { described_class.new list_nodes: %w[Outer-List Inner-List] }
+
+    it "can map nested lists" do
+      xml = "<Root><Outer-List><Item><Inner-List><Item><Name>I am in a list!</Name></Item></Inner-List></Item></Outer-List></Root>"
+      expected = {
+        "outer_list" => [
+          {
+            "inner_list" => [
+              {
+                "name" => "I am in a list!",
+              },
+            ],
+          },
+        ],
+      }
+      expect(parser.parse(xml)).to eq expected
+    end
+  end
 end
