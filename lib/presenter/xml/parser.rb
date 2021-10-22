@@ -1,11 +1,12 @@
 module Presenter
   module Xml
     class Parser
-      def initialize(excludes: [], includes: [], bases: [], preferred_keys: {})
+      def initialize(excludes: [], includes: [], bases: [], preferred_keys: {}, list_nodes: [])
         @excludes = excludes
         @includes = includes
         @bases = bases
         @preferred_keys = preferred_keys
+        @list_nodes = list_nodes
       end
 
       def parse(xml)
@@ -14,7 +15,11 @@ module Presenter
       end
 
       def sax_parser
-        @assessment_document ||= AssessmentDocument.new(excludes: @excludes, includes: @includes, bases: @bases, preferred_keys: @preferred_keys)
+        @assessment_document ||= AssessmentDocument.new excludes: @excludes,
+                                                        includes: @includes,
+                                                        bases: @bases,
+                                                        preferred_keys: @preferred_keys,
+                                                        list_nodes: @list_nodes
         @sax_parser ||= Nokogiri::XML::SAX::Parser.new @assessment_document
       end
 
@@ -26,11 +31,12 @@ module Presenter
     end
 
     class AssessmentDocument < Nokogiri::XML::SAX::Document
-      def initialize(excludes: [], includes: [], bases: [], preferred_keys: {})
+      def initialize(excludes: [], includes: [], bases: [], preferred_keys: {}, list_nodes: [])
         @excludes = excludes
         @includes = includes
         @bases = bases
         @preferred_keys = preferred_keys
+        @list_nodes = list_nodes
         super()
       end
 
@@ -49,7 +55,7 @@ module Presenter
         @is_excluding = true if @excludes.include?(name)
         @is_including = true if @includes.include?(name)
         @attrs = attrs
-        if encountered_position?
+        if encountered_position? || at_list_node_item?
           set_up_list
         end
         write_encounter
@@ -114,6 +120,8 @@ module Presenter
 
       def value_at(keys)
         keys.inject(@output, :fetch)
+      rescue KeyError
+        nil
       end
 
       def prepare_hash(keys)
@@ -160,13 +168,23 @@ module Presenter
         return if @output_position.any? { |x| x.is_a? Integer }
 
         candidate_list = value_at @output_position[..-2]
-        if candidate_list.is_a?(Array)
+
+        case candidate_list
+        when Array
           list_index = candidate_list.length
+        when NilClass
+          set_value_with_keys([], @output_position[..-2])
+          list_index = 0
         else
           set_value_with_keys([candidate_list.values[0]], @output_position[..-2])
           list_index = 1
         end
+
         @output_position[-1] = list_index
+      end
+
+      def at_list_node_item?
+        @list_nodes.include? @source_position[-2]
       end
     end
   end

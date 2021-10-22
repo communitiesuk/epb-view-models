@@ -117,4 +117,28 @@ RSpec.describe Presenter::Xml::Parser do
       expect(parser.parse(xml)).to eq expected
     end
   end
+
+  context "with list nodes specified" do
+    let(:parser) { described_class.new list_nodes: ["Actually-A-List"] }
+
+    it "treats given list node as a list, even if there is only one item in the list" do
+      xml = "<Root><Implicit-List><Implicit-Item><Id>123</Id></Implicit-Item><Implicit-Item><Id>456</Id></Implicit-Item></Implicit-List><Actually-A-List><Actually-An-Item><Speech>I am in a list!</Speech></Actually-An-Item></Actually-A-List></Root>"
+      expected = {
+        "implicit_list" => [
+          {
+            "id" => 123,
+          },
+          {
+            "id" => 456,
+          },
+        ],
+        "actually_a_list" => [
+          {
+            "speech" => "I am in a list!",
+          },
+        ],
+      }
+      expect(parser.parse(xml)).to eq expected
+    end
+  end
 end
