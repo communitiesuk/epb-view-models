@@ -176,7 +176,7 @@ module Presenter
         case candidate_list
         when Array
           list_index = candidate_list.length
-        when NilClass
+        when nil
           set_value_with_keys([], @output_position[..-2])
           list_index = 0
         else
