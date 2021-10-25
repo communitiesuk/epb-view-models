@@ -1,12 +1,13 @@
 module Presenter
   module Xml
     class Parser
-      def initialize(excludes: [], includes: [], bases: [], preferred_keys: {}, list_nodes: [])
+      def initialize(excludes: [], includes: [], bases: [], preferred_keys: {}, list_nodes: [], list_nodes_without_root: {})
         @excludes = excludes
         @includes = includes
         @bases = bases
         @preferred_keys = preferred_keys
         @list_nodes = list_nodes
+        @list_nodes_without_root = list_nodes_without_root
       end
 
       def parse(xml)
@@ -19,7 +20,8 @@ module Presenter
                                                         includes: @includes,
                                                         bases: @bases,
                                                         preferred_keys: @preferred_keys,
-                                                        list_nodes: @list_nodes
+                                                        list_nodes: @list_nodes,
+                                                        list_nodes_without_root: @list_nodes_without_root
         @sax_parser ||= Nokogiri::XML::SAX::Parser.new @assessment_document
       end
 
@@ -31,12 +33,13 @@ module Presenter
     end
 
     class AssessmentDocument < Nokogiri::XML::SAX::Document
-      def initialize(excludes: [], includes: [], bases: [], preferred_keys: {}, list_nodes: [])
+      def initialize(excludes: [], includes: [], bases: [], preferred_keys: {}, list_nodes: [], list_nodes_without_root: {})
         @excludes = excludes
         @includes = includes
         @bases = bases
         @preferred_keys = preferred_keys
         @list_nodes = list_nodes
+        @list_nodes_without_root = list_nodes_without_root
         super()
       end
 
@@ -51,6 +54,7 @@ module Presenter
 
       def start_element_namespace(name, attrs = nil, _prefix = nil, _uri = nil, _namespace = nil)
         @source_position << name
+        @output_position << @list_nodes_without_root[name] if @list_nodes_without_root.key?(name)
         @output_position << as_key(name) unless is_base?(name)
         @is_excluding = true if @excludes.include?(name)
         @is_including = true if @includes.include?(name)
@@ -68,6 +72,7 @@ module Presenter
       def end_element_namespace(name, _prefix = nil, _uri = nil)
         @source_position.pop
         @output_position.pop unless is_base?(name)
+        @output_position.pop if @list_nodes_without_root.key?(name)
         @is_excluding = false if @excludes.include?(name)
         @is_including = false if @includes.include?(name)
       end
@@ -188,7 +193,7 @@ module Presenter
       end
 
       def at_list_node_item?
-        @list_nodes.include? @source_position[-2]
+        @list_nodes.include?(@source_position[-2]) || @list_nodes_without_root.key?(@source_position[-1])
       end
     end
   end

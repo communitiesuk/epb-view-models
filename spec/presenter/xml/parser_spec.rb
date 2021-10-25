@@ -174,4 +174,41 @@ RSpec.describe Presenter::Xml::Parser do
       expect(parser.parse(xml)).to eq expected
     end
   end
+
+  context "with list nodes without roots" do
+    let(:parser) { described_class.new list_nodes_without_root: { "Thing-Item" => "things" } }
+
+    context "when list has more than one item" do
+      it "constructs a list with a synthetic root in the new data structure" do
+        xml = "<Root><Thing-Item><Name>thing 1</Name></Thing-Item><Thing-Item><Name>thing 2</Name></Thing-Item><Sibling>a sister!</Sibling></Root>"
+        expected = {
+          "things" => [
+            {
+              "name" => "thing 1",
+            },
+            {
+              "name" => "thing 2",
+            },
+          ],
+          "sibling" => "a sister!",
+        }
+        expect(parser.parse(xml)).to eq expected
+      end
+    end
+
+    context "when list has only one item" do
+      it "constructs a list with a synthetic root in the new data structure" do
+        xml = "<Root><Thing-Item><Name>thing 1</Name></Thing-Item><Sibling>a sister!</Sibling></Root>"
+        expected = {
+          "things" => [
+            {
+              "name" => "thing 1",
+            },
+          ],
+          "sibling" => "a sister!",
+        }
+        expect(parser.parse(xml)).to eq expected
+      end
+    end
+  end
 end
