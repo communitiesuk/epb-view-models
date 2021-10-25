@@ -54,7 +54,7 @@ module Presenter
 
       def start_element_namespace(name, attrs = nil, _prefix = nil, _uri = nil, _namespace = nil)
         @source_position << name
-        @output_position << @list_nodes_without_root[name] if @list_nodes_without_root.key?(name)
+        @output_position << root_key_for_list if at_list_node_item_without_root?
         @output_position << as_key(name) unless is_base?(name)
         @is_excluding = true if @excludes.include?(name)
         @is_including = true if @includes.include?(name)
@@ -70,9 +70,9 @@ module Presenter
       end
 
       def end_element_namespace(name, _prefix = nil, _uri = nil)
-        @source_position.pop
         @output_position.pop unless is_base?(name)
-        @output_position.pop if @list_nodes_without_root.key?(name)
+        @output_position.pop if at_list_node_item_without_root?
+        @source_position.pop
         @is_excluding = false if @excludes.include?(name)
         @is_including = false if @includes.include?(name)
       end
@@ -193,7 +193,27 @@ module Presenter
       end
 
       def at_list_node_item?
-        @list_nodes.include?(@source_position[-2]) || @list_nodes_without_root.key?(@source_position[-1])
+        @list_nodes.include?(@source_position[-2]) || at_list_node_item_without_root?
+      end
+
+      def at_list_node_item_without_root?
+        return unless @list_nodes_without_root.key?(@source_position[-1])
+
+        case value = @list_nodes_without_root[@source_position[-1]]
+        when String
+          true
+        else
+          value[:parents].all? { |val| @source_position.include? val }
+        end
+      end
+
+      def root_key_for_list
+        case value = @list_nodes_without_root[@source_position[-1]]
+        when String
+          value
+        else
+          value[:key]
+        end
       end
     end
   end

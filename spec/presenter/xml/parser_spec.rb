@@ -210,5 +210,26 @@ RSpec.describe Presenter::Xml::Parser do
         expect(parser.parse(xml)).to eq expected
       end
     end
+
+    context "when specified node has node with same name elsewhere in document but we are targetting a node that has a particular parent node" do
+      let(:parser) { described_class.new list_nodes_without_root: { "Our-Child" => { parents: %w[Our-Parent], key: "our_children" } } }
+
+      it "constructs a list with a synthetic root in the data structure, only for the specified node" do
+        xml = "<Root><Our-Parent><Our-Child><Name>Chris</Name></Our-Child></Our-Parent><Unconnected><Our-Child>Peter</Our-Child></Unconnected></Root>"
+        expected = {
+          "our_parent" => {
+            "our_children" => [
+              {
+                "name" => "Chris",
+              },
+            ],
+          },
+          "unconnected" => {
+            "our_child" => "Peter",
+          },
+        }
+        expect(parser.parse(xml)).to eq expected
+      end
+    end
   end
 end
