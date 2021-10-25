@@ -1,13 +1,13 @@
 module Presenter
   module Xml
     class Parser
-      def initialize(excludes: [], includes: [], bases: [], preferred_keys: {}, list_nodes: [], list_nodes_without_root: {})
+      def initialize(excludes: [], includes: [], bases: [], preferred_keys: {}, list_nodes: [], rootless_list_nodes: {})
         @excludes = excludes
         @includes = includes
         @bases = bases
         @preferred_keys = preferred_keys
         @list_nodes = list_nodes
-        @list_nodes_without_root = list_nodes_without_root
+        @rootless_list_nodes = rootless_list_nodes
       end
 
       def parse(xml)
@@ -21,7 +21,7 @@ module Presenter
                                                         bases: @bases,
                                                         preferred_keys: @preferred_keys,
                                                         list_nodes: @list_nodes,
-                                                        list_nodes_without_root: @list_nodes_without_root
+                                                        rootless_list_nodes: @rootless_list_nodes
         @sax_parser ||= Nokogiri::XML::SAX::Parser.new @assessment_document
       end
 
@@ -33,13 +33,13 @@ module Presenter
     end
 
     class AssessmentDocument < Nokogiri::XML::SAX::Document
-      def initialize(excludes: [], includes: [], bases: [], preferred_keys: {}, list_nodes: [], list_nodes_without_root: {})
+      def initialize(excludes: [], includes: [], bases: [], preferred_keys: {}, list_nodes: [], rootless_list_nodes: {})
         @excludes = excludes
         @includes = includes
         @bases = bases
         @preferred_keys = preferred_keys
         @list_nodes = list_nodes
-        @list_nodes_without_root = list_nodes_without_root
+        @rootless_list_nodes = rootless_list_nodes
         super()
       end
 
@@ -54,7 +54,7 @@ module Presenter
 
       def start_element_namespace(name, attrs = nil, _prefix = nil, _uri = nil, _namespace = nil)
         @source_position << name
-        @output_position << root_key_for_list if at_list_node_item_without_root?
+        @output_position << root_key_for_list if at_rootless_list_node_item?
         @output_position << as_key(name) unless is_base?(name)
         @is_excluding = true if @excludes.include?(name)
         @is_including = true if @includes.include?(name)
@@ -71,7 +71,7 @@ module Presenter
 
       def end_element_namespace(name, _prefix = nil, _uri = nil)
         @output_position.pop unless is_base?(name)
-        @output_position.pop if at_list_node_item_without_root?
+        @output_position.pop if at_rootless_list_node_item?
         @source_position.pop
         @is_excluding = false if @excludes.include?(name)
         @is_including = false if @includes.include?(name)
@@ -193,13 +193,13 @@ module Presenter
       end
 
       def at_list_node_item?
-        @list_nodes.include?(@source_position[-2]) || at_list_node_item_without_root?
+        @list_nodes.include?(@source_position[-2]) || at_rootless_list_node_item?
       end
 
-      def at_list_node_item_without_root?
-        return unless @list_nodes_without_root.key?(@source_position[-1])
+      def at_rootless_list_node_item?
+        return unless @rootless_list_nodes.key?(@source_position[-1])
 
-        case value = @list_nodes_without_root[@source_position[-1]]
+        case value = @rootless_list_nodes[@source_position[-1]]
         when String
           true
         else
@@ -208,7 +208,7 @@ module Presenter
       end
 
       def root_key_for_list
-        case value = @list_nodes_without_root[@source_position[-1]]
+        case value = @rootless_list_nodes[@source_position[-1]]
         when String
           value
         else

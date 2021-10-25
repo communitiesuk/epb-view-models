@@ -176,7 +176,7 @@ RSpec.describe Presenter::Xml::Parser do
   end
 
   context "with list nodes without roots" do
-    let(:parser) { described_class.new list_nodes_without_root: { "Thing-Item" => "things" } }
+    let(:parser) { described_class.new rootless_list_nodes: { "Thing-Item" => "things" } }
 
     context "when list has more than one item" do
       it "constructs a list with a synthetic root in the new data structure" do
@@ -212,7 +212,7 @@ RSpec.describe Presenter::Xml::Parser do
     end
 
     context "when specified node has node with same name elsewhere in document but we are targetting a node that has a particular parent node" do
-      let(:parser) { described_class.new list_nodes_without_root: { "Our-Child" => { parents: %w[Our-Parent], key: "our_children" } } }
+      let(:parser) { described_class.new rootless_list_nodes: { "Our-Child" => { parents: %w[Our-Parent], key: "our_children" } } }
 
       it "constructs a list with a synthetic root in the data structure, only for the specified node" do
         xml = "<Root><Our-Parent><Our-Child><Name>Chris</Name></Our-Child></Our-Parent><Unconnected><Our-Child>Peter</Our-Child></Unconnected></Root>"
