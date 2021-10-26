@@ -48,4 +48,17 @@ RSpec.describe Presenter::Export::Statistics do
       })
     end
   end
+
+  context "when building a Commercial AC cert statistics export" do
+    subject(:stats_export) do
+      schema_type = "CEPC-8.0.0".freeze
+      xml = Nokogiri.XML Samples.xml(schema_type, "ac-cert")
+      wrapper = ViewModel::Factory.new.create(xml.to_s, schema_type)
+      described_class.new(wrapper)
+    end
+
+    it "returns a hash with relevant keys" do
+      expect(stats_export.build).to eq(nil)
+    end
+  end
 end
