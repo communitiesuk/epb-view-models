@@ -6,7 +6,7 @@ module Presenter
       end
 
       class << self
-        KEYS = %i[excludes includes bases preferred_keys list_nodes rootless_list_nodes]
+        KEYS = %i[excludes includes bases preferred_keys list_nodes rootless_list_nodes].freeze
 
         KEYS.each do |key|
           define_method key do |arg|
