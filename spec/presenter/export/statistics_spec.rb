@@ -11,7 +11,6 @@ RSpec.describe Presenter::Export::Statistics do
 
     it "returns a hash with relevant keys" do
       expect(stats_export.build).to eq({
-        current_energy_rating: 50,
         transaction_type: "1",
       })
     end
@@ -27,7 +26,6 @@ RSpec.describe Presenter::Export::Statistics do
 
     it "returns a hash with relevant keys" do
       expect(stats_export.build).to eq({
-        current_energy_rating: 50,
         transaction_type: "1",
       })
     end
@@ -43,7 +41,6 @@ RSpec.describe Presenter::Export::Statistics do
 
     it "returns a hash with relevant keys" do
       expect(stats_export.build).to eq({
-        current_energy_rating: "80",
         transaction_type: "1",
       })
     end
