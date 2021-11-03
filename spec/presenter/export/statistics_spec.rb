@@ -55,7 +55,7 @@ RSpec.describe Presenter::Export::Statistics do
     end
 
     it "returns a hash with relevant keys" do
-      expect(stats_export.build).to eq(nil)
+      expect(stats_export.build).to eq({ transaction_type: 0 })
     end
   end
 end

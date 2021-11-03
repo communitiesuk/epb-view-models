@@ -10,7 +10,9 @@ module Presenter::Export
         transaction_type: @view_model.transaction_type,
       }
     rescue NoMethodError
-      nil
+      {
+        transaction_type: 0,
+      }
     end
   end
 end

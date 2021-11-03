@@ -12,6 +12,7 @@ module Presenter
         Green-Deal-Package
         Energy-Assessor
         Green-Deal-Category
+        RRN
       ]
       includes %w[
         Certificate-Number
@@ -24,6 +25,8 @@ module Presenter
         SAP-Data
         SAP-Property-Details
         Identification-Number
+        Property
+        Address
       ]
       preferred_keys({
         "Certificate-Number" => "scheme_assessor_id",
@@ -47,6 +50,7 @@ module Presenter
         "Floor" => { parents: %w[Property-Summary], key: "floors" },
         "Main-Heating" => { parents: %w[Property-Summary], key: "main-heating" },
         "Main-Heating-Controls" => "main_heating_controls",
+        "Addendum-Number" => "addendum_numbers",
       })
     end
   end

@@ -124,6 +124,7 @@ module Presenter
       def set_value_with_keys(value, keys)
         prepare_hash keys
         *key, last = keys
+
         key.inject(@output, :fetch)[last] = value
       end
 
@@ -151,7 +152,12 @@ module Presenter
         false
       end
 
+      def is_bool?(string)
+        string == true || string == false || string =~ (/(true|false)$/i) ? true : false
+      end
+
       def try_as_number(string)
+        return string if is_bool?(string)
         return string unless is_numeric?(string)
 
         if string.include?(".")
