@@ -91,6 +91,133 @@ RSpec.describe ViewModel::SapWrapper do
           heat_demand_current_unsupported.deep_merge(
             heat_demand_impact_of_unsupported,
           )
+        is_19 = {
+          different_fields: {
+            date_of_expiry: "2032-05-08",
+            date_of_assessment: "2022-05-09",
+            date_of_registration: "2022-05-09",
+            date_registered: "2022-05-09",
+            address_id: "0000000001",
+            address: {
+              address_id: "0000000001",
+              address_line1: "1 Some Street",
+              address_line2: "Some Area",
+              address_line3: "Some County",
+              address_line4: nil,
+              town: "Whitbury",
+              postcode: "A0 0AA",
+            },
+            current_energy_efficiency_band: "c",
+            current_energy_efficiency_rating: 72,
+            estimated_energy_cost: "773.00",
+            main_fuel_type: "39",
+            heat_demand: {
+              current_space_heating_demand: 2666,
+              current_water_heating_demand: 2650,
+              impact_of_cavity_insulation: nil,
+              impact_of_loft_insulation: nil,
+              impact_of_solid_wall_insulation: nil,
+            },
+            estimated_energy_cost: "689.83",
+            primary_energy_use: "59",
+            energy_consumption_potential: "53",
+            property_age_band: nil,
+            property_summary: [
+              {
+                energy_efficiency_rating: 5,
+                environmental_efficiency_rating: 5,
+                name: "walls",
+                description: "Average thermal transmittance 0.18 W/m²K",
+              },
+              {
+                energy_efficiency_rating: 5,
+                environmental_efficiency_rating: 5,
+                name: "roof",
+                description: "Average thermal transmittance 0.13 W/m²K",
+              },
+              {
+                energy_efficiency_rating: 5,
+                environmental_efficiency_rating: 5,
+                name: "floor",
+                description: "Average thermal transmittance 0.12 W/m²K",
+              },
+              {
+                description: "High performance glazing",
+                energy_efficiency_rating: 5,
+                environmental_efficiency_rating: 5,
+                name: "windows",
+              },
+              {
+                description: "Boiler and radiators, electric",
+                energy_efficiency_rating: 3,
+                environmental_efficiency_rating: 2,
+                name: "main_heating",
+              },
+              {
+                description: "Programmer, room thermostat and TRVs",
+                energy_efficiency_rating: 4,
+                environmental_efficiency_rating: 4,
+                name: "main_heating_controls",
+              },
+              {
+                description: "None",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "secondary_heating",
+              },
+              {
+                description: "From main system, waste water heat recovery",
+                energy_efficiency_rating: 4,
+                environmental_efficiency_rating: 3,
+                name: "hot_water",
+              },
+              {
+                description: "Low energy lighting in 91% of fixed outlets",
+                energy_efficiency_rating: 5,
+                environmental_efficiency_rating: 5,
+                name: "lighting",
+              },
+              {
+                description: "Air permeability 2.0 m³/h.m² (assumed)",
+                energy_efficiency_rating: 5,
+                environmental_efficiency_rating: 5,
+                name: "air_tightness",
+              },
+            ],
+            recommended_improvements: [
+              {
+                energy_performance_rating_improvement: 74,
+                energy_performance_band_improvement: "c",
+                environmental_impact_rating_improvement: 94,
+                green_deal_category_code: "NI",
+                improvement_category: "5",
+                improvement_code: "19",
+                improvement_description: nil,
+                improvement_title: "",
+                improvement_type: "N",
+                indicative_cost: "£4,000 - £6,000",
+                sequence: 1,
+                typical_saving: "88",
+              },
+              {
+                energy_performance_band_improvement: "c",
+                energy_performance_rating_improvement: 80,
+                environmental_impact_rating_improvement: 96,
+                green_deal_category_code: "NI",
+                improvement_category: "5",
+                improvement_code: "34",
+                improvement_description: nil,
+                improvement_title: "",
+                improvement_type: "U",
+                indicative_cost: "£9,000 - £14,000",
+                sequence: 2,
+                typical_saving: "88",
+              },
+            ],
+            total_floor_area: 165,
+            environmental_impact_current: "94",
+          },
+        }
 
         is_pre_17 = {
           different_fields: {
@@ -546,6 +673,7 @@ RSpec.describe ViewModel::SapWrapper do
         }
 
         [
+          { schema: "SAP-Schema-19.0.0" }.deep_merge(is_19),
           { schema: "SAP-Schema-18.0.0" }.deep_merge(has_uprn).deep_merge(
             has_stone_walls_addendum,
           ),

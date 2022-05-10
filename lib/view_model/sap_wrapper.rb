@@ -38,6 +38,8 @@ module ViewModel
 
     def build_view_model(xml_doc, schema_type, report_type)
       case schema_type
+      when :"SAP-Schema-19.0.0"
+        return ViewModel::SapSchema1900::CommonSchema.new xml_doc
       when :"SAP-Schema-18.0.0"
         return ViewModel::SapSchema1800::CommonSchema.new xml_doc
       when :"SAP-Schema-17.1"
