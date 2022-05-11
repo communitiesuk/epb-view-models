@@ -97,9 +97,9 @@ RSpec.describe ViewModel::SapWrapper do
             date_of_assessment: "2022-05-09",
             date_of_registration: "2022-05-09",
             date_registered: "2022-05-09",
-            address_id: "0000000001",
+            address_id: "UPRN-0000000001",
             address: {
-              address_id: "0000000001",
+              address_id: "UPRN-0000000001",
               address_line1: "1 Some Street",
               address_line2: "Some Area",
               address_line3: "Some County",
