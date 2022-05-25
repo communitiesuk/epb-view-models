@@ -2767,7 +2767,6 @@ RSpec.describe ViewModel::SapWrapper do
 
     describe ".to_hera_hash" do
       let(:schemas) do
-
         is_19 = {
           different_fields: {
             date_of_registration: "2022-05-09",
@@ -2836,7 +2835,7 @@ RSpec.describe ViewModel::SapWrapper do
             built_form: "4",
             main_dwelling_construction_age_band_or_year: "A",
             main_fuel_type: "39",
-            main_heating_category: "2"
+            main_heating_category: "2",
           },
         }
 
@@ -2944,7 +2943,264 @@ RSpec.describe ViewModel::SapWrapper do
               },
             ],
             main_heating_category: "2",
-          }
+          },
+        }
+
+        is_142 = {
+          different_fields: {
+            main_heating_category: "2",
+            property_summary: [
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "walls",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "walls",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "Slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "windows",
+                description: "Glass window",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating_controls",
+                description: "Thermostat",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "secondary_heating",
+                description: "Electric heater",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "hot_water",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "lighting",
+                description: "Energy saving bulbs",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "air_tightness",
+                description: "Draft Exclusion",
+              },
+            ],
+          },
+        }
+
+        is_rdsap_142 = {
+          different_fields: {
+            type_of_assessment: "RdSAP",
+            built_form: "1",
+            main_dwelling_construction_age_band_or_year: "A",
+            property_summary: [
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "wall",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "wall",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "Slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "window",
+                description: "Glass window",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating_controls",
+                description: "Thermostat",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "hot_water",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "lighting",
+                description: "Energy saving bulbs",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "secondary_heating",
+                description: "Electric heater",
+              },
+            ],
+            main_heating_category: "7",
+            main_fuel_type: "10",
+          },
+        }
+
+        is_141 = {
+          different_fields: {
+            main_heating_category: "2",
+            property_summary: [
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "walls",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "walls",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "Slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "windows",
+                description: "Glass window",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating_controls",
+                description: "Thermostat",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "secondary_heating",
+                description: "Electric heater",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "hot_water",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "lighting",
+                description: "Energy saving bulbs",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "air_tightness",
+                description: "Draft Exclusion",
+              },
+            ],
+            built_form: "2",
+          },
         }
 
         [
@@ -2962,6 +3218,14 @@ RSpec.describe ViewModel::SapWrapper do
           { schema: "SAP-Schema-16.0", type: "rdsap" }.deep_merge(is_rdsap),
           { schema: "SAP-Schema-15.0", type: "sap" }.deep_merge(is_163),
           { schema: "SAP-Schema-15.0", type: "rdsap" }.deep_merge(is_rdsap),
+          { schema: "SAP-Schema-14.2", type: "sap" }.deep_merge(is_142),
+          { schema: "SAP-Schema-14.2", type: "rdsap" }.deep_merge(is_rdsap_142),
+          { schema: "SAP-Schema-14.1", type: "sap" }.deep_merge(is_141),
+          { schema: "SAP-Schema-14.1", type: "rdsap" }.deep_merge(is_rdsap_142),
+          { schema: "SAP-Schema-14.0", type: "sap" }.deep_merge(is_141),
+          { schema: "SAP-Schema-14.0", type: "rdsap" }.deep_merge(is_rdsap_142),
+          { schema: "SAP-Schema-13.0", type: "sap" }.deep_merge(is_141),
+          { schema: "SAP-Schema-13.0", type: "rdsap" }.deep_merge(is_rdsap_142),
         ]
       end
 
