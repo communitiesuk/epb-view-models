@@ -3203,6 +3203,92 @@ RSpec.describe ViewModel::SapWrapper do
           },
         }
 
+        is_rdsap_102 = {
+          different_fields: {
+            dwelling_type: nil,
+            type_of_assessment: "RdSAP",
+            built_form: "1",
+            main_dwelling_construction_age_band_or_year: "C",
+            property_summary: [
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "wall",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "wall",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "Slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "window",
+                description: "Glass window",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating_controls",
+                description: "Thermostat",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "hot_water",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "lighting",
+                description: "Energy saving bulbs",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "secondary_heating",
+                description: "Electric heater",
+              },
+            ],
+            main_heating_category: nil,
+            main_fuel_type: "10",
+            has_hot_water_cylinder: "false",
+          },
+        }
+
         [
           { schema: "SAP-Schema-19.0.0" }.deep_merge(is_19),
           { schema: "SAP-Schema-18.0.0" }.deep_merge(is_18),
@@ -3226,6 +3312,7 @@ RSpec.describe ViewModel::SapWrapper do
           { schema: "SAP-Schema-14.0", type: "rdsap" }.deep_merge(is_rdsap_142),
           { schema: "SAP-Schema-13.0", type: "sap" }.deep_merge(is_141),
           { schema: "SAP-Schema-13.0", type: "rdsap" }.deep_merge(is_rdsap_142),
+          { schema: "SAP-Schema-10.2", type: "rdsap" }.deep_merge(is_rdsap_102),
         ]
       end
 
