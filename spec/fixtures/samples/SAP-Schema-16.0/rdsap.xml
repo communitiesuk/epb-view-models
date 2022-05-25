@@ -145,7 +145,7 @@
             <HIP:Description>Electric heater</HIP:Description>
             <HIP:Environmental-Efficiency-Rating>0</HIP:Environmental-Efficiency-Rating>
           </HIP:Secondary-Heating>
-          <HIP:Has-Hot-Water-Cylinder>false</HIP:Has-Hot-Water-Cylinder>
+          <HIP:Has-Hot-Water-Cylinder>true</HIP:Has-Hot-Water-Cylinder>
           <HIP:Has-Heated-Separate-Conservatory>false</HIP:Has-Heated-Separate-Conservatory>
           <HIP:Dwelling-Type>Mid-terrace house</HIP:Dwelling-Type>
           <HIP:Total-Floor-Area>69</HIP:Total-Floor-Area>

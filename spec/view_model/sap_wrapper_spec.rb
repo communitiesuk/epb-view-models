@@ -2852,12 +2852,116 @@ RSpec.describe ViewModel::SapWrapper do
           },
         }
 
+        is_rdsap = {
+          different_fields: {
+            type_of_assessment: "RdSAP",
+            built_form: "3",
+            main_dwelling_construction_age_band_or_year: "A",
+            property_summary: [
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "wall",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "wall",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "Slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "window",
+                description: "Glass window",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating_controls",
+                description: "Thermostat",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating_controls",
+                description: "Thermostat",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "hot_water",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "lighting",
+                description: "Energy saving bulbs",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "secondary_heating",
+                description: "Electric heater",
+              },
+            ],
+            main_heating_category: "2",
+          }
+        }
+
         [
           { schema: "SAP-Schema-19.0.0" }.deep_merge(is_19),
           { schema: "SAP-Schema-18.0.0" }.deep_merge(is_18),
           { schema: "SAP-Schema-17.1" },
           { schema: "SAP-Schema-17.0" },
           { schema: "SAP-Schema-16.3", type: "sap" }.deep_merge(is_163),
+          { schema: "SAP-Schema-16.3", type: "rdsap" }.deep_merge(is_rdsap),
+          { schema: "SAP-Schema-16.2", type: "sap" }.deep_merge(is_163),
+          { schema: "SAP-Schema-16.2", type: "rdsap" }.deep_merge(is_rdsap),
+          { schema: "SAP-Schema-16.1", type: "sap" }.deep_merge(is_163),
+          { schema: "SAP-Schema-16.1", type: "rdsap" }.deep_merge(is_rdsap),
+          { schema: "SAP-Schema-16.0", type: "sap" }.deep_merge(is_163),
+          { schema: "SAP-Schema-16.0", type: "rdsap" }.deep_merge(is_rdsap),
+          { schema: "SAP-Schema-15.0", type: "sap" }.deep_merge(is_163),
+          { schema: "SAP-Schema-15.0", type: "rdsap" }.deep_merge(is_rdsap),
         ]
       end
 
