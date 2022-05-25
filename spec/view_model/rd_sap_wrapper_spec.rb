@@ -570,7 +570,10 @@ RSpec.describe ViewModel::RdSapWrapper do
       let(:schemas) do
         [
           { schema: "RdSAP-Schema-20.0.0" },
-          { schema: "RdSAP-Schema-19.0"},
+          { schema: "RdSAP-Schema-19.0" },
+          { schema: "RdSAP-Schema-18.0" },
+          { schema: "RdSAP-Schema-17.1" },
+          { schema: "RdSAP-Schema-17.0" },
         ]
       end
 

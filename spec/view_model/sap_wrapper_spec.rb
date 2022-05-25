@@ -109,7 +109,6 @@ RSpec.describe ViewModel::SapWrapper do
             },
             current_energy_efficiency_band: "c",
             current_energy_efficiency_rating: 72,
-            estimated_energy_cost: "773.00",
             main_fuel_type: "39",
             heat_demand: {
               current_space_heating_demand: 2666,
@@ -2772,11 +2771,93 @@ RSpec.describe ViewModel::SapWrapper do
         is_19 = {
           different_fields: {
             date_of_registration: "2022-05-09",
+            property_summary: [
+              {
+                energy_efficiency_rating: 5,
+                environmental_efficiency_rating: 5,
+                name: "walls",
+                description: "Average thermal transmittance 0.18 W/m²K",
+              },
+              {
+                energy_efficiency_rating: 5,
+                environmental_efficiency_rating: 5,
+                name: "roof",
+                description: "Average thermal transmittance 0.13 W/m²K",
+              },
+              {
+                energy_efficiency_rating: 5,
+                environmental_efficiency_rating: 5,
+                name: "floor",
+                description: "Average thermal transmittance 0.12 W/m²K",
+              },
+              {
+                description: "High performance glazing",
+                energy_efficiency_rating: 5,
+                environmental_efficiency_rating: 5,
+                name: "windows",
+              },
+              {
+                description: "Boiler and radiators, electric",
+                energy_efficiency_rating: 3,
+                environmental_efficiency_rating: 2,
+                name: "main_heating",
+              },
+              {
+                description: "Programmer, room thermostat and TRVs",
+                energy_efficiency_rating: 4,
+                environmental_efficiency_rating: 4,
+                name: "main_heating_controls",
+              },
+              {
+                description: "None",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "secondary_heating",
+              },
+              {
+                description: "From main system, waste water heat recovery",
+                energy_efficiency_rating: 4,
+                environmental_efficiency_rating: 3,
+                name: "hot_water",
+              },
+              {
+                description: "Low energy lighting in 91% of fixed outlets",
+                energy_efficiency_rating: 5,
+                environmental_efficiency_rating: 5,
+                name: "lighting",
+              },
+              {
+                description: "Air permeability 2.0 m³/h.m² (assumed)",
+                energy_efficiency_rating: 5,
+                environmental_efficiency_rating: 5,
+                name: "air_tightness",
+              },
+            ],
+            built_form: "4",
+            main_dwelling_construction_age_band_or_year: "A",
+            main_fuel_type: "39",
+            main_heating_category: "2"
+          },
+        }
+
+        is_18 = {
+          different_fields: {
+            main_heating_category: "5",
+          },
+        }
+
+        is_163 = {
+          different_fields: {
+            main_heating_category: "2",
           },
         }
 
         [
-          { schema: "SAP-Schema-19.0.0" }.deep_merge(is_19)
+          { schema: "SAP-Schema-19.0.0" }.deep_merge(is_19),
+          { schema: "SAP-Schema-18.0.0" }.deep_merge(is_18),
+          { schema: "SAP-Schema-17.1" },
+          { schema: "SAP-Schema-17.0" },
+          { schema: "SAP-Schema-16.3", type: "sap" }.deep_merge(is_163),
         ]
       end
 
@@ -2794,72 +2875,102 @@ RSpec.describe ViewModel::SapWrapper do
             postcode: "A0 0AA",
           },
           dwelling_type: "Mid-terrace house",
-          built_form: "4",
-          main_dwelling_construction_age_band_or_year: "A",
+          built_form: "1",
+          main_dwelling_construction_age_band_or_year: "1750",
           property_summary: [
             {
-              energy_efficiency_rating: 5,
-              environmental_efficiency_rating: 5,
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
               name: "walls",
-              description: "Average thermal transmittance 0.18 W/m²K",
+              description: "Brick walls",
             },
             {
-              energy_efficiency_rating: 5,
-              environmental_efficiency_rating: 5,
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
+              name: "walls",
+              description: "Brick walls",
+            },
+            {
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
               name: "roof",
-              description: "Average thermal transmittance 0.13 W/m²K",
+              description: "Slate roof",
             },
             {
-              energy_efficiency_rating: 5,
-              environmental_efficiency_rating: 5,
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
+              name: "roof",
+              description: "slate roof",
+            },
+            {
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
               name: "floor",
-              description: "Average thermal transmittance 0.12 W/m²K",
+              description: "Tiled floor",
             },
             {
-              description: "High performance glazing",
-              energy_efficiency_rating: 5,
-              environmental_efficiency_rating: 5,
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
+              name: "floor",
+              description: "Tiled floor",
+            },
+            {
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
               name: "windows",
+              description: "Glass window",
             },
             {
-              description: "Boiler and radiators, electric",
-              energy_efficiency_rating: 3,
-              environmental_efficiency_rating: 2,
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
               name: "main_heating",
+              description: "Gas boiler",
             },
             {
-              description: "Programmer, room thermostat and TRVs",
-              energy_efficiency_rating: 4,
-              environmental_efficiency_rating: 4,
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
+              name: "main_heating",
+              description: "Gas boiler",
+            },
+            {
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
               name: "main_heating_controls",
+              description: "Thermostat",
             },
             {
-              description: "None",
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
+              name: "main_heating_controls",
+              description: "Thermostat",
+            },
+            {
               energy_efficiency_rating: 0,
               environmental_efficiency_rating: 0,
               name: "secondary_heating",
+              description: "Electric heater",
             },
             {
-              description: "From main system, waste water heat recovery",
-              energy_efficiency_rating: 4,
-              environmental_efficiency_rating: 3,
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
               name: "hot_water",
+              description: "Gas boiler",
             },
             {
-              description: "Low energy lighting in 91% of fixed outlets",
-              energy_efficiency_rating: 5,
-              environmental_efficiency_rating: 5,
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
               name: "lighting",
+              description: "Energy saving bulbs",
             },
             {
-              description: "Air permeability 2.0 m³/h.m² (assumed)",
-              energy_efficiency_rating: 5,
-              environmental_efficiency_rating: 5,
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
               name: "air_tightness",
+              description: "Draft Exclusion",
             },
           ],
-          main_heating_category: "2",
-          main_fuel_type: "39",
+          main_heating_category: "1",
+          main_fuel_type: "36",
           has_hot_water_cylinder: "true",
         }
       end

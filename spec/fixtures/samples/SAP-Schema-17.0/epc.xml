@@ -129,6 +129,7 @@
 				<Description>Draft Exclusion</Description>
 				<Environmental-Efficiency-Rating>0</Environmental-Efficiency-Rating>
 			</Air-Tightness>
+			<Has-Hot-Water-Cylinder>true</Has-Hot-Water-Cylinder>
 			<Dwelling-Type>Mid-terrace house</Dwelling-Type>
 			<Total-Floor-Area>69</Total-Floor-Area>
 			<Multiple-Glazed-Percentage>50</Multiple-Glazed-Percentage>
