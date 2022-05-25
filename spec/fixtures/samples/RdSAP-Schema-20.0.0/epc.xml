@@ -85,6 +85,7 @@
         <Energy-Efficiency-Rating>0</Energy-Efficiency-Rating>
         <Environmental-Efficiency-Rating>0</Environmental-Efficiency-Rating>
       </Secondary-Heating>
+      <Has-Hot-Water-Cylinder>true</Has-Hot-Water-Cylinder>
       <Dwelling-Type>Mid-terrace house</Dwelling-Type>
       <Total-Floor-Area>55</Total-Floor-Area>
       <Multiple-Glazed-Proportion-NR>NR</Multiple-Glazed-Proportion-NR>

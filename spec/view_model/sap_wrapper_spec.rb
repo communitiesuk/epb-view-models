@@ -2765,6 +2765,109 @@ RSpec.describe ViewModel::SapWrapper do
         test_xml_doc(schemas, recommendation_assertion, :to_recommendation_report)
       end
     end
+
+    describe ".to_hera_hash" do
+      let(:schemas) do
+
+        is_19 = {
+          different_fields: {
+            date_of_registration: "2022-05-09",
+          },
+        }
+
+        [
+          { schema: "SAP-Schema-19.0.0" }.deep_merge(is_19)
+        ]
+      end
+
+      let(:assertion) do
+        {
+          type_of_assessment: "SAP",
+          assessment_id: "0000-0000-0000-0000-0000",
+          date_of_registration: "2020-05-04",
+          address: {
+            address_line1: "1 Some Street",
+            address_line2: "Some Area",
+            address_line3: "Some County",
+            address_line4: nil,
+            town: "Whitbury",
+            postcode: "A0 0AA",
+          },
+          dwelling_type: "Mid-terrace house",
+          built_form: "4",
+          main_dwelling_construction_age_band_or_year: "A",
+          property_summary: [
+            {
+              energy_efficiency_rating: 5,
+              environmental_efficiency_rating: 5,
+              name: "walls",
+              description: "Average thermal transmittance 0.18 W/m²K",
+            },
+            {
+              energy_efficiency_rating: 5,
+              environmental_efficiency_rating: 5,
+              name: "roof",
+              description: "Average thermal transmittance 0.13 W/m²K",
+            },
+            {
+              energy_efficiency_rating: 5,
+              environmental_efficiency_rating: 5,
+              name: "floor",
+              description: "Average thermal transmittance 0.12 W/m²K",
+            },
+            {
+              description: "High performance glazing",
+              energy_efficiency_rating: 5,
+              environmental_efficiency_rating: 5,
+              name: "windows",
+            },
+            {
+              description: "Boiler and radiators, electric",
+              energy_efficiency_rating: 3,
+              environmental_efficiency_rating: 2,
+              name: "main_heating",
+            },
+            {
+              description: "Programmer, room thermostat and TRVs",
+              energy_efficiency_rating: 4,
+              environmental_efficiency_rating: 4,
+              name: "main_heating_controls",
+            },
+            {
+              description: "None",
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
+              name: "secondary_heating",
+            },
+            {
+              description: "From main system, waste water heat recovery",
+              energy_efficiency_rating: 4,
+              environmental_efficiency_rating: 3,
+              name: "hot_water",
+            },
+            {
+              description: "Low energy lighting in 91% of fixed outlets",
+              energy_efficiency_rating: 5,
+              environmental_efficiency_rating: 5,
+              name: "lighting",
+            },
+            {
+              description: "Air permeability 2.0 m³/h.m² (assumed)",
+              energy_efficiency_rating: 5,
+              environmental_efficiency_rating: 5,
+              name: "air_tightness",
+            },
+          ],
+          main_heating_category: "2",
+          main_fuel_type: "39",
+          has_hot_water_cylinder: "true",
+        }
+      end
+
+      it "reads the appropriate values" do
+        test_xml_doc(schemas, assertion, :to_hera_hash)
+      end
+    end
   end
 
   context "when Northern Ireland schemas are parsed" do

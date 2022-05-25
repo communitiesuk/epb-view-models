@@ -110,7 +110,7 @@
         <Environmental-Efficiency-Rating>5</Environmental-Efficiency-Rating>
       </Air-Tightness>
       <Has-Fixed-Air-Conditioning>false</Has-Fixed-Air-Conditioning>
-      <Has-Hot-Water-Cylinder>false</Has-Hot-Water-Cylinder>
+      <Has-Hot-Water-Cylinder>true</Has-Hot-Water-Cylinder>
       <Has-Heated-Separate-Conservatory>false</Has-Heated-Separate-Conservatory>
       <Dwelling-Type>Mid-terrace house</Dwelling-Type>
       <Total-Floor-Area>165</Total-Floor-Area>

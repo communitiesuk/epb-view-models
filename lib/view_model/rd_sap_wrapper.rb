@@ -8,6 +8,7 @@ module ViewModel
       @summary = Presenter::RdSap::Summary.new(view_model)
       @report = Presenter::RdSap::Report.new(view_model, schema_type, additional_data)
       @recommendation_report = Presenter::RdSap::RecommendationReport.new(view_model)
+      @hera = Presenter::RdSap::Hera.new(view_model)
     end
 
     def type
@@ -28,6 +29,10 @@ module ViewModel
 
     def to_recommendation_report
       @recommendation_report.to_hash
+    end
+
+    def to_hera_hash
+      @hera.to_hera_hash
     end
 
     def get_view_model

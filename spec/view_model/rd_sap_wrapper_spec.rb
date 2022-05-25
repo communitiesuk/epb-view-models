@@ -565,6 +565,127 @@ RSpec.describe ViewModel::RdSapWrapper do
         test_xml_doc(schemas, assertion, :to_report, additional_data)
       end
     end
+
+    describe ".to_hera_hash" do
+      let(:schemas) do
+        [
+          { schema: "RdSAP-Schema-20.0.0" },
+          { schema: "RdSAP-Schema-19.0"},
+        ]
+      end
+
+      let(:assertion) do
+        {
+          type_of_assessment: "RdSAP",
+          assessment_id: "0000-0000-0000-0000-0000",
+          date_of_registration: "2020-05-04",
+          address: {
+            address_line1: "1 Some Street",
+            address_line2: "",
+            address_line3: "",
+            address_line4: "",
+            town: "Whitbury",
+            postcode: "A0 0AA",
+          },
+          dwelling_type: "Mid-terrace house",
+          built_form: "2",
+          main_dwelling_construction_age_band_or_year: "K",
+          property_summary: [
+            {
+              description: "Solid brick, as built, no insulation (assumed)",
+              energy_efficiency_rating: 1,
+              environmental_efficiency_rating: 1,
+              name: "wall",
+            },
+            {
+              description: "Cavity wall, as built, insulated (assumed)",
+              energy_efficiency_rating: 4,
+              environmental_efficiency_rating: 4,
+              name: "wall",
+            },
+            {
+              description: "Pitched, 25 mm loft insulation",
+              energy_efficiency_rating: 2,
+              environmental_efficiency_rating: 2,
+              name: "roof",
+            },
+            {
+              description: "Pitched, 250 mm loft insulation",
+              energy_efficiency_rating: 4,
+              environmental_efficiency_rating: 4,
+              name: "roof",
+            },
+            {
+              description: "Suspended, no insulation (assumed)",
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
+              name: "floor",
+            },
+            {
+              description: "Solid, insulated (assumed)",
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
+              name: "floor",
+            },
+            {
+              description: "Fully double glazed",
+              energy_efficiency_rating: 3,
+              environmental_efficiency_rating: 3,
+              name: "window",
+            },
+            {
+              description: "Boiler and radiators, anthracite",
+              energy_efficiency_rating: 3,
+              environmental_efficiency_rating: 1,
+              name: "main_heating",
+            },
+            {
+              description: "Boiler and radiators, mains gas",
+              energy_efficiency_rating: 4,
+              environmental_efficiency_rating: 4,
+              name: "main_heating",
+            },
+            {
+              description: "Programmer, room thermostat and TRVs",
+              energy_efficiency_rating: 4,
+              environmental_efficiency_rating: 4,
+              name: "main_heating_controls",
+            },
+            {
+              description: "Time and temperature zone control",
+              energy_efficiency_rating: 5,
+              environmental_efficiency_rating: 5,
+              name: "main_heating_controls",
+            },
+            {
+              description: "From main system",
+              energy_efficiency_rating: 4,
+              environmental_efficiency_rating: 4,
+              name: "hot_water",
+            },
+            {
+              description: "Low energy lighting in 50% of fixed outlets",
+              energy_efficiency_rating: 4,
+              environmental_efficiency_rating: 4,
+              name: "lighting",
+            },
+            {
+              description: "Room heaters, electric",
+              energy_efficiency_rating: 0,
+              environmental_efficiency_rating: 0,
+              name: "secondary_heating",
+            },
+          ],
+          main_heating_category: "2",
+          main_fuel_type: "26",
+          has_hot_water_cylinder: "true",
+        }
+      end
+
+      it "reads the appropriate values" do
+        test_xml_doc(schemas, assertion, :to_hera_hash)
+      end
+    end
   end
 
   context "when Northern Ireland schemas are parsed" do

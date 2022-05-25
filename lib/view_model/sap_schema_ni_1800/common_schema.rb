@@ -271,10 +271,6 @@ module ViewModel
         xpath(%w[Immersion-Heating-Type])
       end
 
-      def main_heating_category
-        xpath(%w[Main-Heating-Category])
-      end
-
       def main_fuel_type
         xpath(%w[Main-Fuel-Type])
       end

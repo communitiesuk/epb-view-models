@@ -54,6 +54,16 @@ module ViewModel
       xpath(%w[Water-Heating-Code])
     end
 
+    def has_hot_water_cylinder
+      return "false" if xpath(%w[Has-Hot-Water-Cylinder]).nil?
+
+      xpath(%w[Has-Hot-Water-Cylinder])
+    end
+
+    def main_heating_category
+      xpath(%w[Main-Heating-Category])
+    end
+
   private
 
     def fetch_addendum_numbers
