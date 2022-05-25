@@ -30,11 +30,11 @@ module ViewModel
     def to_recommendation_report
       @recommendation_report.to_hash
     end
-    
+
     def to_hera_hash
       @hera.to_hera_hash
     end
-    
+
     def get_view_model
       view_model
     end
