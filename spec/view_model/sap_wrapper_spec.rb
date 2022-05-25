@@ -3663,6 +3663,8 @@ RSpec.describe ViewModel::SapWrapper do
           { schema: "SAP-Schema-12.0", type: "rdsap" }.deep_merge(is_rdsap_120),
           { schema: "SAP-Schema-11.2", type: "sap" }.deep_merge(is_112),
           { schema: "SAP-Schema-11.2", type: "rdsap" }.deep_merge(is_rdsap_112),
+          { schema: "SAP-Schema-11.0", type: "sap" }.deep_merge(is_112),
+          { schema: "SAP-Schema-11.0", type: "rdsap" }.deep_merge(is_rdsap_112),
           { schema: "SAP-Schema-10.2", type: "rdsap" }.deep_merge(is_rdsap_102),
         ]
       end
