@@ -2943,7 +2943,7 @@ RSpec.describe ViewModel::SapWrapper do
               },
             ],
             main_heating_category: "boiler with radiators or underfloor heating",
-            main_fuel_type: "rapeseed oil"
+            main_fuel_type: "rapeseed oil",
           },
         }
 
