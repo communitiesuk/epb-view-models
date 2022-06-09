@@ -8,7 +8,7 @@ module ViewModel
       @summary = Presenter::RdSap::Summary.new(view_model)
       @report = Presenter::RdSap::Report.new(view_model, schema_type, additional_data)
       @recommendation_report = Presenter::RdSap::RecommendationReport.new(view_model)
-      @hera = Presenter::RdSap::Hera.new(view_model)
+      @hera = Presenter::RdSap::Hera.new(view_model, schema_type)
     end
 
     def type

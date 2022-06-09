@@ -591,8 +591,8 @@ RSpec.describe ViewModel::RdSapWrapper do
             postcode: "A0 0AA",
           },
           dwelling_type: "Mid-terrace house",
-          built_form: "2",
-          main_dwelling_construction_age_band_or_year: "K",
+          built_form: "Semi-Detached",
+          main_dwelling_construction_age_band_or_year: "England and Wales: 2007-2011",
           property_summary: [
             {
               description: "Solid brick, as built, no insulation (assumed)",
@@ -679,8 +679,8 @@ RSpec.describe ViewModel::RdSapWrapper do
               name: "secondary_heating",
             },
           ],
-          main_heating_category: "2",
-          main_fuel_type: "26",
+          main_heating_category: "boiler with radiators or underfloor heating",
+          main_fuel_type: "mains gas (not community)",
           has_hot_water_cylinder: "true",
         }
       end

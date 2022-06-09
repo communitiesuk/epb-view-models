@@ -274,6 +274,20 @@ module Helper
       "76" => "bioethanol from any biomass source",
       "99" => "Community heating schemes: special fuel",
     }.freeze
+    MAIN_HEATING_CATEGORY = {
+      "1" => "none",
+      "2" => "boiler with radiators or underfloor heating",
+      "3" => "micro-cogeneration",
+      "4" => "heat pump with radiators or underfloor heating",
+      "5" => "heat pump with warm air distribution",
+      "6" => "community heating system",
+      "7" => "electric storage heaters",
+      "8" => "electric underfloor heating",
+      "9" => "warm air system (not heat pump)",
+      "10" => "room heaters",
+      "11" => "other system",
+      "12" => "not recorded",
+    }.freeze
 
     def self.built_form_string(number)
       BUILT_FORM[number]
@@ -358,6 +372,7 @@ module Helper
       ]
 
       schemes_that_use_l = %i[
+        SAP-Schema-19.0.0
         SAP-Schema-18.0.0
         SAP-Schema-17.1
         SAP-Schema-17.0
@@ -561,6 +576,7 @@ module Helper
       ]
 
       sap = %i[
+        SAP-Schema-19.0.0
         SAP-Schema-18.0.0
         SAP-Schema-17.1
         SAP-Schema-17.0
@@ -609,6 +625,10 @@ module Helper
           RDSAP_FUEL_TYPE[value]
         end
       end
+    end
+
+    def self.main_heating_category(value:)
+      MAIN_HEATING_CATEGORY[value] || value
     end
 
     private_class_method :is_rdsap, :is_sap

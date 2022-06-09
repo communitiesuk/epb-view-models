@@ -845,4 +845,34 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(described_class.fuel_type(nil, "SAP-Schema-16.3".to_sym, "3")).to be_nil
     end
   end
+
+  context "when the Main-Heating-Category XML value is passed to the lookup" do
+    context "with matching values in the lookup" do
+      it "returns the expected value for the micro-cogeneration code" do
+        expect(
+          described_class.main_heating_category(value: "3"),
+        ).to eq "micro-cogeneration"
+      end
+
+      it "returns the expected value for the community heating system code" do
+        expect(
+          described_class.main_heating_category(value: "6"),
+        ).to eq "community heating system"
+      end
+
+      it "returns the expected value for the room heaters code" do
+        expect(
+          described_class.main_heating_category(value: "10"),
+        ).to eq "room heaters"
+      end
+    end
+
+    context "without matching values in the lookup" do
+      it "returns the unknown value verbatim" do
+        expect(
+          described_class.main_heating_category(value: "14"),
+        ).to eq "14"
+      end
+    end
+  end
 end

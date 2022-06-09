@@ -8,7 +8,7 @@ module ViewModel
       @summary = Presenter::Sap::Summary.new(view_model)
       @report = Presenter::Sap::Report.new(view_model, schema_type, additional_data)
       @recommendation_report = Presenter::Sap::RecommendationReport.new(view_model)
-      @hera = Presenter::Sap::Hera.new(view_model)
+      @hera = Presenter::Sap::Hera.new(view_model, schema_type)
     end
 
     def type

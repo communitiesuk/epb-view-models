@@ -2832,30 +2832,30 @@ RSpec.describe ViewModel::SapWrapper do
                 name: "air_tightness",
               },
             ],
-            built_form: "4",
-            main_dwelling_construction_age_band_or_year: "A",
-            main_fuel_type: "39",
-            main_heating_category: "2",
+            built_form: "Mid-Terrace",
+            main_dwelling_construction_age_band_or_year: "England and Wales: before 1900",
+            main_fuel_type: "Electricity: electricity, unspecified tariff",
+            main_heating_category: "boiler with radiators or underfloor heating",
           },
         }
 
         is_18 = {
           different_fields: {
-            main_heating_category: "5",
+            main_heating_category: "heat pump with warm air distribution",
           },
         }
 
         is_163 = {
           different_fields: {
-            main_heating_category: "2",
+            main_heating_category: "boiler with radiators or underfloor heating",
           },
         }
 
         is_rdsap = {
           different_fields: {
             type_of_assessment: "RdSAP",
-            built_form: "3",
-            main_dwelling_construction_age_band_or_year: "A",
+            built_form: "End-Terrace",
+            main_dwelling_construction_age_band_or_year: "England and Wales: before 1900",
             property_summary: [
               {
                 energy_efficiency_rating: 0,
@@ -2942,13 +2942,14 @@ RSpec.describe ViewModel::SapWrapper do
                 description: "Electric heater",
               },
             ],
-            main_heating_category: "2",
+            main_heating_category: "boiler with radiators or underfloor heating",
+            main_fuel_type: "rapeseed oil"
           },
         }
 
         is_142 = {
           different_fields: {
-            main_heating_category: "2",
+            main_heating_category: "boiler with radiators or underfloor heating",
             property_summary: [
               {
                 energy_efficiency_rating: 0,
@@ -3035,8 +3036,8 @@ RSpec.describe ViewModel::SapWrapper do
         is_rdsap_142 = {
           different_fields: {
             type_of_assessment: "RdSAP",
-            built_form: "1",
-            main_dwelling_construction_age_band_or_year: "A",
+            built_form: "Detached",
+            main_dwelling_construction_age_band_or_year: "England and Wales: before 1900",
             property_summary: [
               {
                 energy_efficiency_rating: 0,
@@ -3111,14 +3112,14 @@ RSpec.describe ViewModel::SapWrapper do
                 description: "Electric heater",
               },
             ],
-            main_heating_category: "7",
-            main_fuel_type: "10",
+            main_heating_category: "electric storage heaters",
+            main_fuel_type: "electricity",
           },
         }
 
         is_141 = {
           different_fields: {
-            main_heating_category: "2",
+            main_heating_category: "boiler with radiators or underfloor heating",
             property_summary: [
               {
                 energy_efficiency_rating: 0,
@@ -3199,7 +3200,354 @@ RSpec.describe ViewModel::SapWrapper do
                 description: "Draft Exclusion",
               },
             ],
-            built_form: "2",
+            built_form: "Semi-Detached",
+          },
+        }
+
+        is_120 = {
+          different_fields: {
+            dwelling_type: nil,
+            built_form: "Semi-Detached",
+            property_summary: [
+              {
+                description: "Brick walls",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "walls",
+              },
+              {
+                description: "Brick walls",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "walls",
+              },
+              {
+                description: "Slate roof",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+              },
+              {
+                description: "slate roof",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+              },
+              {
+                description: "Tiled floor",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+              },
+              {
+                description: "Tiled floor",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+              },
+              {
+                description: "Glass window",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "windows",
+              },
+              {
+                description: "Gas boiler",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating",
+              },
+              {
+                description: "Thermostat",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating_controls",
+              },
+              {
+                description: "Electric heater",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "secondary_heating",
+              },
+              {
+                description: "Gas boiler",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "hot_water",
+              },
+              {
+                description: "Energy saving bulbs",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "lighting",
+              },
+              {
+                description: "Draft Exclusion",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "air_tightness",
+              },
+            ],
+            main_heating_category: "boiler with radiators or underfloor heating",
+          },
+        }
+
+        is_rdsap_120 = {
+          different_fields: {
+            type_of_assessment: "RdSAP",
+            built_form: "Detached",
+            main_dwelling_construction_age_band_or_year: "England and Wales: before 1900",
+            property_summary: [
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "wall",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "wall",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "Slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "window",
+                description: "Glass window",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating_controls",
+                description: "Thermostat",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "hot_water",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "lighting",
+                description: "Energy saving bulbs",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "secondary_heating",
+                description: "Electric heater",
+              },
+            ],
+            main_heating_category: "electric storage heaters",
+            dwelling_type: nil,
+            main_fuel_type: "electricity",
+          },
+        }
+
+        is_112 = {
+          different_fields: {
+            dwelling_type: nil,
+            built_form: "Semi-Detached",
+            property_summary: [
+              {
+                description: "Brick walls",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "walls",
+              },
+              {
+                description: "Brick walls",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "walls",
+              },
+              {
+                description: "Slate roof",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+              },
+              {
+                description: "slate roof",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+              },
+              {
+                description: "Tiled floor",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+              },
+              {
+                description: "Tiled floor",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+              },
+              {
+                description: "Glass window",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "windows",
+              },
+              {
+                description: "Gas boiler",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating",
+              },
+              {
+                description: "Thermostat",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating_controls",
+              },
+              {
+                description: "Electric heater",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "secondary_heating",
+              },
+              {
+                description: "Gas boiler",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "hot_water",
+              },
+              {
+                description: "Energy saving bulbs",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "lighting",
+              },
+              {
+                description: "Draft Exclusion",
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "air_tightness",
+              },
+            ],
+            main_heating_category: "boiler with radiators or underfloor heating",
+          },
+        }
+
+        is_rdsap_112 = {
+          different_fields: {
+            type_of_assessment: "RdSAP",
+            built_form: "Detached",
+            main_dwelling_construction_age_band_or_year: "England and Wales: 1930-1949",
+            property_summary: [
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "wall",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "wall",
+                description: "Brick walls",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "Slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "roof",
+                description: "slate roof",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "floor",
+                description: "Tiled floor",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "window",
+                description: "Glass window",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "main_heating_controls",
+                description: "Thermostat",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "hot_water",
+                description: "Gas boiler",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "lighting",
+                description: "Energy saving bulbs",
+              },
+              {
+                energy_efficiency_rating: 0,
+                environmental_efficiency_rating: 0,
+                name: "secondary_heating",
+                description: "Electric heater",
+              },
+            ],
+            main_heating_category: nil,
+            dwelling_type: nil,
+            main_fuel_type: "electricity",
+            has_hot_water_cylinder: "false",
           },
         }
 
@@ -3207,8 +3555,8 @@ RSpec.describe ViewModel::SapWrapper do
           different_fields: {
             dwelling_type: nil,
             type_of_assessment: "RdSAP",
-            built_form: "1",
-            main_dwelling_construction_age_band_or_year: "C",
+            built_form: "Detached",
+            main_dwelling_construction_age_band_or_year: "England and Wales: 1930-1949",
             property_summary: [
               {
                 energy_efficiency_rating: 0,
@@ -3284,354 +3632,7 @@ RSpec.describe ViewModel::SapWrapper do
               },
             ],
             main_heating_category: nil,
-            main_fuel_type: "10",
-            has_hot_water_cylinder: "false",
-          },
-        }
-
-        is_120 = {
-          different_fields: {
-            dwelling_type: nil,
-            built_form: "2",
-            property_summary: [
-              {
-                description: "Brick walls",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "walls",
-              },
-              {
-                description: "Brick walls",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "walls",
-              },
-              {
-                description: "Slate roof",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "roof",
-              },
-              {
-                description: "slate roof",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "roof",
-              },
-              {
-                description: "Tiled floor",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "floor",
-              },
-              {
-                description: "Tiled floor",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "floor",
-              },
-              {
-                description: "Glass window",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "windows",
-              },
-              {
-                description: "Gas boiler",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "main_heating",
-              },
-              {
-                description: "Thermostat",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "main_heating_controls",
-              },
-              {
-                description: "Electric heater",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "secondary_heating",
-              },
-              {
-                description: "Gas boiler",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "hot_water",
-              },
-              {
-                description: "Energy saving bulbs",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "lighting",
-              },
-              {
-                description: "Draft Exclusion",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "air_tightness",
-              },
-            ],
-            main_heating_category: "2",
-          },
-        }
-
-        is_rdsap_120 = {
-          different_fields: {
-            type_of_assessment: "RdSAP",
-            built_form: "1",
-            main_dwelling_construction_age_band_or_year: "A",
-            property_summary: [
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "wall",
-                description: "Brick walls",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "wall",
-                description: "Brick walls",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "roof",
-                description: "Slate roof",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "roof",
-                description: "slate roof",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "floor",
-                description: "Tiled floor",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "floor",
-                description: "Tiled floor",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "window",
-                description: "Glass window",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "main_heating",
-                description: "Gas boiler",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "main_heating_controls",
-                description: "Thermostat",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "hot_water",
-                description: "Gas boiler",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "lighting",
-                description: "Energy saving bulbs",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "secondary_heating",
-                description: "Electric heater",
-              },
-            ],
-            main_heating_category: "7",
-            dwelling_type: nil,
-            main_fuel_type: "10",
-          },
-        }
-
-        is_112 = {
-          different_fields: {
-            dwelling_type: nil,
-            built_form: "2",
-            property_summary: [
-              {
-                description: "Brick walls",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "walls",
-              },
-              {
-                description: "Brick walls",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "walls",
-              },
-              {
-                description: "Slate roof",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "roof",
-              },
-              {
-                description: "slate roof",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "roof",
-              },
-              {
-                description: "Tiled floor",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "floor",
-              },
-              {
-                description: "Tiled floor",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "floor",
-              },
-              {
-                description: "Glass window",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "windows",
-              },
-              {
-                description: "Gas boiler",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "main_heating",
-              },
-              {
-                description: "Thermostat",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "main_heating_controls",
-              },
-              {
-                description: "Electric heater",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "secondary_heating",
-              },
-              {
-                description: "Gas boiler",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "hot_water",
-              },
-              {
-                description: "Energy saving bulbs",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "lighting",
-              },
-              {
-                description: "Draft Exclusion",
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "air_tightness",
-              },
-            ],
-            main_heating_category: "2",
-          },
-        }
-
-        is_rdsap_112 = {
-          different_fields: {
-            type_of_assessment: "RdSAP",
-            built_form: "1",
-            main_dwelling_construction_age_band_or_year: "C",
-            property_summary: [
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "wall",
-                description: "Brick walls",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "wall",
-                description: "Brick walls",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "roof",
-                description: "Slate roof",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "roof",
-                description: "slate roof",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "floor",
-                description: "Tiled floor",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "floor",
-                description: "Tiled floor",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "window",
-                description: "Glass window",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "main_heating",
-                description: "Gas boiler",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "main_heating_controls",
-                description: "Thermostat",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "hot_water",
-                description: "Gas boiler",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "lighting",
-                description: "Energy saving bulbs",
-              },
-              {
-                energy_efficiency_rating: 0,
-                environmental_efficiency_rating: 0,
-                name: "secondary_heating",
-                description: "Electric heater",
-              },
-            ],
-            main_heating_category: nil,
-            dwelling_type: nil,
-            main_fuel_type: "10",
+            main_fuel_type: "electricity",
             has_hot_water_cylinder: "false",
           },
         }
@@ -3683,7 +3684,7 @@ RSpec.describe ViewModel::SapWrapper do
             postcode: "A0 0AA",
           },
           dwelling_type: "Mid-terrace house",
-          built_form: "1",
+          built_form: "Detached",
           main_dwelling_construction_age_band_or_year: "1750",
           property_summary: [
             {
@@ -3777,8 +3778,8 @@ RSpec.describe ViewModel::SapWrapper do
               description: "Draft Exclusion",
             },
           ],
-          main_heating_category: "1",
-          main_fuel_type: "36",
+          main_heating_category: "none",
+          main_fuel_type: "Electricity: electricity sold to grid",
           has_hot_water_cylinder: "true",
         }
       end
