@@ -1977,7 +1977,7 @@ RSpec.describe ViewModel::SapWrapper do
               total_floor_area: 165,
               multi_glaze_proportion: "100",
               fixed_lighting_outlets_count: 11,
-              number_open_fireplaces: nil,
+              number_open_fireplaces: "0",
               hotwater_description: "From main system, waste water heat recovery",
               hot_water_energy_eff: "Good",
               hot_water_env_eff: "Average",

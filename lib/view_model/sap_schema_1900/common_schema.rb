@@ -381,7 +381,7 @@ module ViewModel
       end
 
       def open_fireplaces_count
-        xpath(%w[Open-Fireplaces-Count])
+        xpath(%w[Open-Chimneys-Count])
       end
 
       def hot_water_description
