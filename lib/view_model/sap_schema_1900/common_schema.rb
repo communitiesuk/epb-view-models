@@ -259,12 +259,12 @@ module ViewModel
       end
 
       def top_storey
-        flat_level_code = xpath(%w[Level])
+        flat_level_code = xpath(%w[SAP-FlatLevelCode])
         flat_level_code == "3" ? "Y" : "N"
       end
 
       def storey_count
-        nil
+        xpath(%w[Storeys])
       end
 
       def building_part_number
@@ -366,15 +366,18 @@ module ViewModel
       end
 
       def low_energy_lighting
-        xpath(%w[Low-Energy-Fixed-Lighting-Outlets-Percentage])
+        nil
+        # xpath(%w[Low-Energy-Fixed-Lighting-Outlets-Percentage])
       end
 
       def fixed_lighting_outlets_count
-        xpath(%w[Fixed-Lighting-Outlets-Count])
+        @xml_doc.search("Fixed-Lights/Fixed-Light/Lighting-Outlets").map(&:content).map(&:to_i).sum
+        # xpath(%w[Fixed-Lighting-Outlets-Count])
       end
 
       def low_energy_fixed_lighting_outlets_count
-        xpath(%w[Low-Energy-Fixed-Lighting-Outlets-Count])
+        nil
+        # xpath(%w[Low-Energy-Fixed-Lighting-Outlets-Count])
       end
 
       def open_fireplaces_count
@@ -438,7 +441,7 @@ module ViewModel
       end
 
       def wind_turbine_count
-        xpath(%w[Wind-Turbines-Count])
+        @xml_doc.search("Wind-Turbines/Wind-Turbine").map(&:content).count
       end
 
       def unheated_corridor_length

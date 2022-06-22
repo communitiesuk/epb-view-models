@@ -173,6 +173,16 @@
     <SAP-Property-Details>
       <SAP-Energy-Source>
         <Electricity-Tariff>5</Electricity-Tariff>
+        <Wind-Turbines>
+          <Wind-Turbine>
+            <Wind-Turbine-Rotor-Diameter>1.7</Wind-Turbine-Rotor-Diameter>
+            <Wind-Turbine-Hub-Height>3</Wind-Turbine-Hub-Height>
+          </Wind-Turbine>
+          <Wind-Turbine>
+            <Wind-Turbine-Rotor-Diameter>1.7</Wind-Turbine-Rotor-Diameter>
+            <Wind-Turbine-Hub-Height>3</Wind-Turbine-Hub-Height>
+          </Wind-Turbine>
+        </Wind-Turbines>
       </SAP-Energy-Source>
       <SAP-Heating>
         <Main-Heating-Details>

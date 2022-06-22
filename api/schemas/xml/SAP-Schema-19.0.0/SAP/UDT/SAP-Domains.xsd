@@ -1360,7 +1360,7 @@
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:simpleType name="SAP-FlatLevelCode">
+		<xs:simpleType name="SAP-FlatLevelCode">
 		<xs:annotation>
 			<xs:documentation>Codes which indicates where a flat is located within a building.</xs:documentation>
 		</xs:annotation>

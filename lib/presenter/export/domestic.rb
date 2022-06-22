@@ -68,8 +68,8 @@ module Presenter::Export
       view[:lighting_environmental_efficiency_rating] =
         @view_model.lighting_environmental_efficiency_rating.to_i
       view[:low_energy_fixed_lighting_outlets_count] =
-        @view_model.low_energy_fixed_lighting_outlets_count.to_i
-      view[:low_energy_lighting] = @view_model.low_energy_lighting.to_i
+        @view_model.low_energy_fixed_lighting_outlets_count.nil? ? nil : @view_model.low_energy_fixed_lighting_outlets_count.to_i
+      view[:low_energy_lighting] = @view_model.low_energy_lighting.nil? ? nil : @view_model.low_energy_lighting.to_i
       view[:main_fuel_type] = @view_model.main_fuel_type
       view[:main_heating_controls_descriptions] =
         @view_model.all_main_heating_controls_descriptions
