@@ -365,19 +365,47 @@ module ViewModel
         nil
       end
 
-      def low_energy_lighting
-        nil
-        # xpath(%w[Low-Energy-Fixed-Lighting-Outlets-Percentage])
-      end
-
       def fixed_lighting_outlets_count
         @xml_doc.search("Fixed-Lights/Fixed-Light/Lighting-Outlets").map(&:content).map(&:to_i).sum
-        # xpath(%w[Fixed-Lighting-Outlets-Count])
+      end
+
+      def format_fixed_light_array
+        @xml_doc
+          .search("Fixed-Lights/Fixed-Light")
+          .map do |part|
+          {
+            lighting_efficacy:
+              xpath(%w[Lighting-Efficacy], part),
+            lighting_outlets:
+              xpath(%w[Lighting-Outlets], part),
+          }
+        end
+      end
+
+      def low_energy_lighting
+        total_energy_outlet_count = []
+        low_energy_outlet_count = []
+
+        format_fixed_light_array.each do |outlet|
+          if outlet[:lighting_efficacy].to_i > 65
+            low_energy_outlet_count << outlet[:lighting_outlets].to_i
+          end
+          total_energy_outlet_count << outlet[:lighting_outlets].to_f
+        end
+
+        (low_energy_outlet_count.sum / total_energy_outlet_count.sum * 100).round
       end
 
       def low_energy_fixed_lighting_outlets_count
-        nil
-        # xpath(%w[Low-Energy-Fixed-Lighting-Outlets-Count])
+        low_energy_outlet_count = []
+
+        format_fixed_light_array.each do |outlet|
+          if outlet[:lighting_efficacy].to_i > 65
+            low_energy_outlet_count << outlet[:lighting_outlets].to_i
+          end
+        end
+
+        low_energy_outlet_count.sum
       end
 
       def open_fireplaces_count
