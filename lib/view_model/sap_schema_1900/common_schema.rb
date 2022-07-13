@@ -1,6 +1,9 @@
 module ViewModel
   module SapSchema1900
     class CommonSchema < ViewModel::DomesticEpcViewModel
+
+      THRESHOLD_LOW_ENERGY_LIGHTING_EFFICACY = 65
+
       def assessment_id
         xpath(%w[Report-Header RRN])
       end
@@ -387,7 +390,7 @@ module ViewModel
         low_energy_outlet_count = []
 
         format_fixed_light_array.each do |outlet|
-          if outlet[:lighting_efficacy].to_i > 65
+          if outlet[:lighting_efficacy].to_i > THRESHOLD_LOW_ENERGY_LIGHTING_EFFICACY
             low_energy_outlet_count << outlet[:lighting_outlets].to_i
           end
           total_energy_outlet_count << outlet[:lighting_outlets].to_f
@@ -400,7 +403,7 @@ module ViewModel
         low_energy_outlet_count = []
 
         format_fixed_light_array.each do |outlet|
-          if outlet[:lighting_efficacy].to_i > 65
+          if outlet[:lighting_efficacy].to_i > THRESHOLD_LOW_ENERGY_LIGHTING_EFFICACY
             low_energy_outlet_count << outlet[:lighting_outlets].to_i
           end
         end
