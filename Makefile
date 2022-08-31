@@ -14,4 +14,4 @@ test: ## Run all tests
 	@bundle exec rake spec
 
 format: ## Runs Rubocop with the GOV.UK rules
-	@bundle exec rake rubocop:auto_correct
+	@bundle exec rake rubocop:autocorrect
