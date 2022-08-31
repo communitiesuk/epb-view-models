@@ -35,6 +35,8 @@ module Presenter
                                                              @schema_type,
                                                              @view_model.report_type),
           has_hot_water_cylinder: @view_model.has_hot_water_cylinder,
+          total_floor_area: @view_model.total_floor_area.to_s,
+          has_mains_gas: @view_model.mains_gas,
         }
       end
     end

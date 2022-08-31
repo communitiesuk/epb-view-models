@@ -2895,6 +2895,7 @@ RSpec.describe ViewModel::SapWrapper do
             main_dwelling_construction_age_band_or_year: "England and Wales: before 1900",
             main_fuel_type: "Electricity: electricity, unspecified tariff",
             main_heating_category: "boiler with radiators or underfloor heating",
+            total_floor_area: "165",
           },
         }
 
@@ -3348,6 +3349,7 @@ RSpec.describe ViewModel::SapWrapper do
               },
             ],
             main_heating_category: "boiler with radiators or underfloor heating",
+            total_floor_area: "98",
           },
         }
 
@@ -3433,6 +3435,7 @@ RSpec.describe ViewModel::SapWrapper do
             main_heating_category: "electric storage heaters",
             dwelling_type: nil,
             main_fuel_type: "electricity",
+            total_floor_area: "98",
           },
         }
 
@@ -3521,6 +3524,7 @@ RSpec.describe ViewModel::SapWrapper do
               },
             ],
             main_heating_category: "boiler with radiators or underfloor heating",
+            total_floor_area: "98",
           },
         }
 
@@ -3607,6 +3611,7 @@ RSpec.describe ViewModel::SapWrapper do
             dwelling_type: nil,
             main_fuel_type: "electricity",
             has_hot_water_cylinder: "false",
+            total_floor_area: "98",
           },
         }
 
@@ -3693,6 +3698,7 @@ RSpec.describe ViewModel::SapWrapper do
             main_heating_category: nil,
             main_fuel_type: "electricity",
             has_hot_water_cylinder: "false",
+            total_floor_area: "98",
           },
         }
 
@@ -3840,10 +3846,12 @@ RSpec.describe ViewModel::SapWrapper do
           main_heating_category: "none",
           main_fuel_type: "Electricity: electricity sold to grid",
           has_hot_water_cylinder: "true",
+          total_floor_area: "69",
+          has_mains_gas: nil,
         }
       end
 
-      it "reads the appropriate values" do
+      it "reads the appropriate values", aggregate_failures: true do
         test_xml_doc(schemas, assertion, :to_hera_hash)
       end
     end
