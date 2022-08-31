@@ -682,6 +682,8 @@ RSpec.describe ViewModel::RdSapWrapper do
           main_heating_category: "boiler with radiators or underfloor heating",
           main_fuel_type: "mains gas (not community)",
           has_hot_water_cylinder: "true",
+          total_floor_area: "55",
+          has_mains_gas: "Y",
         }
       end
 
