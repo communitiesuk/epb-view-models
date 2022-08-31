@@ -1,7 +1,6 @@
 module ViewModel
   module SapSchema1900
     class CommonSchema < ViewModel::DomesticEpcViewModel
-
       THRESHOLD_LOW_ENERGY_LIGHTING_EFFICACY = 65
 
       def assessment_id
