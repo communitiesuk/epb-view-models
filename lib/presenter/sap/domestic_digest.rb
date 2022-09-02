@@ -1,12 +1,12 @@
 module Presenter
   module Sap
-    class Hera
+    class DomesticDigest
       def initialize(view_model, schema_type)
         @view_model = view_model
         @schema_type = schema_type
       end
 
-      def to_hera_hash
+      def to_domestic_digest
         {
           type_of_assessment: @view_model.type_of_assessment,
           assessment_id: @view_model.assessment_id,

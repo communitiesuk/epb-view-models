@@ -8,7 +8,7 @@ module ViewModel
       @summary = Presenter::RdSap::Summary.new(view_model)
       @report = Presenter::RdSap::Report.new(view_model, schema_type, additional_data)
       @recommendation_report = Presenter::RdSap::RecommendationReport.new(view_model)
-      @hera = Presenter::RdSap::Hera.new(view_model, schema_type)
+      @domestic_digest = Presenter::RdSap::DomesticDigest.new(view_model, schema_type)
     end
 
     def type
@@ -31,9 +31,16 @@ module ViewModel
       @recommendation_report.to_hash
     end
 
-    def to_hera_hash
-      @hera.to_hera_hash
+    def to_domestic_digest
+      @domestic_digest.to_domestic_digest
     end
+
+    def to_hera_hash
+      to_domestic_digest
+    end
+
+    extend Gem::Deprecate
+    deprecate :to_hera_hash, :to_domestic_digest, 2022, 9
 
     def get_view_model
       view_model

@@ -16,3 +16,15 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+class FakeStdErr
+  attr_accessor :messages
+
+  def initialize
+    @messages = []
+  end
+
+  def write(msg)
+    @messages << msg
+  end
+end

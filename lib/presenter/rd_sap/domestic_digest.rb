@@ -1,6 +1,6 @@
 module Presenter
   module RdSap
-    class Hera
+    class DomesticDigest
       TYPE_OF_ASSESSMENT = "RdSAP".freeze
       private_constant :TYPE_OF_ASSESSMENT
 
@@ -9,7 +9,7 @@ module Presenter
         @schema_type = schema_type
       end
 
-      def to_hera_hash
+      def to_domestic_digest
         {
           type_of_assessment: TYPE_OF_ASSESSMENT,
           assessment_id: @view_model.assessment_id,

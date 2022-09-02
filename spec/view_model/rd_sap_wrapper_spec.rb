@@ -566,7 +566,7 @@ RSpec.describe ViewModel::RdSapWrapper do
       end
     end
 
-    describe ".to_hera_hash" do
+    describe ".to_domestic_digest" do
       let(:schemas) do
         [
           { schema: "RdSAP-Schema-20.0.0" },
@@ -685,8 +685,27 @@ RSpec.describe ViewModel::RdSapWrapper do
         }
       end
 
+      context "when using the deprecated to_hera_hash method" do
+        original_stderr = $stderr
+        fake_std_err = nil
+
+        before do
+          fake_std_err = FakeStdErr.new
+          $stderr = fake_std_err
+        end
+
+        after do
+          $stderr = original_stderr
+        end
+
+        it "reads the appropriate values, testing that a deprecation warning is given" do
+          test_xml_doc(schemas, assertion, :to_hera_hash)
+          expect(fake_std_err.messages.count).to be > 0
+        end
+      end
+
       it "reads the appropriate values" do
-        test_xml_doc(schemas, assertion, :to_hera_hash)
+        test_xml_doc(schemas, assertion, :to_domestic_digest)
       end
     end
   end
