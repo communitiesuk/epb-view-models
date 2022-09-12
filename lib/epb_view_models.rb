@@ -5,7 +5,7 @@ loader = Zeitwerk::Loader.for_gem
 loader.setup
 
 module EpbViewModels
-  VERSION = "1.0.22"
+  VERSION = "1.0.23"
 end
 
 # Monkey patching to avoid using ActiveRecord::Type::Boolean.new.cast
