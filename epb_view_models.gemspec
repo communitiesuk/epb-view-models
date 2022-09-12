@@ -22,5 +22,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = %w[lib]
 
   spec.add_dependency "nokogiri", "~> 1.11"
-  spec.add_dependency "zeitwerk", "~> 2.4.2"
+  spec.add_dependency "zeitwerk", "~> 2.4"
 end
