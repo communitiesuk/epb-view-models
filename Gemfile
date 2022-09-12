@@ -12,4 +12,4 @@ end
 
 gem "nokogiri", "~> 1.11"
 gem "rexml", "~> 3.2", ">= 3.2.5"
-gem "zeitwerk", "~> 2.4.2"
+gem "zeitwerk", "~> 2.4"
