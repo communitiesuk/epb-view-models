@@ -684,6 +684,7 @@ RSpec.describe ViewModel::RdSapWrapper do
           has_hot_water_cylinder: "true",
           total_floor_area: "55",
           has_mains_gas: "Y",
+          current_energy_efficiency_rating: 50,
         }
       end
 

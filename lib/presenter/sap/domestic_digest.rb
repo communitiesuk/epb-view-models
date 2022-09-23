@@ -34,6 +34,7 @@ module Presenter
           has_hot_water_cylinder: @view_model.has_hot_water_cylinder,
           total_floor_area: @view_model.total_floor_area.to_s,
           has_mains_gas: @view_model.mains_gas,
+          current_energy_efficiency_rating: @view_model.current_energy_rating,
         }
       end
     end

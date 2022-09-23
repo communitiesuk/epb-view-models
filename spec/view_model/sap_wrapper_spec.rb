@@ -2896,6 +2896,7 @@ RSpec.describe ViewModel::SapWrapper do
             main_fuel_type: "Electricity: electricity, unspecified tariff",
             main_heating_category: "boiler with radiators or underfloor heating",
             total_floor_area: "165",
+            current_energy_efficiency_rating: 72,
           },
         }
 
@@ -3848,6 +3849,7 @@ RSpec.describe ViewModel::SapWrapper do
           has_hot_water_cylinder: "true",
           total_floor_area: "69",
           has_mains_gas: nil,
+          current_energy_efficiency_rating: 50,
         }
       end
 
