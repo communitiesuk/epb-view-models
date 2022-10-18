@@ -171,9 +171,7 @@ module ViewModel
         xpath(%w[Energy-Rating-Current]).to_i
       end
 
-      def estimated_energy_cost
-        xpath(%w[Estimated-Energy-Cost])
-      end
+      def estimated_energy_cost; end
 
       def total_floor_area
         xpath(%w[Property-Summary Total-Floor-Area])

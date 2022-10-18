@@ -179,9 +179,7 @@ module ViewModel
         xpath(%w[Energy-Consumption-Potential])
       end
 
-      def estimated_energy_cost
-        xpath(%w[Estimated-Energy-Cost])
-      end
+      def estimated_energy_cost; end
 
       def total_floor_area
         building_part_areas = @xml_doc.search("//SAP-Building-Part/SAP-Floor-Dimensions/SAP-Floor-Dimension/Total-Floor-Area").map(&:content)
