@@ -324,6 +324,7 @@ RSpec.describe ViewModel::DecWrapper do
           different_fields: {
             assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
+            reason_type: nil,
           },
         },
         {
@@ -333,6 +334,7 @@ RSpec.describe ViewModel::DecWrapper do
             assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             date_of_expiry: "2020-12-31",
             postcode: "BT0 0AA",
+            reason_type: nil,
           },
         },
         {
@@ -347,6 +349,7 @@ RSpec.describe ViewModel::DecWrapper do
             assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
             aircon_present: "N",
             date_of_expiry: "2020-12-31",
+            reason_type: nil,
           },
         },
         {
@@ -362,6 +365,7 @@ RSpec.describe ViewModel::DecWrapper do
             aircon_present: "N",
             date_of_expiry: "2020-12-31",
             postcode: "BT0 0AA",
+            reason_type: nil,
           },
         },
       ]
@@ -411,6 +415,7 @@ RSpec.describe ViewModel::DecWrapper do
         building_environment: "Heating and Natural Ventilation",
         building_category: "C1",
         report_type: "1",
+        reason_type: "6",
         other_fuel: "other",
         estimated_aircon_kw_rating: "1",
       }

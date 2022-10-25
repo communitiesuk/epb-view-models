@@ -69,6 +69,7 @@ module Presenter
           building_environment: @view_model.building_environment,
           building_category: @view_model.building_category,
           report_type: @view_model.report_type,
+          reason_type: @view_model.all_reason_types.first,
           other_fuel: @view_model.other_fuel,
         }
       end
