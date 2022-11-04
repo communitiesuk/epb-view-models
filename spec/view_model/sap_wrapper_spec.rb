@@ -673,6 +673,7 @@ RSpec.describe ViewModel::SapWrapper do
 
         [
           { schema: "SAP-Schema-19.0.0" }.deep_merge(is_19),
+          { schema: "SAP-Schema-19.0.0", type: "epc_no_fixed_lights" }.deep_merge(is_19).deep_merge({ low_energy_lighting: 0 }),
           { schema: "SAP-Schema-18.0.0" }.deep_merge(has_uprn).deep_merge(
             has_stone_walls_addendum,
           ),

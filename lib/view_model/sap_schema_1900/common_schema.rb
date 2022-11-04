@@ -393,6 +393,10 @@ module ViewModel
           total_energy_outlet_count << outlet[:lighting_outlets].to_f
         end
 
+        if total_energy_outlet_count.sum.zero?
+          return 0
+        end
+
         (low_energy_outlet_count.sum / total_energy_outlet_count.sum * 100).round
       end
 
