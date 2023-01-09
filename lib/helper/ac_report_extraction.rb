@@ -138,7 +138,12 @@ module Helper
             ],
           guidance: guidance(node.at("ACI-Cooling-Plant-Maintenance/Guidance")),
         },
-        metering: checklist_values(node.at("ACI-Cooling-Plant-Metering")),
+        metering: {
+          metering_installed: checklist_values_with_guidance(node.at("ACI-Cooling-Plant-Metering"))[:metering_installed],
+          bem_installed: checklist_values(node.at("ACI-Cooling-Plant-Metering"))[:bem_installed],
+          usage_records: checklist_values(node.at("ACI-Cooling-Plant-Metering"))[:usage_records],
+          excessive_use: checklist_values(node.at("ACI-Cooling-Plant-Metering"))[:excessive_use],
+        },
         humidity_control:
           checklist_values(node.at("ACI-Cooling-Plant-Humidity-Control"))[
             :humidity_control

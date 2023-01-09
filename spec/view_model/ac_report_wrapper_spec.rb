@@ -344,6 +344,7 @@ RSpec.describe ViewModel::AcReportWrapper do
                 state: false,
               },
               metering_installed: {
+                guidance: "Separate energy metering for AC systems monitors energy use of air conditioning/comfort cooling systems.",
                 note: "",
                 state: false,
               },
@@ -525,6 +526,7 @@ RSpec.describe ViewModel::AcReportWrapper do
                 state: false,
               },
               metering_installed: {
+                guidance: "Separate energy metering for AC systems monitors energy use of air conditioning/comfort cooling systems. If the energy consumption consumed by these systems is measured then it is possible to save/reduce energy use & monitor any energy saving that is achieved. It is recommended that separate energy meters should be installed.",
                 note: "",
                 state: false,
               },
