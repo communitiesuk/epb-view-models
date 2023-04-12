@@ -5,8 +5,8 @@ require_relative "lib/epb_view_models"
 Gem::Specification.new do |spec|
   spec.name          = "epb_view_models"
   spec.version       = EpbViewModels::VERSION
-  spec.authors       = ["MHCLG Energy Performance of Buildings"]
-  spec.email         = ["mhclg.digital-services@communities.gov.uk"]
+  spec.authors       = ["DLUHC Energy Performance of Buildings"]
+  spec.email         = ["dluhc.digital-services@levellingup.gov.uk"]
   spec.summary       = "Library used to parse Energy Performance Certificates (EPC)"
   spec.homepage      = "https://github.com/communitiesuk/epb-view-models"
   spec.license       = "MIT"
