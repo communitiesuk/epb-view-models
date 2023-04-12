@@ -372,6 +372,7 @@ module Helper
       ]
 
       schemes_that_use_l = %i[
+        SAP-Schema-19.1.0
         SAP-Schema-19.0.0
         SAP-Schema-18.0.0
         SAP-Schema-17.1
@@ -576,6 +577,7 @@ module Helper
       ]
 
       sap = %i[
+        SAP-Schema-19.1.0
         SAP-Schema-19.0.0
         SAP-Schema-18.0.0
         SAP-Schema-17.1
