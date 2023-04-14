@@ -10,8 +10,6 @@ module Presenter
       end
 
       def to_domestic_digest
-
-
         {
           type_of_assessment: TYPE_OF_ASSESSMENT,
           assessment_id: @view_model.assessment_id,

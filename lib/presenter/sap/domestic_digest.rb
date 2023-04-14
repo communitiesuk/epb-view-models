@@ -35,7 +35,7 @@ module Presenter
           total_floor_area: @view_model.total_floor_area.to_s,
           has_mains_gas: @view_model.mains_gas,
           current_energy_efficiency_rating: @view_model.current_energy_rating,
-          type_of_property:   Helper::XmlEnumsToOutput.property_type(@view_model.property_type),
+          type_of_property: Helper::XmlEnumsToOutput.property_type(@view_model.property_type),
         }
       end
     end

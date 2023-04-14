@@ -685,7 +685,7 @@ RSpec.describe ViewModel::RdSapWrapper do
           total_floor_area: "55",
           has_mains_gas: "Y",
           current_energy_efficiency_rating: 50,
-          type_of_property: "House"
+          type_of_property: "House",
         }
       end
 

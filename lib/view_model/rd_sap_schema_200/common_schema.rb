@@ -122,10 +122,9 @@ module ViewModel
           .map do |node|
             {
               sequence: xpath(%w[Sequence], node).to_i,
+              improvement_code: xpath(%w[Improvement-Details Improvement-Number], node),
               improvement_summary: xpath(%w[Improvement-Summary], node),
               improvement_description: xpath(%w[Improvement-Description], node),
-              improvement_code:
-                xpath(%w[Improvement-Details Improvement-Number], node),
               indicative_cost: xpath(%w[Indicative-Cost], node),
             }
           end
