@@ -2776,8 +2776,62 @@ RSpec.describe ViewModel::SapWrapper do
           },
         }
 
+        sap_18_0_0_with_description_and_summary = {
+          different_fields: {
+            recommendations: [
+              {
+                assessment_id: "0000-0000-0000-0000-0000",
+                improvement_code: "5",
+                improvement_description: "Increase loft insulation to 270 mm",
+                improvement_summary: "Increase loft insulation to 270 mm",
+                indicative_cost: "£100 - £350",
+                sequence: 1,
+              },
+              {
+                assessment_id: "0000-0000-0000-0000-0000",
+                improvement_code: nil,
+                improvement_description: "Improvement desc",
+                improvement_summary: nil,
+                indicative_cost: "2000",
+                sequence: 2,
+              },
+            ],
+          },
+        }
+
+        sap_19_x_x_with_description_and_summary = {
+          different_fields: {
+            recommendations: [
+              {
+                assessment_id: "0000-0000-0000-0000-0000",
+                improvement_code: "19",
+                improvement_description: "Solar water heating",
+                improvement_summary: "Solar water heating",
+                indicative_cost: "£4,000 - £6,000",
+                sequence: 1,
+              },
+              {
+                assessment_id: "0000-0000-0000-0000-0000",
+                improvement_code: "34",
+                improvement_description: "Solar photovoltaic panels",
+                improvement_summary: "Solar photovoltaic panels, 2.5 kWp",
+                indicative_cost: "£9,000 - £14,000",
+                sequence: 2,
+              },
+            ],
+          },
+        }
+
         [
-          { schema: "SAP-Schema-18.0.0" },
+          { schema: "SAP-Schema-19.1.0" }.deep_merge(
+            sap_19_x_x_with_description_and_summary,
+          ),
+          { schema: "SAP-Schema-19.0.0" }.deep_merge(
+            sap_19_x_x_with_description_and_summary,
+          ),
+          { schema: "SAP-Schema-18.0.0" }.deep_merge(
+            sap_18_0_0_with_description_and_summary,
+          ),
           { schema: "SAP-Schema-17.1" },
           { schema: "SAP-Schema-17.0" },
           { schema: "SAP-Schema-16.3", type: "sap" },

@@ -387,8 +387,38 @@ RSpec.describe ViewModel::RdSapWrapper do
 
     describe ".to_recommendation_report" do
       let(:schemas) do
+        rdsap_20_with_description_and_summary = {
+          different_fields: {
+            recommendations: [
+              {
+                assessment_id: "0000-0000-0000-0000-0000",
+                improvement_code: "5",
+                improvement_description: "Increase loft insulation to 270 mm",
+                improvement_summary: "Increase loft insulation to 270 mm",
+                indicative_cost: "£100 - £350",
+                sequence: 1,
+              },
+              {
+                assessment_id: "0000-0000-0000-0000-0000",
+                improvement_code: "1",
+                improvement_description: "Insulate hot water cylinder with 80 mm jacket",
+                improvement_summary: "Insulate hot water cylinder with 80 mm jacket",
+                indicative_cost: "2000",
+                sequence: 2,
+              },
+              {
+                assessment_id: "0000-0000-0000-0000-0000",
+                improvement_code: nil,
+                improvement_description: "Improvement desc",
+                improvement_summary: nil,
+                indicative_cost: "1000",
+                sequence: 3,
+              },
+            ],
+          },
+        }
         [
-          { schema: "RdSAP-Schema-20.0.0" },
+          { schema: "RdSAP-Schema-20.0.0" }.deep_merge(rdsap_20_with_description_and_summary),
           { schema: "RdSAP-Schema-19.0" },
           { schema: "RdSAP-Schema-18.0" },
           { schema: "RdSAP-Schema-17.1" },
