@@ -35,7 +35,15 @@ module Presenter
           total_floor_area: @view_model.total_floor_area.to_s,
           has_mains_gas: @view_model.mains_gas,
           current_energy_efficiency_rating: @view_model.current_energy_rating,
+          potential_energy_efficiency_rating: @view_model.potential_energy_rating,
           type_of_property: Helper::XmlEnumsToOutput.property_type(@view_model.property_type),
+          recommended_improvements: @view_model.improvements.map do |improvement|
+            improvement[:energy_performance_band_improvement] =
+              Helper::EnergyBandCalculator.domestic(
+                improvement[:energy_performance_rating_improvement],
+              )
+            improvement
+          end,
         }
       end
     end
