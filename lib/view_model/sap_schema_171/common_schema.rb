@@ -180,6 +180,18 @@ module ViewModel
         xpath(%w[Property-Summary Total-Floor-Area])
       end
 
+      def total_roof_area
+        roofs = @xml_doc.xpath("//SAP-Roofs/SAP-Roof")
+        return nil if roofs.count == 0
+
+        total_roof_area = 0
+        roofs.each do |roof|
+          roof_area = roof.at("Total-Roof-Area")&.content.to_i
+          total_roof_area += roof_area
+        end
+        total_roof_area
+      end
+
       def dwelling_type
         xpath(%w[Dwelling-Type])
       end

@@ -214,6 +214,7 @@ RSpec.describe ViewModel::SapWrapper do
               },
             ],
             total_floor_area: 165,
+            total_roof_area: 57,
             environmental_impact_current: "94",
           },
         }
@@ -671,6 +672,12 @@ RSpec.describe ViewModel::SapWrapper do
           },
         }
 
+        has_total_roof_area = {
+          different_fields: {
+            total_roof_area: 12,
+          },
+        }
+
         [
           { schema: "SAP-Schema-19.1.0" }.deep_merge(is_19),
           { schema: "SAP-Schema-19.0.0" }.deep_merge(is_19),
@@ -686,7 +693,8 @@ RSpec.describe ViewModel::SapWrapper do
             unsupported_fields: %i[tenure],
           }.deep_merge(is_pre_17)
            .deep_merge(has_stone_walls_addendum)
-           .deep_merge(has_several_lzc_energy_source),
+           .deep_merge(has_several_lzc_energy_source)
+           .deep_merge(has_total_roof_area),
           { schema: "SAP-Schema-16.3", type: "rdsap" }.deep_merge(is_rdsap)
                                                       .deep_merge(is_pre_17)
                                                       .deep_merge(has_several_addendum_types),
@@ -694,9 +702,9 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-16.2",
             type: "sap",
             unsupported_fields: %i[tenure],
-          }.deep_merge(has_stone_walls_addendum).deep_merge(
-            has_single_lzc_energy_source,
-          ),
+          }.deep_merge(has_stone_walls_addendum)
+           .deep_merge(has_single_lzc_energy_source)
+           .deep_merge(has_total_roof_area),
           { schema: "SAP-Schema-16.2", type: "rdsap" }.deep_merge(is_rdsap)
                                                       .deep_merge(is_pre_17)
                                                       .deep_merge(has_several_addendum_types),
@@ -704,9 +712,9 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-16.1",
             type: "sap",
             unsupported_fields: %i[tenure],
-          }.deep_merge(has_stone_walls_addendum).deep_merge(
-            has_single_lzc_energy_source,
-          ),
+          }.deep_merge(has_stone_walls_addendum)
+           .deep_merge(has_single_lzc_energy_source)
+           .deep_merge(has_total_roof_area),
           { schema: "SAP-Schema-16.1", type: "rdsap" }.deep_merge(is_rdsap)
                                                       .deep_merge(is_pre_17)
                                                       .deep_merge(has_several_addendum_types),
@@ -714,9 +722,9 @@ RSpec.describe ViewModel::SapWrapper do
             schema: "SAP-Schema-16.0",
             type: "sap",
             unsupported_fields: %i[tenure],
-          }.deep_merge(has_stone_walls_addendum).deep_merge(
-            has_single_lzc_energy_source,
-          ),
+          }.deep_merge(has_stone_walls_addendum)
+           .deep_merge(has_single_lzc_energy_source)
+           .deep_merge(has_total_roof_area),
           {
             schema: "SAP-Schema-16.0",
             type: "rdsap",
@@ -724,9 +732,12 @@ RSpec.describe ViewModel::SapWrapper do
           }.deep_merge(is_rdsap)
            .deep_merge(is_pre_17)
            .deep_merge(has_several_addendum_types),
-          { schema: "SAP-Schema-15.0", type: "sap" }.deep_merge(is_pre_16)
-                                                    .deep_merge(heat_demand_impact_of_unsupported)
-                                                    .deep_merge(has_single_lzc_energy_source),
+          { schema: "SAP-Schema-15.0",
+            type: "sap",
+          }.deep_merge(is_pre_16)
+          .deep_merge(heat_demand_impact_of_unsupported)
+          .deep_merge(has_single_lzc_energy_source)
+          .deep_merge(has_total_roof_area),
           { schema: "SAP-Schema-15.0", type: "rdsap" }.deep_merge(is_rdsap)
                                                       .deep_merge(is_pre_16)
                                                       .deep_merge(heat_demand_impact_of_unsupported)
@@ -1075,6 +1086,7 @@ RSpec.describe ViewModel::SapWrapper do
           related_party_disclosure_text: nil,
           tenure: "1",
           total_floor_area: 69.0,
+          total_roof_area: nil,
           status: "ENTERED",
           environmental_impact_current: "52",
           addendum: nil,

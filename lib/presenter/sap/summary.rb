@@ -103,6 +103,7 @@ module Presenter
           tenure: @view_model.tenure,
           transaction_type: @view_model.transaction_type,
           total_floor_area: convert_to_big_decimal(@view_model.total_floor_area),
+          total_roof_area: @view_model.respond_to?(:total_roof_area) ? @view_model.total_roof_area : nil,
           status: @view_model.status,
           environmental_impact_current: @view_model.environmental_impact_current,
           environmental_impact_potential:
