@@ -5,8 +5,9 @@ loader = Zeitwerk::Loader.for_gem(warn_on_extra_files: false)
 loader.setup
 
 module EpbViewModels
-  VERSION = "1.1.3"
+  VERSION = "1.1.4"
 end
+
 
 # Monkey patching to avoid using ActiveRecord::Type::Boolean.new.cast
 # Source: http://jeffgardner.org/2011/08/04/rails-string-to-boolean-method/
