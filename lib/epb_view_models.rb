@@ -5,7 +5,7 @@ loader = Zeitwerk::Loader.for_gem(warn_on_extra_files: false)
 loader.setup
 
 module EpbViewModels
-  VERSION = "1.1.4"
+  VERSION = "1.1.5"
 end
 
 
