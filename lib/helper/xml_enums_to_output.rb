@@ -31,6 +31,7 @@ module Helper
       "3" => "Unknown",
       "4" => "dual (24 hour)",
       "5" => "off-peak 18 hour",
+      "6" => "off-peak 10 hour",
     }.freeze
     RDSAP_GLAZED_TYPE = {
       "1" => "double glazing installed before 2002",
@@ -42,6 +43,14 @@ module Helper
       "7" => "double, known data",
       "8" => "triple, known data",
       "ND" => "not defined",
+      "6-post20" => "triple glazing, unknown install date",
+      "9" => "triple glazing, installed between 2002-2022 in EAW, 2003-2023 in SCT, 2006-2022 NI",
+      "10" => "triple glazing, installed before 2002 in EAW, 2003 in SCT, 2006 NI",
+      "11" => "secondary glazing, normal emissivity",
+      "12" => "secondary glazing, low emissivity",
+      "13" => "double glazing, installed during or after 2022 in EAW, 2023 in SCT, 2022 NI",
+      "14" => "triple glazing, installed during or after 2022 in EAW, 2023 in SCT, 2022 NI",
+
     }.freeze
     RDSAP_GLAZED_AREA = {
       "1" => "Normal",
@@ -78,6 +87,9 @@ module Helper
       "12RdSAP" => "RHI application",
       "13RdSAP" => "ECO assessment",
       "14RdSAP" => "Stock condition survey",
+      "15RdSAP" => "Grant scheme (ECO, RHI, etc.)",
+      "16RdSAP" => "Non-grant scheme (e.g. MEES)",
+      "17RdSAP" => "re-mortgaging",
     }.freeze
     CONSTRUCTION_AGE_BAND = {
       "A" => "England and Wales: before 1900",
@@ -94,6 +106,8 @@ module Helper
       "K-pre-17.0" => "England and Wales: 2007 onwards",
       "K-12.0" => "Post-2006",
       "L" => "England and Wales: 2012 onwards",
+      "L-post-20" => "England and Wales: 2012-2021",
+      "M" => "England and Wales: 2022 onwards",
       "0" => "Not applicable",
       "NR" => "Not recorded",
     }.freeze
@@ -136,6 +150,7 @@ module Helper
       "0" => "no corridor",
       "1" => "heated corridor",
       "2" => "unheated corridor",
+      "3" => "stairwell",
     }.freeze
     MECHANICAL_VENTILATION = {
       "0" => "natural",
@@ -144,6 +159,12 @@ module Helper
       "0-pre12.0" => "none",
       "1-pre12.0" => "mechanical - heat recovering",
       "2-pre12.0" => "mechanical - non recovering",
+      "1-post20" => "mechanical ventilation without heat recovery (MV)",
+      "2-post20" => "mechanical extract, decentralised (MEV dc)",
+      "3-post20" => "mechanical extract, centralised (MEV c)",
+      "4-post20" => "mechanical ventilation with heat recovery (MVHR)",
+      "5-post20" => "positive input from loft",
+      "6-post20" => "positive input from outside",
     }.freeze
     CEPC_TRANSACTION_TYPE = {
       "1" => "Mandatory issue (Marketed sale)",
@@ -167,6 +188,7 @@ module Helper
       "10" => "natural with intermittent extract fans and passive vents",
     }.freeze
     CYLINDER_INSULATION_THICKNESS = {
+      "0" => "0 mm",
       "12" => "12 mm",
       "25" => "25 mm",
       "38" => "38 mm",
@@ -311,7 +333,10 @@ module Helper
       RDSAP_GLAZED_AREA[value]
     end
 
-    def self.glazed_type_rdsap(value)
+    def self.glazed_type_rdsap(value,  schema_type = "")
+      if value =="6"  && schemas_post_20.include?(schema_type)
+        return RDSAP_GLAZED_TYPE["#{value}-post20"]
+      end
       RDSAP_GLAZED_TYPE[value]
     end
 
@@ -396,6 +421,7 @@ module Helper
         SAP-Schema-13.0
         SAP-Schema-12.0
         RdSAP-Schema-20.0.0
+        RdSAP-Schema-21.0.0
         RdSAP-Schema-19.0
         RdSAP-Schema-18.0
         RdSAP-Schema-17.1
@@ -461,6 +487,10 @@ module Helper
         return value
       end
 
+      if value == "L" && schemas_post_20.include?(schema_type)
+        return CONSTRUCTION_AGE_BAND["L-post-20"]
+      end
+
       return value if value == "L" && !schemes_that_use_l.include?(schema_type)
 
       if value == "0" &&
@@ -486,8 +516,14 @@ module Helper
         SAP-Schema-10.2
         SAP-Schema-NI-11.2
       ].freeze
+
+
       if types_of_sap_pre12.include?(schema_type) && is_rdsap(report_type)
         return MECHANICAL_VENTILATION["#{value}-pre12.0"]
+      end
+
+      if schemas_post_20.include?(schema_type) && is_rdsap(report_type)
+        return MECHANICAL_VENTILATION["#{value}-post20"]
       end
 
       MECHANICAL_VENTILATION[value] || value
@@ -633,6 +669,14 @@ module Helper
       MAIN_HEATING_CATEGORY[value] || value
     end
 
-    private_class_method :is_rdsap, :is_sap
+    def self.schemas_post_20
+      %i[
+         RdSAP-Schema-21.0.0
+      ]
+    end
+
+    private_class_method :is_rdsap, :is_sap, :schemas_post_20
+
+
   end
 end

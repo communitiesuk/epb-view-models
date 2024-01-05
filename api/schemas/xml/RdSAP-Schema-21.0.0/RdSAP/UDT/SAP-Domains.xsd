@@ -887,7 +887,7 @@ Northern Ireland: 2014 onwards (TBA)</xs:documentation>
 			</xs:enumeration>
 			<xs:enumeration value="3">
 				<xs:annotation>
-					<xs:documentation>stairwell</xs:documentation>
+					<xs:documentation>Voluntary (No legal requirement for an EPC).</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
