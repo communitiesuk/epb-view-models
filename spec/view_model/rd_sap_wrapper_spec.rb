@@ -11,6 +11,12 @@ RSpec.describe ViewModel::RdSapWrapper do
     describe ".to_hash" do
       let(:schemas) do
         [
+          { schema: "RdSAP-Schema-21.0.0",
+            different_fields: {
+              property_age_band: "M",
+              transaction_type: "16",
+
+            } },
           { schema: "RdSAP-Schema-20.0.0" },
           {
             schema: "RdSAP-Schema-19.0",
@@ -464,36 +470,54 @@ RSpec.describe ViewModel::RdSapWrapper do
 
     describe ".to_report" do
       let(:schemas) do
-        [{
-          schema: "RdSAP-Schema-20.0.0",
-          different_fields: {
-            assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+        [
+          {
+            schema: "RdSAP-Schema-21.0.0",
+            different_fields: {
+              assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+              construction_age_band: "England and Wales: 2022 onwards",
+              transaction_type: "Non-grant scheme (e.g. MEES)",
+              mechanical_ventilation: "positive input from outside",
+              glazed_area: nil,
+              low_energy_lighting: nil,
+              fixed_lighting_outlets_count: nil,
+              low_energy_fixed_lighting_outlets_count: nil,
+              number_open_fireplaces: nil,
+              glazed_type: nil,
+
+            },
           },
-        },
-         {
-           schema: "RdSAP-Schema-19.0",
-           different_fields: {
-             assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
-           },
-         },
-         {
-           schema: "RdSAP-Schema-18.0",
-           different_fields: {
-             assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
-           },
-         },
-         {
-           schema: "RdSAP-Schema-17.1",
-           different_fields: {
-             assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
-           },
-         },
-         {
-           schema: "RdSAP-Schema-17.0",
-           different_fields: {
-             assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
-           },
-         }]
+          {
+            schema: "RdSAP-Schema-20.0.0",
+            different_fields: {
+              assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+            },
+          },
+          {
+            schema: "RdSAP-Schema-19.0",
+            different_fields: {
+              assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+            },
+          },
+          {
+            schema: "RdSAP-Schema-18.0",
+            different_fields: {
+              assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+            },
+          },
+          {
+            schema: "RdSAP-Schema-17.1",
+            different_fields: {
+              assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+            },
+          },
+          {
+            schema: "RdSAP-Schema-17.0",
+            different_fields: {
+              assessment_id: "4af9d2c31cf53e72ef6f59d3f59a1bfc500ebc2b1027bc5ca47361435d988e1a",
+            },
+          },
+        ]
       end
 
       let(:assertion) do
@@ -599,6 +623,8 @@ RSpec.describe ViewModel::RdSapWrapper do
     describe ".to_domestic_digest" do
       let(:schemas) do
         [
+          { schema: "RdSAP-Schema-21.0.0",
+            different_fields: { main_dwelling_construction_age_band_or_year: "England and Wales: 2022 onwards" } },
           { schema: "RdSAP-Schema-20.0.0" },
           { schema: "RdSAP-Schema-19.0" },
           { schema: "RdSAP-Schema-18.0" },

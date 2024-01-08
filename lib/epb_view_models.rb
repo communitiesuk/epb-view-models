@@ -8,7 +8,6 @@ module EpbViewModels
   VERSION = "1.1.5"
 end
 
-
 # Monkey patching to avoid using ActiveRecord::Type::Boolean.new.cast
 # Source: http://jeffgardner.org/2011/08/04/rails-string-to-boolean-method/
 class String

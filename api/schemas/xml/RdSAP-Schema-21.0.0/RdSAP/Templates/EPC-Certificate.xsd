@@ -179,6 +179,7 @@ If windows not measured, same as SAP-Data\Energy-Assessment\Property-Summary\Mul
 	</xs:complexType>
 	<xs:element name="Improvement" type="Improvement"/>
 	<xs:complexType name="Improvement">
+
 		<xs:all>
 			<xs:element name="Sequence" type="xs:integer">
 				<xs:annotation>

@@ -13,6 +13,13 @@ RSpec.describe Accessor::DomesticRecommendationsAccessor do
     end
   end
 
+  context "when fetching domestic recommendation for RdSAP-21.0.0" do
+    it "returns the appropriate text for summary and description" do
+      response = accessor.fetch_details(schema_version: "RdSAP-Schema-21.0.0", improvement_number: "5")
+      expect(response.summary).to eq "Increase loft insulation to 270 mm"
+    end
+  end
+
   context "when creating a entry for a domestic recommendation NI" do
     it "returns the appropriate text for summary and description" do
       response = accessor.fetch_details(schema_version: "RdSAP-Schema-NI-20.0.0", improvement_number: "5")

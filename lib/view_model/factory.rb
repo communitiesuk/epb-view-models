@@ -14,6 +14,7 @@ module ViewModel
       CEPC-3.1
     ].freeze
     TYPES_OF_RD_SAP = %i[
+      RdSAP-Schema-21.0.0
       RdSAP-Schema-20.0.0
       RdSAP-Schema-19.0
       RdSAP-Schema-18.0
