@@ -733,8 +733,7 @@ RSpec.describe ViewModel::SapWrapper do
            .deep_merge(is_pre_17)
            .deep_merge(has_several_addendum_types),
           { schema: "SAP-Schema-15.0",
-            type: "sap",
-          }.deep_merge(is_pre_16)
+            type: "sap" }.deep_merge(is_pre_16)
           .deep_merge(heat_demand_impact_of_unsupported)
           .deep_merge(has_single_lzc_energy_source)
           .deep_merge(has_total_roof_area),

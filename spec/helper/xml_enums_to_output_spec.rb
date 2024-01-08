@@ -187,8 +187,8 @@ RSpec.describe Helper::XmlEnumsToOutput do
         "ND",
       )
       expect(described_class.energy_tariff("6", rdsap_report_type)).to eq(
-                                                                          "off-peak 10 hour",
-                                                                          )
+        "off-peak 10 hour",
+      )
     end
 
     it "does not find the value in the enum and returns the same value" do
@@ -242,14 +242,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
   end
 
   context "when the Glazing-Type XML value is passed to to the RdSAP glazed_type enum" do
-    it "does not find a value in the enum and returns nil" , aggregate_failures: true do
+    it "does not find a value in the enum and returns nil", aggregate_failures: true do
       expect(described_class.glazed_type_rdsap(nil)).to be_nil
       expect(
         described_class.glazed_type_rdsap("Any other value"),
       ).to be_nil
     end
 
-    it "and the value is in the lookup, it returns the expected string" , aggregate_failures: true do
+    it "and the value is in the lookup, it returns the expected string", aggregate_failures: true do
       expect(described_class.glazed_type_rdsap("1")).to eq(
         "double glazing installed before 2002",
       )
@@ -272,7 +272,6 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(described_class.glazed_type_rdsap("6", :"RdSAP-Schema-21.0.0")).to eq("triple glazing, unknown install date")
       expect(described_class.glazed_type_rdsap("14", :"RdSAP-Schema-21.0.0")).to eq("triple glazing, installed during or after 2022 in EAW, 2023 in SCT, 2022 NI")
     end
-
   end
 
   context "when the Glazing-Area XML value is passed to to the RdSAP glazed_area enum" do
@@ -315,7 +314,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
   end
 
   context "when the Transaction-Type xml value is passed to the transaction type enum" do
-    it "and the value is in the lookup, it returns the expected string" , aggregate_failures: true do
+    it "and the value is in the lookup, it returns the expected string", aggregate_failures: true do
       expect(described_class.transaction_type("1")).to eq(
         "marketed sale",
       )
@@ -471,14 +470,13 @@ RSpec.describe Helper::XmlEnumsToOutput do
         ),
       ).to eq("L")
 
-
       expect(
         described_class.construction_age_band_lookup(
           "L",
           :"RdSAP-Schema-21.0.0",
           sap_report_type,
-          ),
-        ).to eq("England and Wales: 2012-2021")
+        ),
+      ).to eq("England and Wales: 2012-2021")
     end
 
     it "returns the expected description for M values" do
@@ -487,12 +485,9 @@ RSpec.describe Helper::XmlEnumsToOutput do
           "M",
           :"SAP-Schema-21.0.0",
           rdsap_report_type,
-          ),
-        ).to eq("England and Wales: 2022 onwards")
-
-
+        ),
+      ).to eq("England and Wales: 2022 onwards")
     end
-
 
     it "returns the expected description for NR values" do
       expect(
@@ -739,12 +734,12 @@ RSpec.describe Helper::XmlEnumsToOutput do
         "unheated corridor",
       )
 
-      expect(described_class.heat_loss_corridor("3")).to eq( "stairwell",  )
+      expect(described_class.heat_loss_corridor("3")).to eq("stairwell")
     end
   end
 
   context "when the Mechanical-Ventilation xml value is passed to the transaction type enum" do
-    it "does not find a value in the enum and returns nil" , aggregate_failures: true do
+    it "does not find a value in the enum and returns nil", aggregate_failures: true do
       expect(
         described_class.mechanical_ventilation(
           nil,
@@ -761,7 +756,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       ).to eq("Any other value")
     end
 
-    it "and the value is in the lookup, it returns the expected string" , aggregate_failures: true do
+    it "and the value is in the lookup, it returns the expected string", aggregate_failures: true do
       expect(
         described_class.mechanical_ventilation(
           "0",
@@ -802,17 +797,16 @@ RSpec.describe Helper::XmlEnumsToOutput do
           "1",
           :"RdSAP-Schema-21.0.0",
           rdsap_report_type,
-          ),
-        ).to eq("mechanical ventilation without heat recovery (MV)")
+        ),
+      ).to eq("mechanical ventilation without heat recovery (MV)")
 
       expect(
         described_class.mechanical_ventilation(
           "6",
           :"RdSAP-Schema-21.0.0",
           rdsap_report_type,
-          ),
-        ).to eq("positive input from outside")
-
+        ),
+      ).to eq("positive input from outside")
     end
   end
 

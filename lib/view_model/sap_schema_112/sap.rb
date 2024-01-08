@@ -65,7 +65,7 @@ module ViewModel
 
       def total_roof_area
         roofs = @xml_doc.xpath("//SAP-Roofs/SAP-Roof")
-        return nil if roofs.count == 0
+        return nil if roofs.count.zero?
 
         total_roof_area = 0
         roofs.each do |roof|

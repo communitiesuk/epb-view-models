@@ -5,6 +5,7 @@ def test_xml_doc(schemas, assertion, method_called = :to_hash, additional_data =
     sample = Samples.xml(schema_case[:schema], schema_case[:type])
 
     schema_path = Helper::SchemaListHelper.new(schema_case[:schema]).schema_path
+
     schema =
       Nokogiri::XML::Schema.from_document Nokogiri.XML(
         File.read(schema_path),

@@ -333,10 +333,11 @@ module Helper
       RDSAP_GLAZED_AREA[value]
     end
 
-    def self.glazed_type_rdsap(value,  schema_type = "")
-      if value =="6"  && schemas_post_20.include?(schema_type)
+    def self.glazed_type_rdsap(value, schema_type = "")
+      if value == "6" && schemas_post_20.include?(schema_type)
         return RDSAP_GLAZED_TYPE["#{value}-post20"]
       end
+
       RDSAP_GLAZED_TYPE[value]
     end
 
@@ -517,7 +518,6 @@ module Helper
         SAP-Schema-NI-11.2
       ].freeze
 
-
       if types_of_sap_pre12.include?(schema_type) && is_rdsap(report_type)
         return MECHANICAL_VENTILATION["#{value}-pre12.0"]
       end
@@ -569,6 +569,7 @@ module Helper
 
     def self.fuel_type(value, schema_type = "", report_type = "2")
       rdsap = %i[
+        RdSAP-Schema-21.0.0
         RdSAP-Schema-20.0.0
         RdSAP-Schema-19.0
         RdSAP-Schema-18.0
@@ -671,12 +672,10 @@ module Helper
 
     def self.schemas_post_20
       %i[
-         RdSAP-Schema-21.0.0
+        RdSAP-Schema-21.0.0
       ]
     end
 
     private_class_method :is_rdsap, :is_sap, :schemas_post_20
-
-
   end
 end
