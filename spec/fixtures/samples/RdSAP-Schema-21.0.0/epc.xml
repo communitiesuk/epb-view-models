@@ -337,7 +337,7 @@
           <Frame-Factor>1.0</Frame-Factor>
           <Window-Wall-Type>6</Window-Wall-Type>
           <Permanent-Shutters-Present>N</Permanent-Shutters-Present>
-          <Permanent-Shutters-Insulated>N</Permanent-Shutters-Insul
+          <Permanent-Shutters-Insulated>N</Permanent-Shutters-Insulated>
         </SAP-Window>
       </SAP-Windows>
       <CFL-Fixed-Lighting-Bulbs-Count>5</CFL-Fixed-Lighting-Bulbs-Count>
