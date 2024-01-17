@@ -711,14 +711,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
     end
   end
 
-  context "when the Property-Type xml value is passed to the transaction type enum" do
+  context "when the Property-Type xml value is passed to the property type enum" do
     it "and the value is in the lookup, it returns the expected string" do
       expect(described_class.property_type("0")).to eq("House")
       expect(described_class.property_type("4")).to eq("Park home")
     end
   end
 
-  context "when the Heat-Loss-Corridor xml value is passed to the transaction type enum" do
+  context "when the Heat-Loss-Corridor xml value is passed to the heat loss corridor enum" do
     it "does not find a value in the enum and returns nil" do
       expect(described_class.heat_loss_corridor(nil)).to be_nil
       expect(
@@ -738,7 +738,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
     end
   end
 
-  context "when the Mechanical-Ventilation xml value is passed to the transaction type enum" do
+  context "when the Mechanical-Ventilation xml value is passed to the mechanical ventilation enum" do
     it "does not find a value in the enum and returns nil", aggregate_failures: true do
       expect(
         described_class.mechanical_ventilation(
