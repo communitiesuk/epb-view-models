@@ -487,6 +487,14 @@ module ViewModel
       def floor_height
         @xml_doc.search("Storey-Height").map(&:content)
       end
+
+      def gas_smart_meter_present
+        nil
+      end
+
+      def electricity_smart_meter_present
+        nil
+      end
     end
   end
 end

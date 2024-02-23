@@ -15,7 +15,8 @@ RSpec.describe ViewModel::RdSapWrapper do
             different_fields: {
               property_age_band: "M",
               transaction_type: "16",
-
+              gas_smart_meter_present: "false",
+              electricity_smart_meter_present: "true",
             } },
           { schema: "RdSAP-Schema-20.0.0" },
           {
@@ -272,6 +273,8 @@ RSpec.describe ViewModel::RdSapWrapper do
             stone_walls: true,
             system_build: true,
           },
+          gas_smart_meter_present: nil,
+          electricity_smart_meter_present: nil,
         }
       end
 
@@ -1036,6 +1039,8 @@ RSpec.describe ViewModel::RdSapWrapper do
           status: "ENTERED",
           environmental_impact_current: "52",
           addendum: nil,
+          gas_smart_meter_present: nil,
+          electricity_smart_meter_present: nil,
         }
       end
 

@@ -159,6 +159,8 @@ module Presenter
               @view_model.extensions_count
             end,
           addendum: @view_model.addendum,
+          gas_smart_meter_present: @view_model.gas_smart_meter_present,
+          electricity_smart_meter_present: @view_model.electricity_smart_meter_present,
         }
       end
 

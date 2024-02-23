@@ -582,6 +582,14 @@ module ViewModel
       def has_cylinder_thermostat
         xpath(%w[Cylinder-Thermostat])
       end
+
+      def gas_smart_meter_present
+        xpath(%w[Gas-Smart-Meter-Present])
+      end
+
+      def electricity_smart_meter_present
+        xpath(%w[Electricity-Smart-Meter-Present])
+      end
     end
   end
 end

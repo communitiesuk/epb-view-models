@@ -501,6 +501,14 @@ module ViewModel
         end
         nil
       end
+
+      def gas_smart_meter_present
+        nil
+      end
+
+      def electricity_smart_meter_present
+        nil
+      end
     end
   end
 end

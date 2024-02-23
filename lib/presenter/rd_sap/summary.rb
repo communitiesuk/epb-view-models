@@ -112,6 +112,8 @@ module Presenter
           environmental_impact_potential:
             @view_model.environmental_impact_potential,
           addendum: @view_model.addendum,
+          gas_smart_meter_present: @view_model.gas_smart_meter_present,
+          electricity_smart_meter_present: @view_model.electricity_smart_meter_present,
         }
       end
 

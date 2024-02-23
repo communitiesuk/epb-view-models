@@ -627,6 +627,14 @@ module ViewModel
       def ventilation_type
         xpath(%w[Ventilation-Type])
       end
+
+      def gas_smart_meter_present
+        xpath(%w[Gas-Smart-Meter-Present])
+      end
+
+      def electricity_smart_meter_present
+        xpath(%w[Electricity-Smart-Meter-Present])
+      end
     end
   end
 end
