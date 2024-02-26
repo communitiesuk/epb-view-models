@@ -216,8 +216,8 @@ RSpec.describe ViewModel::SapWrapper do
             total_floor_area: 165,
             total_roof_area: 57,
             environmental_impact_current: "94",
-            gas_smart_meter_present: "false",
-            electricity_smart_meter_present: "false",
+            gas_smart_meter_present: false,
+            electricity_smart_meter_present: false,
           },
         }
 

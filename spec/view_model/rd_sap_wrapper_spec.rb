@@ -15,8 +15,8 @@ RSpec.describe ViewModel::RdSapWrapper do
             different_fields: {
               property_age_band: "M",
               transaction_type: "16",
-              gas_smart_meter_present: "false",
-              electricity_smart_meter_present: "true",
+              gas_smart_meter_present: false,
+              electricity_smart_meter_present: true,
             } },
           { schema: "RdSAP-Schema-20.0.0" },
           {

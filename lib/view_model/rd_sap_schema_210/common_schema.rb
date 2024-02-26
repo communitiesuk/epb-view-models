@@ -584,11 +584,11 @@ module ViewModel
       end
 
       def gas_smart_meter_present
-        xpath(%w[Gas-Smart-Meter-Present])
+        Helper::ToBool.execute(xpath(%w[Gas-Smart-Meter-Present]))
       end
 
       def electricity_smart_meter_present
-        xpath(%w[Electricity-Smart-Meter-Present])
+        Helper::ToBool.execute(xpath(%w[Electricity-Smart-Meter-Present]))
       end
     end
   end
