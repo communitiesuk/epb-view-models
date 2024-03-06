@@ -20,10 +20,10 @@
   },
   "asset_rating": 80,
   "asset_rating_band": "d",
-  "building_complexity": "3",
+  "building_complexity": 3,
   "building_emission_rate": "67.09",
   "building_environment": "Air Conditioning",
-  "building_level": "3",
+  "building_level": 3,
   "building_reference_number": "UPRN-000000000001",
   "current_energy_efficiency_band": "d",
   "current_energy_efficiency_rating": 80,
@@ -53,7 +53,7 @@
   "target_emissions": "23.2",
   "technical_information": {
     "building_environment": "Air Conditioning",
-    "building_level": "3",
+    "building_level": 3,
     "floor_area": "403",
     "main_heating_fuel": "Natural Gas"
   },

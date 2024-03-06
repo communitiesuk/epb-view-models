@@ -12,7 +12,7 @@ module ViewModel
       def extract_aci_recommendations(nodes)
         recommendations = nodes.map do |node|
           {
-            sequence: node.at("Seq-Number").content,
+            sequence: node.at("Seq-Number").content&.to_i,
             text: node.at("Text").content,
           }
         end

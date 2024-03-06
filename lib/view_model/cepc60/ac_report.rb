@@ -13,7 +13,7 @@ module ViewModel
         nodes.filter_map do |node|
           unless node.at("Text").content.nil? || node.at("Text").content.empty?
             {
-              sequence: node.at("Seq-Number").content,
+              sequence: node.at("Seq-Number").content&.to_i,
               text: node.at("Text").content,
             }
           end

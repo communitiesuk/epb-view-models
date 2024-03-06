@@ -26,15 +26,15 @@ module ViewModel
       end
 
       def current_heating_co2
-        xpath(%w[This-Assessment Heating-CO2])
+        xpath(%w[This-Assessment Heating-CO2])&.to_i
       end
 
       def current_electricity_co2
-        xpath(%w[This-Assessment Electricity-CO2])
+        xpath(%w[This-Assessment Electricity-CO2])&.to_i
       end
 
       def current_renewables_co2
-        xpath(%w[This-Assessment Renewables-CO2])
+        xpath(%w[This-Assessment Renewables-CO2])&.to_i
       end
 
       def year1_assessment_date
@@ -42,15 +42,15 @@ module ViewModel
       end
 
       def year1_heating_co2
-        xpath(%w[Year1-Assessment Heating-CO2])
+        xpath(%w[Year1-Assessment Heating-CO2])&.to_i
       end
 
       def year1_electricity_co2
-        xpath(%w[Year1-Assessment Electricity-CO2])
+        xpath(%w[Year1-Assessment Electricity-CO2])&.to_i
       end
 
       def year1_renewables_co2
-        xpath(%w[Year1-Assessment Renewables-CO2])
+        xpath(%w[Year1-Assessment Renewables-CO2])&.to_i
       end
 
       def year1_energy_efficiency_rating
@@ -62,15 +62,15 @@ module ViewModel
       end
 
       def year2_heating_co2
-        xpath(%w[Year2-Assessment Heating-CO2])
+        xpath(%w[Year2-Assessment Heating-CO2])&.to_i
       end
 
       def year2_electricity_co2
-        xpath(%w[Year2-Assessment Electricity-CO2])
+        xpath(%w[Year2-Assessment Electricity-CO2])&.to_i
       end
 
       def year2_renewables_co2
-        xpath(%w[Year2-Assessment Renewables-CO2])
+        xpath(%w[Year2-Assessment Renewables-CO2])&.to_i
       end
 
       def year2_energy_efficiency_rating
@@ -151,7 +151,7 @@ module ViewModel
           .map do |node|
             {
               name: xpath(%w[Name], node),
-              id: xpath(%w[Benchmark-ID], node),
+              id: xpath(%w[Benchmark-ID], node)&.to_i,
               tufa: xpath(%w[TUFA], node),
             }
           end
@@ -167,7 +167,7 @@ module ViewModel
               consumption: xpath(%w[Consumption], node),
               start_date: xpath(%w[Start-Date], node),
               end_date: xpath(%w[End-Date], node),
-              estimate: xpath(%w[Estimate], node),
+              estimate: xpath(%w[Estimate], node)&.to_i,
               name: node.name,
             }
           end

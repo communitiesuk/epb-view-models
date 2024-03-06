@@ -131,12 +131,12 @@ RSpec.describe ViewModel::AcReportWrapper do
         executive_summary: expected_summary,
         key_recommendations: {
           efficiency: [
-            { sequence: "0", text: "A way to improve your efficiency" },
-            { sequence: "1", text: "A second way to improve efficiency" },
+            { sequence: 0, text: "A way to improve your efficiency" },
+            { sequence: 1, text: "A second way to improve efficiency" },
           ],
-          maintenance: [{ sequence: "0", text: "Text2" }],
-          control: [{ sequence: "0", text: "Text4" }],
-          management: [{ sequence: "0", text: "Text6" }],
+          maintenance: [{ sequence: 0, text: "Text2" }],
+          control: [{ sequence: 0, text: "Text4" }],
+          management: [{ sequence: 0, text: "Text6" }],
         },
         sub_systems: [
           volume_definitions: "VOL001 The Shop",
@@ -570,7 +570,7 @@ RSpec.describe ViewModel::AcReportWrapper do
                   flag: true,
                   note: "Quite good condition",
                   recommendations: [
-                    { sequence: "0", text: "Give it a good scrub" },
+                    { sequence: 0, text: "Give it a good scrub" },
                   ],
                 },
                 change_frequency: {
@@ -732,7 +732,7 @@ RSpec.describe ViewModel::AcReportWrapper do
                   "Local Controller\n\n            Zoning is considered satisfactory as systems are linked to single controller.",
                 recommendations: [
                   {
-                    sequence: "1",
+                    sequence: 1,
                     text:
                       "Where an area/room has more than one AC system installed that have separate controllers; it should be ensured that AC systems are set to the same set point temperature and mode (heating/cooling/auto).",
                   },
@@ -743,26 +743,26 @@ RSpec.describe ViewModel::AcReportWrapper do
                 note:
                   "Time/date on the local controller is not used as Central controller timeclock controls the units.",
                 recommendations: [
-                  { sequence: "1", text: "No recommendation required." },
+                  { sequence: 1, text: "No recommendation required." },
                 ],
               },
               set_on_period: {
                 note: "N/A Central controller timeclock controls the units.",
                 recommendations: [
-                  { sequence: "1", text: "No recommendation required" },
+                  { sequence: 1, text: "No recommendation required" },
                 ],
               },
               timer_shortfall: {
                 note: "There is no shortfall in controller capabilities.",
                 recommendations: [
-                  { sequence: "1", text: "No recommendation required." },
+                  { sequence: 1, text: "No recommendation required." },
                 ],
                 flag: false,
               },
               sensors: {
                 note: "Sensors are considered satisfactory.",
                 recommendations: [
-                  { sequence: "1", text: "No recommendation required." },
+                  { sequence: 1, text: "No recommendation required." },
                 ],
                 flag: true,
               },
@@ -770,7 +770,7 @@ RSpec.describe ViewModel::AcReportWrapper do
                 note: "The set temperature on local controller; 18 deg C",
                 recommendations: [
                   {
-                    sequence: "1",
+                    sequence: 1,
                     text:
                       "Ensure staff are educated to run AC systems for comfort and efficiency by setting the AC system temperature to circa 22 deg C +/- 1 deg C.",
                   },
@@ -781,7 +781,7 @@ RSpec.describe ViewModel::AcReportWrapper do
                   "System dead-bands for the indoor unit are set at manufacture stage, these are considered satisfactory.",
                 recommendations: [
                   {
-                    sequence: "1",
+                    sequence: 1,
                     text:
                       "There were LPHW ceiling heaters within the same zones as AC systems and it was unclear from the BMS panel whether interlocks were provided between the systems to prevent both operating simultaneously. This should be investigated at head office were the BMS is set from and ensure that the AC systems do not operate at the same time as the heating and that adequate dead-bands are configured between the systems.",
                   },
@@ -790,7 +790,7 @@ RSpec.describe ViewModel::AcReportWrapper do
               capacity: {
                 note: "",
                 recommendations: [
-                  { sequence: "1", text: "No recommendation required." },
+                  { sequence: 1, text: "No recommendation required." },
                 ],
                 flag: true,
               },
@@ -798,7 +798,7 @@ RSpec.describe ViewModel::AcReportWrapper do
                 note: "N/A Unit is not ducted type",
                 recommendations: [
                   {
-                    sequence: "1",
+                    sequence: 1,
                     text: "Considered satisfactory, no recommendation required.",
                   },
                 ],
@@ -807,7 +807,7 @@ RSpec.describe ViewModel::AcReportWrapper do
                 note: "Provision of Guidance notices would be useful.",
                 recommendations: [
                   {
-                    sequence: "1",
+                    sequence: 1,
                     text:
                       "Consider providing ‘Good Practise Guideline’ notices (laminated sheet adjacent each AC controller) including ‘simple step’ recommendations on how to operate the systems efficiently.",
                   },

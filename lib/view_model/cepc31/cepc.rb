@@ -26,7 +26,7 @@ module ViewModel
       end
 
       def building_level
-        xpath(%w[Building-Level])
+        xpath(%w[Building-Level])&.to_i
       end
 
       def energy_efficiency_rating
