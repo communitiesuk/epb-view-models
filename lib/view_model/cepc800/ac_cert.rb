@@ -21,7 +21,7 @@ module ViewModel
       end
 
       def ac_rated_output
-        xpath(%w[AC-Rated-Output AC-kW-Rating])
+        xpath(%w[AC-Rated-Output AC-kW-Rating])&.to_i
       end
 
       def random_sampling

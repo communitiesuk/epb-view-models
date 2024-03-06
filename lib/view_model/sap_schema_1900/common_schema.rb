@@ -163,11 +163,11 @@ module ViewModel
       end
 
       def potential_energy_rating
-        xpath(%w[Energy-Rating-Potential]).to_i
+        xpath(%w[Energy-Rating-Potential])&.to_i
       end
 
       def current_energy_rating
-        xpath(%w[Energy-Rating-Current]).to_i
+        xpath(%w[Energy-Rating-Current])&.to_i
       end
 
       def primary_energy_use
@@ -181,7 +181,7 @@ module ViewModel
       def estimated_energy_cost; end
 
       def total_floor_area
-        xpath(%w[Property-Summary Total-Floor-Area]).to_i
+        xpath(%w[Property-Summary Total-Floor-Area])&.to_i
       end
 
       def total_roof_area
@@ -242,19 +242,19 @@ module ViewModel
 
       def impact_of_cavity_insulation
         if xpath(%w[Impact-Of-Cavity-Insulation])
-          xpath(%w[Impact-Of-Cavity-Insulation]).to_i
+          xpath(%w[Impact-Of-Cavity-Insulation])&.to_i
         end
       end
 
       def impact_of_loft_insulation
         if xpath(%w[Impact-Of-Loft-Insulation])
-          xpath(%w[Impact-Of-Loft-Insulation]).to_i
+          xpath(%w[Impact-Of-Loft-Insulation])&.to_i
         end
       end
 
       def impact_of_solid_wall_insulation
         if xpath(%w[Impact-Of-Solid-Wall-Insulation])
-          xpath(%w[Impact-Of-Solid-Wall-Insulation]).to_i
+          xpath(%w[Impact-Of-Solid-Wall-Insulation])&.to_i
         end
       end
 

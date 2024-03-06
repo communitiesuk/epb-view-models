@@ -30,7 +30,7 @@ module ViewModel
       end
 
       def energy_efficiency_rating
-        xpath(%w[This-Assessment Energy-Rating])
+        xpath(%w[This-Assessment Energy-Rating])&.to_i
       end
 
       def current_assessment_date
@@ -66,7 +66,7 @@ module ViewModel
       end
 
       def year1_energy_efficiency_rating
-        xpath(%w[Year1-Assessment Energy-Rating])
+        xpath(%w[Year1-Assessment Energy-Rating])&.to_i
       end
 
       def year2_assessment_date
@@ -86,7 +86,7 @@ module ViewModel
       end
 
       def year2_energy_efficiency_rating
-        xpath(%w[Year2-Assessment Energy-Rating])
+        xpath(%w[Year2-Assessment Energy-Rating])&.to_i
       end
 
       def main_heating_fuel
@@ -110,7 +110,7 @@ module ViewModel
       end
 
       def asset_rating
-        xpath(%w[OR-Previous-Data Asset-Rating])
+        xpath(%w[OR-Previous-Data Asset-Rating])&.to_i
       end
 
       def property_type

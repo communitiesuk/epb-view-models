@@ -6,7 +6,7 @@ module ViewModel
       end
 
       def ac_kw_rating
-        xpath(%w[AC-kW-Rating])
+        xpath(%w[AC-kW-Rating])&.to_i
       end
 
       def ac_present
@@ -36,7 +36,7 @@ module ViewModel
       end
 
       def energy_efficiency_rating
-        xpath(%w[Asset-Rating])
+        xpath(%w[Asset-Rating])&.to_i
       end
 
       def epc_related_party_disclosure
@@ -44,7 +44,7 @@ module ViewModel
       end
 
       def estimated_ac_kw_rating
-        xpath(%w[AC-Estimated-Output])
+        xpath(%w[AC-Estimated-Output])&.to_i
       end
 
       def existing_build_rating

@@ -30,7 +30,7 @@ module ViewModel
       end
 
       def energy_efficiency_rating
-        xpath(%w[Asset-Rating])
+        xpath(%w[Asset-Rating])&.to_i
       end
 
       def epc_related_party_disclosure

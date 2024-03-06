@@ -10,7 +10,7 @@
     "postcode": "A0 0AA",
     "town": "Whitbury"
   },
-  "aircon_kw_rating": "100",
+  "aircon_kw_rating": 100,
   "aircon_present": "No",
   "assessor": {
     "email": "REDACTED",
@@ -18,7 +18,7 @@
     "scheme_assessor_id": "REDACTED",
     "telephone": "REDACTED"
   },
-  "asset_rating": "80",
+  "asset_rating": 80,
   "asset_rating_band": "d",
   "building_complexity": "3",
   "building_emission_rate": "67.09",
@@ -26,12 +26,12 @@
   "building_level": "3",
   "building_reference_number": "UPRN-000000000001",
   "current_energy_efficiency_band": "d",
-  "current_energy_efficiency_rating": "80",
+  "current_energy_efficiency_rating": 80,
   "date_of_assessment": "2020-05-04",
   "date_of_expiry": "2026-05-04",
   "date_of_registration": "2020-05-04",
-  "energy_efficiency_rating": "80",
-  "estimated_aircon_kw_rating": "3",
+  "energy_efficiency_rating": 80,
+  "estimated_aircon_kw_rating": 3,
   "existing_build_band": "d",
   "existing_build_rating": "81",
   "existing_stock_benchmark": [

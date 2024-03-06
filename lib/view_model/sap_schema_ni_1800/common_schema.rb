@@ -94,7 +94,7 @@ module ViewModel
       end
 
       def related_party_disclosure_number
-        xpath(%w[Related-Party-Disclosure-Number]).to_i
+        xpath(%w[Related-Party-Disclosure-Number])&.to_i
       end
 
       def improvements
@@ -153,11 +153,11 @@ module ViewModel
       end
 
       def potential_energy_rating
-        xpath(%w[Energy-Rating-Potential]).to_i
+        xpath(%w[Energy-Rating-Potential])&.to_i
       end
 
       def current_energy_rating
-        xpath(%w[Energy-Rating-Current]).to_i
+        xpath(%w[Energy-Rating-Current])&.to_i
       end
 
       def primary_energy_use
