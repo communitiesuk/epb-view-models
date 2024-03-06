@@ -233,11 +233,11 @@ module ViewModel
       end
 
       def environmental_impact_current
-        xpath(%w[Environmental-Impact-Current])
+        xpath(%w[Environmental-Impact-Current])&.to_i
       end
 
       def environmental_impact_potential
-        xpath(%w[Environmental-Impact-Potential])
+        xpath(%w[Environmental-Impact-Potential])&.to_i
       end
 
       def co2_emissions_current_per_floor_area
@@ -374,7 +374,7 @@ module ViewModel
       end
 
       def extensions_count
-        xpath(%w[Extensions-Count])
+        xpath(%w[Extensions-Count])&.to_i
       end
 
       def report_type

@@ -344,11 +344,11 @@ module ViewModel
       end
 
       def environmental_impact_current
-        xpath(%w[Environmental-Impact-Current])
+        xpath(%w[Environmental-Impact-Current])&.to_i
       end
 
       def environmental_impact_potential
-        xpath(%w[Environmental-Impact-Potential])
+        xpath(%w[Environmental-Impact-Potential])&.to_i
       end
 
       def co2_emissions_current_per_floor_area

@@ -222,19 +222,19 @@ module ViewModel
       end
 
       def energy_rating_current
-        xpath(%w[Energy-Rating-Current])
+        xpath(%w[Energy-Rating-Current])&.to_i
       end
 
       def energy_rating_potential
-        xpath(%w[Energy-Rating-Potential])
+        xpath(%w[Energy-Rating-Potential])&.to_i
       end
 
       def environmental_impact_current
-        xpath(%w[Environmental-Impact-Current])
+        xpath(%w[Environmental-Impact-Current])&.to_i
       end
 
       def environmental_impact_potential
-        xpath(%w[Environmental-Impact-Potential])
+        xpath(%w[Environmental-Impact-Potential])&.to_i
       end
 
       def primary_energy_use
@@ -428,7 +428,7 @@ module ViewModel
       end
 
       def extensions_count
-        xpath(%w[Extensions-Count])
+        xpath(%w[Extensions-Count])&.to_i
       end
 
       def report_type
