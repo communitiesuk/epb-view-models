@@ -30,11 +30,11 @@ module ViewModel
       end
 
       def habitable_room_count
-        xpath(%w[Habitable-Room-Count])
+        xpath(%w[Habitable-Room-Count])&.to_i
       end
 
       def heated_room_count
-        xpath(%w[Heated-Room-Count])
+        xpath(%w[Heated-Room-Count])&.to_i
       end
 
       def photovoltaic_roof_area_percent
@@ -54,7 +54,7 @@ module ViewModel
       end
 
       def storey_count
-        xpath(%w[Storey-Count])
+        xpath(%w[Storey-Count])&.to_i
       end
 
       def energy_tariff

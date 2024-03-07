@@ -286,15 +286,15 @@ module ViewModel
       end
 
       def fixed_lighting_outlets_count
-        xpath(%w[Fixed-Lighting-Outlets-Count])
+        xpath(%w[Fixed-Lighting-Outlets-Count])&.to_i
       end
 
       def low_energy_fixed_lighting_outlets_count
-        xpath(%w[Low-Energy-Fixed-Lighting-Outlets-Count])
+        xpath(%w[Low-Energy-Fixed-Lighting-Outlets-Count])&.to_i
       end
 
       def open_fireplaces_count
-        xpath(%w[Open-Fireplaces-Count])
+        xpath(%w[Open-Fireplaces-Count])&.to_i
       end
 
       def hot_water_description
@@ -350,7 +350,7 @@ module ViewModel
       end
 
       def wind_turbine_count
-        xpath(%w[Wind-Turbines-Count])
+        xpath(%w[Wind-Turbines-Count])&.to_i
       end
 
       def heat_loss_corridor
@@ -494,7 +494,7 @@ module ViewModel
       end
 
       def mech_vent_sys_index_number
-        xpath(%w[Mechanical-Vent-System-Index-Number])
+        xpath(%w[Mechanical-Vent-System-Index-Number])&.to_i
       end
 
       def mechanical_vent_data_source

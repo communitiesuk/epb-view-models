@@ -427,7 +427,7 @@ module ViewModel
       end
 
       def open_fireplaces_count
-        xpath(%w[Open-Chimneys-Count])
+        xpath(%w[Open-Chimneys-Count])&.to_i
       end
 
       def hot_water_description
@@ -613,7 +613,7 @@ module ViewModel
       end
 
       def mech_vent_sys_index_number
-        xpath(%w[Mechanical-Vent-System-Index-Number])
+        xpath(%w[Mechanical-Vent-System-Index-Number])&.to_i
       end
 
       def mechanical_vent_data_source

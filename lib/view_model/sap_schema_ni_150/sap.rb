@@ -26,7 +26,7 @@ module ViewModel
       end
 
       def mech_vent_sys_index_number
-        xpath(%w[Mechanical-Vent-System-Index-Number])
+        xpath(%w[Mechanical-Vent-System-Index-Number])&.to_i
       end
 
       def mechanical_vent_data_source

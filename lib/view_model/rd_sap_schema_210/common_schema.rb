@@ -223,7 +223,7 @@ module ViewModel
       end
 
       def habitable_room_count
-        xpath(%w[Habitable-Room-Count])
+        xpath(%w[Habitable-Room-Count])&.to_i
       end
 
       def energy_rating_current
@@ -311,7 +311,7 @@ module ViewModel
       end
 
       def storey_count
-        xpath(%w[Storey-Count])
+        xpath(%w[Storey-Count])&.to_i
       end
 
       def building_part_number
@@ -398,7 +398,7 @@ module ViewModel
       end
 
       def heated_room_count
-        xpath(%w[Heated-Room-Count])
+        xpath(%w[Heated-Room-Count])&.to_i
       end
 
       def low_energy_lighting
@@ -430,7 +430,7 @@ module ViewModel
       end
 
       def wind_turbine_count
-        xpath(%w[Wind-Turbines-Count])
+        xpath(%w[Wind-Turbines-Count])&.to_i
       end
 
       def heat_loss_corridor

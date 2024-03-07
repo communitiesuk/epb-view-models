@@ -29,7 +29,7 @@ module ViewModel
       end
 
       def treated_floor_area
-        xpath(%w[Air-Conditioning-Inspection-Certificate Treated-Floor-Area])
+        xpath(%w[Air-Conditioning-Inspection-Certificate Treated-Floor-Area])&.to_i
       end
 
       def ac_system_metered
@@ -41,7 +41,7 @@ module ViewModel
       def refrigerant_charge
         xpath(
           %w[Air-Conditioning-Inspection-Certificate Refrigerant-Charge-Total],
-        )
+        )&.to_i
       end
 
       def related_rrn
