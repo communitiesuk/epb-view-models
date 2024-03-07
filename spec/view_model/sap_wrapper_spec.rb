@@ -39,6 +39,18 @@ RSpec.describe ViewModel::SapWrapper do
           },
         }
 
+        country_code = {
+          different_fields: {
+            country_code: "EAW"
+          },
+        }
+
+        empty_country_code = {
+          different_fields: {
+            country_code: nil
+          },
+        }
+
         has_addendum_number = {
           different_fields: {
             addendum: {
@@ -218,6 +230,7 @@ RSpec.describe ViewModel::SapWrapper do
             environmental_impact_current: "94",
             gas_smart_meter_present: false,
             electricity_smart_meter_present: false,
+            country_code: "ENG",
           },
         }
 
@@ -253,7 +266,9 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
+
           },
+
         }
 
         is_pre_16 = {
@@ -289,6 +304,8 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
+            country_code: "EAW"
+
           },
         }
 
@@ -519,6 +536,7 @@ RSpec.describe ViewModel::SapWrapper do
                   description: "Draft Exclusion",
                 },
               ],
+              country_code: "EAW"
             },
           }.deep_merge heat_demand_unsupported
 
@@ -686,7 +704,7 @@ RSpec.describe ViewModel::SapWrapper do
           { schema: "SAP-Schema-19.0.0", type: "epc_no_fixed_lights" }.deep_merge(is_19).deep_merge({ low_energy_lighting: 0 }),
           { schema: "SAP-Schema-18.0.0" }.deep_merge(has_uprn).deep_merge(
             has_stone_walls_addendum,
-          ),
+          ).deep_merge(country_code),
           { schema: "SAP-Schema-17.1" }.deep_merge(has_stone_walls_addendum),
           { schema: "SAP-Schema-17.0" }.deep_merge(has_stone_walls_addendum),
           {
@@ -696,44 +714,44 @@ RSpec.describe ViewModel::SapWrapper do
           }.deep_merge(is_pre_17)
            .deep_merge(has_stone_walls_addendum)
            .deep_merge(has_several_lzc_energy_source)
-           .deep_merge(has_total_roof_area),
+           .deep_merge(has_total_roof_area).deep_merge(country_code),
           { schema: "SAP-Schema-16.3", type: "rdsap" }.deep_merge(is_rdsap)
                                                       .deep_merge(is_pre_17)
-                                                      .deep_merge(has_several_addendum_types),
+                                                      .deep_merge(has_several_addendum_types).deep_merge(country_code),
           {
             schema: "SAP-Schema-16.2",
             type: "sap",
             unsupported_fields: %i[tenure],
           }.deep_merge(has_stone_walls_addendum)
            .deep_merge(has_single_lzc_energy_source)
-           .deep_merge(has_total_roof_area),
+           .deep_merge(has_total_roof_area).deep_merge(country_code),
           { schema: "SAP-Schema-16.2", type: "rdsap" }.deep_merge(is_rdsap)
                                                       .deep_merge(is_pre_17)
-                                                      .deep_merge(has_several_addendum_types),
+                                                      .deep_merge(has_several_addendum_types).deep_merge(country_code),
           {
             schema: "SAP-Schema-16.1",
             type: "sap",
             unsupported_fields: %i[tenure],
           }.deep_merge(has_stone_walls_addendum)
            .deep_merge(has_single_lzc_energy_source)
-           .deep_merge(has_total_roof_area),
+           .deep_merge(has_total_roof_area).deep_merge(country_code),
           { schema: "SAP-Schema-16.1", type: "rdsap" }.deep_merge(is_rdsap)
                                                       .deep_merge(is_pre_17)
-                                                      .deep_merge(has_several_addendum_types),
+                                                      .deep_merge(has_several_addendum_types).deep_merge(country_code),
           {
             schema: "SAP-Schema-16.0",
             type: "sap",
             unsupported_fields: %i[tenure],
           }.deep_merge(has_stone_walls_addendum)
            .deep_merge(has_single_lzc_energy_source)
-           .deep_merge(has_total_roof_area),
+           .deep_merge(has_total_roof_area).deep_merge(country_code),
           {
             schema: "SAP-Schema-16.0",
             type: "rdsap",
             unsupported_fields: %i[tenure],
           }.deep_merge(is_rdsap)
            .deep_merge(is_pre_17)
-           .deep_merge(has_several_addendum_types),
+           .deep_merge(has_several_addendum_types).deep_merge(country_code),
           { schema: "SAP-Schema-15.0",
             type: "sap" }.deep_merge(is_pre_16)
           .deep_merge(heat_demand_impact_of_unsupported)
@@ -826,7 +844,7 @@ RSpec.describe ViewModel::SapWrapper do
            .deep_merge(heat_demand_unsupported),
           { schema: "SAP-Schema-11.2", type: "sap" }.deep_merge(is_pre_15)
                                                     .deep_merge(is_pre_14)
-                                                    .deep_merge(is_pre_13),
+                                                    .deep_merge(is_pre_13).deep_merge(country_code),
           {
             schema: "SAP-Schema-11.2",
             type: "rdsap",
@@ -852,7 +870,7 @@ RSpec.describe ViewModel::SapWrapper do
            ),
           { schema: "SAP-Schema-11.0", type: "sap" }.deep_merge(is_pre_15)
                                                     .deep_merge(is_pre_14)
-                                                    .deep_merge(is_pre_13),
+                                                    .deep_merge(is_pre_13).deep_merge(country_code),
           {
             schema: "SAP-Schema-11.0",
             type: "rdsap",
@@ -875,7 +893,7 @@ RSpec.describe ViewModel::SapWrapper do
                  tenure
                ],
              },
-           ),
+           ).deep_merge(empty_country_code),
           {
             schema: "SAP-Schema-10.2",
             type: "rdsap",
@@ -898,7 +916,7 @@ RSpec.describe ViewModel::SapWrapper do
                  tenure
                ],
              },
-           ),
+           ).deep_merge(empty_country_code),
         ]
       end
 
@@ -1093,6 +1111,7 @@ RSpec.describe ViewModel::SapWrapper do
           addendum: nil,
           gas_smart_meter_present: nil,
           electricity_smart_meter_present: nil,
+          country_code: nil,
         }
       end
 

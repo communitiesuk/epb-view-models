@@ -161,6 +161,7 @@ module Presenter
           addendum: @view_model.addendum,
           gas_smart_meter_present: @view_model.gas_smart_meter_present,
           electricity_smart_meter_present: @view_model.electricity_smart_meter_present,
+          country_code: @view_model.country_code,
         }
       end
 

@@ -16,7 +16,8 @@ RSpec.describe ViewModel::RdSapWrapper do
               property_age_band: "M",
               transaction_type: "16",
               gas_smart_meter_present: false,
-              electricity_smart_meter_present: true,
+              country_code: "ENG",
+            electricity_smart_meter_present: true,
             } },
           { schema: "RdSAP-Schema-20.0.0" },
           {
@@ -267,6 +268,7 @@ RSpec.describe ViewModel::RdSapWrapper do
           transaction_type: "1",
           total_floor_area: 55.0,
           status: "ENTERED",
+          country_code: "EAW",
           environmental_impact_current: "52",
           addendum: {
             addendum_number: [1, 8],
