@@ -118,10 +118,10 @@ module Presenter
           habitable_room_count: @view_model.respond_to?(:habitable_room_count) ? @view_model.habitable_room_count : nil,
           heated_room_count: @view_model.respond_to?(:heated_room_count) ? @view_model.heated_room_count : nil,
           low_energy_lighting: @view_model.respond_to?(:low_energy_lighting) ? @view_model.low_energy_lighting : nil,
-          fixed_lighting_outlets_count: @view_model.fixed_lighting_outlets_count,
+          fixed_lighting_outlets_count: @view_model.respond_to?(:fixed_lighting_outlets_count) ? @view_model.fixed_lighting_outlets_count : nil,
           low_energy_fixed_lighting_outlets_count:
-            @view_model.low_energy_fixed_lighting_outlets_count,
-          open_fireplaces_count: @view_model.open_fireplaces_count,
+            @view_model.respond_to?(:low_energy_fixed_lighting_outlets_count) ? @view_model.low_energy_fixed_lighting_outlets_count : nil,
+          open_fireplaces_count: @view_model.respond_to?(:open_fireplaces_count) ? @view_model.open_fireplaces_count : nil,
           hot_water_description: @view_model.hot_water_description,
           hot_water_energy_efficiency_rating:
             @view_model.hot_water_energy_efficiency_rating,

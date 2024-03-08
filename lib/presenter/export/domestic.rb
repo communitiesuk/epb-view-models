@@ -36,7 +36,7 @@ module Presenter::Export
         view[:extensions_count] = @view_model.extensions_count
       end
       view[:fixed_lighting_outlets_count] =
-        @view_model.fixed_lighting_outlets_count.to_i
+        @view_model.respond_to?(:fixed_lighting_outlets_count) ? @view_model.fixed_lighting_outlets_count : nil
       view[:glazed_area] = @view_model.glazed_area.to_i if @view_model.respond_to?(:glazed_area) && !@view_model
         .glazed_area.nil?
       if @view_model.respond_to?(:habitable_room_count) && !@view_model.habitable_room_count.nil?
@@ -68,7 +68,7 @@ module Presenter::Export
       view[:lighting_environmental_efficiency_rating] =
         @view_model.lighting_environmental_efficiency_rating.to_i
       view[:low_energy_fixed_lighting_outlets_count] =
-        @view_model.low_energy_fixed_lighting_outlets_count.nil? ? nil : @view_model.low_energy_fixed_lighting_outlets_count.to_i
+        @view_model.respond_to?(:low_energy_fixed_lighting_outlets_count) ? @view_model.low_energy_fixed_lighting_outlets_count : nil
       view[:low_energy_lighting] = @view_model.respond_to?(:low_energy_lighting) ? @view_model.low_energy_lighting&.to_i : nil
       view[:main_fuel_type] = @view_model.main_fuel_type
       view[:main_heating_controls_descriptions] =
@@ -78,7 +78,7 @@ module Presenter::Export
       view[:mains_gas] = @view_model.mains_gas if @view_model.respond_to?(:mains_gas) && !@view_model.mains_gas.nil?
       view[:multiple_glazed_proportion] =
         @view_model.respond_to?(:multiple_glazed_proportion) ? @view_model.multiple_glazed_proportion.to_i : nil
-      view[:open_fireplaces_count] = @view_model.open_fireplaces_count.to_i
+      view[:open_fireplaces_count] = @view_model.respond_to?(:open_fireplaces_count) ? @view_model.open_fireplaces_count : nil
       if @view_model.respond_to?(:photovoltaic_roof_area_percent) && !@view_model.photovoltaic_roof_area_percent.nil?
         view[:photovoltaic_roof_area_percent] =
           @view_model.photovoltaic_roof_area_percent.to_i

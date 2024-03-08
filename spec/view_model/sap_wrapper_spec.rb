@@ -41,13 +41,13 @@ RSpec.describe ViewModel::SapWrapper do
 
         country_code = {
           different_fields: {
-            country_code: "EAW"
+            country_code: "EAW",
           },
         }
 
         empty_country_code = {
           different_fields: {
-            country_code: nil
+            country_code: nil,
           },
         }
 
@@ -304,7 +304,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
-            country_code: "EAW"
+            country_code: "EAW",
 
           },
         }
@@ -536,7 +536,7 @@ RSpec.describe ViewModel::SapWrapper do
                   description: "Draft Exclusion",
                 },
               ],
-              country_code: "EAW"
+              country_code: "EAW",
             },
           }.deep_merge heat_demand_unsupported
 

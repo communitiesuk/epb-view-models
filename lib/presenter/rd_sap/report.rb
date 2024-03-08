@@ -55,7 +55,7 @@ module Presenter
           environment_impact_potential:
             @view_model.environmental_impact_potential,
           extension_count: @view_model.respond_to?(:extensions_count) ? @view_model.extensions_count : nil,
-          fixed_lighting_outlets_count: @view_model.fixed_lighting_outlets_count,
+          fixed_lighting_outlets_count: @view_model.respond_to?(:fixed_lighting_outlets_count) ? @view_model.fixed_lighting_outlets_count : nil,
           flat_top_storey: @view_model.top_storey,
           flat_storey_count: @view_model.respond_to?(:storey_count) ? @view_model.storey_count : nil,
           floor_description: @view_model.all_floor_descriptions.first,
@@ -104,7 +104,7 @@ module Presenter
             Helper::XmlEnumsToOutput.energy_rating_string(@view_model.lighting_environmental_efficiency_rating),
           low_energy_lighting: @view_model.respond_to?(:low_energy_lighting) ? @view_model.low_energy_lighting : nil,
           low_energy_fixed_lighting_count:
-            @view_model.low_energy_fixed_lighting_outlets_count,
+            @view_model.respond_to?(:low_energy_fixed_lighting_outlets_count) ? @view_model.low_energy_fixed_lighting_outlets_count : nil,
           main_fuel: Helper::XmlEnumsToOutput.fuel_type(@view_model.main_fuel_type,
                                                         @schema_type,
                                                         @view_model.report_type),
@@ -140,7 +140,7 @@ module Presenter
           multi_glaze_proportion: @view_model.respond_to?(:multiple_glazed_proportion) ? @view_model.multiple_glazed_proportion : nil,
           number_habitable_rooms: @view_model.respond_to?(:habitable_room_count) ? @view_model.habitable_room_count : nil,
           number_heated_rooms: @view_model.respond_to?(:heated_room_count) ? @view_model.heated_room_count : nil,
-          number_open_fireplaces: @view_model.open_fireplaces_count,
+          number_open_fireplaces: @view_model.respond_to?(:open_fireplaces_count) ? @view_model.open_fireplaces_count : nil,
           photo_supply: @view_model.respond_to?(:photovoltaic_roof_area_percent) ? @view_model.photovoltaic_roof_area_percent : nil,
           posttown: @view_model.town,
           postcode: @view_model.postcode,
@@ -271,10 +271,10 @@ module Presenter
           number_habitable_rooms: @view_model.respond_to?(:habitable_room_count) ? @view_model.habitable_room_count : nil,
           number_heated_rooms: @view_model.respond_to?(:heated_room_count) ? @view_model.heated_room_count : nil,
           low_energy_lighting: @view_model.respond_to?(:low_energy_lighting) ? @view_model.low_energy_lighting : nil,
-          fixed_lighting_outlets_count: @view_model.fixed_lighting_outlets_count,
+          fixed_lighting_outlets_count: @view_model.respond_to?(:fixed_lighting_outlets_count) ? @view_model.fixed_lighting_outlets_count : nil,
           low_energy_fixed_lighting_outlets_count:
-            @view_model.low_energy_fixed_lighting_outlets_count,
-          number_open_fireplaces: @view_model.open_fireplaces_count,
+            @view_model.respond_to?(:low_energy_fixed_lighting_outlets_count) ? @view_model.low_energy_fixed_lighting_outlets_count : nil,
+          number_open_fireplaces: @view_model.respond_to?(:open_fireplaces_count) ? @view_model.open_fireplaces_count : nil,
           hotwater_description: @view_model.hot_water_description,
           hot_water_energy_eff:
             Helper::XmlEnumsToOutput.energy_rating_string(

@@ -393,28 +393,8 @@ module ViewModel
         xpath(%w[Multiple-Glazed-Proportion])
       end
 
-      def glazed_area
-        nil
-      end
-
       def heated_room_count
         xpath(%w[Heated-Room-Count])&.to_i
-      end
-
-      def low_energy_lighting
-        nil
-      end
-
-      def fixed_lighting_outlets_count
-        nil
-      end
-
-      def low_energy_fixed_lighting_outlets_count
-        nil
-      end
-
-      def open_fireplaces_count
-        nil
       end
 
       def hot_water_description

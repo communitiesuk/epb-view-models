@@ -17,7 +17,7 @@ RSpec.describe ViewModel::RdSapWrapper do
               transaction_type: "16",
               gas_smart_meter_present: false,
               country_code: "ENG",
-            electricity_smart_meter_present: true,
+              electricity_smart_meter_present: true,
             } },
           { schema: "RdSAP-Schema-20.0.0" },
           {
