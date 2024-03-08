@@ -517,14 +517,6 @@ module ViewModel
       def has_cylinder_thermostat
         xpath(%w[Cylinder-Thermostat])
       end
-
-      def gas_smart_meter_present
-        nil
-      end
-
-      def electricity_smart_meter_present
-        nil
-      end
     end
   end
 end

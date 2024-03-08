@@ -240,10 +240,6 @@ module ViewModel
         xpath(%w[CO2-Emissions-Current-Per-Floor-Area])
       end
 
-      def mains_gas
-        nil
-      end
-
       def level
         xpath(%w[Level])
       end
@@ -251,10 +247,6 @@ module ViewModel
       def top_storey
         flat_level_code = xpath(%w[Level])
         flat_level_code == "3" ? "Y" : "N"
-      end
-
-      def storey_count
-        nil
       end
 
       def main_heating_controls
@@ -267,14 +259,6 @@ module ViewModel
 
       def glazed_area
         xpath(%w[Glazed-Area])
-      end
-
-      def habitable_room_count
-        nil
-      end
-
-      def heated_room_count
-        nil
       end
 
       def low_energy_lighting
@@ -339,10 +323,6 @@ module ViewModel
 
       def lighting_environmental_efficiency_rating
         xpath(%w[Lighting Environmental-Efficiency-Rating])
-      end
-
-      def photovoltaic_roof_area_percent
-        nil
       end
 
       def built_form
@@ -413,14 +393,6 @@ module ViewModel
         @xml_doc.search("Main-Heating/Energy-Efficiency-Rating").map(&:content)
       end
 
-      def solar_water_heating_flag
-        nil
-      end
-
-      def mechanical_ventilation
-        nil
-      end
-
       def main_dwelling_construction_age_band_or_year
         sap_building_parts =
           @xml_doc.xpath("//SAP-Building-Parts/SAP-Building-Part")
@@ -475,14 +447,6 @@ module ViewModel
         @xml_doc
           .search("Main-Heating-Controls/Environmental-Efficiency-Rating")
           .map(&:content)
-      end
-
-      def gas_smart_meter_present
-        nil
-      end
-
-      def electricity_smart_meter_present
-        nil
       end
     end
   end

@@ -61,10 +61,9 @@ module Presenter
               @view_model.current_space_heating_demand&.to_i,
             current_water_heating_demand:
               @view_model.current_water_heating_demand&.to_i,
-            impact_of_cavity_insulation: @view_model.impact_of_cavity_insulation,
-            impact_of_loft_insulation: @view_model.impact_of_loft_insulation,
-            impact_of_solid_wall_insulation:
-              @view_model.impact_of_solid_wall_insulation,
+            impact_of_cavity_insulation: @view_model.respond_to?(:impact_of_cavity_insulation) ? @view_model.impact_of_cavity_insulation : nil,
+            impact_of_loft_insulation: @view_model.respond_to?(:impact_of_loft_insulation) ? @view_model.impact_of_loft_insulation : nil,
+            impact_of_solid_wall_insulation: @view_model.respond_to?(:impact_of_solid_wall_insulation) ? @view_model.impact_of_solid_wall_insulation : nil,
           },
           heating_cost_current: @view_model.heating_cost_current,
           heating_cost_potential: @view_model.heating_cost_potential,
@@ -86,9 +85,9 @@ module Presenter
               @view_model.lighting_cost_potential,
               estimated_energy_cost,
             ),
-          primary_energy_use: @view_model.primary_energy_use,
+          primary_energy_use: @view_model.respond_to?(:primary_energy_use) ? @view_model.primary_energy_use : nil,
           energy_consumption_potential: @view_model.energy_consumption_potential,
-          property_age_band: @view_model.property_age_band,
+          property_age_band: @view_model.respond_to?(:property_age_band) ? @view_model.property_age_band : nil,
           property_summary: @view_model.property_summary,
           recommended_improvements:
             @view_model.improvements.map do |improvement|
@@ -99,12 +98,11 @@ module Presenter
               improvement
             end,
           lzc_energy_sources: @view_model.lzc_energy_sources,
-          related_party_disclosure_number:
-            @view_model.related_party_disclosure_number,
+          related_party_disclosure_number: @view_model.respond_to?(:related_party_disclosure_number) ? @view_model.related_party_disclosure_number : nil,
           related_party_disclosure_text:
             @view_model.related_party_disclosure_text,
-          tenure: @view_model.tenure,
-          transaction_type: @view_model.transaction_type,
+          tenure: @view_model.respond_to?(:tenure) ? @view_model.tenure : nil,
+          transaction_type: @view_model.respond_to?(:transaction_type) ? @view_model.transaction_type : nil,
           total_floor_area: convert_to_big_decimal(@view_model.total_floor_area),
           status: @view_model.status,
           country_code: @view_model.country_code,
@@ -112,8 +110,8 @@ module Presenter
           environmental_impact_potential:
             @view_model.environmental_impact_potential,
           addendum: @view_model.addendum,
-          gas_smart_meter_present: @view_model.gas_smart_meter_present,
-          electricity_smart_meter_present: @view_model.electricity_smart_meter_present,
+          gas_smart_meter_present: @view_model.respond_to?(:gas_smart_meter_present) ? @view_model.gas_smart_meter_present : nil,
+          electricity_smart_meter_present: @view_model.respond_to?(:electricity_smart_meter_present) ? @view_model.electricity_smart_meter_present : nil,
         }
       end
 

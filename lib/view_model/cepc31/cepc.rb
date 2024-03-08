@@ -1,26 +1,6 @@
 module ViewModel
   module Cepc31
     class Cepc < ViewModel::Cepc31::CommonSchema
-      def ac_inspection_commissioned
-        nil
-      end
-
-      def ac_kw_rating
-        nil
-      end
-
-      def ac_present
-        nil
-      end
-
-      def building_emission_rate
-        nil
-      end
-
-      def building_emission
-        nil
-      end
-
       def building_environment
         xpath(%w[Building-Environment])
       end
@@ -35,10 +15,6 @@ module ViewModel
 
       def epc_related_party_disclosure
         xpath(%w[Related-Party-Disclosure])
-      end
-
-      def estimated_ac_kw_rating
-        nil
       end
 
       def existing_build_rating
@@ -75,22 +51,6 @@ module ViewModel
 
       def special_energy_uses
         xpath(%w[Special-Energy-Uses])
-      end
-
-      def standard_emissions
-        nil
-      end
-
-      def target_emissions
-        nil
-      end
-
-      def transaction_type
-        nil
-      end
-
-      def typical_emissions
-        nil
       end
 
       def renewable_sources

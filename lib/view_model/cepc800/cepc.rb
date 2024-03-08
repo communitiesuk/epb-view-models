@@ -13,11 +13,6 @@ module ViewModel
         xpath(%w[AC-Present])
       end
 
-      def building_emissions
-        xpath(%w[BER])
-      end
-
-      # This would seem to be a copy? Is the method name used?
       def building_emission_rate
         xpath(%w[BER])
       end

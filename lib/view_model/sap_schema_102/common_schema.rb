@@ -89,10 +89,6 @@ module ViewModel
         xpath(%w[Related-Party-Disclosure])
       end
 
-      def related_party_disclosure_number
-        nil
-      end
-
       def improvements
         @xml_doc
           .search("Suggested-Improvements/Improvement")
@@ -196,14 +192,6 @@ module ViewModel
         xpath(%w[Construction-Year])
       end
 
-      def tenure
-        nil
-      end
-
-      def transaction_type
-        nil
-      end
-
       def current_space_heating_demand
         xpath(%w[Space-Heating-Existing-Dwelling])
       end
@@ -265,10 +253,6 @@ module ViewModel
         xpath(%w[CO2-Emissions-Current-Per-Floor-Area])
       end
 
-      def mains_gas
-        nil
-      end
-
       def level
         xpath(%w[Level])
       end
@@ -278,28 +262,12 @@ module ViewModel
         flat_level_code == "3" ? "Y" : "N"
       end
 
-      def storey_count
-        nil
-      end
-
       def main_heating_controls
         xpath(%w[Main-Heating-Controls Description])
       end
 
       def multiple_glazed_proportion
         xpath(%w[Multiple-Glazed-Proportion])
-      end
-
-      def glazed_area
-        nil
-      end
-
-      def habitable_room_count
-        nil
-      end
-
-      def heated_room_count
-        nil
       end
 
       def low_energy_lighting
@@ -366,10 +334,6 @@ module ViewModel
         xpath(%w[Lighting Environmental-Efficiency-Rating])
       end
 
-      def photovoltaic_roof_area_percent
-        nil
-      end
-
       def built_form
         xpath(%w[Built-Form])
       end
@@ -430,14 +394,6 @@ module ViewModel
         xpath(%w[Electricity-Tariff])
       end
 
-      def solar_water_heating_flag
-        nil
-      end
-
-      def mechanical_ventilation
-        nil
-      end
-
       def floor_level
         xpath(%w[SAP-Flat-Details Level])
       end
@@ -490,34 +446,6 @@ module ViewModel
 
       def cylinder_size
         xpath(%w[Cylinder-Size])
-      end
-
-      def has_cylinder_thermostat
-        nil
-      end
-
-      def mech_vent_sys_index_number
-        nil
-      end
-
-      def mechanical_vent_data_source
-        nil
-      end
-
-      def thermal_store
-        nil
-      end
-
-      def ventilation_type
-        nil
-      end
-
-      def gas_smart_meter_present
-        nil
-      end
-
-      def electricity_smart_meter_present
-        nil
       end
     end
   end

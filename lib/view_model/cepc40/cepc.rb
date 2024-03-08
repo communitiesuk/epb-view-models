@@ -13,14 +13,6 @@ module ViewModel
         xpath(%w[AC-Present])
       end
 
-      def building_emission_rate
-        nil
-      end
-
-      def building_emission
-        nil
-      end
-
       def building_environment
         xpath(%w[Building-Environment])
       end
@@ -75,22 +67,6 @@ module ViewModel
 
       def special_energy_uses
         xpath(%w[Special-Energy-Uses])
-      end
-
-      def standard_emissions
-        nil
-      end
-
-      def target_emissions
-        nil
-      end
-
-      def transaction_type
-        nil
-      end
-
-      def typical_emissions
-        nil
       end
 
       def renewable_sources

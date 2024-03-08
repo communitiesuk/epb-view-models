@@ -69,10 +69,6 @@ module ViewModel
         xpath(%w[Cylinder-Insulation-Thickness])
       end
 
-      def low_energy_lighting
-        nil
-      end
-
       def multiple_glazed_proportion
         xpath(%w[Multiple-Glazed-Proportion])
       end
@@ -87,22 +83,6 @@ module ViewModel
 
       def has_cylinder_thermostat
         xpath(%w[Cylinder-Thermostat])
-      end
-
-      def mech_vent_sys_index_number
-        nil
-      end
-
-      def mechanical_vent_data_source
-        nil
-      end
-
-      def thermal_store
-        nil
-      end
-
-      def ventilation_type
-        nil
       end
 
       def water_heating_fuel

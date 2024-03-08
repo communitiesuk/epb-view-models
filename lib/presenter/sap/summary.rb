@@ -58,10 +58,9 @@ module Presenter
               @view_model.current_space_heating_demand&.to_i,
             current_water_heating_demand:
               @view_model.current_water_heating_demand&.to_i,
-            impact_of_cavity_insulation: @view_model.impact_of_cavity_insulation,
-            impact_of_loft_insulation: @view_model.impact_of_loft_insulation,
-            impact_of_solid_wall_insulation:
-              @view_model.impact_of_solid_wall_insulation,
+            impact_of_cavity_insulation: @view_model.respond_to?(:impact_of_cavity_insulation) ? @view_model.impact_of_cavity_insulation : nil,
+            impact_of_loft_insulation: @view_model.respond_to?(:impact_of_loft_insulation) ? @view_model.impact_of_loft_insulation : nil,
+            impact_of_solid_wall_insulation: @view_model.respond_to?(:impact_of_solid_wall_insulation) ? @view_model.impact_of_solid_wall_insulation : nil,
           },
           heating_cost_current: @view_model.heating_cost_current,
           heating_cost_potential: @view_model.heating_cost_potential,
@@ -83,9 +82,9 @@ module Presenter
               @view_model.lighting_cost_potential,
               estimated_energy_cost,
             ),
-          primary_energy_use: @view_model.primary_energy_use,
+          primary_energy_use: @view_model.respond_to?(:primary_energy_use) ? @view_model.primary_energy_use : nil,
           energy_consumption_potential: @view_model.energy_consumption_potential,
-          property_age_band: @view_model.property_age_band,
+          property_age_band: @view_model.respond_to?(:property_age_band) ? @view_model.property_age_band : nil,
           property_summary: @view_model.property_summary,
           recommended_improvements:
             @view_model.improvements.map do |improvement|
@@ -96,12 +95,11 @@ module Presenter
               improvement
             end,
           lzc_energy_sources: @view_model.lzc_energy_sources,
-          related_party_disclosure_number:
-            @view_model.related_party_disclosure_number,
+          related_party_disclosure_number: @view_model.respond_to?(:related_party_disclosure_number) ? @view_model.related_party_disclosure_number : nil,
           related_party_disclosure_text:
             @view_model.related_party_disclosure_text,
-          tenure: @view_model.tenure,
-          transaction_type: @view_model.transaction_type,
+          tenure: @view_model.respond_to?(:tenure) ? @view_model.tenure : nil,
+          transaction_type: @view_model.respond_to?(:transaction_type) ? @view_model.transaction_type : nil,
           total_floor_area: convert_to_big_decimal(@view_model.total_floor_area),
           total_roof_area: @view_model.respond_to?(:total_roof_area) ? @view_model.total_roof_area : nil,
           status: @view_model.status,
@@ -110,16 +108,16 @@ module Presenter
             @view_model.environmental_impact_potential,
           co2_emissions_current_per_floor_area:
             @view_model.co2_emissions_current_per_floor_area,
-          mains_gas: @view_model.mains_gas,
+          mains_gas: @view_model.respond_to?(:mains_gas) ? @view_model.mains_gas : nil,
           level: @view_model.level,
           top_storey: @view_model.top_storey,
-          storey_count: @view_model.storey_count,
+          storey_count: @view_model.respond_to?(:storey_count) ? @view_model.storey_count : nil,
           main_heating_controls: @view_model.main_heating_controls,
-          multiple_glazed_proportion: @view_model.multiple_glazed_proportion,
-          glazed_area: @view_model.glazed_area,
-          habitable_room_count: @view_model.habitable_room_count,
-          heated_room_count: @view_model.heated_room_count,
-          low_energy_lighting: @view_model.low_energy_lighting,
+          multiple_glazed_proportion: @view_model.respond_to?(:multiple_glazed_proportion) ? @view_model.multiple_glazed_proportion : nil,
+          glazed_area: @view_model.respond_to?(:glazed_area) ? @view_model.glazed_area : nil,
+          habitable_room_count: @view_model.respond_to?(:habitable_room_count) ? @view_model.habitable_room_count : nil,
+          heated_room_count: @view_model.respond_to?(:heated_room_count) ? @view_model.heated_room_count : nil,
+          low_energy_lighting: @view_model.respond_to?(:low_energy_lighting) ? @view_model.low_energy_lighting : nil,
           fixed_lighting_outlets_count: @view_model.fixed_lighting_outlets_count,
           low_energy_fixed_lighting_outlets_count:
             @view_model.low_energy_fixed_lighting_outlets_count,
@@ -145,22 +143,18 @@ module Presenter
             @view_model.lighting_energy_efficiency_rating,
           lighting_environmental_efficiency_rating:
             @view_model.lighting_environmental_efficiency_rating,
-          photovoltaic_roof_area_percent:
-            @view_model.photovoltaic_roof_area_percent,
-          heat_loss_corridor: @view_model.heat_loss_corridor,
+          photovoltaic_roof_area_percent: @view_model.respond_to?(:photovoltaic_roof_area_percent) ? @view_model.photovoltaic_roof_area_percent : nil,
+          heat_loss_corridor: @view_model.respond_to?(:heat_loss_corridor) ? @view_model.heat_loss_corridor : nil,
           wind_turbine_count: @view_model.wind_turbine_count,
-          unheated_corridor_length: @view_model.unheated_corridor_length,
+          unheated_corridor_length: @view_model.respond_to?(:unheated_corridor_length) ? @view_model.unheated_corridor_length : nil,
           built_form:
             Helper::XmlEnumsToOutput.built_form_string(@view_model.built_form),
           mainheat_description:
             @view_model.all_main_heating_descriptions.join(", "),
-          extensions_count:
-            if @view_model.respond_to?(:extensions_count)
-              @view_model.extensions_count
-            end,
+          extensions_count: @view_model.respond_to?(:extensions_count) ? @view_model.extensions_count : nil,
           addendum: @view_model.addendum,
-          gas_smart_meter_present: @view_model.gas_smart_meter_present,
-          electricity_smart_meter_present: @view_model.electricity_smart_meter_present,
+          gas_smart_meter_present: @view_model.respond_to?(:gas_smart_meter_present) ? @view_model.gas_smart_meter_present : nil,
+          electricity_smart_meter_present: @view_model.respond_to?(:electricity_smart_meter_present) ? @view_model.electricity_smart_meter_present : nil,
           country_code: @view_model.country_code,
         }
       end

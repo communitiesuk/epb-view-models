@@ -20,7 +20,7 @@ module Presenter
           benchmarks: @view_model.benchmarks,
           energy_consumption: @view_model.or_energy_consumption,
           annual_energy_summary: @view_model.annual_energy_summary,
-          dec_status: @view_model.dec_status,
+          dec_status: @view_model.respond_to?(:dec_status) ? @view_model.dec_status : nil,
           current_assessment_date: @view_model.current_assessment_date,
           energy_efficiency_rating: @view_model.energy_efficiency_rating,
           current_electricity_co2: @view_model.current_electricity_co2,
@@ -31,7 +31,7 @@ module Presenter
 
         xml = ERB.new(get_template).result_with_hash dec_data
 
-        if @view_model.dec_status.nil?
+        if !@view_model.respond_to?(:dec_status) || @view_model.dec_status.nil?
           doc = Nokogiri.XML(xml)
           doc.at("DEC-Status").remove
           xml = doc.to_xml

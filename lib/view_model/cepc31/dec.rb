@@ -1,14 +1,6 @@
 module ViewModel
   module Cepc31
     class Dec < ViewModel::Cepc31::CommonSchema
-      def estimated_ac_kw_rating
-        nil
-      end
-
-      def ac_present
-        nil
-      end
-
       def main_benchmark
         xpath(%w[OR-Benchmark-Data Main-Benchmark])
       end
@@ -141,10 +133,6 @@ module ViewModel
         xpath(%w[DEC-Annual-Energy-Summary Renewables-Electrical])
       end
 
-      def dec_status
-        nil
-      end
-
       def dec_related_party_disclosure
         xpath(%w[Related-Party-Disclosure])
       end
@@ -171,14 +159,6 @@ module ViewModel
 
       def benchmarks
         []
-      end
-
-      def ac_kw_rating
-        nil
-      end
-
-      def ac_inspection_commissioned
-        nil
       end
 
       def or_energy_consumption

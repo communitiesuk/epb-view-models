@@ -43,8 +43,8 @@ module Presenter
           cylinder_insul_thickness: @view_model.cylinder_insul_thickness,
           cylinder_insulation_type: @view_model.cylinder_insulation_type,
           cylinder_size: @view_model.cylinder_size,
-          has_cylinder_thermostat: @view_model.has_cylinder_thermostat == "Y" ? "true" : "false",
-          energy_consumption_current: @view_model.primary_energy_use,
+          has_cylinder_thermostat: @view_model.respond_to?(:has_cylinder_thermostat) && @view_model.has_cylinder_thermostat == "Y" ? "true" : "false",
+          energy_consumption_current: @view_model.respond_to?(:primary_energy_use) ? @view_model.primary_energy_use : nil,
           energy_consumption_potential: @view_model.energy_consumption_potential,
           energy_tariff:
             Helper::XmlEnumsToOutput.energy_tariff(
@@ -54,10 +54,10 @@ module Presenter
           environment_impact_current: @view_model.environmental_impact_current,
           environment_impact_potential:
             @view_model.environmental_impact_potential,
-          extension_count: @view_model.extensions_count,
+          extension_count: @view_model.respond_to?(:extensions_count) ? @view_model.extensions_count : nil,
           fixed_lighting_outlets_count: @view_model.fixed_lighting_outlets_count,
           flat_top_storey: @view_model.top_storey,
-          flat_storey_count: @view_model.storey_count,
+          flat_storey_count: @view_model.respond_to?(:storey_count) ? @view_model.storey_count : nil,
           floor_description: @view_model.all_floor_descriptions.first,
           floor_energy_eff:
             Helper::XmlEnumsToOutput.energy_rating_string(
@@ -70,14 +70,14 @@ module Presenter
           floor_height: @view_model.floor_height.first,
           floor_level: @view_model.floor_level,
           glazed_area:
-            Helper::XmlEnumsToOutput.glazed_area_rdsap(@view_model.glazed_area),
+            Helper::XmlEnumsToOutput.glazed_area_rdsap(@view_model.respond_to?(:glazed_area) ? @view_model.glazed_area : nil),
           glazed_type:
             Helper::XmlEnumsToOutput.glazed_type_rdsap(
               @view_model.multi_glazing_type,
             ),
           heat_loss_corridor:
             Helper::XmlEnumsToOutput.heat_loss_corridor(
-              @view_model.heat_loss_corridor,
+              @view_model.respond_to?(:heat_loss_corridor) ? @view_model.heat_loss_corridor : nil,
             ),
           heating_cost_current: @view_model.heating_cost_current,
           heating_cost_potential: @view_model.heating_cost_potential,
@@ -102,7 +102,7 @@ module Presenter
             ),
           lighting_env_eff:
             Helper::XmlEnumsToOutput.energy_rating_string(@view_model.lighting_environmental_efficiency_rating),
-          low_energy_lighting: @view_model.low_energy_lighting,
+          low_energy_lighting: @view_model.respond_to?(:low_energy_lighting) ? @view_model.low_energy_lighting : nil,
           low_energy_fixed_lighting_count:
             @view_model.low_energy_fixed_lighting_outlets_count,
           main_fuel: Helper::XmlEnumsToOutput.fuel_type(@view_model.main_fuel_type,
@@ -128,20 +128,20 @@ module Presenter
             ),
           mainheatcont_description:
             @view_model.all_main_heating_controls_descriptions.first,
-          mains_gas_flag: @view_model.mains_gas,
+          mains_gas_flag: @view_model.respond_to?(:mains_gas) ? @view_model.mains_gas : nil,
           mechanical_ventilation:
             Helper::XmlEnumsToOutput.mechanical_ventilation(
-              @view_model.mechanical_ventilation,
+              @view_model.respond_to?(:mechanical_ventilation) ? @view_model.mechanical_ventilation : nil,
               @schema_type,
               @view_model.report_type,
             ),
           mech_vent_sys_index_number: nil,
           mechanical_vent_data_source: nil,
-          multi_glaze_proportion: @view_model.multiple_glazed_proportion,
-          number_habitable_rooms: @view_model.habitable_room_count,
-          number_heated_rooms: @view_model.heated_room_count,
+          multi_glaze_proportion: @view_model.respond_to?(:multiple_glazed_proportion) ? @view_model.multiple_glazed_proportion : nil,
+          number_habitable_rooms: @view_model.respond_to?(:habitable_room_count) ? @view_model.habitable_room_count : nil,
+          number_heated_rooms: @view_model.respond_to?(:heated_room_count) ? @view_model.heated_room_count : nil,
           number_open_fireplaces: @view_model.open_fireplaces_count,
-          photo_supply: @view_model.photovoltaic_roof_area_percent,
+          photo_supply: @view_model.respond_to?(:photovoltaic_roof_area_percent) ? @view_model.photovoltaic_roof_area_percent : nil,
           posttown: @view_model.town,
           postcode: @view_model.postcode,
           potential_energy_efficiency:
@@ -171,17 +171,17 @@ module Presenter
             Helper::XmlEnumsToOutput.energy_rating_string(
               @view_model.secondary_heating_environmental_efficiency_rating,
             ),
-          solar_water_heating_flag: @view_model.solar_water_heating_flag,
-          tenure: Helper::XmlEnumsToOutput.tenure(@view_model.tenure),
+          solar_water_heating_flag: @view_model.respond_to?(:solar_water_heating_flag) ? @view_model.solar_water_heating_flag : nil,
+          tenure: Helper::XmlEnumsToOutput.tenure(@view_model.respond_to?(:tenure) ? @view_model.tenure : nil),
           thermal_store: nil,
           total_floor_area: @view_model.total_floor_area,
           transaction_type:
             Helper::XmlEnumsToOutput.transaction_type(
-              @view_model.transaction_type,
+              @view_model.respond_to?(:transaction_type) ? @view_model.transaction_type : nil,
               @view_model.report_type,
               @schema_type,
             ),
-          unheated_corridor_length: @view_model.unheated_corridor_length,
+          unheated_corridor_length: @view_model.respond_to?(:unheated_corridor_length) ? @view_model.unheated_corridor_length : nil,
           ventilation_type: nil,
           walls_description: @view_model.all_wall_descriptions.first,
           walls_energy_eff:
@@ -241,15 +241,15 @@ module Presenter
             @view_model.potential_energy_rating.to_s.chomp,
           property_type:
             Helper::XmlEnumsToOutput.property_type(@view_model.property_type),
-          tenure: Helper::XmlEnumsToOutput.tenure(@view_model.tenure),
+          tenure: Helper::XmlEnumsToOutput.tenure(@view_model.respond_to?(:tenure) ? @view_model.tenure : nil),
           transaction_type:
             Helper::XmlEnumsToOutput.transaction_type(
-              @view_model.transaction_type,
+              @view_model.respond_to?(:transaction_type) ? @view_model.transaction_type : nil,
             ),
           environment_impact_current: @view_model.environmental_impact_current,
           environment_impact_potential:
             @view_model.environmental_impact_potential,
-          energy_consumption_current: @view_model.primary_energy_use,
+          energy_consumption_current: @view_model.respond_to?(:primary_energy_use) ? @view_model.primary_energy_use : nil,
           energy_consumption_potential: @view_model.energy_consumption_potential,
           co2_emissions_current: @view_model.current_carbon_emission,
           co2_emiss_curr_per_floor_area:
@@ -262,15 +262,15 @@ module Presenter
           lighting_cost_current: @view_model.lighting_cost_current,
           lighting_cost_potential: @view_model.lighting_cost_potential,
           total_floor_area: @view_model.total_floor_area,
-          mains_gas_flag: @view_model.mains_gas,
+          mains_gas_flag: @view_model.respond_to?(:mains_gas) ? @view_model.mains_gas : nil,
           flat_top_storey: @view_model.top_storey,
-          flat_storey_count: @view_model.storey_count,
-          multi_glaze_proportion: @view_model.multiple_glazed_proportion,
+          flat_storey_count: @view_model.respond_to?(:storey_count) ? @view_model.storey_count : nil,
+          multi_glaze_proportion: @view_model.respond_to?(:multiple_glazed_proportion) ? @view_model.multiple_glazed_proportion : nil,
           glazed_area:
-            Helper::XmlEnumsToOutput.glazed_area_rdsap(@view_model.glazed_area),
-          number_habitable_rooms: @view_model.habitable_room_count,
-          number_heated_rooms: @view_model.heated_room_count,
-          low_energy_lighting: @view_model.low_energy_lighting,
+            Helper::XmlEnumsToOutput.glazed_area_rdsap(@view_model.respond_to?(:glazed_area) ? @view_model.glazed_area : nil),
+          number_habitable_rooms: @view_model.respond_to?(:habitable_room_count) ? @view_model.habitable_room_count : nil,
+          number_heated_rooms: @view_model.respond_to?(:heated_room_count) ? @view_model.heated_room_count : nil,
+          low_energy_lighting: @view_model.respond_to?(:low_energy_lighting) ? @view_model.low_energy_lighting : nil,
           fixed_lighting_outlets_count: @view_model.fixed_lighting_outlets_count,
           low_energy_fixed_lighting_outlets_count:
             @view_model.low_energy_fixed_lighting_outlets_count,
@@ -287,9 +287,9 @@ module Presenter
           wind_turbine_count: @view_model.wind_turbine_count,
           heat_loss_corridor:
             Helper::XmlEnumsToOutput.heat_loss_corridor(
-              @view_model.heat_loss_corridor,
+              @view_model.respond_to?(:heat_loss_corridor) ? @view_model.heat_loss_corridor : nil,
             ),
-          unheated_corridor_length: @view_model.unheated_corridor_length,
+          unheated_corridor_length: @view_model.respond_to?(:unheated_corridor_length) ? @view_model.unheated_corridor_length : nil,
           windows_description: @view_model.window_description,
           windows_energy_eff:
             Helper::XmlEnumsToOutput.energy_rating_string(
@@ -317,7 +317,7 @@ module Presenter
             Helper::XmlEnumsToOutput.energy_rating_string(
               @view_model.lighting_environmental_efficiency_rating,
             ),
-          photo_supply: @view_model.photovoltaic_roof_area_percent,
+          photo_supply: @view_model.respond_to?(:photovoltaic_roof_area_percent) ? @view_model.photovoltaic_roof_area_percent : nil,
           built_form:
             Helper::XmlEnumsToOutput.built_form_string(@view_model.built_form),
           mainheat_description:
@@ -330,7 +330,7 @@ module Presenter
             Helper::XmlEnumsToOutput.energy_rating_string(
               @view_model.all_main_heating_environmental_efficiency.first,
             ),
-          extension_count: @view_model.extensions_count,
+          extension_count: @view_model.respond_to?(:extensions_count) ? @view_model.extensions_count : nil,
           report_type: @view_model.report_type,
           mainheatcont_description:
             @view_model.all_main_heating_controls_descriptions.first,
@@ -358,10 +358,10 @@ module Presenter
               @view_model.report_type,
             ),
           floor_level: @view_model.floor_level,
-          solar_water_heating_flag: @view_model.solar_water_heating_flag,
+          solar_water_heating_flag: @view_model.respond_to?(:solar_water_heating_flag) ? @view_model.solar_water_heating_flag : nil,
           mechanical_ventilation:
             Helper::XmlEnumsToOutput.mechanical_ventilation(
-              @view_model.mechanical_ventilation,
+              @view_model.respond_to?(:mechanical_ventilation) ? @view_model.mechanical_ventilation : nil,
               @schema_type,
               @view_model.report_type,
             ),

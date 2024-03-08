@@ -355,28 +355,12 @@ module ViewModel
         xpath(%w[CO2-Emissions-Current-Per-Floor-Area])
       end
 
-      def mains_gas
-        nil
-      end
-
       def main_heating_controls
         xpath(%w[Main-Heating-Controls Description])
       end
 
       def multiple_glazed_proportion
         xpath(%w[Multiple-Glazed-Percentage])
-      end
-
-      def glazed_area
-        nil
-      end
-
-      def habitable_room_count
-        nil
-      end
-
-      def heated_room_count
-        nil
       end
 
       def fixed_lighting_outlets_count
@@ -478,24 +462,12 @@ module ViewModel
         xpath(%w[Lighting Environmental-Efficiency-Rating])
       end
 
-      def photovoltaic_roof_area_percent
-        nil
-      end
-
       def built_form
         xpath(%w[Built-Form])
       end
 
       def wind_turbine_count
         @xml_doc.search("Wind-Turbines/Wind-Turbine").map(&:content).count
-      end
-
-      def unheated_corridor_length
-        nil
-      end
-
-      def heat_loss_corridor
-        nil
       end
 
       def all_main_heating_descriptions
@@ -544,18 +516,6 @@ module ViewModel
 
       def all_main_heating_energy_efficiency
         @xml_doc.search("Main-Heating/Energy-Efficiency-Rating").map(&:content)
-      end
-
-      def extensions_count
-        nil
-      end
-
-      def solar_water_heating_flag
-        nil
-      end
-
-      def mechanical_ventilation
-        nil
       end
 
       def floor_height

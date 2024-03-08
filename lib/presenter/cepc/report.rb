@@ -18,14 +18,13 @@ module Presenter
       def report_from_assessment_xml
         {
           assessment_id: Helper::RrnHelper.hash_rrn(@view_model.assessment_id),
-          ac_inspection_commissioned: @view_model.ac_inspection_commissioned,
+          ac_inspection_commissioned: @view_model.respond_to?(:ac_inspection_commissioned) ? @view_model.ac_inspection_commissioned : nil,
           address1: @view_model.address_line1,
           address2: @view_model.address_line2,
           address3: @view_model.address_line3,
-          aircon_kw_rating: @view_model.ac_kw_rating,
+          aircon_kw_rating: @view_model.respond_to?(:ac_kw_rating) ? @view_model.ac_kw_rating : nil,
           aircon_present:
-            if !@view_model.ac_present.nil? &&
-                @view_model.ac_present.upcase == "YES"
+            if @view_model.respond_to?(:ac_present) && @view_model.ac_present.upcase == "YES"
               "Y"
             else
               "N"
@@ -35,10 +34,10 @@ module Presenter
             Helper::EnergyBandCalculator.commercial(
               @view_model.energy_efficiency_rating.to_i,
             ),
-          building_emissions: @view_model.building_emission_rate,
+          building_emissions: @view_model.respond_to?(:building_emission_rate) ? @view_model.building_emission_rate : nil,
           building_environment: @view_model.building_environment,
           building_level: @view_model.building_level,
-          estimated_aircon_kw_rating: @view_model.estimated_ac_kw_rating,
+          estimated_aircon_kw_rating: @view_model.respond_to?(:estimated_ac_kw_rating) ? @view_model.estimated_ac_kw_rating : nil,
           existing_stock_benchmark: @view_model.existing_build_rating,
           floor_area: @view_model.floor_area,
           inspection_date: @view_model.date_of_assessment,
@@ -48,18 +47,18 @@ module Presenter
           other_fuel_desc: @view_model.other_fuel_description,
           postcode: @view_model.postcode,
           posttown: @view_model.town,
-          primary_energy_value: @view_model.primary_energy_use,
+          primary_energy_value: @view_model.respond_to?(:primary_energy_use) ? @view_model.primary_energy_use : nil,
           property_type: @view_model.property_type,
           report_type: @view_model.report_type,
           special_energy_uses: @view_model.special_energy_uses,
-          standard_emissions: @view_model.standard_emissions,
-          target_emissions: @view_model.target_emissions,
+          standard_emissions: @view_model.respond_to?(:standard_emissions) ? @view_model.standard_emissions : nil,
+          target_emissions: @view_model.respond_to?(:target_emissions) ? @view_model.target_emissions : nil,
           transaction_type:
             Helper::XmlEnumsToOutput.cepc_transaction_type(
-              @view_model.transaction_type,
+              @view_model.respond_to?(:transaction_type) ? @view_model.transaction_type : nil,
             ),
           type_of_assessment: TYPE_OF_ASSESSMENT,
-          typical_emissions: @view_model.typical_emissions,
+          typical_emissions: @view_model.respond_to?(:typical_emissions) ? @view_model.typical_emissions : nil,
           renewable_sources: @view_model.renewable_sources,
         }
       end

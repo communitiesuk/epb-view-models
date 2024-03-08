@@ -17,10 +17,6 @@ module ViewModel
         xpath(%w[AC-Rated-Output])
       end
 
-      def building_emissions
-        xpath(%w[BER])
-      end
-
       def building_emission_rate
         xpath(%w[BER])
       end

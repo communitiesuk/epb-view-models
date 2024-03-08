@@ -30,8 +30,8 @@ module Presenter
             floor_area: @view_model.floor_area,
             building_level: @view_model.building_level,
           },
-          building_emission_rate: @view_model.building_emission_rate,
-          primary_energy_use: @view_model.primary_energy_use,
+          building_emission_rate: @view_model.respond_to?(:building_emission_rate) ? @view_model.building_emission_rate : nil,
+          primary_energy_use: @view_model.respond_to?(:primary_energy_use) ? @view_model.primary_energy_use : nil,
           related_rrn: @view_model.related_rrn,
           new_build_rating: @view_model.new_build_rating,
           new_build_band:

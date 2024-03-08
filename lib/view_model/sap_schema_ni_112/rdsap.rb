@@ -89,25 +89,9 @@ module ViewModel
         xpath(%w[Cylinder-Thermostat])
       end
 
-      def mech_vent_sys_index_number
-        nil
-      end
-
-      def mechanical_vent_data_source
-        nil
-      end
-
       # DO NOT CORRECT - this typo is present in the schema XML pre 12.0
       def mechanical_ventilation
         xpath(%w[Mechanical-Ventliation])
-      end
-
-      def thermal_store
-        nil
-      end
-
-      def ventilation_type
-        nil
       end
 
       def water_heating_fuel

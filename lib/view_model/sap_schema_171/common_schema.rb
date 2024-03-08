@@ -286,10 +286,6 @@ module ViewModel
         xpath(%w[CO2-Emissions-Current-Per-Floor-Area])
       end
 
-      def mains_gas
-        nil
-      end
-
       def level
         xpath(%w[Level])
       end
@@ -299,28 +295,12 @@ module ViewModel
         flat_level_code == "3" ? "Y" : "N"
       end
 
-      def storey_count
-        nil
-      end
-
       def main_heating_controls
         xpath(%w[Main-Heating-Controls Description])
       end
 
       def multiple_glazed_proportion
         xpath(%w[Multiple-Glazed-Percentage])
-      end
-
-      def glazed_area
-        nil
-      end
-
-      def habitable_room_count
-        nil
-      end
-
-      def heated_room_count
-        nil
       end
 
       def low_energy_lighting
@@ -359,14 +339,6 @@ module ViewModel
         xpath(%w[Wind-Turbines-Count])&.to_i
       end
 
-      def heat_loss_corridor
-        nil
-      end
-
-      def unheated_corridor_length
-        nil
-      end
-
       def window_energy_efficiency_rating
         xpath(%w[Windows Energy-Efficiency-Rating])
       end
@@ -397,10 +369,6 @@ module ViewModel
 
       def lighting_environmental_efficiency_rating
         xpath(%w[Lighting Environmental-Efficiency-Rating])
-      end
-
-      def photovoltaic_roof_area_percent
-        nil
       end
 
       def built_form
@@ -453,18 +421,6 @@ module ViewModel
 
       def all_main_heating_energy_efficiency
         @xml_doc.search("Main-Heating/Energy-Efficiency-Rating").map(&:content)
-      end
-
-      def extensions_count
-        nil
-      end
-
-      def solar_water_heating_flag
-        nil
-      end
-
-      def mechanical_ventilation
-        nil
       end
 
       def floor_height
@@ -535,14 +491,6 @@ module ViewModel
 
       def ventilation_type
         xpath(%w[Ventilation-Type])
-      end
-
-      def gas_smart_meter_present
-        nil
-      end
-
-      def electricity_smart_meter_present
-        nil
       end
     end
   end

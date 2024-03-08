@@ -57,15 +57,14 @@ module Presenter
           yr2_renewables_co2: @view_model.year2_renewables_co2,
           # open data request for return value to be Y OR N
           aircon_present:
-            if !@view_model.ac_present.nil? &&
-                @view_model.ac_present.upcase == "YES"
+            if @view_model.respond_to?(:ac_present) && @view_model.ac_present.upcase == "YES"
               "Y"
             else
               "N"
             end,
-          aircon_kw_rating: @view_model.ac_kw_rating,
-          estimated_aircon_kw_rating: @view_model.estimated_ac_kw_rating,
-          ac_inspection_commissioned: @view_model.ac_inspection_commissioned,
+          aircon_kw_rating: @view_model.respond_to?(:ac_kw_rating) ? @view_model.ac_kw_rating : nil,
+          estimated_aircon_kw_rating: @view_model.respond_to?(:estimated_ac_kw_rating) ? @view_model.estimated_ac_kw_rating : nil,
+          ac_inspection_commissioned: @view_model.respond_to?(:ac_inspection_commissioned) ? @view_model.ac_inspection_commissioned : nil,
           building_environment: @view_model.building_environment,
           building_category: @view_model.building_category,
           report_type: @view_model.report_type,

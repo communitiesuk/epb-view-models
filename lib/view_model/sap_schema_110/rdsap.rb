@@ -98,24 +98,8 @@ module ViewModel
         xpath(%w[Cylinder-Thermostat])
       end
 
-      def mech_vent_sys_index_number
-        nil
-      end
-
-      def mechanical_vent_data_source
-        nil
-      end
-
-      def thermal_store
-        nil
-      end
-
       def water_heating_fuel
         xpath(%w[Water-Heating-Fuel])
-      end
-
-      def ventilation_type
-        nil
       end
     end
   end
