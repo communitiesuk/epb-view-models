@@ -38,7 +38,7 @@ module ViewModel
       end
 
       def existing_build_rating
-        xpath(%w[Existing-Stock-Benchmark])
+        xpath(%w[Existing-Stock-Benchmark])&.to_i
       end
 
       def floor_area
@@ -50,7 +50,7 @@ module ViewModel
       end
 
       def new_build_rating
-        xpath(%w[New-Build-Benchmark])
+        xpath(%w[New-Build-Benchmark])&.to_i
       end
 
       def other_fuel_description

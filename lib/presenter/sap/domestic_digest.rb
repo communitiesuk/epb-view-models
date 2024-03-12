@@ -39,9 +39,7 @@ module Presenter
           type_of_property: Helper::XmlEnumsToOutput.property_type(@view_model.property_type),
           recommended_improvements: @view_model.improvements.map do |improvement|
             improvement[:energy_performance_band_improvement] =
-              Helper::EnergyBandCalculator.domestic(
-                improvement[:energy_performance_rating_improvement],
-              )
+              Helper::EnergyBandCalculator.domestic(improvement[:energy_performance_rating_improvement])
             improvement
           end,
         }

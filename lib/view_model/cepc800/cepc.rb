@@ -43,7 +43,7 @@ module ViewModel
       end
 
       def existing_build_rating
-        xpath(%w[Existing-Stock-Benchmark])
+        xpath(%w[Existing-Stock-Benchmark])&.to_i
       end
 
       def floor_area
@@ -56,7 +56,7 @@ module ViewModel
 
       # This is new_build_benchmark in the CEPC wrapper
       def new_build_rating
-        xpath(%w[New-Build-Benchmark])
+        xpath(%w[New-Build-Benchmark])&.to_i
       end
 
       def or_assessment_start_date

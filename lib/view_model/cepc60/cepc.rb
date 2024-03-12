@@ -42,7 +42,7 @@ module ViewModel
       end
 
       def existing_build_rating
-        xpath(%w[Existing-Stock-Benchmark])
+        xpath(%w[Existing-Stock-Benchmark])&.to_i
       end
 
       def main_heating_fuel
@@ -50,7 +50,7 @@ module ViewModel
       end
 
       def new_build_rating
-        xpath(%w[New-Build-Benchmark])
+        xpath(%w[New-Build-Benchmark])&.to_i
       end
 
       def other_fuel_description

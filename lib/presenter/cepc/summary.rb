@@ -34,15 +34,9 @@ module Presenter
           primary_energy_use: @view_model.respond_to?(:primary_energy_use) ? @view_model.primary_energy_use : nil,
           related_rrn: @view_model.related_rrn,
           new_build_rating: @view_model.new_build_rating,
-          new_build_band:
-            Helper::EnergyBandCalculator.commercial(
-              @view_model.new_build_rating.to_i,
-            ),
+          new_build_band: Helper::EnergyBandCalculator.commercial(@view_model.new_build_rating),
           existing_build_rating: @view_model.existing_build_rating,
-          existing_build_band:
-            Helper::EnergyBandCalculator.commercial(
-              @view_model.existing_build_rating.to_i,
-            ),
+          existing_build_band: Helper::EnergyBandCalculator.commercial(@view_model.existing_build_rating),
           current_energy_efficiency_rating: @view_model.energy_efficiency_rating,
           energy_efficiency_rating: @view_model.energy_efficiency_rating,
           assessor: {
@@ -58,10 +52,7 @@ module Presenter
             },
           },
           related_party_disclosure: @view_model.epc_related_party_disclosure,
-          current_energy_efficiency_band:
-            Helper::EnergyBandCalculator.commercial(
-              @view_model.energy_efficiency_rating.to_i,
-            ),
+          current_energy_efficiency_band: Helper::EnergyBandCalculator.commercial(@view_model.energy_efficiency_rating),
           property_type: @view_model.property_type,
           building_complexity: @view_model.building_level,
         }

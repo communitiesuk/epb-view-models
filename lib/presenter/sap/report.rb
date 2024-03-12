@@ -35,11 +35,9 @@ module Presenter
               @schema_type,
               @view_model.report_type,
             ),
-          current_energy_efficiency: @view_model.current_energy_rating.to_s.chomp,
+          current_energy_efficiency: @view_model.current_energy_rating,
           current_energy_rating:
-            Helper::EnergyBandCalculator.domestic(
-              @view_model.current_energy_rating,
-            ),
+            Helper::EnergyBandCalculator.domestic(@view_model.current_energy_rating),
           cylinder_insul_thickness: @view_model.cylinder_insul_thickness,
           cylinder_insulation_type: @view_model.cylinder_insulation_type,
           cylinder_size: @view_model.cylinder_size,
@@ -151,12 +149,9 @@ module Presenter
           photo_supply: @view_model.respond_to?(:photovoltaic_roof_area_percent) ? @view_model.photovoltaic_roof_area_percent : nil,
           postcode: @view_model.postcode,
           posttown: @view_model.town,
-          potential_energy_efficiency:
-            @view_model.potential_energy_rating.to_s.chomp,
+          potential_energy_efficiency: @view_model.potential_energy_rating,
           potential_energy_rating:
-            Helper::EnergyBandCalculator.domestic(
-              @view_model.potential_energy_rating,
-            ),
+            Helper::EnergyBandCalculator.domestic(@view_model.potential_energy_rating),
           property_type:
             Helper::XmlEnumsToOutput.property_type(@view_model.property_type),
           report_type: @view_model.report_type,
@@ -235,16 +230,11 @@ module Presenter
               @view_model.report_type,
             ),
           current_energy_rating:
-            Helper::EnergyBandCalculator.domestic(
-              @view_model.current_energy_rating,
-            ),
+            Helper::EnergyBandCalculator.domestic(@view_model.current_energy_rating),
           potential_energy_rating:
-            Helper::EnergyBandCalculator.domestic(
-              @view_model.potential_energy_rating,
-            ),
-          current_energy_efficiency: @view_model.current_energy_rating.to_s.chomp,
-          potential_energy_efficiency:
-            @view_model.potential_energy_rating.to_s.chomp,
+            Helper::EnergyBandCalculator.domestic(@view_model.potential_energy_rating),
+          current_energy_efficiency: @view_model.current_energy_rating,
+          potential_energy_efficiency: @view_model.potential_energy_rating,
           property_type:
             Helper::XmlEnumsToOutput.property_type(@view_model.property_type),
           tenure: Helper::XmlEnumsToOutput.tenure(@view_model.respond_to?(:tenure) ? @view_model.tenure : nil),

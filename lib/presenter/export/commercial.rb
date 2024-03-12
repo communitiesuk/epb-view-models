@@ -27,33 +27,24 @@ module Presenter::Export
       view[:current_energy_efficiency_rating] =
         @view_model.energy_efficiency_rating
       view[:current_energy_efficiency_band] =
-        Helper::EnergyBandCalculator.commercial(
-          @view_model.energy_efficiency_rating.to_i,
-        )
+        Helper::EnergyBandCalculator.commercial(@view_model.energy_efficiency_rating)
       view[:new_build_band] =
-        Helper::EnergyBandCalculator.commercial(
-          @view_model.new_build_rating.to_i,
-        )
+        Helper::EnergyBandCalculator.commercial(@view_model.new_build_rating)
       view[:existing_build_rating] = @view_model.existing_build_rating
       view[:existing_build_band] =
-        Helper::EnergyBandCalculator.commercial(
-          @view_model.existing_build_rating.to_i,
-        )
+        Helper::EnergyBandCalculator.commercial(@view_model.existing_build_rating)
       view[:ac_inspection_commissioned] = @view_model.respond_to?(:ac_inspection_commissioned) ? @view_model.ac_inspection_commissioned : nil
       view[:aircon_kw_rating] = @view_model.respond_to?(:ac_kw_rating) ? @view_model.ac_kw_rating : nil
       view[:aircon_present] = @view_model.ac_present if @view_model.respond_to?(:ac_present)
       view[:asset_rating] = @view_model.energy_efficiency_rating
       view[:asset_rating_band] =
-        Helper::EnergyBandCalculator.commercial(
-          @view_model.energy_efficiency_rating.to_i,
-        )
+        Helper::EnergyBandCalculator.commercial(@view_model.energy_efficiency_rating)
       view[:building_environment] = @view_model.building_environment
       view[:building_level] = @view_model.building_level
       view[:building_reference_number] = @view_model.address_id
       view[:estimated_aircon_kw_rating] = @view_model.respond_to?(:estimated_ac_kw_rating) ? @view_model.estimated_ac_kw_rating : nil
-      view[:existing_stock_benchmark] =
-        @view_model.existing_build_rating,
-        view[:floor_area] = @view_model.floor_area
+      view[:existing_stock_benchmark] = @view_model.existing_build_rating
+      view[:floor_area] = @view_model.floor_area
       view[:main_heating_fuel] = @view_model.main_heating_fuel
       view[:other_fuel_description] = @view_model.other_fuel_description
       view[:special_energy_uses] = @view_model.special_energy_uses

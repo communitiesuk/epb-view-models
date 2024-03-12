@@ -33,15 +33,12 @@
   "energy_efficiency_rating": 80,
   "estimated_aircon_kw_rating": 3,
   "existing_build_band": "d",
-  "existing_build_rating": "81",
-  "existing_stock_benchmark": [
-    "81",
-    "403"
-  ],
+  "existing_build_rating": 81,
+  "existing_stock_benchmark": 81,
   "floor_area": "403",
   "main_heating_fuel": "Natural Gas",
   "new_build_band": "b",
-  "new_build_rating": "28",
+  "new_build_rating": 28,
   "other_fuel_description": "Test",
   "primary_energy_use": "413.22",
   "property_type": "B1 Offices and Workshop businesses",

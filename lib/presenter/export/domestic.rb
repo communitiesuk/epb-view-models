@@ -20,18 +20,15 @@ module Presenter::Export
       view[:current_carbon_emission] = @view_model.current_carbon_emission.to_f
       view[:current_energy_efficiency_band] =
         Helper::EnergyBandCalculator.domestic(@view_model.current_energy_rating)
-      view[:current_energy_efficiency_rating] =
-        @view_model.current_energy_rating
+      view[:current_energy_efficiency_rating] = @view_model.current_energy_rating
       view[:date_of_assessment] = @view_model.date_of_assessment
       view[:date_of_expiry] = @view_model.date_of_expiry
       view[:date_of_registration] = @view_model.date_of_registration
       view[:dwelling_type] = @view_model.dwelling_type
       view[:energy_consumption_potential] =
         @view_model.energy_consumption_potential.to_i
-      view[:environmental_impact_current] =
-        @view_model.environmental_impact_current.to_i
-      view[:environmental_impact_potential] =
-        @view_model.environmental_impact_potential.to_i
+      view[:environmental_impact_current] = @view_model.environmental_impact_current
+      view[:environmental_impact_potential] = @view_model.environmental_impact_potential
       if @view_model.respond_to?(:extensions_count) && !@view_model.extensions_count.nil?
         view[:extensions_count] = @view_model.extensions_count
       end
@@ -86,11 +83,8 @@ module Presenter::Export
       view[:potential_carbon_emission] =
         @view_model.potential_carbon_emission.to_f
       view[:potential_energy_efficiency_band] =
-        Helper::EnergyBandCalculator.domestic(
-          @view_model.potential_energy_rating,
-        )
-      view[:potential_energy_efficiency_rating] =
-        @view_model.potential_energy_rating
+        Helper::EnergyBandCalculator.domestic(@view_model.potential_energy_rating)
+      view[:potential_energy_efficiency_rating] = @view_model.potential_energy_rating
       view[:primary_energy_use] = @view_model.respond_to?(:primary_energy_use) ? @view_model.primary_energy_use.to_i : nil
       view[:property_age_band] = @view_model.respond_to?(:property_age_band) ? @view_model.property_age_band : nil
       view[:property_summary] = @view_model.property_summary
@@ -99,9 +93,7 @@ module Presenter::Export
       view[:recommended_improvements] =
         @view_model.improvements.map do |improvement|
           improvement[:energy_performance_band_improvement] =
-            Helper::EnergyBandCalculator.domestic(
-              improvement[:energy_performance_rating_improvement],
-            )
+            Helper::EnergyBandCalculator.domestic(improvement[:energy_performance_rating_improvement])
           improvement
         end
       if @view_model.respond_to?(:related_party_disclosure_number) && !@view_model.related_party_disclosure_number.nil?
@@ -119,7 +111,7 @@ module Presenter::Export
       view[:secondary_heating_environmental_efficiency_rating] =
         @view_model.secondary_heating_environmental_efficiency_rating.to_i
       view[:status] = @view_model.status
-      view[:storey_count] = @view_model.storey_count.to_i if @view_model.respond_to?(:storey_count) && !@view_model
+      view[:storey_count] = @view_model.storey_count if @view_model.respond_to?(:storey_count) && !@view_model
         .storey_count.nil?
       view[:tenure] = enum_value(:tenure, @view_model.respond_to?(:tenure) ? @view_model.tenure : nil)
       view[:top_storey] = @view_model.top_storey
@@ -130,7 +122,7 @@ module Presenter::Export
       if @view_model.respond_to?(:unheated_corridor_length) && !@view_model.unheated_corridor_length.nil?
         view[:unheated_corridor_length] = @view_model.unheated_corridor_length.to_i
       end
-      view[:wind_turbine_count] = @view_model.wind_turbine_count.to_i
+      view[:wind_turbine_count] = @view_model.wind_turbine_count
       view[:window_description] = @view_model.window_description
       view[:window_energy_efficiency_rating] =
         @view_model.window_energy_efficiency_rating.to_i

@@ -30,10 +30,7 @@ module Presenter
               "N"
             end,
           asset_rating: @view_model.energy_efficiency_rating,
-          asset_rating_band:
-            Helper::EnergyBandCalculator.commercial(
-              @view_model.energy_efficiency_rating.to_i,
-            ),
+          asset_rating_band: Helper::EnergyBandCalculator.commercial(@view_model.energy_efficiency_rating),
           building_emissions: @view_model.respond_to?(:building_emission_rate) ? @view_model.building_emission_rate : nil,
           building_environment: @view_model.building_environment,
           building_level: @view_model.building_level,

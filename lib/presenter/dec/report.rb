@@ -24,10 +24,7 @@ module Presenter
           current_operational_rating: @view_model.energy_efficiency_rating,
           yr1_operational_rating: @view_model.year1_energy_efficiency_rating,
           yr2_operational_rating: @view_model.year2_energy_efficiency_rating,
-          operational_rating_band:
-            Helper::EnergyBandCalculator.commercial(
-              @view_model.energy_efficiency_rating.to_i,
-            ).upcase,
+          operational_rating_band: Helper::EnergyBandCalculator.commercial(@view_model.energy_efficiency_rating).upcase,
           electric_co2: @view_model.current_electricity_co2,
           heating_co2: @view_model.current_heating_co2,
           renewables_co2: @view_model.current_renewables_co2,

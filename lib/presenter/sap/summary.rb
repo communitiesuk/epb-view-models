@@ -45,10 +45,7 @@ module Presenter
           },
           current_carbon_emission:
             convert_to_big_decimal(@view_model.current_carbon_emission),
-          current_energy_efficiency_band:
-            Helper::EnergyBandCalculator.domestic(
-              @view_model.current_energy_rating,
-            ),
+          current_energy_efficiency_band: Helper::EnergyBandCalculator.domestic(@view_model.current_energy_rating),
           current_energy_efficiency_rating: @view_model.current_energy_rating,
           dwelling_type: @view_model.dwelling_type,
           estimated_energy_cost:,
@@ -70,10 +67,7 @@ module Presenter
           lighting_cost_potential: @view_model.lighting_cost_potential,
           potential_carbon_emission:
             convert_to_big_decimal(@view_model.potential_carbon_emission),
-          potential_energy_efficiency_band:
-            Helper::EnergyBandCalculator.domestic(
-              @view_model.potential_energy_rating,
-            ),
+          potential_energy_efficiency_band: Helper::EnergyBandCalculator.domestic(@view_model.potential_energy_rating),
           potential_energy_efficiency_rating: @view_model.potential_energy_rating,
           potential_energy_saving:
             Helper::EstimatedCostPotentialSavingHelper.new.potential_saving(
@@ -89,9 +83,7 @@ module Presenter
           recommended_improvements:
             @view_model.improvements.map do |improvement|
               improvement[:energy_performance_band_improvement] =
-                Helper::EnergyBandCalculator.domestic(
-                  improvement[:energy_performance_rating_improvement],
-                )
+                Helper::EnergyBandCalculator.domestic(improvement[:energy_performance_rating_improvement])
               improvement
             end,
           lzc_energy_sources: @view_model.lzc_energy_sources,
