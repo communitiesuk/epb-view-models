@@ -21,6 +21,6 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = %w[lib]
 
-  spec.add_dependency "nokogiri", "~> 1.11"
+  spec.add_dependency "nokogiri", "~> 1.16"
   spec.add_dependency "zeitwerk", "~> 2.6"
 end

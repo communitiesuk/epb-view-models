@@ -10,6 +10,6 @@ group :test do
   gem "rubocop-govuk", "~> 4.7.0", require: false
 end
 
-gem "nokogiri", "~> 1.11"
+gem "nokogiri", "~> 1.16"
 gem "rexml", "~> 3.2", ">= 3.2.5"
 gem "zeitwerk", "~> 2.6"
