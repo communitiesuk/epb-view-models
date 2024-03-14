@@ -22,7 +22,7 @@ module Presenter
                                                         preferred_keys: @preferred_keys,
                                                         list_nodes: @list_nodes,
                                                         rootless_list_nodes: @rootless_list_nodes
-        @sax_parser ||= Nokogiri::XML::SAX::Parser.new @assessment_document
+        @sax_parser ||= Nokogiri::XML::SAX::Parser.new(@assessment_document) { |config| config.huge.strict }
       end
 
     private
@@ -40,7 +40,7 @@ module Presenter
         @preferred_keys = preferred_keys
         @list_nodes = list_nodes
         @rootless_list_nodes = rootless_list_nodes
-        super()
+        super() { |config| config.huge.strict }
       end
 
       def start_document
