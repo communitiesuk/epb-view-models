@@ -32,7 +32,7 @@ module Presenter
         xml = ERB.new(get_template).result_with_hash dec_data
 
         if !@view_model.respond_to?(:dec_status) || @view_model.dec_status.nil?
-          doc = Nokogiri.XML(xml)
+          doc = Nokogiri.XML(xml) { |config| config.huge.strict }
           doc.at("DEC-Status").remove
           xml = doc.to_xml
         end

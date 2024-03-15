@@ -65,7 +65,7 @@ module ViewModel
       # Hack to use symbols, we need to update all callers to use symbols instead
       schema_type = schema_type.to_sym
 
-      xml_doc = Nokogiri.XML(xml).remove_namespaces!
+      xml_doc = Nokogiri.XML(xml, nil, nil, Nokogiri::XML::ParseOptions.new.huge.strict).remove_namespaces!
 
       if TYPES_OF_CEPC.include?(schema_type)
         filtered_results =

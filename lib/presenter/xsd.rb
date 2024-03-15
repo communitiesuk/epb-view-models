@@ -54,7 +54,7 @@ module Presenter
     end
 
     def read_xml(file_name, node_name, node_hash)
-      doc = Nokogiri.XML(File.read(file_name))
+      doc = Nokogiri.XML(File.read(file_name)) { |config| config.huge.strict }
       enums_hash = {}
 
       doc.xpath(node_name).each do |node|
