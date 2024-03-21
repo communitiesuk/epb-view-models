@@ -297,8 +297,9 @@ RSpec.describe ViewModel::AcReportWrapper do
               },
               f_gas_inspection: {
                 note:
-                  "The system operated using refrigerant which is not banned.",
+                  "The system is installed with 4.7kg of R22.",
                 state: true,
+                guidance: "R22 is an ODS (Ozone Depleting Substance)",
               },
               guidance: [
                 {
@@ -481,6 +482,7 @@ RSpec.describe ViewModel::AcReportWrapper do
                 note:
                   "The system operated using refrigerant which is not banned.",
                 state: true,
+                guidance: "This refrigerant is considered satisfactory and not presently proposed to be banned or phased out.",
               },
               guidance: [
                 {

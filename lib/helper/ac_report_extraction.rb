@@ -103,7 +103,7 @@ module Helper
           refrigerant_name:
             xpath(%w[ACI-Cooling-Plant-Refrigeration/Refrigerant-Name], node),
           f_gas_inspection:
-            checklist_values(node.at("ACI-Cooling-Plant-Refrigeration"))[
+            checklist_values_with_guidance(node.at("ACI-Cooling-Plant-Refrigeration"))[
               :f_gas_inspection
             ],
           pre_compressor:
