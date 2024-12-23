@@ -1,0 +1,227 @@
+{
+  "type_of_assessment":"SAP",
+  "assessment_id":"0000-0000-0000-0000-0000",
+  "date_of_expiry":"2030-05-03",
+  "date_of_assessment":"2020-05-04",
+  "date_of_registration":"2020-05-04",
+  "date_registered":"2020-05-04",
+  "address_id":"LPRN-0000000000",
+  "address_line1":"1 Some Street",
+  "address_line2":"Some Area",
+  "address_line3":"Some County",
+  "address_line4":null,
+  "town":"Whitbury",
+  "postcode":"A0 0AA",
+  "address":{
+    "address_id":"LPRN-0000000000",
+    "address_line1":"1 Some Street",
+    "address_line2":"Some Area",
+    "address_line3":"Some County",
+    "address_line4":null,
+    "town":"Whitbury",
+    "postcode":"A0 0AA"
+  },
+  "assessor":{
+    "scheme_assessor_id":"SPEC000000",
+    "name":"Mr Test Boi TST",
+    "contact_details":{
+      "email":"a@b.c",
+      "telephone":"111222333"
+    }
+  },
+  "current_carbon_emission":2.4,
+  "current_energy_efficiency_band":"e",
+  "current_energy_efficiency_rating":50,
+  "dwelling_type":"Mid-terrace house",
+  "estimated_energy_cost":"689.83",
+  "main_fuel_type":"36",
+  "heat_demand":{
+    "current_space_heating_demand":13120,
+    "current_water_heating_demand":2285,
+    "impact_of_cavity_insulation":null,
+    "impact_of_loft_insulation":null,
+    "impact_of_solid_wall_insulation":null
+  },
+  "heating_cost_current":"365.98",
+  "heating_cost_potential":"250.34",
+  "hot_water_cost_current":"200.40",
+  "hot_water_cost_potential":"180.43",
+  "lighting_cost_current":"123.45",
+  "lighting_cost_potential":"84.23",
+  "potential_carbon_emission":1.4,
+  "potential_energy_efficiency_band":"c",
+  "potential_energy_efficiency_rating":72,
+  "potential_energy_saving":"174.83",
+  "primary_energy_use":"230",
+  "energy_consumption_potential":"88",
+  "property_age_band":"1750",
+  "property_summary":[
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"walls",
+      "description":"Brick walls"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"walls",
+      "description":"Brick walls"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"roof",
+      "description":"Slate roof"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"roof",
+      "description":"slate roof"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"floor",
+      "description":"Tiled floor"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"floor",
+      "description":"Tiled floor"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"windows",
+      "description":"Glass window"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"main_heating",
+      "description":"Gas boiler"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"main_heating",
+      "description":"Gas boiler"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"main_heating_controls",
+      "description":"Thermostat"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"main_heating_controls",
+      "description":"Thermostat"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"secondary_heating",
+      "description":"Electric heater"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"hot_water",
+      "description":"Gas boiler"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"lighting",
+      "description":"Energy saving bulbs"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"air_tightness",
+      "description":"Draft Exclusion"
+    }
+  ],
+  "recommended_improvements":[
+    {
+      "energy_performance_rating_improvement":50,
+      "environmental_impact_rating_improvement":50,
+      "green_deal_category_code":null,
+      "improvement_category":"1",
+      "improvement_code":"5",
+      "improvement_description":null,
+      "improvement_title":"",
+      "improvement_type":"A",
+      "indicative_cost":"£100 - £350",
+      "sequence":1,
+      "typical_saving":"360",
+      "energy_performance_band_improvement":"e"
+    },
+    {
+      "energy_performance_rating_improvement":60,
+      "environmental_impact_rating_improvement":64,
+      "green_deal_category_code":null,
+      "improvement_category":"2",
+      "improvement_code":null,
+      "improvement_description":"Improvement desc",
+      "improvement_title":"",
+      "improvement_type":"B",
+      "indicative_cost":"2000",
+      "sequence":2,
+      "typical_saving":"99",
+      "energy_performance_band_improvement":"d"
+    }
+  ],
+  "lzc_energy_sources":[11],
+  "related_party_disclosure_number":1,
+  "related_party_disclosure_text":null,
+  "tenure":null,
+  "transaction_type":"1",
+  "total_floor_area":69.0,
+  "total_roof_area":12,
+  "status":"ENTERED",
+  "environmental_impact_current":52,
+  "environmental_impact_potential":93,
+  "co2_emissions_current_per_floor_area":"20",
+  "mains_gas":null,
+  "level":"1",
+  "top_storey":"N",
+  "storey_count":null,
+  "main_heating_controls":"Thermostat",
+  "multiple_glazed_proportion":null,
+  "glazed_area":null,
+  "habitable_room_count":null,
+  "heated_room_count":null,
+  "low_energy_lighting":"100",
+  "fixed_lighting_outlets_count":8,
+  "low_energy_fixed_lighting_outlets_count":8,
+  "open_fireplaces_count":0,
+  "hot_water_description":"Gas boiler",
+  "hot_water_energy_efficiency_rating":"0",
+  "hot_water_environmental_efficiency_rating":"0",
+  "window_description":"Glass window",
+  "window_energy_efficiency_rating":"0",
+  "window_environmental_efficiency_rating":"0",
+  "secondary_heating_description":"Electric heater",
+  "secondary_heating_energy_efficiency_rating":"0",
+  "secondary_heating_environmental_efficiency_rating":"0",
+  "lighting_description":"Energy saving bulbs",
+  "lighting_energy_efficiency_rating":"0",
+  "lighting_environmental_efficiency_rating":"0",
+  "photovoltaic_roof_area_percent":null,
+  "heat_loss_corridor":null,
+  "wind_turbine_count":0,
+  "unheated_corridor_length":null,
+  "built_form":"Detached",
+  "mainheat_description":"Gas boiler, Gas boiler",
+  "extensions_count":null,
+  "addendum":null,
+  "gas_smart_meter_present":null,
+  "electricity_smart_meter_present":null,
+  "country_code":"EAW"
+}
