@@ -52,9 +52,7 @@ def fetch_assertion(assertion, method_called, type)
 
   unless File.exist? assertion_path
     raise ArgumentError,
-          "No assertion found for schema #{schema}, create one at #{
-            assertion_path
-          }"
+          "No assertion found for schema #{assertion}, create one at #{assertion_path}"
   end
 
   json_assertion = File.read assertion_path
