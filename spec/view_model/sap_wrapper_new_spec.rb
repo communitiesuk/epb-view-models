@@ -2,7 +2,7 @@ require_relative "../wrapper_test_helper"
 
 RSpec.describe ViewModel::SapWrapper do
   context "when calling the sap wrapper for a valid schema" do
-    it "returns the expected assertion" do
+    it "returns the expected assertion for the to_hash method" do
       schema_tests = [
         { schema: "SAP-Schema-19.1.0", type: "epc", method_called: :to_hash },
         { schema: "SAP-Schema-19.0.0", type: "epc", method_called: :to_hash },
