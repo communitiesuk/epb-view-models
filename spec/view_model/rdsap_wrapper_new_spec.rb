@@ -22,6 +22,7 @@ RSpec.describe ViewModel::RdSapWrapper do
         { schema: "SAP-Schema-12.0", type: "rdsap", method_called: :to_hash },
         { schema: "SAP-Schema-11.2", type: "rdsap", method_called: :to_hash },
         { schema: "SAP-Schema-11.0", type: "rdsap", method_called: :to_hash },
+        { schema: "SAP-Schema-10.2", type: "rdsap", method_called: :to_hash },
         { schema: "RdSAP-Schema-NI-20.0.0", type: "epc", method_called: :to_hash },
         { schema: "RdSAP-Schema-NI-19.0", type: "epc", method_called: :to_hash },
         { schema: "RdSAP-Schema-NI-18.0", type: "epc", method_called: :to_hash },
