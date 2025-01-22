@@ -6,6 +6,7 @@ module ViewModel
       @schema_type = schema_type
       @view_model = build_view_model(xml_doc, schema_type, report_type)
       @summary = Presenter::Sap::Summary.new(view_model)
+      @certificate_summary = Presenter::Sap::CertificateSummary.new(view_model)
       @report = Presenter::Sap::Report.new(view_model, schema_type, additional_data)
       @recommendation_report = Presenter::Sap::RecommendationReport.new(view_model)
       @domestic_digest = Presenter::Sap::DomesticDigest.new(view_model, schema_type)
@@ -17,6 +18,10 @@ module ViewModel
 
     def to_hash
       @summary.to_hash
+    end
+
+    def to_certificate_summary
+      @certificate_summary.to_certificate_summary
     end
 
     def to_hash_ni
