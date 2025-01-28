@@ -1,0 +1,85 @@
+{
+  "type_of_assessment": "DEC-RR",
+  "assessment_id": "0000-0000-0000-0000-0000",
+  "report_type": "2",
+  "date_of_assessment": "2020-05-04",
+  "date_of_registration": "2020-05-04",
+  "date_of_expiry": "2030-05-03",
+  "address": {
+    "address_id": "UPRN-000000000001",
+    "address_line1": "Some Unit",
+    "address_line2": "2 Lonely Street",
+    "address_line3": "Some Area",
+    "address_line4": "Some County",
+    "town": "Fulchester",
+    "postcode": "A0 0AA"
+  },
+  "assessor": {
+    "scheme_assessor_id": "SPEC000000",
+    "name": "Mrs Report Writer",
+    "company_details": {
+      "name": "Trillian Certificates Plc",
+      "address": "123 My Street, My City, AB3 4CD"
+    },
+    "contact_details": {
+      "email": "a@b.c",
+      "telephone": "0555 497 2848"
+    }
+  },
+  "short_payback_recommendations": [
+    {
+      "code": "ECP-L5",
+      "text":
+      "Consider thinking about maybe possibly getting a solar panel but only one.",
+      "cO2Impact": "MEDIUM"
+    },
+    {
+      "code": "EPC-L7",
+      "text":
+      "Consider introducing variable speed drives (VSD) for fans, pumps and compressors.",
+      "cO2Impact": "LOW"
+    }
+  ],
+  "medium_payback_recommendations": [
+    {
+      "code": "ECP-C1",
+      "text":
+      "Engage experts to propose specific measures to reduce hot waterwastage and plan to carry this out.",
+      "cO2Impact": "LOW"
+    }
+  ],
+  "long_payback_recommendations": [
+    {
+      "code": "ECP-F4",
+      "text": "Consider replacing or improving glazing",
+      "cO2Impact": "LOW"
+    }
+  ],
+  "other_recommendations": [
+    { "code": "ECP-H2", "text": "Add a big wind turbine", "cO2Impact": "HIGH" }
+  ],
+  "technical_information": {
+    "building_environment": "Air Conditioning",
+    "floor_area": "10",
+    "occupier": "Primary School",
+    "property_type": "University campus",
+    "renewable_sources": "Renewable source",
+    "discounted_energy": "Special discount",
+    "date_of_issue": "2020-05-04",
+    "calculation_tool": "DCLG, ORCalc, v3.6.2",
+    "inspection_type": "Physical"
+  },
+  "site_service_one": {
+    "description": "Electricity",
+    "quantity": "751445"
+  },
+  "site_service_two": {
+    "description": "Gas",
+    "quantity": "72956"
+  },
+  "site_service_three": {
+    "description": "Not used",
+    "quantity": "0"
+  },
+  "related_rrn": null
+}
