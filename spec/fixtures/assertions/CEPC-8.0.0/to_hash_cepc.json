@@ -1,0 +1,48 @@
+{
+  "type_of_assessment": "CEPC",
+  "assessment_id": "0000-0000-0000-0000-0000",
+  "date_of_expiry": "2026-05-04",
+  "report_type": "3",
+  "date_of_assessment": "2020-05-04",
+  "date_of_registration": "2020-05-04",
+  "address": {
+    "address_id": "UPRN-000000000001",
+    "address_line1": "Some Unit",
+    "address_line2": "2 Lonely Street",
+    "address_line3": "Some Area",
+    "address_line4": "Some County",
+    "town": "Whitbury",
+    "postcode": "A0 0AA"
+  },
+  "technical_information": {
+    "main_heating_fuel": "Natural Gas",
+    "building_environment": "Air Conditioning",
+    "floor_area": "403",
+    "building_level": 3
+  },
+  "building_emission_rate": "67.09",
+  "primary_energy_use": "413.22",
+  "related_rrn": null,
+  "new_build_rating": 28,
+  "new_build_band": "b",
+  "existing_build_rating": 81,
+  "existing_build_band": "d",
+  "current_energy_efficiency_rating": 80,
+  "energy_efficiency_rating": 80,
+  "assessor": {
+    "scheme_assessor_id": "SPEC000000",
+    "name": "TEST NAME BOI",
+    "company_details": {
+      "name": "Trillian Certificates Plc",
+      "address": "123 My Street, My City, AB3 4CD"
+    },
+    "contact_details": {
+      "email": "a@b.c",
+      "telephone": "012345"
+    }
+  },
+  "related_party_disclosure": "1",
+  "current_energy_efficiency_band": "d",
+  "property_type": "B1 Offices and Workshop businesses",
+  "building_complexity": 3
+}
