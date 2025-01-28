@@ -1,0 +1,89 @@
+{
+  "type_of_assessment": "AC-REPORT",
+  "assessment_id": "0000-0000-0000-0000-0000",
+  "report_type": "5",
+  "date_of_assessment": "2020-05-20",
+  "related_rrn": "0000-0000-0000-0000-0001",
+  "date_of_expiry": "2030-05-04",
+  "date_of_registration": "2020-05-20",
+  "address": {
+    "address_id": "LPRN-432167890000",
+    "address_line1": "Some Unit",
+    "address_line2": "2 Lonely Street",
+    "address_line3": "Some Area",
+    "address_line4": "Some County",
+    "town": "Whitbury",
+    "postcode": "A0 0AA"
+  },
+  "related_party_disclosure": "No related Party",
+  "assessor": {
+    "scheme_assessor_id": "SPEC000000",
+    "name": "Test Assessor Name",
+    "contact_details": {
+      "email": "test@example.com",
+      "telephone": "07555 666777"
+    },
+    "company_details": {
+      "name": "Assess Energy Limited",
+      "address": "111 Twotwotwo Street, Mytown, MT7 1AA"
+    }
+  },
+  "executive_summary": "The objective and intention of the inspection and this report is to provide the client/end user with information relating to the installed Air Conditioning/Comfort Cooling systems (AC) and Ventilation Systems and endeavour to provide ideas and recommendations for the site to reduce its CO2 emissions, lower energy consumption and save money on energy bills.\n\n        BUILDING TYPE/DETAILS:\n\n        The site inspected was; A Shop located in London. The site was inspected on the 20th May 2019. The estimated total floor area provided with air conditioning/comfort cooling (AC) on site was circa; 1876m2.\n\n      ",
+  "key_recommendations": {
+    "efficiency": [
+      { "sequence": 0, "text": "A way to improve your efficiency" },
+      { "sequence": 1, "text": "A second way to improve efficiency" }
+    ],
+    "maintenance": [{ "sequence": 0, "text": "Text2" }],
+    "control": [{ "sequence": 0, "text": "Text4" }],
+    "management": [{ "sequence": 0, "text": "Text6" }]
+  },
+  "sub_systems": [],
+  "pre_inspection_checklist": {
+    "pcs": {
+      "essential": {
+        "list_of_systems": false,
+        "temperature_control_method": false,
+        "operation_control_method": false
+      },
+      "desirable": {
+        "previous_reports": false,
+        "maintenance_records": false,
+        "calibration_records": false,
+        "consumption_records": false
+      },
+      "optional": {
+        "cooling_load_estimate": false,
+        "complaint_records": false
+      }
+    },
+    "sccs": {
+      "essential": {
+        "list_of_systems": true,
+        "cooling_capacities": true,
+        "control_zones": true,
+        "temperature_controls": true,
+        "operation_controls": true,
+        "schematics": false
+      },
+      "desirable": {
+        "previous_reports": true,
+        "refrigeration_maintenance": false,
+        "delivery_system_maintenance": true,
+        "control_system_maintenance": true,
+        "consumption_records": true,
+        "commissioning_results": true
+      },
+      "optional": {
+        "cooling_load_estimate": true,
+        "complaint_records": true,
+        "bms_capability": true,
+        "monitoring_capability": true
+      }
+    }
+  },
+  "cooling_plants": [],
+  "air_handling_systems": [],
+  "terminal_units": [],
+  "system_controls": []
+}

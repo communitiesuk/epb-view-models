@@ -9,6 +9,7 @@ RSpec.describe ViewModel::AcReportWrapper do
         { schema: "CEPC-7.1", type: "ac-report", method_called: :to_hash },
         { schema: "CEPC-7.0", type: "ac-report", method_called: :to_hash },
         { schema: "CEPC-6.0", type: "ac-report", method_called: :to_hash },
+        { schema: "CEPC-5.1", type: "ac-report", method_called: :to_hash },
         { schema: "CEPC-5.0", type: "ac-report", method_called: :to_hash },
         { schema: "CEPC-4.0", type: "ac-report", method_called: :to_hash },
       ]
