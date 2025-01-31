@@ -917,6 +917,7 @@ RSpec.describe ViewModel::RdSapWrapper do
                                        indicative_cost: "1000",
                                        sequence: 3,
                                        typical_saving: "99" }],
+          photo_supply: "0"
         }
       end
 

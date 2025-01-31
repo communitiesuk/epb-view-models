@@ -45,6 +45,7 @@ module Presenter
               Helper::EnergyBandCalculator.domestic(improvement[:energy_performance_rating_improvement])
             improvement
           end,
+          photo_supply: @view_model.respond_to?(:photovoltaic_roof_area_percent) ? @view_model.photovoltaic_roof_area_percent : nil,
         }
       end
     end

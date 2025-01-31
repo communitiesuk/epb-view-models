@@ -3227,6 +3227,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
+            photo_supply: "0",
           },
         }
 
@@ -3353,6 +3354,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
+            photo_supply: "0"
           },
         }
 
@@ -3583,6 +3585,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
+            photo_supply: "0"
           },
         }
 
@@ -3814,6 +3817,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
+            photo_supply: "0"
           },
         }
 
@@ -4049,6 +4053,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
+            photo_supply: "0"
           },
         }
 
@@ -4285,6 +4290,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
+            photo_supply: "0"
           },
         }
 
@@ -4467,6 +4473,7 @@ RSpec.describe ViewModel::SapWrapper do
               typical_saving: "99",
             },
           ],
+          photo_supply: nil
         }
       end
 
