@@ -43,6 +43,7 @@ module Presenter
             improvement
           end,
           photo_supply: @view_model.respond_to?(:photovoltaic_roof_area_percent) ? @view_model.photovoltaic_roof_area_percent : nil,
+          main_heating_controls: @view_model.all_main_heating_controls_descriptions
         }
       end
     end
