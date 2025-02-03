@@ -3229,7 +3229,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
-            photo_supply: "0",
+            photo_supply: 0,
           },
         }
 
@@ -3356,7 +3356,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
-            photo_supply: "0"
+            photo_supply: 0
           },
         }
 
@@ -3588,7 +3588,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
-            photo_supply: "0",
+            photo_supply: 0,
             main_heating_controls: ["Thermostat"]
           },
         }
@@ -3822,7 +3822,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
-            photo_supply: "0",
+            photo_supply: 0,
             main_heating_controls: ["Thermostat"]
           },
         }
@@ -4060,7 +4060,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
-            photo_supply: "0",
+            photo_supply: 0,
             main_heating_controls: ["Thermostat"]
           },
         }
@@ -4299,7 +4299,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
-            photo_supply: "0",
+            photo_supply: 0,
             main_heating_controls: ["Thermostat"]
           },
         }
@@ -4484,7 +4484,7 @@ RSpec.describe ViewModel::SapWrapper do
             },
           ],
           photo_supply: nil,
-          main_heating_controls: ["Thermostat", "Thermostat"]
+          main_heating_controls: %w[Thermostat Thermostat]
         }
       end
 
