@@ -43,7 +43,7 @@ RSpec.describe ViewModel::SapWrapper do
       end
     end
 
-    it "returns the expected assertion for the to_new_summary method" do
+    it "returns the expected assertion for the to_create_summary method" do
       schema_tests = [
         { schema: "SAP-Schema-19.1.0", type: "epc", method_called: :to_certificate_summary },
         { schema: "SAP-Schema-19.0.0", type: "epc", method_called: :to_certificate_summary },
@@ -108,5 +108,30 @@ RSpec.describe ViewModel::SapWrapper do
       end
     end
 
+    it "returns the expected assertion for the to_report method" do
+      schema_tests = [
+        { schema: "SAP-Schema-19.1.0", type: "epc", method_called: :to_report },
+        { schema: "SAP-Schema-19.0.0", type: "epc", method_called: :to_report },
+        { schema: "SAP-Schema-18.0.0", type: "epc", method_called: :to_report },
+        { schema: "SAP-Schema-17.1", type: "epc", method_called: :to_report },
+        { schema: "SAP-Schema-17.0", type: "epc", method_called: :to_report },
+        { schema: "SAP-Schema-16.3", type: "sap", method_called: :to_report },
+        { schema: "SAP-Schema-16.2", type: "sap", method_called: :to_report },
+        { schema: "SAP-Schema-16.1", type: "sap", method_called: :to_report },
+        { schema: "SAP-Schema-16.0", type: "sap", method_called: :to_report },
+        { schema: "SAP-Schema-15.0", type: "sap", method_called: :to_report },
+        { schema: "SAP-Schema-14.2", type: "sap", method_called: :to_report },
+        { schema: "SAP-Schema-14.1", type: "sap", method_called: :to_report },
+        { schema: "SAP-Schema-14.0", type: "sap", method_called: :to_report },
+        { schema: "SAP-Schema-13.0", type: "sap", method_called: :to_report },
+        { schema: "SAP-Schema-12.0", type: "sap", method_called: :to_report },
+        { schema: "SAP-Schema-11.2", type: "sap", method_called: :to_report },
+        { schema: "SAP-Schema-11.0", type: "sap", method_called: :to_report }
+      ]
+
+      schema_tests.each do |schema|
+        test_wrapper(schema)
+      end
+    end
   end
 end
