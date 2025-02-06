@@ -83,5 +83,30 @@ RSpec.describe ViewModel::SapWrapper do
         test_wrapper(schema)
       end
     end
+
+    it "returns the expected assertion for the to_hash_ni method" do
+      schema_tests = [
+        { schema: "SAP-Schema-NI-18.0.0", type: "epc", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-17.4", type: "epc", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-17.3", type: "epc", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-17.2", type: "sap", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-17.1", type: "sap", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-17.0", type: "sap", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-16.1", type: "sap", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-16.0", type: "sap", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-15.0", type: "sap", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-14.2", type: "sap", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-14.1", type: "sap", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-14.0", type: "sap", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-13.0", type: "sap", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-12.0", type: "sap", method_called: :to_hash_ni },
+        { schema: "SAP-Schema-NI-11.2", type: "sap", method_called: :to_hash_ni },
+      ]
+
+      schema_tests.each do |schema|
+        test_wrapper(schema)
+      end
+    end
+
   end
 end
