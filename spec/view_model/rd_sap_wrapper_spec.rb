@@ -918,7 +918,7 @@ RSpec.describe ViewModel::RdSapWrapper do
                                        sequence: 3,
                                        typical_saving: "99" }],
           photo_supply: 0,
-          main_heating_controls: ["Programmer, room thermostat and TRVs", "Time and temperature zone control"]
+          main_heating_controls: ["Programmer, room thermostat and TRVs", "Time and temperature zone control"],
         }
       end
 

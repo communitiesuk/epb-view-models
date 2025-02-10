@@ -33,7 +33,7 @@ RSpec.describe Presenter::Xsd do
     end
   end
 
-  context "when traversing all the xsd for RdSAP type " do
+  context "when traversing all the xsd for RdSAP type" do
     let(:enums) { export.get_enums_by_type(ViewModelDomain::XsdArguments.new(simple_type: "SAP-BuiltFormCode", assessment_type: "RdSAP", xsd_dir_path: "/api/schemas/xml/RdSAP**/RdSAP/UDT/*-Domains.xsd")) }
 
     describe "#get_enums_by_type" do

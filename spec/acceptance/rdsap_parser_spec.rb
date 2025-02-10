@@ -1,6 +1,6 @@
 RSpec.describe "the parser and the rdsap configuration" do
   context "when loading xml from RdSap" do
-    let(:config)  do
+    let(:config) do
       Presenter::RdSap::ExportConfiguration.new
     end
 

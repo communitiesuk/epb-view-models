@@ -6,7 +6,7 @@ RSpec.describe ViewModel::Factory do
       xml_doc = Nokogiri.XML(Samples.xml("CEPC-8.0.0", "cepc"))
       factory = described_class.new
       result = factory.create(xml_doc.to_xml, "CEPC-8.0.0")
-      expect(result).to be_kind_of(ViewModel::CepcWrapper)
+      expect(result).to be_a(ViewModel::CepcWrapper)
     end
 
     it "can filter an xml document with multiple reports" do
@@ -30,7 +30,7 @@ RSpec.describe ViewModel::Factory do
       xml_doc = Nokogiri.XML(Samples.xml("SAP-Schema-19.1.0", "epc"))
       factory = described_class.new
       result = factory.create(xml_doc.to_xml, "SAP-Schema-19.1.0")
-      expect(result).to be_kind_of(ViewModel::SapWrapper)
+      expect(result).to be_a(ViewModel::SapWrapper)
     end
 
     it "can filter a domestic xml document with to_certificate_summary" do

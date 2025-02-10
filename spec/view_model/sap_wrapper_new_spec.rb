@@ -126,7 +126,7 @@ RSpec.describe ViewModel::SapWrapper do
         { schema: "SAP-Schema-13.0", type: "sap", method_called: :to_report },
         { schema: "SAP-Schema-12.0", type: "sap", method_called: :to_report },
         { schema: "SAP-Schema-11.2", type: "sap", method_called: :to_report },
-        { schema: "SAP-Schema-11.0", type: "sap", method_called: :to_report }
+        { schema: "SAP-Schema-11.0", type: "sap", method_called: :to_report },
       ]
 
       schema_tests.each do |schema|

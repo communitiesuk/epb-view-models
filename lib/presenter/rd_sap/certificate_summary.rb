@@ -47,7 +47,7 @@ module Presenter
             current_space_heating_demand:
               @view_model.current_space_heating_demand&.to_i,
             current_water_heating_demand:
-              @view_model.current_water_heating_demand&.to_i
+              @view_model.current_water_heating_demand&.to_i,
           },
           heating_cost_current: @view_model.heating_cost_current,
           heating_cost_potential: @view_model.heating_cost_potential,

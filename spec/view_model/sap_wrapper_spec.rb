@@ -3017,14 +3017,14 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "88",
               },
             ],
-            main_heating_controls: ["Programmer, room thermostat and TRVs"]
+            main_heating_controls: ["Programmer, room thermostat and TRVs"],
           },
         }
 
         is_18 = {
           different_fields: {
             main_heating_category: "heat pump with warm air distribution",
-            main_heating_controls: %w[Thermostat Thermostat]
+            main_heating_controls: %w[Thermostat Thermostat],
           },
         }
 
@@ -3356,7 +3356,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
-            photo_supply: 0
+            photo_supply: 0,
           },
         }
 
@@ -3473,7 +3473,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
-            main_heating_controls: ["Thermostat"]
+            main_heating_controls: %w[Thermostat],
           },
         }
 
@@ -3589,7 +3589,7 @@ RSpec.describe ViewModel::SapWrapper do
               },
             ],
             photo_supply: 0,
-            main_heating_controls: ["Thermostat"]
+            main_heating_controls: %w[Thermostat],
           },
         }
 
@@ -3707,7 +3707,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
-            main_heating_controls: ["Thermostat"]
+            main_heating_controls: %w[Thermostat],
           },
         }
 
@@ -3823,7 +3823,7 @@ RSpec.describe ViewModel::SapWrapper do
               },
             ],
             photo_supply: 0,
-            main_heating_controls: ["Thermostat"]
+            main_heating_controls: %w[Thermostat],
           },
         }
 
@@ -3943,7 +3943,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
-            main_heating_controls: ["Thermostat"]
+            main_heating_controls: %w[Thermostat],
           },
         }
 
@@ -4061,7 +4061,7 @@ RSpec.describe ViewModel::SapWrapper do
               },
             ],
             photo_supply: 0,
-            main_heating_controls: ["Thermostat"]
+            main_heating_controls: %w[Thermostat],
           },
         }
 
@@ -4181,7 +4181,7 @@ RSpec.describe ViewModel::SapWrapper do
                 typical_saving: "99",
               },
             ],
-            main_heating_controls: ["Thermostat"]
+            main_heating_controls: %w[Thermostat],
           },
         }
 
@@ -4300,7 +4300,7 @@ RSpec.describe ViewModel::SapWrapper do
               },
             ],
             photo_supply: 0,
-            main_heating_controls: ["Thermostat"]
+            main_heating_controls: %w[Thermostat],
           },
         }
 
@@ -4484,7 +4484,7 @@ RSpec.describe ViewModel::SapWrapper do
             },
           ],
           photo_supply: nil,
-          main_heating_controls: %w[Thermostat Thermostat]
+          main_heating_controls: %w[Thermostat Thermostat],
         }
       end
 
@@ -4494,7 +4494,7 @@ RSpec.describe ViewModel::SapWrapper do
         end
       end
 
-      it "reads the appropriate values", aggregate_failures: true do
+      it "reads the appropriate values", :aggregate_failures do
         test_xml_doc(schemas, assertion, :to_domestic_digest)
       end
     end

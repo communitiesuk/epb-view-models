@@ -208,7 +208,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       expect(described_class.fuel_type(1)).to be_nil
     end
 
-    it "returns rapeseed oil if the schema is  is not the correct type" do
+    it "returns rapeseed oil if the schema is not the correct type" do
       expect(described_class.fuel_type("36", :"SAP-Schema-16.3", "2")).to eq("rapeseed oil")
     end
 
@@ -242,14 +242,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
   end
 
   context "when the Glazing-Type XML value is passed to to the RdSAP glazed_type enum" do
-    it "does not find a value in the enum and returns nil", aggregate_failures: true do
+    it "does not find a value in the enum and returns nil", :aggregate_failures do
       expect(described_class.glazed_type_rdsap(nil)).to be_nil
       expect(
         described_class.glazed_type_rdsap("Any other value"),
       ).to be_nil
     end
 
-    it "and the value is in the lookup, it returns the expected string", aggregate_failures: true do
+    it "and the value is in the lookup, it returns the expected string", :aggregate_failures do
       expect(described_class.glazed_type_rdsap("1")).to eq(
         "double glazing installed before 2002",
       )
@@ -261,14 +261,14 @@ RSpec.describe Helper::XmlEnumsToOutput do
       )
     end
 
-    it "returns nil if the value is not the correct type", aggregate_failures: true do
+    it "returns nil if the value is not the correct type", :aggregate_failures do
       expect(
         described_class.glazed_type_rdsap({ "hash": "3" }),
       ).to be_nil
       expect(described_class.glazed_type_rdsap(3)).to be_nil
     end
 
-    it "returns the correct values for a scheme type greater than RdSAP20", aggregate_failures: true do
+    it "returns the correct values for a scheme type greater than RdSAP20", :aggregate_failures do
       expect(described_class.glazed_type_rdsap("6", :"RdSAP-Schema-21.0.0")).to eq("triple glazing, unknown install date")
       expect(described_class.glazed_type_rdsap("14", :"RdSAP-Schema-21.0.0")).to eq("triple glazing, installed during or after 2022 in EAW, 2023 in SCT, 2022 NI")
     end
@@ -314,7 +314,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
   end
 
   context "when the Transaction-Type xml value is passed to the transaction type enum" do
-    it "and the value is in the lookup, it returns the expected string", aggregate_failures: true do
+    it "and the value is in the lookup, it returns the expected string", :aggregate_failures do
       expect(described_class.transaction_type("1")).to eq(
         "marketed sale",
       )
@@ -367,7 +367,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       ).to eq("England and Wales: 1930-1949")
     end
 
-    it "returns the expected description for K values", aggregate_failures: true do
+    it "returns the expected description for K values", :aggregate_failures do
       expect(
         described_class.construction_age_band_lookup(
           "K",
@@ -446,7 +446,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       ).to eq("England and Wales: 2007-2011")
     end
 
-    it "returns the expected description for L values", aggregate_failures: true do
+    it "returns the expected description for L values", :aggregate_failures do
       expect(
         described_class.construction_age_band_lookup(
           "L",
@@ -726,7 +726,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       ).to eq("Any other value")
     end
 
-    it "and the value is in the lookup, it returns the expected string", aggregate_failures: true do
+    it "and the value is in the lookup, it returns the expected string", :aggregate_failures do
       expect(described_class.heat_loss_corridor("0")).to eq(
         "no corridor",
       )
@@ -739,7 +739,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
   end
 
   context "when the Mechanical-Ventilation xml value is passed to the mechanical ventilation enum" do
-    it "does not find a value in the enum and returns nil", aggregate_failures: true do
+    it "does not find a value in the enum and returns nil", :aggregate_failures do
       expect(
         described_class.mechanical_ventilation(
           nil,
@@ -756,7 +756,7 @@ RSpec.describe Helper::XmlEnumsToOutput do
       ).to eq("Any other value")
     end
 
-    it "and the value is in the lookup, it returns the expected string", aggregate_failures: true do
+    it "and the value is in the lookup, it returns the expected string", :aggregate_failures do
       expect(
         described_class.mechanical_ventilation(
           "0",

@@ -39,7 +39,7 @@ RSpec.describe ViewModel::RdSapWrapper do
         { schema: "SAP-Schema-NI-14.0", type: "rdsap", method_called: :to_hash },
         { schema: "SAP-Schema-NI-13.0", type: "rdsap", method_called: :to_hash },
         { schema: "SAP-Schema-NI-12.0", type: "rdsap", method_called: :to_hash },
-        { schema: "SAP-Schema-NI-11.2", type: "rdsap", method_called: :to_hash }
+        { schema: "SAP-Schema-NI-11.2", type: "rdsap", method_called: :to_hash },
       ]
 
       schema_tests.each do |schema|
@@ -84,7 +84,7 @@ RSpec.describe ViewModel::RdSapWrapper do
         { schema: "SAP-Schema-NI-14.0", type: "rdsap", method_called: :to_certificate_summary },
         { schema: "SAP-Schema-NI-13.0", type: "rdsap", method_called: :to_certificate_summary },
         { schema: "SAP-Schema-NI-12.0", type: "rdsap", method_called: :to_certificate_summary },
-        { schema: "SAP-Schema-NI-11.2", type: "rdsap", method_called: :to_certificate_summary }
+        { schema: "SAP-Schema-NI-11.2", type: "rdsap", method_called: :to_certificate_summary },
       ]
 
       schema_tests.each do |schema|
@@ -110,7 +110,7 @@ RSpec.describe ViewModel::RdSapWrapper do
         { schema: "SAP-Schema-NI-14.0", type: "rdsap", method_called: :to_hash_ni },
         { schema: "SAP-Schema-NI-13.0", type: "rdsap", method_called: :to_hash_ni },
         { schema: "SAP-Schema-NI-12.0", type: "rdsap", method_called: :to_hash_ni },
-        { schema: "SAP-Schema-NI-11.2", type: "rdsap", method_called: :to_hash_ni }
+        { schema: "SAP-Schema-NI-11.2", type: "rdsap", method_called: :to_hash_ni },
       ]
 
       schema_tests.each do |schema|
@@ -138,7 +138,7 @@ RSpec.describe ViewModel::RdSapWrapper do
         { schema: "SAP-Schema-12.0", type: "rdsap", method_called: :to_report },
         { schema: "SAP-Schema-11.2", type: "rdsap", method_called: :to_report },
         { schema: "SAP-Schema-11.0", type: "rdsap", method_called: :to_report },
-        { schema: "SAP-Schema-10.2", type: "rdsap", method_called: :to_report }
+        { schema: "SAP-Schema-10.2", type: "rdsap", method_called: :to_report },
       ]
 
       schema_tests.each do |schema|
