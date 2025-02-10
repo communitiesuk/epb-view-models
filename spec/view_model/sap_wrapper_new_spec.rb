@@ -2,7 +2,7 @@ require_relative "../wrapper_test_helper"
 
 RSpec.describe ViewModel::SapWrapper do
   context "when calling the sap wrapper for a valid schema" do
-    it "returns the expected assertion for the to_hash method" do
+    it "returns the expected assertion for the to_hash method", :aggregate_failures do
       schema_tests = [
         { schema: "SAP-Schema-19.1.0", type: "epc", method_called: :to_hash },
         { schema: "SAP-Schema-19.0.0", type: "epc", method_called: :to_hash },
@@ -43,7 +43,7 @@ RSpec.describe ViewModel::SapWrapper do
       end
     end
 
-    it "returns the expected assertion for the to_create_summary method" do
+    it "returns the expected assertion for the to_create_summary method", :aggregate_failures do
       schema_tests = [
         { schema: "SAP-Schema-19.1.0", type: "epc", method_called: :to_certificate_summary },
         { schema: "SAP-Schema-19.0.0", type: "epc", method_called: :to_certificate_summary },
@@ -84,7 +84,7 @@ RSpec.describe ViewModel::SapWrapper do
       end
     end
 
-    it "returns the expected assertion for the to_hash_ni method" do
+    it "returns the expected assertion for the to_hash_ni method", :aggregate_failures do
       schema_tests = [
         { schema: "SAP-Schema-NI-18.0.0", type: "epc", method_called: :to_hash_ni },
         { schema: "SAP-Schema-NI-17.4", type: "epc", method_called: :to_hash_ni },
@@ -108,7 +108,7 @@ RSpec.describe ViewModel::SapWrapper do
       end
     end
 
-    it "returns the expected assertion for the to_report method" do
+    it "returns the expected assertion for the to_report method", :aggregate_failures do
       schema_tests = [
         { schema: "SAP-Schema-19.1.0", type: "epc", method_called: :to_report },
         { schema: "SAP-Schema-19.0.0", type: "epc", method_called: :to_report },
