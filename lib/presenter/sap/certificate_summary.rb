@@ -76,12 +76,13 @@ module Presenter
             @view_model.related_party_disclosure_text,
           total_floor_area: convert_to_big_decimal(@view_model.total_floor_area),
           status: @view_model.status,
-          co2_emissions_current_per_floor_area:
-            @view_model.co2_emissions_current_per_floor_area,
+          environmental_impact_current: @view_model.environmental_impact_current,
+          environmental_impact_potential:
+            @view_model.environmental_impact_potential,
+          primary_energy_use: @view_model.respond_to?(:primary_energy_use) ? @view_model.primary_energy_use : nil,
           addendum: @view_model.addendum,
           gas_smart_meter_present: @view_model.respond_to?(:gas_smart_meter_present) ? @view_model.gas_smart_meter_present : nil,
           electricity_smart_meter_present: @view_model.respond_to?(:electricity_smart_meter_present) ? @view_model.electricity_smart_meter_present : nil,
-          country_code: @view_model.country_code,
         }
       end
 

@@ -136,9 +136,10 @@
   "related_party_disclosure_text":null,
   "total_floor_area":165,
   "status":"ENTERED",
-  "co2_emissions_current_per_floor_area":"5.6",
+  "environmental_impact_current": 94,
+  "environmental_impact_potential": 96,
+  "primary_energy_use": "59",
   "addendum":null,
   "gas_smart_meter_present":false,
-  "electricity_smart_meter_present":false,
-  "country_code":"ENG"
+  "electricity_smart_meter_present":false
 }

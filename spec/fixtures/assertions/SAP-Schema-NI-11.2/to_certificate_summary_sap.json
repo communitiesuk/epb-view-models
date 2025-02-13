@@ -154,9 +154,10 @@
   "related_party_disclosure_text":"Not related to owner",
   "total_floor_area":98.0,
   "status":"ENTERED",
-  "co2_emissions_current_per_floor_area":null,
+  "environmental_impact_current": 52,
+  "environmental_impact_potential": 93,
+  "primary_energy_use": "230",
   "addendum":null,
   "gas_smart_meter_present":null,
-  "electricity_smart_meter_present":null,
-  "country_code":"EAW"
+  "electricity_smart_meter_present":null
 }
