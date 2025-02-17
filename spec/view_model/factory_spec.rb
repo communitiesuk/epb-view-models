@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe ViewModel::Factory do
-  context "it constructs an object from commercial xml" do
+  context "when constructing an object from a commercial xml" do
     it "constructs a CEPC object for CEPC-8.0.0 xml" do
       xml_doc = Nokogiri.XML(Samples.xml("CEPC-8.0.0", "cepc"))
       factory = described_class.new
@@ -25,7 +25,7 @@ RSpec.describe ViewModel::Factory do
     end
   end
 
-  context "it constructs an object from domestic xml" do
+  context "when constructing an object from a domestic xml" do
     it "constructs a SAP object for SAP-Schema-19.1.0 xml" do
       xml_doc = Nokogiri.XML(Samples.xml("SAP-Schema-19.1.0", "epc"))
       factory = described_class.new

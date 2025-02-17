@@ -1,5 +1,6 @@
 require_relative "../wrapper_test_helper"
 
+# rubocop:disable RSpec/SpecFilePathFormat
 RSpec.describe ViewModel::RdSapWrapper do
   context "when calling the RdSAP wrapper for a valid schema" do
     it "returns the expected assertion for the to_hash method", :aggregate_failures do
@@ -43,7 +44,7 @@ RSpec.describe ViewModel::RdSapWrapper do
       ]
 
       schema_tests.each do |schema|
-        test_wrapper(schema)
+        expect { test_wrapper(schema) }.not_to raise_error
       end
     end
 
@@ -88,7 +89,7 @@ RSpec.describe ViewModel::RdSapWrapper do
       ]
 
       schema_tests.each do |schema|
-        test_wrapper(schema)
+        expect { test_wrapper(schema) }.not_to raise_error
       end
     end
 
@@ -114,7 +115,7 @@ RSpec.describe ViewModel::RdSapWrapper do
       ]
 
       schema_tests.each do |schema|
-        test_wrapper(schema)
+        expect { test_wrapper(schema) }.not_to raise_error
       end
     end
 
@@ -142,8 +143,10 @@ RSpec.describe ViewModel::RdSapWrapper do
       ]
 
       schema_tests.each do |schema|
-        test_wrapper(schema)
+        expect { test_wrapper(schema) }.not_to raise_error
       end
     end
   end
 end
+
+# rubocop:enable RSpec/SpecFilePathFormat

@@ -206,7 +206,7 @@ RSpec.describe ViewModel::DecWrapper do
     end
 
     it "reads the appropriate values" do
-      test_xml_doc(schemas, assertion)
+      expect { test_xml_doc(schemas, assertion) }.not_to raise_error
     end
   end
 
@@ -428,13 +428,13 @@ RSpec.describe ViewModel::DecWrapper do
     end
 
     it "reads the appropriate values" do
-      test_xml_doc(schemas, assertion, :to_report, additional_data)
+      expect { test_xml_doc(schemas, assertion, :to_report, additional_data) }.not_to raise_error
     end
   end
 
   it "returns the expect view_model_boundary without a valid schema type" do
     expect {
       described_class.new "", "invalid", {}
-    }.to raise_error.with_message "Unsupported schema type"
+    }.to raise_error("Unsupported schema type")
   end
 end

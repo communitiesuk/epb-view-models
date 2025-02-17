@@ -7,7 +7,7 @@ RSpec.describe "Helper::EnergyBandCalculator" do
     end
 
     it "returns nil for a nil rating" do
-      expect(Helper::EnergyBandCalculator.domestic(nil)).to eq(nil)
+      expect(Helper::EnergyBandCalculator.domestic(nil)).to be_nil
     end
   end
 
@@ -25,7 +25,7 @@ RSpec.describe "Helper::EnergyBandCalculator" do
     end
 
     it "returns nil for a nil rating" do
-      expect(Helper::EnergyBandCalculator.commercial(nil)).to eq(nil)
+      expect(Helper::EnergyBandCalculator.commercial(nil)).to be_nil
     end
   end
 end

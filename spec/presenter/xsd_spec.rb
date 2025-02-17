@@ -95,7 +95,7 @@ RSpec.describe Presenter::Xsd do
                                           "6" => "Enclosed Mid-Terrace",
                                           "NR" => "Not Recorded" } }
 
-        expect(export.variation_between_schema_versions?(enums_hash)).to eq(false)
+        expect(export.variation_between_schema_versions?(enums_hash)).to be(false)
       end
 
       it "returns true if there are variations between schema versions" do
@@ -114,7 +114,7 @@ RSpec.describe Presenter::Xsd do
                                           "6" => "Enclosed Mid-Terrace",
                                           "NR" => "Not Recorded" } }
 
-        expect(export.variation_between_schema_versions?(enums_hash)).to eq(true)
+        expect(export.variation_between_schema_versions?(enums_hash)).to be(true)
       end
     end
   end

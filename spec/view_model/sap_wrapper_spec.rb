@@ -1116,7 +1116,7 @@ RSpec.describe ViewModel::SapWrapper do
       end
 
       it "reads the appropriate values" do
-        test_xml_doc(schemas, assertion)
+        expect { test_xml_doc(schemas, assertion) }.not_to raise_error
       end
     end
 
@@ -1989,7 +1989,7 @@ RSpec.describe ViewModel::SapWrapper do
       end
 
       it "reads the appropriate values" do
-        test_xml_doc(schemas, assertion, :to_hash_ni)
+        expect { test_xml_doc(schemas, assertion, :to_hash_ni) }.not_to raise_error
       end
     end
 
@@ -2781,7 +2781,7 @@ RSpec.describe ViewModel::SapWrapper do
       end
 
       it "reads the appropriate values" do
-        test_xml_doc(schemas, assertion, :to_report, additional_data)
+        expect { test_xml_doc(schemas, assertion, :to_report, additional_data) }.not_to raise_error
       end
     end
 
@@ -2910,7 +2910,7 @@ RSpec.describe ViewModel::SapWrapper do
       end
 
       it "reads the appropriate values" do
-        test_xml_doc(schemas, recommendation_assertion, :to_recommendation_report)
+        expect { test_xml_doc(schemas, recommendation_assertion, :to_recommendation_report) }.not_to raise_error
       end
     end
 
@@ -4495,7 +4495,7 @@ RSpec.describe ViewModel::SapWrapper do
       end
 
       it "reads the appropriate values", :aggregate_failures do
-        test_xml_doc(schemas, assertion, :to_domestic_digest)
+        expect { test_xml_doc(schemas, assertion, :to_domestic_digest) }.not_to raise_error
       end
     end
   end
@@ -5372,7 +5372,7 @@ RSpec.describe ViewModel::SapWrapper do
       end
 
       it "reads the appropriate values" do
-        test_xml_doc(schemas, assertion)
+        expect { test_xml_doc(schemas, assertion) }.not_to raise_error
       end
     end
 
@@ -6174,7 +6174,7 @@ RSpec.describe ViewModel::SapWrapper do
       end
 
       it "reads the appropriate values" do
-        test_xml_doc(schemas, assertion, :to_hash_ni)
+        expect { test_xml_doc(schemas, assertion, :to_hash_ni) }.not_to raise_error
       end
     end
 
@@ -6855,7 +6855,7 @@ RSpec.describe ViewModel::SapWrapper do
       end
 
       it "reads the appropriate values" do
-        test_xml_doc(schemas, assertion, :to_report, additional_data)
+        expect { test_xml_doc(schemas, assertion, :to_report, additional_data) }.not_to raise_error
       end
     end
   end

@@ -39,7 +39,7 @@ RSpec.describe ViewModel::SapWrapper do
       ]
 
       schema_tests.each do |schema|
-        test_wrapper(schema)
+        expect { test_wrapper(schema) }.not_to raise_error
       end
     end
 
@@ -80,7 +80,7 @@ RSpec.describe ViewModel::SapWrapper do
       ]
 
       schema_tests.each do |schema|
-        test_wrapper(schema)
+        expect { test_wrapper(schema) }.not_to raise_error
       end
     end
 
@@ -104,7 +104,7 @@ RSpec.describe ViewModel::SapWrapper do
       ]
 
       schema_tests.each do |schema|
-        test_wrapper(schema)
+        expect { test_wrapper(schema) }.not_to raise_error
       end
     end
 
@@ -130,7 +130,7 @@ RSpec.describe ViewModel::SapWrapper do
       ]
 
       schema_tests.each do |schema|
-        test_wrapper(schema)
+        expect { test_wrapper(schema) }.not_to raise_error
       end
     end
   end

@@ -221,7 +221,7 @@ RSpec.describe ViewModel::DecRrWrapper do
     end
 
     it "reads the appropriate values" do
-      test_xml_doc(schemas, assertion)
+      expect { test_xml_doc(schemas, assertion) }.not_to raise_error
     end
   end
 
@@ -400,7 +400,7 @@ RSpec.describe ViewModel::DecRrWrapper do
     end
 
     it "reads the appropriate values" do
-      test_xml_doc(schemas, assertion, :to_report)
+      expect { test_xml_doc(schemas, assertion, :to_report) }.not_to raise_error
     end
   end
 

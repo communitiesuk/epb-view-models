@@ -11,7 +11,7 @@ RSpec.describe ViewModel::AcCertWrapper do
       ]
 
       schema_tests.each do |schema|
-        test_wrapper(schema)
+        expect { test_wrapper(schema) }.not_to raise_error
       end
     end
   end
