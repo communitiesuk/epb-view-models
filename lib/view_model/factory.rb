@@ -20,6 +20,7 @@ module ViewModel
       RdSAP-Schema-18.0
       RdSAP-Schema-17.1
       RdSAP-Schema-17.0
+      RdSAP-Schema-NI-21.0.0
       RdSAP-Schema-NI-20.0.0
       RdSAP-Schema-NI-19.0
       RdSAP-Schema-NI-18.0

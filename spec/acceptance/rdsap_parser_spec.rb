@@ -25,5 +25,15 @@ RSpec.describe "the parser and the rdsap configuration" do
         expect { parser.parse(rdsap) }.not_to raise_error
       end
     end
+
+    context "when parsing RdSAP-Schema-NI-21.0.0" do
+      let(:rdsap) do
+        Samples.xml("RdSAP-Schema-NI-21.0.0")
+      end
+
+      it "parses the document in the expected format" do
+        expect { parser.parse(rdsap) }.not_to raise_error
+      end
+    end
   end
 end

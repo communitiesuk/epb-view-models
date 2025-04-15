@@ -136,6 +136,7 @@ module Helper
       "K-SAP-NI" => "Northern Ireland: 2007 onwards",
       "K-12.0" => "Post-2006",
       "L" => "Northern Ireland: 2014 onwards",
+      "M" => "Northern Ireland: 2022 onwards",
       "0" => "Not applicable",
       "NR" => "Not recorded",
     }.freeze
@@ -347,6 +348,7 @@ module Helper
 
     def self.transaction_type(value, report_type = "2", schema_type = "")
       types_of_ni = %i[
+        RdSAP-Schema-NI-21.0.0
         RdSAP-Schema-NI-20.0.0
         RdSAP-Schema-NI-19.0
         RdSAP-Schema-NI-18.0
@@ -446,6 +448,7 @@ module Helper
       ]
 
       rdsap_schemas_ni = %i[
+        RdSAP-Schema-NI-21.0.0
         RdSAP-Schema-NI-20.0.0
         RdSAP-Schema-NI-19.0
         RdSAP-Schema-NI-18.0
@@ -575,6 +578,7 @@ module Helper
         RdSAP-Schema-18.0
         RdSAP-Schema-17.1
         RdSAP-Schema-17.0
+        RdSAP-Schema-NI-21.0.0
         RdSAP-Schema-NI-20.0.0
         RdSAP-Schema-NI-19.0
         RdSAP-Schema-NI-18.0
@@ -673,6 +677,7 @@ module Helper
     def self.schemas_post_20
       %i[
         RdSAP-Schema-21.0.0
+        RdSAP-Schema-NI-21.0.0
       ]
     end
 
