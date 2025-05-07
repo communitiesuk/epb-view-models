@@ -241,6 +241,8 @@ module ViewModel
         when "3"
           return ViewModel::SapSchemaNi112::Sap.new(xml_doc)
         end
+      when :"SAP-Schema-S-19.0.0"
+        return ViewModel::SapSchemaS1900::CommonSchema.new xml_doc
       end
 
       raise ArgumentError, "Unsupported schema type"

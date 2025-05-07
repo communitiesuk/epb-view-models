@@ -36,6 +36,7 @@ RSpec.describe ViewModel::SapWrapper do
         { schema: "SAP-Schema-NI-13.0", type: "sap", method_called: :to_hash },
         { schema: "SAP-Schema-NI-12.0", type: "sap", method_called: :to_hash },
         { schema: "SAP-Schema-NI-11.2", type: "sap", method_called: :to_hash },
+        { schema: "SAP-Schema-S-19.0.0", type: "epc", method_called: :to_hash },
       ]
 
       schema_tests.each do |schema|

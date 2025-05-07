@@ -1,0 +1,170 @@
+{
+  "type_of_assessment": "SAP",
+  "assessment_id": "0000-0000-0000-0000-0000",
+  "date_of_expiry": "2034-11-20",
+  "date_of_assessment": "2024-11-21",
+  "date_of_registration": "2024-11-21",
+  "date_registered": "2024-11-21",
+  "address_id": "0000000001",
+  "address_line1": "1 LOVELY ROAD",
+  "address_line2": "NICE ESTATE",
+  "address_line3": "",
+  "address_line4": null,
+  "town": "TOWN",
+  "postcode": "EH1 2NG",
+  "address": {
+    "address_id": "0000000001",
+    "address_line1": "1 LOVELY ROAD",
+    "address_line2": "NICE ESTATE",
+    "address_line3": "",
+    "address_line4": null,
+    "town": "TOWN",
+    "postcode": "EH1 2NG"
+  },
+  "assessor": {
+    "scheme_assessor_id": null,
+    "name": "Testa Sessor",
+    "contact_details": {
+      "email": "a@b.c",
+      "telephone": "111222333"
+    }
+  },
+  "current_carbon_emission": 0.22e1,
+  "current_energy_efficiency_band": "b",
+  "current_energy_efficiency_rating": 91,
+  "dwelling_type": "Detached house",
+  "estimated_energy_cost": "837.00",
+  "main_fuel_type": "1",
+  "heat_demand": {
+    "current_space_heating_demand": null,
+    "current_water_heating_demand": null,
+    "impact_of_cavity_insulation": null,
+    "impact_of_loft_insulation": null,
+    "impact_of_solid_wall_insulation": null
+  },
+  "heating_cost_current": "603",
+  "heating_cost_potential": "603",
+  "hot_water_cost_current": "152",
+  "hot_water_cost_potential": "152",
+  "lighting_cost_current": "82",
+  "lighting_cost_potential": "82",
+  "potential_carbon_emission": 0.22e1,
+  "potential_energy_efficiency_band": "b",
+  "potential_energy_efficiency_rating": 91,
+  "potential_energy_saving": "0.00",
+  "primary_energy_use": "63",
+  "energy_consumption_potential": "63",
+  "property_age_band": "2024",
+  "property_summary": [
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "walls",
+      "description": "Average thermal transmittance 0.21 W/m²K"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "roof",
+      "description": "Average thermal transmittance 0.14 W/m²K"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "floor",
+      "description": "Average thermal transmittance 0.16 W/m²K"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "windows",
+      "description": "High performance glazing"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 4,
+      "name": "main_heating",
+      "description": "Boiler and radiators, mains gas"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "main_heating_controls",
+      "description": "Time and temperature zone control"
+    },
+    {
+      "energy_efficiency_rating": 0,
+      "environmental_efficiency_rating": 0,
+      "name": "secondary_heating",
+      "description": "None"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "hot_water",
+      "description": "From main system"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "lighting",
+      "description": "Excelent lighting efficiency"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "air_tightness",
+      "description": "Air permeability [AP50] = 4.0 m³/h.m² (as tested)"
+    }
+  ],
+  "recommended_improvements": [],
+  "lzc_energy_sources": [
+    11
+  ],
+  "related_party_disclosure_number": 1,
+  "related_party_disclosure_text": null,
+  "tenure": "ND",
+  "transaction_type": "6",
+  "total_floor_area": 0.184e3,
+  "total_roof_area": 107,
+  "status": "ENTERED",
+  "environmental_impact_current": 88,
+  "environmental_impact_potential": 88,
+  "co2_emissions_current_per_floor_area": "12.1",
+  "mains_gas": null,
+  "level": null,
+  "top_storey": "N",
+  "storey_count": null,
+  "main_heating_controls": "Time and temperature zone control",
+  "multiple_glazed_proportion": "100",
+  "glazed_area": null,
+  "habitable_room_count": null,
+  "heated_room_count": null,
+  "low_energy_lighting": 100,
+  "fixed_lighting_outlets_count": 19,
+  "low_energy_fixed_lighting_outlets_count": 19,
+  "open_fireplaces_count": 0,
+  "hot_water_description": "From main system",
+  "hot_water_energy_efficiency_rating": "4",
+  "hot_water_environmental_efficiency_rating": "4",
+  "window_description": "High performance glazing",
+  "window_energy_efficiency_rating": "4",
+  "window_environmental_efficiency_rating": "4",
+  "secondary_heating_description": "None",
+  "secondary_heating_energy_efficiency_rating": "0",
+  "secondary_heating_environmental_efficiency_rating": "0",
+  "lighting_description": "Excelent lighting efficiency",
+  "lighting_energy_efficiency_rating": "5",
+  "lighting_environmental_efficiency_rating": "5",
+  "photovoltaic_roof_area_percent": null,
+  "heat_loss_corridor": null,
+  "wind_turbine_count": 0,
+  "unheated_corridor_length": null,
+  "built_form": "Detached",
+  "mainheat_description": "Boiler and radiators, mains gas",
+  "extensions_count": null,
+  "addendum": null,
+  "gas_smart_meter_present": true,
+  "electricity_smart_meter_present": true,
+  "country_code": "SCT"
+}
