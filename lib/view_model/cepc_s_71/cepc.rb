@@ -1,12 +1,12 @@
 module ViewModel
   module CepcS71
     class Cepc < ViewModel::Cepc71::CommonSchema
-
       def date_of_expiry
         expires_at = (Date.parse(date_of_registration) - 1) >> 12 * 10
 
         expires_at.to_s
       end
+
       def ac_inspection_commissioned
         xpath(%w[AC-Inspection-Commissioned])
       end

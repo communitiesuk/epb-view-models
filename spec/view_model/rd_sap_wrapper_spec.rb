@@ -528,10 +528,10 @@ RSpec.describe ViewModel::RdSapWrapper do
               transaction_type: "Non-grant scheme (e.g. MEES)",
               mechanical_ventilation: "positive input from outside",
               glazed_area: nil,
-              low_energy_lighting: nil,
-              fixed_lighting_outlets_count: nil,
-              low_energy_fixed_lighting_outlets_count: nil,
-              number_open_fireplaces: nil,
+              low_energy_lighting: 100,
+              fixed_lighting_outlets_count: 31,
+              low_energy_fixed_lighting_outlets_count: 31,
+              number_open_fireplaces: 1,
               glazed_type: nil,
               recommended_improvements: [
                 {
