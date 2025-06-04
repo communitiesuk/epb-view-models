@@ -22,6 +22,10 @@ module ViewModel
       @report.to_hash
     end
 
+    # def to_report_ni
+    #   @report.to_hash_ni
+    # end
+
     def get_view_model
       view_model
     end
