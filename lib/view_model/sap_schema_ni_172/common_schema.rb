@@ -453,22 +453,6 @@ module ViewModel
           .search("Main-Heating-Controls/Environmental-Efficiency-Rating")
           .map(&:content)
       end
-
-      def recommendations_for_report
-        accessor = Accessor::DomesticRecommendationsAccessor.instance
-        @xml_doc
-          .search("Suggested-Improvements Improvement")
-          .map do |node|
-          improvement_code = xpath(%w[Improvement-Details Improvement-Number], node)
-          {
-            sequence: xpath(%w[Sequence], node).to_i,
-            improvement_code: xpath(%w[Improvement-Details Improvement-Number], node),
-            improvement_summary: improvement_code ? accessor.fetch_details(schema_version: "SAP-Schema-NI-17.2", improvement_number: improvement_code).summary : xpath(%w[Improvement-Summary], node),
-            improvement_description: improvement_code ? accessor.fetch_details(schema_version: "SAP-Schema-NI-17.2", improvement_number: improvement_code).description : xpath(%w[Improvement-Description], node),
-            indicative_cost: xpath(%w[Indicative-Cost], node),
-          }
-        end
-      end
     end
   end
 end

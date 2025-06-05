@@ -175,5 +175,17 @@ RSpec.describe ViewModel::SapWrapper do
         expect { test_wrapper(schema) }.not_to raise_error
       end
     end
+
+    it "returns the expected assertion for the to_recommendation_report method", :aggregate_failures do
+      schema_tests = [
+        { schema: "SAP-Schema-NI-18.0.0", type: "epc", method_called: :to_recommendation_report },
+        { schema: "SAP-Schema-NI-17.4", type: "epc", method_called: :to_recommendation_report },
+        { schema: "SAP-Schema-NI-17.3", type: "epc", method_called: :to_recommendation_report },
+      ]
+
+      schema_tests.each do |schema|
+        expect { test_wrapper(schema) }.not_to raise_error
+      end
+    end
   end
 end
