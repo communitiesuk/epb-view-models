@@ -5,6 +5,7 @@ RSpec.describe ViewModel::RdSapWrapper do
   context "when calling the RdSAP wrapper for a valid schema" do
     it "returns the expected assertion for the to_hash method", :aggregate_failures do
       schema_tests = [
+        { schema: "RdSAP-Schema-21.0.1", type: "epc", method_called: :to_hash },
         { schema: "RdSAP-Schema-21.0.0", type: "epc", method_called: :to_hash },
         { schema: "RdSAP-Schema-20.0.0", type: "epc", method_called: :to_hash },
         { schema: "RdSAP-Schema-19.0", type: "epc", method_called: :to_hash },
@@ -52,6 +53,7 @@ RSpec.describe ViewModel::RdSapWrapper do
 
     it "returns the expected assertion for the to_certificate_summary method", :aggregate_failures do
       schema_tests = [
+        { schema: "RdSAP-Schema-21.0.1", type: "epc", method_called: :to_certificate_summary },
         { schema: "RdSAP-Schema-21.0.0", type: "epc", method_called: :to_certificate_summary },
         { schema: "RdSAP-Schema-20.0.0", type: "epc", method_called: :to_certificate_summary },
         { schema: "RdSAP-Schema-19.0", type: "epc", method_called: :to_certificate_summary },
@@ -125,6 +127,7 @@ RSpec.describe ViewModel::RdSapWrapper do
 
     it "returns the expected assertion for the to_report method", :aggregate_failures do
       schema_tests = [
+        { schema: "RdSAP-Schema-21.0.1", type: "epc", method_called: :to_report },
         { schema: "RdSAP-Schema-21.0.0", type: "epc", method_called: :to_report },
         { schema: "RdSAP-Schema-20.0.0", type: "epc", method_called: :to_report },
         { schema: "RdSAP-Schema-19.0", type: "epc", method_called: :to_report },
@@ -153,6 +156,7 @@ RSpec.describe ViewModel::RdSapWrapper do
 
     it "returns the expected assertion for the to_domestic_digest method", :aggregate_failures do
       schema_tests = [
+        { schema: "RdSAP-Schema-21.0.1", type: "epc", method_called: :to_domestic_digest },
         { schema: "RdSAP-Schema-21.0.0", type: "epc", method_called: :to_domestic_digest },
         { schema: "RdSAP-Schema-20.0.0", type: "epc", method_called: :to_domestic_digest },
         { schema: "RdSAP-Schema-19.0", type: "epc", method_called: :to_domestic_digest },

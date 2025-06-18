@@ -55,6 +55,8 @@ module ViewModel
 
     def build_view_model(xml_doc, schema_type)
       case schema_type
+      when :"RdSAP-Schema-21.0.1"
+        ViewModel::RdSapSchema2101::CommonSchema.new xml_doc
       when :"RdSAP-Schema-21.0.0"
         ViewModel::RdSapSchema210::CommonSchema.new xml_doc
       when :"RdSAP-Schema-20.0.0"

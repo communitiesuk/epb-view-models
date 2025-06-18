@@ -572,6 +572,7 @@ module Helper
 
     def self.fuel_type(value, schema_type = "", report_type = "2")
       rdsap = %i[
+        RdSAP-Schema-21.0.1
         RdSAP-Schema-21.0.0
         RdSAP-Schema-20.0.0
         RdSAP-Schema-19.0
@@ -676,6 +677,7 @@ module Helper
 
     def self.schemas_post_20
       %i[
+        RdSAP-Schema-21.0.1
         RdSAP-Schema-21.0.0
         RdSAP-Schema-NI-21.0.0
       ]
