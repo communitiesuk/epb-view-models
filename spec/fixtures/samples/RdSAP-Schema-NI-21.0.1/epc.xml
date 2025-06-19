@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RdSAP-Report xmlns="https://epbr.digital.communities.gov.uk/xsd/rdsap"
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="https://epbr.digital.communities.gov.uk/xsd/rdsap ../../../../api/schemas/xml/RdSAP-Schema-21.0.1/RdSAP/Templates/RdSAP-Report.xsd">
+              xsi:schemaLocation="https://epbr.digital.communities.gov.uk/xsd/rdsap ../../../../api/schemas/xml/RdSAP-Schema-NI-21.0.1/RdSAP/Templates/RdSAP-Report.xsd">
   <Calculation-Software-Name>SomeSoft RdSAP Calculator</Calculation-Software-Name>
   <Calculation-Software-Version>13.05r16</Calculation-Software-Version>
   <User-Interface-Name>SomeSoft RdSAP FormWiz</User-Interface-Name>
@@ -387,7 +387,7 @@
         <Address-Line-2></Address-Line-2>
         <Address-Line-3></Address-Line-3>
         <Post-Town></Post-Town>
-        <Postcode>AL1C 2DE</Postcode>
+        <Postcode>BT1 2DE</Postcode>
       </Contact-Address>
       <E-Mail>a@b.c</E-Mail>
       <Telephone>0555 497 2848</Telephone>
@@ -402,7 +402,7 @@
       <Address>
         <Address-Line-1>1 Some Street</Address-Line-1>
         <Post-Town>Whitbury</Post-Town>
-        <Postcode>A0 0AA</Postcode>
+        <Postcode>BT0 0AA</Postcode>
       </Address>
       <UPRN>UPRN-000000000000</UPRN>
     </Property>

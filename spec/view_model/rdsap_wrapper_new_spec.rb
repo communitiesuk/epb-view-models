@@ -25,6 +25,7 @@ RSpec.describe ViewModel::RdSapWrapper do
         { schema: "SAP-Schema-11.2", type: "rdsap", method_called: :to_hash },
         { schema: "SAP-Schema-11.0", type: "rdsap", method_called: :to_hash },
         { schema: "SAP-Schema-10.2", type: "rdsap", method_called: :to_hash },
+        { schema: "RdSAP-Schema-NI-21.0.1", type: "epc", method_called: :to_hash },
         { schema: "RdSAP-Schema-NI-21.0.0", type: "epc", method_called: :to_hash },
         { schema: "RdSAP-Schema-NI-20.0.0", type: "epc", method_called: :to_hash },
         { schema: "RdSAP-Schema-NI-19.0", type: "epc", method_called: :to_hash },
@@ -73,6 +74,7 @@ RSpec.describe ViewModel::RdSapWrapper do
         { schema: "SAP-Schema-11.2", type: "rdsap", method_called: :to_certificate_summary },
         { schema: "SAP-Schema-11.0", type: "rdsap", method_called: :to_certificate_summary },
         { schema: "SAP-Schema-10.2", type: "rdsap", method_called: :to_certificate_summary },
+        { schema: "RdSAP-Schema-NI-21.0.1", type: "epc", method_called: :to_certificate_summary },
         { schema: "RdSAP-Schema-NI-21.0.0", type: "epc", method_called: :to_certificate_summary },
         { schema: "RdSAP-Schema-NI-20.0.0", type: "epc", method_called: :to_certificate_summary },
         { schema: "RdSAP-Schema-NI-19.0", type: "epc", method_called: :to_certificate_summary },
@@ -100,6 +102,7 @@ RSpec.describe ViewModel::RdSapWrapper do
 
     it "returns the expected assertion for the to_hash_ni method", :aggregate_failures do
       schema_tests = [
+        { schema: "RdSAP-Schema-NI-21.0.1", type: "epc", method_called: :to_hash_ni },
         { schema: "RdSAP-Schema-NI-21.0.0", type: "epc", method_called: :to_hash_ni },
         { schema: "RdSAP-Schema-NI-20.0.0", type: "epc", method_called: :to_hash_ni },
         { schema: "RdSAP-Schema-NI-19.0", type: "epc", method_called: :to_hash_ni },
@@ -176,6 +179,7 @@ RSpec.describe ViewModel::RdSapWrapper do
         { schema: "SAP-Schema-11.2", type: "rdsap", method_called: :to_domestic_digest },
         { schema: "SAP-Schema-11.0", type: "rdsap", method_called: :to_domestic_digest },
         { schema: "SAP-Schema-10.2", type: "rdsap", method_called: :to_domestic_digest },
+        { schema: "RdSAP-Schema-NI-21.0.1", type: "epc", method_called: :to_domestic_digest },
         { schema: "RdSAP-Schema-NI-21.0.0", type: "epc", method_called: :to_domestic_digest },
         { schema: "RdSAP-Schema-NI-20.0.0", type: "epc", method_called: :to_domestic_digest },
         { schema: "RdSAP-Schema-NI-19.0", type: "epc", method_called: :to_domestic_digest },
@@ -203,6 +207,7 @@ RSpec.describe ViewModel::RdSapWrapper do
 
     it "returns the expected assertion for the to_recommendation_report method", :aggregate_failures do
       schema_tests = [
+        { schema: "RdSAP-Schema-NI-21.0.1", type: "epc", method_called: :to_recommendation_report },
         { schema: "RdSAP-Schema-NI-21.0.0", type: "epc", method_called: :to_recommendation_report },
         { schema: "RdSAP-Schema-NI-20.0.0", type: "epc", method_called: :to_recommendation_report },
         { schema: "RdSAP-Schema-NI-19.0", type: "epc", method_called: :to_recommendation_report },

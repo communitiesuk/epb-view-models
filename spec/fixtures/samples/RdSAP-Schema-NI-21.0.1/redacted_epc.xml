@@ -1,9 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<RdSAP-Report xmlns="https://epbr.digital.communities.gov.uk/xsd/rdsap"
-              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="https://epbr.digital.communities.gov.uk/xsd/rdsap ../../../../api/schemas/xml/RdSAP-Schema-21.0.1/RdSAP/Templates/RdSAP-Report.xsd">
-  <Calculation-Software-Name>SomeSoft RdSAP Calculator</Calculation-Software-Name>
-  <Calculation-Software-Version>13.05r16</Calculation-Software-Version>
+<?xml version="1.0" encoding="utf-8"?>
+<RdSAP-Report schemaLocation="https://epbr.digital.communities.gov.uk/xsd/rdsap ../../../../api/schemas/xml/RdSAP-Schema-NI-21.0.1/RdSAP/Templates/RdSAP-Report.xsd">
   <User-Interface-Name>SomeSoft RdSAP FormWiz</User-Interface-Name>
   <User-Interface-Version>UI-13.05r16</User-Interface-Version>
   <Schema-Version-Original>SAP-19.0</Schema-Version-Original>
@@ -165,7 +161,6 @@
   </Energy-Assessment>
   <SAP-Data>
     <SAP-Property-Details>
-      <Open-Chimneys-Count>1</Open-Chimneys-Count>
       <Property-Type>0</Property-Type>
       <Built-Form>2</Built-Form>
       <Extensions-Count>0</Extensions-Count>
@@ -186,7 +181,7 @@
       <Mechanical-Ventilation>6</Mechanical-Ventilation>
       <Mechanical-Vent-Duct-Type>3</Mechanical-Vent-Duct-Type>
       <Mechanical-Vent-Duct-Placement>2</Mechanical-Vent-Duct-Placement>
-      <Mechanical-Vent-Duct-Insulation>2</Mechanical-Vent-Duct-Insulation>
+      <Mechanical-Ventilation-Duct-Insulation>2</Mechanical-Ventilation-Duct-Insulation>
       <Mechanical-Vent-Duct-Insulation-Level>2</Mechanical-Vent-Duct-Insulation-Level>
       <Mechanical-Vent-Measured-Installation>false</Mechanical-Vent-Measured-Installation>
       <Solar-Water-Heating>N</Solar-Water-Heating>
@@ -364,58 +359,19 @@
       <Pressure-Test-Certificate-Number>0</Pressure-Test-Certificate-Number>
       <Wet-Rooms-Count>0</Wet-Rooms-Count>
       <Pressure-Test>6</Pressure-Test>
-
     </SAP-Property-Details>
   </SAP-Data>
   <Report-Header>
     <RRN>0000-0000-0000-0000-0000</RRN>
-    <Inspection-Date>2020-05-04</Inspection-Date>
     <Report-Type>2</Report-Type>
-    <Completion-Date>2020-05-04</Completion-Date>
-    <Registration-Date>2020-05-04</Registration-Date>
-    <Status>entered</Status>
     <Language-Code>1</Language-Code>
     <Property-Type>0</Property-Type>
     <Region-Code>1</Region-Code>
     <Country-Code>ENG</Country-Code>
-    <Transaction-Type>16</Transaction-Type>
     <Tenure>1</Tenure>
-    <Energy-Assessor>
-      <Name>Testa Sessor</Name>
-      <Contact-Address>
-        <Address-Line-1>12 Epc Street</Address-Line-1>
-        <Address-Line-2></Address-Line-2>
-        <Address-Line-3></Address-Line-3>
-        <Post-Town></Post-Town>
-        <Postcode>AL1C 2DE</Postcode>
-      </Contact-Address>
-      <E-Mail>a@b.c</E-Mail>
-      <Telephone>0555 497 2848</Telephone>
-      <Company-Name>Test EPCs 4U</Company-Name>
-      <Scheme-Name>Testing Energy Scheme</Scheme-Name>
-      <Scheme-Web-Site>http://www.scheme.example.com</Scheme-Web-Site>
-      <Identification-Number>
-        <Certificate-Number>SPEC000000</Certificate-Number>
-      </Identification-Number>
-    </Energy-Assessor>
     <Property>
-      <Address>
-        <Address-Line-1>1 Some Street</Address-Line-1>
-        <Post-Town>Whitbury</Post-Town>
-        <Postcode>A0 0AA</Postcode>
-      </Address>
       <UPRN>UPRN-000000000000</UPRN>
     </Property>
-    <Related-Party-Disclosure>
-      <Related-Party-Disclosure-Text>No related party</Related-Party-Disclosure-Text>
-    </Related-Party-Disclosure>
   </Report-Header>
-  <Insurance-Details>
-    <Insurer>EPC Protect Inc.</Insurer>
-    <Policy-No>X13-76540987B</Policy-No>
-    <Effective-Date>2020-05-04</Effective-Date>
-    <Expiry-Date>2030-05-03</Expiry-Date>
-    <PI-Limit>5000000</PI-Limit>
-  </Insurance-Details>
   <ExternalDefinitions-Revision-Number>5.0</ExternalDefinitions-Revision-Number>
 </RdSAP-Report>

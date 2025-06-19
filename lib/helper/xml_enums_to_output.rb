@@ -579,6 +579,7 @@ module Helper
         RdSAP-Schema-18.0
         RdSAP-Schema-17.1
         RdSAP-Schema-17.0
+        RdSAP-Schema-NI-21.0.1
         RdSAP-Schema-NI-21.0.0
         RdSAP-Schema-NI-20.0.0
         RdSAP-Schema-NI-19.0
@@ -680,6 +681,7 @@ module Helper
         RdSAP-Schema-21.0.1
         RdSAP-Schema-21.0.0
         RdSAP-Schema-NI-21.0.0
+        RdSAP-Schema-NI-21.0.1
       ]
     end
 

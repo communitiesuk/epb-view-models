@@ -69,6 +69,8 @@ module ViewModel
         ViewModel::RdSapSchema171::CommonSchema.new xml_doc
       when :"RdSAP-Schema-17.0"
         ViewModel::RdSapSchema170::CommonSchema.new xml_doc
+      when :"RdSAP-Schema-NI-21.0.1"
+        ViewModel::RdSapSchemaNi2101::CommonSchema.new xml_doc
       when :"RdSAP-Schema-NI-21.0.0"
         ViewModel::RdSapSchemaNi210::CommonSchema.new xml_doc
       when :"RdSAP-Schema-NI-20.0.0"
