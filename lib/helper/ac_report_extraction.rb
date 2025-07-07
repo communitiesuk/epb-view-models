@@ -104,7 +104,7 @@ module Helper
             xpath(%w[ACI-Cooling-Plant-Refrigeration/Refrigerant-Name], node),
           f_gas_inspection:
             checklist_values_with_guidance(node.at("ACI-Cooling-Plant-Refrigeration"))[
-              :f_gas_inspection
+              :f_gas_inspection,
             ],
           pre_compressor:
             xpath(%w[ACI-Cooling-Plant-Refrigeration/Pre-Compressor], node),
@@ -118,11 +118,11 @@ module Helper
             ),
           compressor_control:
             checklist_values(node.at("ACI-Cooling-Plant-Refrigeration"), skip_state: true)[
-              :compressor_control
+              :compressor_control,
             ],
           refrigerant_leak:
             checklist_values(node.at("ACI-Cooling-Plant-Refrigeration"))[
-              :refrigerant_leak
+              :refrigerant_leak,
             ],
           guidance:
             guidance(node.at("ACI-Cooling-Plant-Refrigeration/Guidance")),
@@ -130,11 +130,11 @@ module Helper
         maintenance: {
           records_kept:
             checklist_values(node.at("ACI-Cooling-Plant-Maintenance"))[
-              :records_kept
+              :records_kept,
             ],
           competent_person:
             checklist_values(node.at("ACI-Cooling-Plant-Maintenance"))[
-              :competent_person
+              :competent_person,
             ],
           guidance: guidance(node.at("ACI-Cooling-Plant-Maintenance/Guidance")),
         },
@@ -146,7 +146,7 @@ module Helper
         },
         humidity_control:
           checklist_values(node.at("ACI-Cooling-Plant-Humidity-Control"))[
-            :humidity_control
+            :humidity_control,
           ],
         chillers:
           if xpath(%w[ACI-Cooling-Plant-Chillers], node).nil?

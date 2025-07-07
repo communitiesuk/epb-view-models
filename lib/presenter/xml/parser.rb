@@ -153,7 +153,7 @@ module Presenter
       end
 
       def is_bool?(string)
-        string == true || string == false || string =~ (/(true|false)$/i) ? true : false
+        string == true || string == false || string =~ /(true|false)$/i ? true : false
       end
 
       def try_as_number(string)

@@ -398,13 +398,17 @@ module ViewModel
       end
 
       def low_energy_lighting
-        (low_energy_fixed_lighting_outlets_count / fixed_lighting_outlets_count) * 100
+        if fixed_lighting_outlets_count.zero?
+          return 0
+        end
+
+        ((low_energy_fixed_lighting_outlets_count / fixed_lighting_outlets_count) * 100).round
       end
 
       def fixed_lighting_outlets_count
         fixed_lighting_outlets_count = low_energy_fixed_lighting_outlets_count
-        if xpath(%w[Incandescent-Lighting-Bulbs-Count])
-          fixed_lighting_outlets_count += xpath(%w[Incandescent-Lighting-Bulbs-Count])&.to_i
+        if xpath(%w[Incandescent-Fixed-Lighting-Bulbs-Count])
+          fixed_lighting_outlets_count += xpath(%w[Incandescent-Fixed-Lighting-Bulbs-Count])&.to_i
         end
         fixed_lighting_outlets_count
       end

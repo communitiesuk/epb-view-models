@@ -28,7 +28,7 @@ RSpec.describe ViewModel::DecWrapper do
       end
     end
 
-    it "returns the expected assertion for the to_report method", :aggregate_failures do
+    it "returns the expected assertion for the to_report method for EAW", :aggregate_failures do
       schema_tests = [
         { schema: "CEPC-8.0.0", type: "dec", method_called: :to_report },
         { schema: "CEPC-8.0.0", type: "dec-large-building", method_called: :to_report },
@@ -46,7 +46,7 @@ RSpec.describe ViewModel::DecWrapper do
       end
     end
 
-    it "returns the expected assertion for the to_report method", :aggregate_failures do
+    it "returns the expected assertion for the to_report method for NI", :aggregate_failures do
       schema_tests = [
         { schema: "CEPC-NI-8.0.0", type: "dec", method_called: :to_report },
         { schema: "CEPC-7.1", type: "dec-ni", method_called: :to_report },
