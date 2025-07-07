@@ -402,7 +402,7 @@ module ViewModel
           return 0
         end
 
-        ((low_energy_fixed_lighting_outlets_count / fixed_lighting_outlets_count) * 100).round
+        ((low_energy_fixed_lighting_outlets_count.to_f / fixed_lighting_outlets_count) * 100).round
       end
 
       def fixed_lighting_outlets_count
