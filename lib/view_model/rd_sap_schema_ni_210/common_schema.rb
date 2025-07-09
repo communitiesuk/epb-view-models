@@ -125,8 +125,9 @@ module ViewModel
             {
               sequence: xpath(%w[Sequence], node).to_i,
               improvement_code: xpath(%w[Improvement-Details Improvement-Number], node),
-              improvement_summary: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-21.0.0", improvement_number: improvement_code).summary : xpath(%w[Improvement-Summary], node),
-              improvement_description: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-21.0.0", improvement_number: improvement_code).description : xpath(%w[Improvement-Description], node),
+              # the schema version is set to 21.0.1 as 21.0.0 had missing improvements in the external definitions
+              improvement_summary: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-21.0.1", improvement_number: improvement_code).summary : xpath(%w[Improvement-Summary], node),
+              improvement_description: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-21.0.1", improvement_number: improvement_code).description : xpath(%w[Improvement-Description], node),
               indicative_cost: xpath(%w[Indicative-Cost], node),
             }
           end
@@ -395,6 +396,41 @@ module ViewModel
 
       def heated_room_count
         xpath(%w[Heated-Room-Count])&.to_i
+      end
+
+      def low_energy_lighting
+        if fixed_lighting_outlets_count.zero?
+          return 0
+        end
+
+        ((low_energy_fixed_lighting_outlets_count.to_f / fixed_lighting_outlets_count) * 100).round
+      end
+
+      def fixed_lighting_outlets_count
+        fixed_lighting_outlets_count = low_energy_fixed_lighting_outlets_count
+        if xpath(%w[Incandescent-Fixed-Lighting-Bulbs-Count])
+          fixed_lighting_outlets_count += xpath(%w[Incandescent-Fixed-Lighting-Bulbs-Count])&.to_i
+        end
+        fixed_lighting_outlets_count
+      end
+
+      def low_energy_fixed_lighting_outlets_count
+        low_energy_fixed_lighting_outlets_count = 0
+        if xpath(%w[CFL-Fixed-Lighting-Bulbs-Count])
+          low_energy_fixed_lighting_outlets_count += xpath(%w[CFL-Fixed-Lighting-Bulbs-Count])&.to_i
+        end
+        if xpath(%w[LED-Fixed-Lighting-Bulbs-Count])
+          low_energy_fixed_lighting_outlets_count += xpath(%w[LED-Fixed-Lighting-Bulbs-Count])&.to_i
+        end
+        if xpath(%w[Low-Energy-Fixed-Lighting-Bulbs-Count])
+          low_energy_fixed_lighting_outlets_count += xpath(%w[Low-Energy-Fixed-Lighting-Bulbs-Count])&.to_i
+        end
+
+        low_energy_fixed_lighting_outlets_count
+      end
+
+      def open_fireplaces_count
+        xpath(%w[Open-Chimneys-Count])&.to_i
       end
 
       def hot_water_description

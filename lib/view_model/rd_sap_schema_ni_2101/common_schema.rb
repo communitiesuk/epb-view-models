@@ -125,8 +125,8 @@ module ViewModel
             {
               sequence: xpath(%w[Sequence], node).to_i,
               improvement_code: xpath(%w[Improvement-Details Improvement-Number], node),
-              improvement_summary: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-21.0.0", improvement_number: improvement_code).summary : xpath(%w[Improvement-Summary], node),
-              improvement_description: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-21.0.0", improvement_number: improvement_code).description : xpath(%w[Improvement-Description], node),
+              improvement_summary: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-21.0.1", improvement_number: improvement_code).summary : xpath(%w[Improvement-Summary], node),
+              improvement_description: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-21.0.1", improvement_number: improvement_code).description : xpath(%w[Improvement-Description], node),
               indicative_cost: xpath(%w[Indicative-Cost], node),
             }
           end
@@ -398,13 +398,17 @@ module ViewModel
       end
 
       def low_energy_lighting
-        (low_energy_fixed_lighting_outlets_count / fixed_lighting_outlets_count) * 100
+        if fixed_lighting_outlets_count.zero?
+          return 0
+        end
+
+        ((low_energy_fixed_lighting_outlets_count.to_f / fixed_lighting_outlets_count) * 100).round
       end
 
       def fixed_lighting_outlets_count
         fixed_lighting_outlets_count = low_energy_fixed_lighting_outlets_count
-        if xpath(%w[Incandescent-Lighting-Bulbs-Count])
-          fixed_lighting_outlets_count += xpath(%w[Incandescent-Lighting-Bulbs-Count])&.to_i
+        if xpath(%w[Incandescent-Fixed-Lighting-Bulbs-Count])
+          fixed_lighting_outlets_count += xpath(%w[Incandescent-Fixed-Lighting-Bulbs-Count])&.to_i
         end
         fixed_lighting_outlets_count
       end
