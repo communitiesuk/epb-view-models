@@ -21,7 +21,7 @@
   "main_benchmark": "",
   "main_heating_fuel": "Natural Gas",
   "special_energy_uses": "special",
-  "renewable_sources": "1",
+  "renewable_sources": null,
   "total_floor_area": "99",
   "occupancy_level": "level",
   "annual_thermal_fuel_usage": "1",

@@ -226,6 +226,10 @@ module ViewModel
       def building_category
         xpath(%w[Building-Category])
       end
+
+      def renewable_sources
+        xpath(%w[Renewable-Sources])
+      end
     end
   end
 end

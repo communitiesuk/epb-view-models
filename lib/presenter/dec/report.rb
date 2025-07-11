@@ -37,7 +37,7 @@ module Presenter
           main_benchmark: @view_model.main_benchmark,
           main_heating_fuel: @view_model.main_heating_fuel,
           special_energy_uses: @view_model.special_energy_uses,
-          renewable_sources: @view_model.renewables_fuel_thermal,
+          renewable_sources: @view_model.respond_to?(:renewable_sources) ? @view_model.renewable_sources : nil,
           total_floor_area: @view_model.floor_area,
           occupancy_level: @view_model.occupancy_level,
           annual_thermal_fuel_usage: @view_model.annual_energy_use_fuel_thermal,

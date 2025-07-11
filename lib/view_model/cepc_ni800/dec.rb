@@ -224,6 +224,10 @@ module ViewModel
       def other_fuel
         xpath(%w[Technical-Information Other-Fuel-Description])
       end
+
+      def renewable_sources
+        xpath(%w[Renewable-Sources])
+      end
     end
   end
 end
