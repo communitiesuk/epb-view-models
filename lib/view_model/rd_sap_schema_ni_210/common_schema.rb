@@ -125,9 +125,8 @@ module ViewModel
             {
               sequence: xpath(%w[Sequence], node).to_i,
               improvement_code: xpath(%w[Improvement-Details Improvement-Number], node),
-              # the schema version is set to 21.0.1 as 21.0.0 had missing improvements in the external definitions
-              improvement_summary: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-21.0.1", improvement_number: improvement_code).summary : xpath(%w[Improvement-Summary], node),
-              improvement_description: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-21.0.1", improvement_number: improvement_code).description : xpath(%w[Improvement-Description], node),
+              improvement_summary: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-21.0.0", improvement_number: improvement_code).summary : xpath(%w[Improvement-Summary], node),
+              improvement_description: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-21.0.0", improvement_number: improvement_code).description : xpath(%w[Improvement-Description], node),
               indicative_cost: xpath(%w[Indicative-Cost], node),
             }
           end
