@@ -4,6 +4,7 @@ RSpec.describe ViewModel::SapWrapper do
   context "when calling the sap wrapper for a valid schema" do
     it "returns the expected assertion for the to_hash method", :aggregate_failures do
       schema_tests = [
+        { schema: "SAP-Schema-19.2.0", type: "epc", method_called: :to_hash },
         { schema: "SAP-Schema-19.1.0", type: "epc", method_called: :to_hash },
         { schema: "SAP-Schema-19.0.0", type: "epc", method_called: :to_hash },
         { schema: "SAP-Schema-18.0.0", type: "epc", method_called: :to_hash },
@@ -46,6 +47,7 @@ RSpec.describe ViewModel::SapWrapper do
 
     it "returns the expected assertion for the to_create_summary method", :aggregate_failures do
       schema_tests = [
+        { schema: "SAP-Schema-19.2.0", type: "epc", method_called: :to_certificate_summary },
         { schema: "SAP-Schema-19.1.0", type: "epc", method_called: :to_certificate_summary },
         { schema: "SAP-Schema-19.0.0", type: "epc", method_called: :to_certificate_summary },
         { schema: "SAP-Schema-18.0.0", type: "epc", method_called: :to_certificate_summary },
@@ -111,6 +113,7 @@ RSpec.describe ViewModel::SapWrapper do
 
     it "returns the expected assertion for the to_report method", :aggregate_failures do
       schema_tests = [
+        { schema: "SAP-Schema-19.2.0", type: "epc", method_called: :to_report },
         { schema: "SAP-Schema-19.1.0", type: "epc", method_called: :to_report },
         { schema: "SAP-Schema-19.0.0", type: "epc", method_called: :to_report },
         { schema: "SAP-Schema-18.0.0", type: "epc", method_called: :to_report },
@@ -137,6 +140,7 @@ RSpec.describe ViewModel::SapWrapper do
 
     it "returns the expected assertion for the to_domestic_digest method", :aggregate_failures do
       schema_tests = [
+        { schema: "SAP-Schema-19.2.0", type: "epc", method_called: :to_domestic_digest },
         { schema: "SAP-Schema-19.1.0", type: "epc", method_called: :to_domestic_digest },
         { schema: "SAP-Schema-19.0.0", type: "epc", method_called: :to_domestic_digest },
         { schema: "SAP-Schema-18.0.0", type: "epc", method_called: :to_domestic_digest },

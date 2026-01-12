@@ -1,0 +1,197 @@
+{
+  "type_of_assessment":"SAP",
+  "assessment_id":"0000-0000-0000-0000-0000",
+  "date_of_expiry":"2032-05-08",
+  "date_of_assessment":"2022-05-09",
+  "date_of_registration":"2022-05-09",
+  "date_registered":"2022-05-09",
+  "address_id":"UPRN-0000000001",
+  "address_line1":"1 Some Street",
+  "address_line2":"Some Area",
+  "address_line3":"Some County",
+  "address_line4":null,
+  "town":"Whitbury",
+  "postcode":"A0 0AA",
+  "address":{
+    "address_id":"UPRN-0000000001",
+    "address_line1":"1 Some Street",
+    "address_line2":"Some Area",
+    "address_line3":"Some County",
+    "address_line4":null,
+    "town":"Whitbury",
+    "postcode":"A0 0AA"
+  },
+  "assessor":{
+    "scheme_assessor_id":"SPEC000000",
+    "name":"Mr Test Boi TST",
+    "contact_details":{
+      "email":"a@b.c",
+      "telephone":"111222333"
+    }
+  },
+  "current_carbon_emission":2.4,
+  "current_energy_efficiency_band":"c",
+  "current_energy_efficiency_rating":72,
+  "dwelling_type":"Mid-terrace house",
+  "estimated_energy_cost":"689.83",
+  "main_fuel_type":"5",
+  "heat_demand":{
+    "current_space_heating_demand":2666,
+    "current_water_heating_demand":2650,
+    "impact_of_cavity_insulation":null,
+    "impact_of_loft_insulation":null,
+    "impact_of_solid_wall_insulation":null
+  },
+  "heating_cost_current":"365.98",
+  "heating_cost_potential":"250.34",
+  "hot_water_cost_current":"200.40",
+  "hot_water_cost_potential":"180.43",
+  "lighting_cost_current":"123.45",
+  "lighting_cost_potential":"84.23",
+  "potential_carbon_emission":1.4,
+  "potential_energy_efficiency_band":"c",
+  "potential_energy_efficiency_rating":72,
+  "potential_energy_saving":"174.83",
+  "primary_energy_use":"59",
+  "energy_consumption_potential":"53",
+  "property_age_band":null,
+  "property_summary":[
+    {
+      "energy_efficiency_rating":5,
+      "environmental_efficiency_rating":5,
+      "name":"walls",
+      "description":"Average thermal transmittance 0.18 W/m²K"
+    },
+    {
+      "energy_efficiency_rating":5,
+      "environmental_efficiency_rating":5,
+      "name":"roof",
+      "description":"Average thermal transmittance 0.13 W/m²K"
+    },
+    {
+      "energy_efficiency_rating":5,
+      "environmental_efficiency_rating":5,
+      "name":"floor",
+      "description":"Average thermal transmittance 0.12 W/m²K"
+    },
+    {
+      "energy_efficiency_rating":5,
+      "environmental_efficiency_rating":5,
+      "name":"windows",
+      "description":"High performance glazing"
+    },
+    {
+      "energy_efficiency_rating":3,
+      "environmental_efficiency_rating":2,
+      "name":"main_heating",
+      "description":"Boiler and radiators, electric"
+    },
+    {
+      "energy_efficiency_rating":4,
+      "environmental_efficiency_rating":4,
+      "name":"main_heating_controls",
+      "description":"Programmer, room thermostat and TRVs"
+    },
+    {
+      "energy_efficiency_rating":0,
+      "environmental_efficiency_rating":0,
+      "name":"secondary_heating",
+      "description":"None"
+    },
+    {
+      "energy_efficiency_rating":4,
+      "environmental_efficiency_rating":3,
+      "name":"hot_water",
+      "description":"From main system, waste water heat recovery"
+    },
+    {
+      "energy_efficiency_rating":5,
+      "environmental_efficiency_rating":5,
+      "name":"lighting",
+      "description":"Low energy lighting in 91% of fixed outlets"
+    },
+    {
+      "energy_efficiency_rating":5,
+      "environmental_efficiency_rating":5,
+      "name":"air_tightness",
+      "description":"Air permeability 2.0 m³/h.m² (assumed)"
+    }
+  ],
+  "recommended_improvements":[
+    {
+      "energy_performance_rating_improvement":74,
+      "environmental_impact_rating_improvement":94,
+      "green_deal_category_code":"NI",
+      "improvement_category":"5",
+      "improvement_code":"19",
+      "improvement_description":null,
+      "improvement_title":"",
+      "improvement_type":"N",
+      "indicative_cost":"£4,000 - £6,000",
+      "sequence":1,
+      "typical_saving":"88",
+      "energy_performance_band_improvement":"c"
+    },
+    {
+      "energy_performance_rating_improvement":80,
+      "environmental_impact_rating_improvement":96,
+      "green_deal_category_code":"NI",
+      "improvement_category":"5",
+      "improvement_code":"34",
+      "improvement_description":null,
+      "improvement_title":"",
+      "improvement_type":"U",
+      "indicative_cost":"£9,000 - £14,000",
+      "sequence":2,
+      "typical_saving":"88",
+      "energy_performance_band_improvement":"c"
+    }
+  ],
+  "lzc_energy_sources":null,
+  "related_party_disclosure_number":1,
+  "related_party_disclosure_text":null,
+  "tenure":"1",
+  "transaction_type":"1",
+  "total_floor_area":165,
+  "total_roof_area":57,
+  "status":"ENTERED",
+  "environmental_impact_current":94,
+  "environmental_impact_potential":96,
+  "co2_emissions_current_per_floor_area":"5.6",
+  "mains_gas":null,
+  "level":null,
+  "top_storey":"N",
+  "storey_count":null,
+  "main_heating_controls":"Programmer, room thermostat and TRVs",
+  "multiple_glazed_proportion":"100",
+  "glazed_area":null,
+  "habitable_room_count":null,
+  "heated_room_count":null,
+  "low_energy_lighting":91,
+  "fixed_lighting_outlets_count":11,
+  "low_energy_fixed_lighting_outlets_count":10,
+  "open_fireplaces_count":0,
+  "hot_water_description":"From main system, waste water heat recovery",
+  "hot_water_energy_efficiency_rating":"4",
+  "hot_water_environmental_efficiency_rating":"3",
+  "window_description":"High performance glazing",
+  "window_energy_efficiency_rating":"5",
+  "window_environmental_efficiency_rating":"5",
+  "secondary_heating_description":"None",
+  "secondary_heating_energy_efficiency_rating":"0",
+  "secondary_heating_environmental_efficiency_rating":"0",
+  "lighting_description":"Low energy lighting in 91% of fixed outlets",
+  "lighting_energy_efficiency_rating":"5",
+  "lighting_environmental_efficiency_rating":"5",
+  "photovoltaic_roof_area_percent":null,
+  "heat_loss_corridor":null,
+  "wind_turbine_count":2,
+  "unheated_corridor_length":null,
+  "built_form":"Mid-Terrace",
+  "mainheat_description":"Boiler and radiators, electric",
+  "extensions_count":null,
+  "addendum":null,
+  "gas_smart_meter_present":false,
+  "electricity_smart_meter_present":false,
+  "country_code":"ENG"
+}

@@ -258,6 +258,7 @@ module Helper
       "2" => "Gas: bulk LPG",
       "3" => "Gas: bottled LPG",
       "4" => "Oil: heating oil",
+      "5" => "Gas: bottled LPG (for secondary heating)",
       "7" => "Gas: biogas",
       "8" => "LNG",
       "9" => "LPG subject to Special Condition 18",
@@ -400,6 +401,7 @@ module Helper
       ]
 
       schemes_that_use_l = %i[
+        SAP-Schema-19.2.0
         SAP-Schema-19.1.0
         SAP-Schema-19.0.0
         SAP-Schema-18.0.0
@@ -620,6 +622,7 @@ module Helper
       ]
 
       sap = %i[
+        SAP-Schema-19.2.0
         SAP-Schema-19.1.0
         SAP-Schema-19.0.0
         SAP-Schema-18.0.0

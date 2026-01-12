@@ -32,6 +32,7 @@ module ViewModel
       RdSAP-Schema-S-19.0
     ].freeze
     TYPES_OF_SAP = %i[
+      SAP-Schema-19.2.0
       SAP-Schema-19.1.0
       SAP-Schema-19.0.0
       SAP-Schema-18.0.0

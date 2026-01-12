@@ -74,6 +74,7 @@ RSpec.shared_context "with common node values" do
       "2" => "Gas: bulk LPG",
       "3" => "Gas: bottled LPG",
       "4" => "Oil: heating oil",
+      "5" => "Gas: bottled LPG (for secondary heating)",
       "7" => "Gas: biogas",
       "8" => "LNG",
       "9" => "LPG subject to Special Condition 18",

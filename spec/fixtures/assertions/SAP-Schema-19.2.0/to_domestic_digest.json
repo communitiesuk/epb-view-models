@@ -1,0 +1,121 @@
+{
+  "type_of_assessment": "SAP",
+  "assessment_id": "0000-0000-0000-0000-0000",
+  "date_of_registration": "2022-05-09",
+  "address": {
+    "address_line1": "1 Some Street",
+    "address_line2": "Some Area",
+    "address_line3": "Some County",
+    "address_line4": null,
+    "town": "Whitbury",
+    "postcode": "A0 0AA"
+  },
+  "dwelling_type": "Mid-terrace house",
+  "built_form": "Mid-Terrace",
+  "main_dwelling_construction_age_band_or_year": "England and Wales: before 1900",
+  "property_summary": [
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "walls",
+      "description": "Average thermal transmittance 0.18 W/m²K"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "roof",
+      "description": "Average thermal transmittance 0.13 W/m²K"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "floor",
+      "description": "Average thermal transmittance 0.12 W/m²K"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "windows",
+      "description": "High performance glazing"
+    },
+    {
+      "energy_efficiency_rating": 3,
+      "environmental_efficiency_rating": 2,
+      "name": "main_heating",
+      "description": "Boiler and radiators, electric"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "main_heating_controls",
+      "description": "Programmer, room thermostat and TRVs"
+    },
+    {
+      "energy_efficiency_rating": 0,
+      "environmental_efficiency_rating": 0,
+      "name": "secondary_heating",
+      "description": "None"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 3,
+      "name": "hot_water",
+      "description": "From main system, waste water heat recovery"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "lighting",
+      "description": "Low energy lighting in 91% of fixed outlets"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "air_tightness",
+      "description": "Air permeability 2.0 m³/h.m² (assumed)"
+    }
+  ],
+  "main_heating_category": "boiler with radiators or underfloor heating",
+  "main_fuel_type": "Gas: bottled LPG (for secondary heating)",
+  "has_hot_water_cylinder": "true",
+  "total_floor_area": "165",
+  "has_mains_gas": null,
+  "current_energy_efficiency_rating": 72,
+  "potential_energy_efficiency_rating": 72,
+  "type_of_property": "House",
+  "recommended_improvements": [
+    {
+      "energy_performance_rating_improvement": 74,
+      "environmental_impact_rating_improvement": 94,
+      "green_deal_category_code": "NI",
+      "improvement_category": "5",
+      "improvement_code": "19",
+      "improvement_description": null,
+      "improvement_title": "",
+      "improvement_type": "N",
+      "indicative_cost": "£4,000 - £6,000",
+      "sequence": 1,
+      "typical_saving": "88",
+      "energy_performance_band_improvement": "c"
+    },
+    {
+      "energy_performance_rating_improvement": 80,
+      "environmental_impact_rating_improvement": 96,
+      "green_deal_category_code": "NI",
+      "improvement_category": "5",
+      "improvement_code": "34",
+      "improvement_description": null,
+      "improvement_title": "",
+      "improvement_type": "U",
+      "indicative_cost": "£9,000 - £14,000",
+      "sequence": 2,
+      "typical_saving": "88",
+      "energy_performance_band_improvement": "c"
+    }
+  ],
+  "photo_supply": null,
+  "main_heating_controls": [
+    "Programmer, room thermostat and TRVs"
+  ],
+  "lzc_energy_sources": null
+}
