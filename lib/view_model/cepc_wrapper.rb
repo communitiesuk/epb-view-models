@@ -6,6 +6,7 @@ module ViewModel
       @view_model = build_view_model(xml_doc, schema_type)
       @summary = Presenter::Cepc::Summary.new(view_model)
       @report = Presenter::Cepc::Report.new(view_model, additional_data)
+      @certificate_summary = Presenter::Cepc::CertificateSummary.new(view_model)
     end
 
     def type
@@ -20,6 +21,10 @@ module ViewModel
     # hash keys will be turned into columns for expected csv
     def to_report
       @report.to_hash
+    end
+
+    def to_certificate_summary
+      @certificate_summary.to_certificate_summary
     end
 
     def get_report_type

@@ -1,3 +1,5 @@
+require 'date'
+
 module ViewModel
   class BaseViewModel
     def initialize(xml_doc)
