@@ -27,6 +27,8 @@ module ViewModelGateway
                   rdsap_xsd_files
                 when "cepc"
                   cepc_xsd_files
+                when "cs63"
+                  cd63_xsd_files
                 end
               else
                 @glob_path = "#{@dir_path}#{@xsd_dir_path}"
@@ -56,6 +58,11 @@ module ViewModelGateway
 
     def cepc_xsd_files
       @glob_path = "#{@dir_path + XSD_DEFAULT_PATH}Reported-Data.xsd"
+      Dir.glob(@glob_path)
+    end
+
+    def cs63_xsd_files
+      @glob_path = "#{@dir_path + XSD_DEFAULT_PATH}ActionPlan.xsd"
       Dir.glob(@glob_path)
     end
   end
