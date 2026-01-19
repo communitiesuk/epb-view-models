@@ -27,6 +27,10 @@ module ViewModel
       @certificate_summary.to_certificate_summary
     end
 
+    def to_certificate_summary_scotland
+      @certificate_summary.to_certificate_summary_scotland
+    end
+
     def get_report_type
       view_model.report_type
     end

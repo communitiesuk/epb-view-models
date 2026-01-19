@@ -1,0 +1,101 @@
+{
+  "type_of_assessment":"CEPC",
+  "assessment_id":"0000-0000-0000-0000-0000",
+  "date_of_expiry":"2033-08-03",
+  "report_type":"3",
+  "date_of_assessment":"2023-07-11",
+  "date_of_registration":"2023-08-04",
+  "address":
+  {
+    "address_line1":"Non-dom Property",
+    "address_line2":"Some Street",
+    "address_line3":"Bigger Line",
+    "address_line4":null,
+    "town":"Town",
+    "postcode":"FK1 1XE"
+  },
+  "assessor":
+  {
+    "scheme_assessor_id":"SPEC000000",
+    "name":"Testa Sessor",
+    "contact_details":
+    {
+      "email":"sessor@email.co.uk",
+      "telephone":"00000000073"
+    }
+  },
+  "technical_information":
+  {
+    "main_heating_fuel":"LPG",
+    "building_environment":"Heating and Natural Ventilation",
+    "floor_area":"109"
+  },
+  "current_energy_efficiency_rating":120,
+  "current_energy_efficiency_band":"e",
+  "property_type":"\n        Hotel\n        Hotels\n      ",
+  "property_short_description": "Hotel",
+  "compliant_2002":"N",
+  "renewable_energy_sources":["\n        None\n      "],
+  "electricity_sources":["\n        Grid supplied\n      "],
+  "primary_energy_indicator":"616",
+  "calculation_tool":"DesignBuilder Software Ltd, DesignBuilder SBEM, v7.2.0, SBEM, v6.1.e.0",
+  "ter_2002": "118.01",
+  "ter":"55.93",
+  "recommendations":
+  [
+    {
+      "payback_type":"short",
+      "recommendation_code":"EPC-H7",
+      "recommendation":"Add optimum start/stop to the heating system.",
+      "cO2_Impact":"MEDIUM"
+    },
+    {
+      "payback_type":"short",
+      "recommendation_code":"EPC-H8",
+      "recommendation":"Add weather compensation controls to heating system.",
+      "cO2_Impact":"MEDIUM"
+    },
+    {
+      "payback_type":"short",
+      "recommendation_code":"EPC-H5",
+      "recommendation":"Add local time control to heating system.",
+      "cO2_Impact":"MEDIUM"
+    },
+    {
+      "payback_type":"short",
+      "recommendation_code":"EPC-V1",
+      "recommendation":"In some spaces, the solar gain limit defined in the NCM is exceeded, which might cause overheating. Consider solar control measures such as the application of reflective coating or shading devices to windows.",
+      "cO2_Impact":"MEDIUM"
+    },
+    {
+      "payback_type":"short",
+      "recommendation_code":"EPC-E3",
+      "recommendation":"Some solid walls are poorly insulated - introduce or improve internal wall insulation.",
+      "cO2_Impact":"MEDIUM"
+    },
+    {
+      "payback_type":"short",
+      "recommendation_code":"EPC-F4",
+      "recommendation":"Consider switching from oil or LPG to biomass.",
+      "cO2_Impact":"HIGH"
+    },
+    {
+      "payback_type":"short",
+      "recommendation_code":"EPC-E7",
+      "recommendation":"Carry out a pressure test, identify and treat identified air leakage. Enter result in EPC calculation.",
+      "cO2_Impact":"MEDIUM"
+    },
+    {
+      "payback_type":"short",
+      "recommendation_code":"EPC-E8",
+      "recommendation":"Some glazing is poorly insulated. Replace/improve glazing and/or frames. ",
+      "cO2_Impact":"MEDIUM"
+    },
+    {
+      "payback_type":"medium",
+      "recommendation_code":"EPC-E2",
+      "recommendation":"Roof is poorly insulated. Install or improve insulation of roof.",
+      "cO2_Impact":"MEDIUM"
+    }
+  ]
+}

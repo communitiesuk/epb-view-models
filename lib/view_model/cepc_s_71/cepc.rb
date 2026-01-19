@@ -7,49 +7,17 @@ module ViewModel
         expires_at.to_s
       end
 
-      def ac_inspection_commissioned
-        xpath(%w[AC-Inspection-Commissioned])
-      end
-
-      def ac_kw_rating
-        xpath(%w[AC-kW-Rating])&.to_i
-      end
-
-      def ac_present
-        xpath(%w[AC-Present])
-      end
-
-      def ac_rated_output
-        xpath(%w[AC-Rated-Output])
-      end
-
-      def building_emission_rate
-        xpath(%w[BER])
-      end
-
       def building_environment
         xpath(%w[Building-Environment])
-      end
-
-      def building_level
-        xpath(%w[Building-Level])&.to_i
       end
 
       def energy_efficiency_rating
         xpath(%w[Asset-Rating])&.to_i
       end
 
-      def epc_related_party_disclosure
-        xpath(%w[EPC-Related-Party-Disclosure])
-      end
-
-      def estimated_ac_kw_rating
-        xpath(%w[AC-Estimated-Output])&.to_i
-      end
-
-      def existing_build_rating
-        xpath(%w[Existing-Stock-Benchmark])&.to_i
-      end
+      # def existing_build_rating
+      #   xpath(%w[Existing-Stock-Benchmark])&.to_i
+      # end
 
       def floor_area
         xpath(%w[Technical-Information Floor-Area])
@@ -59,48 +27,85 @@ module ViewModel
         xpath(%w[Main-Heating-Fuel])
       end
 
-      def new_build_rating
-        xpath(%w[New-Build-Benchmark])&.to_i
-      end
+      # def new_build_rating
+      #   xpath(%w[New-Build-Benchmark])&.to_i
+      # end
 
-      def other_fuel_description
-        xpath(%w[Other-Fuel-Description])
-      end
-
-      def primary_energy_use
-        xpath(%w[Energy-Consumption-Current])
-      end
+      # def primary_energy_use
+      #   xpath(%w[Energy-Consumption-Current])
+      # end
 
       def property_type
         xpath(%w[Property-Type])
       end
 
-      def related_rrn
-        xpath(%w[Related-RRN])
+      def property_short_description
+        xpath(%w[Property-Type Short-Description])
       end
 
-      def special_energy_uses
-        xpath(%w[Special-Energy-Uses])
+      def compliant_2002
+        xpath(%w[Compliant-2002])
       end
 
-      def standard_emissions
-        xpath(%w[SER])
+      def renewable_energy_sources
+        @xml_doc.search("Renewable-Energy-Sources").map(&:content)
       end
 
-      def target_emissions
+      def electricity_sources
+        @xml_doc.search("Electricity-Sources").map(&:content)
+      end
+
+      def primary_energy_indicator
+      xpath(%w[Primary-Energy-Indicator])
+      end
+
+      def calculation_tool
+      xpath(%w[Calculation-Tool])
+      end
+
+      def ter_2002
+      xpath(%w[TER-2002])
+      end
+
+      def ter
         xpath(%w[TER])
-      end
-
-      def transaction_type
-        xpath(%w[Transaction-Type])
-      end
-
-      def typical_emissions
-        xpath(%w[TYR])
       end
 
       def renewable_sources
         xpath(%w[Renewable-Sources])
+      end
+
+      def recommendations(payback = "")
+        if payback.empty?
+          # return an enumerable of all nodes
+          @xml_doc.xpath "Recommendations-Report RR-Recommendations"
+        else
+          @xml_doc
+            .search("Recommendations-Report RR-Recommendations/#{payback}")
+            .map do |node|
+            {
+              code: node.at("Recommendation-Code").content,
+              text: node.at("Recommendation").content,
+              cO2Impact: node.at("CO2-Impact").content,
+            }
+          end
+        end
+      end
+
+      def short_payback_recommendations
+        recommendations("Short-Payback")
+      end
+
+      def medium_payback_recommendations
+        recommendations("Medium-Payback")
+      end
+
+      def long_payback_recommendations
+        recommendations("Long-Payback")
+      end
+
+      def other_recommendations
+        recommendations("Other-Payback")
       end
     end
   end
