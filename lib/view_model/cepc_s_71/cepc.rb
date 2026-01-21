@@ -107,6 +107,22 @@ module ViewModel
       def other_recommendations
         recommendations("Other-Payback")
       end
+
+      def related_rrn
+        xpath(%w[Related-RRN])
+      end
+
+      def new_build_rating
+        xpath(%w[New-Build-Benchmark])&.to_i
+      end
+
+      def existing_build_rating
+        xpath(%w[Existing-Stock-Benchmark])&.to_i
+      end
+
+      def epc_related_party_disclosure
+        xpath(%w[EPC-Related-Party-Disclosure])
+      end
     end
   end
 end

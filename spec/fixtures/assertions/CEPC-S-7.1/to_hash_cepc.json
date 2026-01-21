@@ -1,0 +1,53 @@
+{
+  "type_of_assessment":"CEPC",
+  "assessment_id":"0000-0000-0000-0000-0000",
+  "date_of_expiry":"2033-08-03",
+  "report_type":"3",
+  "date_of_assessment":"2023-07-11",
+  "date_of_registration":"2023-08-04",
+  "address":
+  {
+    "address_id":"LPRN-0000000001",
+    "address_line1":"Non-dom Property",
+    "address_line2":"Some Street",
+    "address_line3":"Bigger Line",
+    "address_line4":null,
+    "town":"Town",
+    "postcode":"FK1 1XE"
+  },
+  "technical_information":
+  {
+    "main_heating_fuel":"LPG",
+    "building_environment":"Heating and Natural Ventilation",
+    "floor_area":"109",
+    "building_level":null
+  },
+  "building_emission_rate":null,
+  "primary_energy_use":null,
+  "related_rrn":null,
+  "new_build_rating":56,
+  "new_build_band":"c",
+  "existing_build_rating":null,
+  "existing_build_band":null,
+  "current_energy_efficiency_rating":120,
+  "energy_efficiency_rating":120,
+  "assessor":
+  {
+    "scheme_assessor_id":"SPEC000000",
+    "name":"Testa Sessor",
+    "contact_details":
+    {
+      "email":"sessor@email.co.uk",
+      "telephone":"00000000073"
+    },
+    "company_details":
+    {
+      "name":"EPC R Us Ltd",
+      "address":"6 Unit Business Park Town"
+    }
+  },
+  "related_party_disclosure":null,
+  "current_energy_efficiency_band":"e",
+  "property_type":"\n        Hotel\n        Hotels\n      ",
+  "building_complexity":null
+}
