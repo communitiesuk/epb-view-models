@@ -20,9 +20,16 @@
     "name":"Testa Sessor",
     "contact_details":
     {
-      "email":"sessor@email.co.uk",
-      "telephone":"00000000073"
-    }
+      "email": "sessor@email.co.uk",
+      "telephone": "00000000073",
+      "trading_address": "6 Unit Business Park Town"
+    },
+    "company_name": "EPC R Us Ltd",
+    "insurer": "Insurance Company",
+    "insurer_effective_date": "2022-10-22",
+    "insurer_expiry_date": "2023-10-21",
+    "insurer_pi_limit": "5000000",
+    "policy_no": "POL000000"
   },
   "technical_information":
   {
@@ -31,15 +38,22 @@
     "floor_area":"109"
   },
   "current_energy_efficiency_rating":120,
-  "current_energy_efficiency_band":"e",
+  "potential_energy_rating":"17",
+  "current_energy_efficiency_band":"G",
+  "potential_energy_band":"B+",
+  "new_build_benchmark_rating":"56",
+  "new_build_benchmark_band":"D",
+  "comparative_asset_rating":"65",
+  "epc_rating_ber":"120.47",
+  "approximate_energy_use":"523",
   "property_type":"\n        Hotel\n        Hotels\n      ",
-  "property_short_description": "Hotel",
+  "property_short_description":"Hotel",
   "compliant_2002":"N",
-  "renewable_energy_sources":["\n        None\n      "],
+  "renewable_energy_sources": ["\n        None\n      "],
   "electricity_sources":["\n        Grid supplied\n      "],
   "primary_energy_indicator":"616",
   "calculation_tool":"DesignBuilder Software Ltd, DesignBuilder SBEM, v7.2.0, SBEM, v6.1.e.0",
-  "ter_2002": "118.01",
+  "ter_2002":"118.01",
   "ter":"55.93",
   "recommendations":
   [

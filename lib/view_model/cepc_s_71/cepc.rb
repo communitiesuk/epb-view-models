@@ -15,9 +15,41 @@ module ViewModel
         xpath(%w[Asset-Rating])&.to_i
       end
 
-      # def existing_build_rating
-      #   xpath(%w[Existing-Stock-Benchmark])&.to_i
-      # end
+      def current_energy_efficiency_band
+        xpath(%w[Energy-Band])
+      end
+
+      def potential_energy_rating
+        xpath(%w[Potential-Rating])
+      end
+
+      def potential_energy_band
+        xpath(%w[Potential-Band])
+      end
+
+      def new_build_benchmark_rating
+        xpath(%w[New-Build-Benchmark])
+      end
+
+      def new_build_benchmark_band
+        xpath(%w[New-Build-Benchmark-Band])
+      end
+
+      def comparative_asset_rating
+        xpath(%w[Comparative-Asset-Rating])
+      end
+
+      def comparative_asset_band
+        xpath(%w[Comparative-Energy-Band])
+      end
+
+      def epc_rating_ber
+        xpath(%w[BER])
+      end
+
+      def approximate_energy_use
+        xpath(%w[Approximate-Energy-Use])
+      end
 
       def floor_area
         xpath(%w[Technical-Information Floor-Area])
@@ -26,14 +58,6 @@ module ViewModel
       def main_heating_fuel
         xpath(%w[Main-Heating-Fuel])
       end
-
-      # def new_build_rating
-      #   xpath(%w[New-Build-Benchmark])&.to_i
-      # end
-
-      # def primary_energy_use
-      #   xpath(%w[Energy-Consumption-Current])
-      # end
 
       def property_type
         xpath(%w[Property-Type])
@@ -56,15 +80,15 @@ module ViewModel
       end
 
       def primary_energy_indicator
-      xpath(%w[Primary-Energy-Indicator])
+        xpath(%w[Primary-Energy-Indicator])
       end
 
       def calculation_tool
-      xpath(%w[Calculation-Tool])
+        xpath(%w[Calculation-Tool])
       end
 
       def ter_2002
-      xpath(%w[TER-2002])
+        xpath(%w[TER-2002])
       end
 
       def ter
@@ -122,6 +146,34 @@ module ViewModel
 
       def epc_related_party_disclosure
         xpath(%w[EPC-Related-Party-Disclosure])
+      end
+
+      def trading_address
+        xpath(%w[Trading-Address])
+      end
+
+      def company_name
+        xpath(%w[Company-Name])
+      end
+
+      def insurer
+        xpath(%w[Insurer])
+      end
+
+      def policy_no
+        xpath(%w[Policy-No])
+      end
+
+      def insurer_effective_date
+        xpath(%w[Effective-Date])
+      end
+
+      def insurer_expiry_date
+        xpath(%w[Expiry-Date])
+      end
+
+      def insurer_pi_limit
+        xpath(%w[PI-Limit])
       end
     end
   end
