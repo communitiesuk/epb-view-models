@@ -36,7 +36,7 @@ module Presenter
               name: @view_model.company_name,
               address: @view_model.trading_address,
             },
-          }
+          },
         }
       end
     end

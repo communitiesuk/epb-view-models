@@ -7,7 +7,6 @@ module Presenter
         @view_model = view_model
       end
 
-
       def to_certificate_summary
         {
           type_of_assessment: TYPE_OF_ASSESSMENT,

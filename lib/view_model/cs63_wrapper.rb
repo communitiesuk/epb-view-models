@@ -2,7 +2,7 @@ module ViewModel
   class Cs63Wrapper
     attr_reader :view_model
 
-    def initialize(xml_doc, schema_type, additional_data = {})
+    def initialize(xml_doc, _schema_type, _additional_data = {})
       @view_model = ViewModel::Cs63::CommonSchema.new xml_doc
       # @view_model = build_view_model(xml_doc, schema_type)
       @summary = Presenter::Cs63::Summary.new(view_model)
@@ -21,11 +21,8 @@ module ViewModel
       @certificate_summary.to_certificate_summary
     end
 
-
     def get_view_model
       view_model
     end
-
-  private
   end
 end

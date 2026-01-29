@@ -1,4 +1,4 @@
-require 'date'
+require "date"
 
 module ViewModel
   module Cs63
@@ -181,7 +181,6 @@ module ViewModel
 
       def date_of_expiry
         Date.parse(date_of_registration).next_month(42).to_s
-
       end
 
       def date_of_assessment
