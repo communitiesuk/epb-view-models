@@ -1,0 +1,30 @@
+{
+  "type_of_assessment": "CS63",
+  "assessment_id": "0000-0000-0000-0000-0000",
+  "date_of_expiry": "2028-12-11",
+  "report_type": "9",
+  "date_of_assessment": "2025-06-04",
+  "date_of_registration": "2025-06-11",
+  "address": {
+    "address_id": "0000000001",
+    "address_line1": "Non-dom Property",
+    "address_line2": "",
+    "address_line3": "",
+    "address_line4": "",
+    "town": "Town",
+    "postcode": "FK1 1XE"
+  },
+  "related_rrn": null,
+  "assessor": {
+    "scheme_assessor_id": "SPEC000000",
+    "name": "Testa Sessor",
+    "contact_details": {
+      "email": "sessor@email.co.uk",
+      "telephone": "00000000073"
+    },
+    "company_details": {
+      "name": "EPC R Us Ltd",
+      "address": "6 Unit Business Park Town"
+    }
+  }
+}

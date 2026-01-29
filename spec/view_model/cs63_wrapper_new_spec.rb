@@ -5,6 +5,7 @@ RSpec.describe ViewModel::CepcWrapper do
     it "returns the expected assertion for the to_hash method", :aggregate_failures do
       schema_tests = [
         { schema: "CS63-S-7.0", type: "action_plan", method_called: :to_hash },
+        { schema: "CS63-S-7.0", type: "action_plan", method_called: :to_certificate_summary },
       ]
 
       schema_tests.each do |schema|

@@ -24,21 +24,7 @@ module Presenter
             town: @view_model.town,
             postcode: @view_model.postcode,
           },
-          technical_information: {
-            main_heating_fuel: @view_model.main_heating_fuel,
-            building_environment: @view_model.building_environment,
-            floor_area: @view_model.floor_area,
-            building_level: @view_model.building_level,
-          },
-          building_emission_rate: @view_model.respond_to?(:building_emission_rate) ? @view_model.building_emission_rate : nil,
-          primary_energy_use: @view_model.respond_to?(:primary_energy_use) ? @view_model.primary_energy_use : nil,
           related_rrn: @view_model.related_rrn,
-          new_build_rating: @view_model.new_build_rating,
-          new_build_band: Helper::EnergyBandCalculator.commercial(@view_model.new_build_rating),
-          existing_build_rating: @view_model.existing_build_rating,
-          existing_build_band: Helper::EnergyBandCalculator.commercial(@view_model.existing_build_rating),
-          current_energy_efficiency_rating: @view_model.energy_efficiency_rating,
-          energy_efficiency_rating: @view_model.energy_efficiency_rating,
           assessor: {
             scheme_assessor_id: @view_model.scheme_assessor_id,
             name: @view_model.assessor_name,
@@ -48,13 +34,9 @@ module Presenter
             },
             company_details: {
               name: @view_model.company_name,
-              address: @view_model.company_address,
+              address: @view_model.trading_address,
             },
-          },
-          related_party_disclosure: @view_model.epc_related_party_disclosure,
-          current_energy_efficiency_band: Helper::EnergyBandCalculator.commercial(@view_model.energy_efficiency_rating),
-          property_type: @view_model.property_type,
-          building_complexity: @view_model.building_level,
+          }
         }
       end
     end

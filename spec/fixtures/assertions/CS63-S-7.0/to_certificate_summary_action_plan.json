@@ -1,0 +1,85 @@
+{
+  "type_of_assessment": "CS63",
+  "assessment_id": "0000-0000-0000-0000-0000",
+  "epc_assessment_id": "0000-0000-0000-0000-0001",
+  "sale_lease_date": "2025-06-13",
+  "report_type": "9",
+  "date_of_assessment": "2025-06-04",
+  "plan_report_date": "2025-06-11",
+  "address": {
+    "address_line1": "Non-dom Property",
+    "address_line2": "",
+    "address_line3": "",
+    "address_line4": "",
+    "town": "Town",
+    "postcode": "FK1 1XE"
+  },
+  "assessor": {
+    "scheme_assessor_id": "SPEC000000",
+    "name": "Testa Sessor",
+    "contact_details": {
+      "email": "sessor@email.co.uk",
+      "telephone": "00000000073",
+      "trading_address": "6 Unit Business Park Town"
+    },
+    "company_name": "EPC R Us Ltd",
+    "status": "Registered"
+  },
+  "owner_commission_report": "Y",
+  "delegated_person_commission_report": "N",
+  "property_type_short_description": "General Industrial",
+  "property_type_long_description": "B2 to B7 General Industrial and Special Industrial Groups",
+  "building_improvements": "N",
+  "operational_ratings": "Y",
+  "dec": "N",
+  "planned_completion_date": "2028-12-12",
+  "actual_completion_date": null,
+  "target_emission_savings": "1.61",
+  "target_energy_savings": "10.11",
+  "accept_prescriptive_improvements": "Y",
+  "prescriptive_improvements": [
+    {
+      "measure_description_short": "Central time heating control",
+      "measure_description_long": null,
+      "measure_valid": "N",
+      "measure_type": null
+    },
+    {
+      "measure_description_short": "Lighting controls",
+      "measure_description_long": null,
+      "measure_valid": "Y",
+      "measure_type": null
+    },
+    {
+      "measure_description_short": "Draught-stripping windows and doors",
+      "measure_description_long": null,
+      "measure_valid": "Y",
+      "measure_type": null
+    },
+    {
+      "measure_description_short": "Hot water storage insulation",
+      "measure_description_long": null,
+      "measure_valid": "N",
+      "measure_type": null
+    },
+    {
+      "measure_description_short": "Lamp replacement",
+      "measure_description_long": null,
+      "measure_valid": "N",
+      "measure_type": null
+    },
+    {
+      "measure_description_short": "Boiler replacement",
+      "measure_description_long": null,
+      "measure_valid": "N",
+      "measure_type": null
+    },
+    {
+      "measure_description_short": "Roof insulation",
+      "measure_description_long": null,
+      "measure_valid": "N",
+      "measure_type": null
+    }
+  ],
+  "alternative_improvements": []
+}

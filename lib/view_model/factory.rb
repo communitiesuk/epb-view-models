@@ -2,6 +2,9 @@
 
 module ViewModel
   class Factory
+    TYPES_OF_CS63 = %i[
+      CS63-S-7.0
+    ].freeze
     TYPES_OF_CEPC = %i[
       CEPC-8.0.0
       CEPC-NI-8.0.0
@@ -105,6 +108,8 @@ module ViewModel
       elsif TYPES_OF_SAP.include?(schema_type)
         report_type = xml_doc.at("Report-Type")&.content
         ViewModel::SapWrapper.new(xml_doc, schema_type, report_type, additional_data)
+      elsif TYPES_OF_CS63.include?(schema_type)
+        ViewModel::Cs63Wrapper.new(xml_doc, schema_type, additional_data)
       end
     end
   end
