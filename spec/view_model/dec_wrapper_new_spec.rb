@@ -4,6 +4,7 @@ RSpec.describe ViewModel::DecWrapper do
   context "when calling the DEC wrapper for a valid schema" do
     it "returns the expected assertion for the to_hash method", :aggregate_failures do
       schema_tests = [
+        # { schema: "DECAR-S-7. 0", type: "dec", method_called: :to_hash },
         { schema: "CEPC-8.0.0", type: "dec", method_called: :to_hash },
         { schema: "CEPC-8.0.0", type: "dec-large-building", method_called: :to_hash },
         { schema: "CEPC-NI-8.0.0", type: "dec", method_called: :to_hash },

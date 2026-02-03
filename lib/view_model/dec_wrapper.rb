@@ -30,6 +30,8 @@ module ViewModel
 
     def build_view_model(xml_doc, schema_type)
       case schema_type
+      when :"DECAR-S-7.0"
+        ViewModel::DecarS70::Dec.new xml_doc
       when :"CEPC-8.0.0"
         ViewModel::Cepc800::Dec.new xml_doc
       when :"CEPC-NI-8.0.0"
