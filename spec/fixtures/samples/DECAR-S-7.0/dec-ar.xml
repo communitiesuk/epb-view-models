@@ -19,6 +19,8 @@
         <CEPC:Trading-Address>6 Unit Business Park Town</CEPC:Trading-Address>
         <CEPC:Company-Name>EPC R Us Ltd</CEPC:Company-Name>
         <CEPC:Status>Registered</CEPC:Status>
+        <CEPC:E-Mail>assessor@co.uk</CEPC:E-Mail>
+        <CEPC:Telephone-Number>000002828282</CEPC:Telephone-Number>
       </CEPC:Energy-Assessor>
       <CEPC:Property-Details>
         <CEPC:Location-Description>GF in modern detached pavilion sytle building. Cavity brick walls with pitched conc tiled roof.</CEPC:Location-Description>

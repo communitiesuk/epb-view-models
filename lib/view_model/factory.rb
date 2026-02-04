@@ -2,6 +2,9 @@
 
 module ViewModel
   class Factory
+    TYPES_OF_DECAR = %i[
+      DECAR-S-7.0
+    ].freeze
     TYPES_OF_CS63 = %i[
       CS63-S-7.0
     ].freeze
@@ -77,7 +80,7 @@ module ViewModel
 
       xml_doc = Nokogiri.XML(xml, nil, nil, Nokogiri::XML::ParseOptions.new.huge.strict).remove_namespaces!
 
-      if TYPES_OF_CEPC.include?(schema_type)
+      if TYPES_OF_CEPC.include?(schema_type) || TYPES_OF_DECAR.include?(schema_type)
         filtered_results =
           if filter_results_for
             xml_doc.at("//*[RRN=\"#{filter_results_for}\"]/ancestor::Report")

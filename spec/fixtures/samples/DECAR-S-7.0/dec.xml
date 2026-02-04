@@ -19,6 +19,8 @@
         <CEPC:Trading-Address>6 Unit Business Park Town</CEPC:Trading-Address>
         <CEPC:Company-Name>EPC R Us Ltd</CEPC:Company-Name>
         <CEPC:Status>Registered</CEPC:Status>
+        <CEPC:E-Mail>assessor@co.uk</CEPC:E-Mail>
+        <CEPC:Telephone-Number>000002828282</CEPC:Telephone-Number>
       </CEPC:Energy-Assessor>
       <CEPC:Property-Details>
         <CEPC:Location-Description />
@@ -118,6 +120,13 @@
         <CEPC:Heating-CO2>5</CEPC:Heating-CO2>
         <CEPC:Renewables-CO2>0</CEPC:Renewables-CO2>
       </CEPC:Year1-Assessment>
+      <CEPC:Year2-Assessment>
+        <CEPC:Nominated-Date>2023-03-01</CEPC:Nominated-Date>
+        <CEPC:Energy-Rating>33</CEPC:Energy-Rating>
+        <CEPC:Electricity-CO2>17</CEPC:Electricity-CO2>
+        <CEPC:Heating-CO2>5</CEPC:Heating-CO2>
+        <CEPC:Renewables-CO2>0</CEPC:Renewables-CO2>
+      </CEPC:Year2-Assessment>
       <CEPC:Technical-Information>
         <CEPC:Main-Heating-Fuel>Natural Gas</CEPC:Main-Heating-Fuel>
         <CEPC:Building-Environment>Heating and Natural Ventilation</CEPC:Building-Environment>

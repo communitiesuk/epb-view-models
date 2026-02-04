@@ -1,0 +1,73 @@
+{
+  "assessment_id": "0000-0000-0000-0000-0000",
+  "date_of_assessment": "2025-04-02",
+  "date_of_expiry": "2035-03-31",
+  "date_of_registration": "2025-06-18",
+  "address": {
+    "address_id": "0000000001",
+    "address_line1": "Non-dom Property",
+    "address_line2": "Buisness Park",
+    "address_line3": "",
+    "address_line4": "",
+    "town": "Town",
+    "postcode": "EH14 2SP"
+  },
+  "type_of_assessment": "DEC",
+  "schema_version": 7,
+  "report_type": "1",
+  "current_assessment": {
+    "date": "2025-04-01",
+    "energy_efficiency_rating": 47,
+    "energy_efficiency_band": "b",
+    "heating_co2": 17,
+    "electricity_co2": 19,
+    "renewables_co2": 0
+  },
+  "year1_assessment": {
+    "date": null,
+    "energy_efficiency_rating": null,
+    "energy_efficiency_band": null,
+    "heating_co2": null,
+    "electricity_co2": null,
+    "renewables_co2": null
+  },
+  "year2_assessment": {
+    "date": null,
+    "energy_efficiency_rating": null,
+    "energy_efficiency_band": null,
+    "heating_co2": null,
+    "electricity_co2": null,
+    "renewables_co2": null
+  },
+  "technical_information": {
+    "main_heating_fuel": "Natural Gas",
+    "building_environment": "Heating and Natural Ventilation",
+    "floor_area": "973.6",
+    "occupier": "Business name",
+    "asset_rating": 21,
+    "annual_energy_use_fuel_thermal": "79",
+    "annual_energy_use_electrical": "37",
+    "typical_thermal_use": "127",
+    "typical_electrical_use": "95",
+    "renewables_fuel_thermal": "0",
+    "renewables_electrical": "0"
+  },
+  "assessor": {
+    "scheme_assessor_id": "SPEC000000",
+    "name": "Test Assessor",
+    "company_details": {
+      "name": "EPC R Us Ltd",
+      "address": "6 Unit Business Park Town"
+    },
+    "contact_details": {
+      "email": "assessor@co.uk",
+      "telephone": "000002828282"
+    }
+  },
+  "administrative_information": {
+    "issue_date": "2025-06-18",
+    "calculation_tool": "BSD, OR Scotland, v1.0.0",
+    "related_party_disclosure": "4",
+    "related_rrn": "0046-0223-3215-3264-4200"
+  }
+}

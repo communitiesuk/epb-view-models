@@ -1,6 +1,6 @@
 require_relative "../wrapper_test_helper"
 
-RSpec.describe ViewModel::CepcWrapper do
+RSpec.describe ViewModel::Cs63Wrapper do
   context "when calling the CS63 wrapper for a valid schema" do
     it "returns the expected assertion for the to_hash method", :aggregate_failures do
       schema_tests = [

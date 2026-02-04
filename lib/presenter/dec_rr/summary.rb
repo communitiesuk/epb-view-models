@@ -1,15 +1,13 @@
 module Presenter
   module DecRr
     class Summary
-      TYPE_OF_ASSESSMENT = "DEC-RR".freeze
-
       def initialize(view_model)
         @view_model = view_model
       end
 
       def to_hash
         {
-          type_of_assessment: TYPE_OF_ASSESSMENT,
+          type_of_assessment: @view_model&.type_of_assessment,
           assessment_id: @view_model.assessment_id,
           report_type: @view_model.report_type,
           date_of_assessment: @view_model.date_of_assessment,

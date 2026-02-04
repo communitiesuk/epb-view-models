@@ -1,6 +1,10 @@
 module ViewModel
   module Cepc40
     class DecRr < ViewModel::Cepc40::CommonSchema
+      def type_of_assessment
+        "DEC-RR"
+      end
+
       def date_of_expiry
         floor_area = xpath(%w[Advisory-Report Technical-Information Floor-Area])
 

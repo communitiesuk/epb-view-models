@@ -1,6 +1,10 @@
 module ViewModel
   module CepcNi800
     class DecRr < ViewModel::CepcNi800::CommonSchema
+      def type_of_assessment
+        "DEC-RR"
+      end
+
       def date_of_expiry
         expiry_date = (Date.parse(date_of_issue) - 1).next_year 7
 

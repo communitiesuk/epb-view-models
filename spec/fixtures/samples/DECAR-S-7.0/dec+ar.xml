@@ -20,6 +20,8 @@
         <CEPC:Trading-Address>6 Unit Business Park Town</CEPC:Trading-Address>
         <CEPC:Company-Name>EPC R Us Ltd</CEPC:Company-Name>
         <CEPC:Status>Registered</CEPC:Status>
+        <CEPC:E-Mail>assessor@co.uk</CEPC:E-Mail>
+        <CEPC:Telephone-Number>000002828282</CEPC:Telephone-Number>
       </CEPC:Energy-Assessor>
       <CEPC:Property-Details>
         <CEPC:Location-Description>Landlord owned building built 1980. central landlord heating with mmixture of lighting, electric pou and a single split AC unit in the comms room. </CEPC:Location-Description>
@@ -133,6 +135,8 @@
         <CEPC:Trading-Address>6 Unit Business Park Town</CEPC:Trading-Address>
         <CEPC:Company-Name>EPC R Us Ltd</CEPC:Company-Name>
         <CEPC:Status>Registered</CEPC:Status>
+        <CEPC:E-Mail>assessor@co.uk</CEPC:E-Mail>
+        <CEPC:Telephone-Number>000002828282</CEPC:Telephone-Number>
       </CEPC:Energy-Assessor>
       <CEPC:Property-Details>
         <CEPC:Location-Description>Landlord owned building built 1980. central landlord heating with mmixture of lighting, electric pou and a single split AC unit in the comms room. </CEPC:Location-Description>

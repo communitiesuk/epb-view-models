@@ -6,7 +6,6 @@ def test_wrapper(schema_case)
   validate_xml(sample, schema_case)
 
   view_model = ViewModel::Factory.new.create(sample, schema_case[:schema], nil)
-
   source_hash = view_model.method(schema_case[:method_called]).call
   # print source_hash.to_json
   assertion = fetch_assertion(schema_case[:schema], schema_case[:method_called], schema_case[:type])
