@@ -6,6 +6,7 @@ module ViewModel
       @view_model = build_view_model(xml_doc, schema_type)
       @summary = Presenter::DecRr::Summary.new(view_model)
       @recommendation_report = Presenter::DecRr::RecommendationReport.new(view_model)
+      @certificate_summary = Presenter::DecRr::CertificateSummary.new(view_model)
     end
 
     def type
@@ -19,6 +20,10 @@ module ViewModel
     # FIXME: Method name is not consistent for recommendation reports (see SAP/RdSAP)
     def to_report
       @recommendation_report.to_hash
+    end
+
+    def to_certificate_summary
+      @certificate_summary.to_hash
     end
 
     def get_view_model

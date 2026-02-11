@@ -45,5 +45,15 @@ RSpec.describe ViewModel::DecRrWrapper do
         expect { test_wrapper(schema) }.not_to raise_error
       end
     end
+
+    it "returns the expected assertion for the to_certificate_summary method", :aggregate_failures do
+      schema_tests = [
+        { schema: "DECAR-S-7.0", type: "dec-ar", method_called: :to_certificate_summary },
+      ]
+
+      schema_tests.each do |schema|
+        expect { test_wrapper(schema) }.not_to raise_error
+      end
+    end
   end
 end
