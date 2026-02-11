@@ -66,10 +66,8 @@ module ViewModel
 
     def assessor_contact_address
       address = xpath(%w[Energy-Assessor Contact-Address]).nil? ? xpath(%w[Home-Inspector Contact-Address]) : xpath(%w[Energy-Assessor Contact-Address])
-      format_address = address&.split("\n").map do |line|
-        line.strip
-      end
-      format_address&.reject(&:empty?)&.join(', ')
+      format_address = address&.split("\n")&.map(&:strip)
+      format_address&.reject(&:empty?)&.join(", ")
     end
 
     def company_name

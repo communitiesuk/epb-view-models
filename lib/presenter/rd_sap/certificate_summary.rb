@@ -32,7 +32,7 @@ module Presenter
           assessor: {
             scheme_assessor_id: @view_model.scheme_assessor_id,
             name: @view_model.assessor_name,
-            assessor_contact_address:@view_model.assessor_contact_address,
+            assessor_contact_address: @view_model.assessor_contact_address,
             company_name: @view_model.company_name,
             contact_details: {
               email: @view_model.assessor_email,
