@@ -1,0 +1,119 @@
+{
+  "type_of_assessment": "RdSAP",
+  "assessment_id": "0000-0000-0000-0000-0000",
+  "date_of_expiry": "2033-06-26",
+  "date_of_assessment": "2023-06-27",
+  "date_of_registration": "2023-06-27",
+  "address": {
+    "address_line1": "1 Some Street",
+    "address_line2": "",
+    "address_line3": "",
+    "address_line4": null,
+    "town": "Newkirk",
+    "postcode": "FK1 1XE"
+  },
+  "assessor": {
+    "scheme_assessor_id": "SPEC000000",
+    "name": "Testa Sessor",
+    "assessor_contact_address": "12 Epc Street, Newkirk, FK1 1XE",
+    "company_name": "Test EPCs 4U",
+    "contact_details": {
+      "email": "a@b.c",
+      "telephone": "0555 497 2848"
+    }
+  },
+  "current_carbon_emission": 0.17e1,
+  "carbon_emissions_current_per_floor_area": "25",
+  "current_energy_efficiency_band": "c",
+  "current_energy_efficiency_rating": 79,
+  "dwelling_type": "Top-floor flat",
+  "estimated_energy_cost": "933.00",
+  "heat_demand": {
+    "current_space_heating_demand": 3865,
+    "current_water_heating_demand": 1955
+  },
+  "heating_cost_current": "585",
+  "heating_cost_potential": "585",
+  "hot_water_cost_current": "226",
+  "hot_water_cost_potential": "226",
+  "lighting_cost_current": "122",
+  "lighting_cost_potential": "122",
+  "potential_carbon_emission": 0.17e1,
+  "potential_energy_efficiency_band": "c",
+  "potential_energy_efficiency_rating": 79,
+  "potential_energy_saving": "0.00",
+  "property_summary": [
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "wall",
+      "description": "Timber frame, as built, insulated (assumed)"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "wall",
+      "description": "Solid brick, as built, insulated (assumed)"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "roof",
+      "description": "Pitched, insulated (assumed)"
+    },
+    {
+      "energy_efficiency_rating": 0,
+      "environmental_efficiency_rating": 0,
+      "name": "floor",
+      "description": "(another dwelling below)"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "window",
+      "description": "Fully double glazed"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "main_heating",
+      "description": "Boiler and radiators, mains gas"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "main_heating_controls",
+      "description": "Programmer, room thermostat and TRVs"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "hot_water",
+      "description": "From main system"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "lighting",
+      "description": "Low energy lighting in all fixed outlets"
+    },
+    {
+      "energy_efficiency_rating": 0,
+      "environmental_efficiency_rating": 0,
+      "name": "secondary_heating",
+      "description": "None"
+    }
+  ],
+  "recommended_improvements": [],
+  "lzc_energy_sources": null,
+  "related_party_disclosure_number": 1,
+  "related_party_disclosure_text": null,
+  "total_floor_area": 0.66e2,
+  "status": "ENTERED",
+  "environmental_impact_current": 80,
+  "environmental_impact_potential": 80,
+  "primary_energy_use": "145",
+  "addendum": null,
+  "gas_smart_meter_present": null,
+  "electricity_smart_meter_present": null
+}
