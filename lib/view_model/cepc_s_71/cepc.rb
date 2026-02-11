@@ -20,15 +20,11 @@ module ViewModel
       end
 
       def potential_energy_rating
-        xpath(%w[Potential-Rating])
+        xpath(%w[Potential-Rating])&.to_i
       end
 
       def potential_energy_band
         xpath(%w[Potential-Band])
-      end
-
-      def new_build_benchmark_rating
-        xpath(%w[New-Build-Benchmark])
       end
 
       def new_build_benchmark_band
@@ -36,7 +32,7 @@ module ViewModel
       end
 
       def comparative_asset_rating
-        xpath(%w[Comparative-Asset-Rating])
+        xpath(%w[Comparative-Asset-Rating])&.to_i
       end
 
       def comparative_asset_band
@@ -44,11 +40,11 @@ module ViewModel
       end
 
       def epc_rating_ber
-        xpath(%w[BER])
+        xpath(%w[BER])&.to_f
       end
 
       def approximate_energy_use
-        xpath(%w[Approximate-Energy-Use])
+        xpath(%w[Approximate-Energy-Use])&.to_i
       end
 
       def floor_area
@@ -60,7 +56,11 @@ module ViewModel
       end
 
       def property_type
-        xpath(%w[Property-Type])
+        xpath(%w[Property-Type Long-Description])
+      end
+
+      def property_long_description
+        xpath(%w[Property-Type Long-Description])
       end
 
       def property_short_description
@@ -72,15 +72,15 @@ module ViewModel
       end
 
       def renewable_energy_sources
-        @xml_doc.search("Renewable-Energy-Sources").map(&:content)
+        @xml_doc.search("Renewable-Energy-Sources").children.search("Renewable-Energy-Source").map(&:content)
       end
 
       def electricity_sources
-        @xml_doc.search("Electricity-Sources").map(&:content)
+        @xml_doc.search("Electricity-Sources").children.search("Electricity-Source").map(&:content)
       end
 
       def primary_energy_indicator
-        xpath(%w[Primary-Energy-Indicator])
+        xpath(%w[Primary-Energy-Indicator])&.to_i
       end
 
       def calculation_tool
@@ -88,15 +88,11 @@ module ViewModel
       end
 
       def ter_2002
-        xpath(%w[TER-2002])
+        xpath(%w[TER-2002])&.to_f
       end
 
       def ter
-        xpath(%w[TER])
-      end
-
-      def renewable_sources
-        xpath(%w[Renewable-Sources])
+        xpath(%w[TER])&.to_f
       end
 
       def recommendations(payback = "")
