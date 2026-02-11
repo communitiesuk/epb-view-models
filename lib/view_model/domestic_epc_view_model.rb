@@ -64,6 +64,22 @@ module ViewModel
       xpath(%w[Main-Heating-Category])
     end
 
+    def assessor_contact_address
+      address = xpath(%w[Energy-Assessor Contact-Address]).nil? ? xpath(%w[Home-Inspector Contact-Address]) : xpath(%w[Energy-Assessor Contact-Address])
+      format_address = address&.split("\n").map do |line|
+        line.strip
+      end
+      format_address&.reject(&:empty?)&.join(', ')
+    end
+
+    def company_name
+      xpath(%w[Company-Name])
+    end
+
+    def co2_emissions_current_per_floor_area
+      xpath(%w[CO2-Emissions-Current-Per-Floor-Area])
+    end
+
   private
 
     def fetch_addendum_numbers

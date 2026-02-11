@@ -93,6 +93,7 @@ RSpec.describe ViewModel::RdSapWrapper do
         { schema: "SAP-Schema-NI-13.0", type: "rdsap", method_called: :to_certificate_summary },
         { schema: "SAP-Schema-NI-12.0", type: "rdsap", method_called: :to_certificate_summary },
         { schema: "SAP-Schema-NI-11.2", type: "rdsap", method_called: :to_certificate_summary },
+        { schema: "RdSAP-Schema-S-19.0", type: "epc", method_called: :to_certificate_summary },
       ]
 
       schema_tests.each do |schema|

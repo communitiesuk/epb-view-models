@@ -32,6 +32,8 @@ module Presenter
           assessor: {
             scheme_assessor_id: @view_model.scheme_assessor_id,
             name: @view_model.assessor_name,
+            assessor_contact_address:@view_model.assessor_contact_address,
+            company_name: @view_model.company_name,
             contact_details: {
               email: @view_model.assessor_email,
               telephone: @view_model.assessor_telephone,
@@ -39,6 +41,7 @@ module Presenter
           },
           current_carbon_emission:
             convert_to_big_decimal(@view_model.current_carbon_emission),
+          carbon_emissions_current_per_floor_area: @view_model.co2_emissions_current_per_floor_area,
           current_energy_efficiency_band: Helper::EnergyBandCalculator.domestic(@view_model.current_energy_rating),
           current_energy_efficiency_rating: @view_model.current_energy_rating,
           dwelling_type: @view_model.dwelling_type,

@@ -15,12 +15,15 @@
   "assessor":{
     "scheme_assessor_id":"SPEC000000",
     "name":"Mr Test Boi TST",
+    "assessor_contact_address": "3 Some Street, Fulchester, A0 0AA",
+    "company_name": "SPEC",
     "contact_details":{
       "email":"a@b.c",
       "telephone":"111222333"
     }
   },
   "current_carbon_emission":2.4,
+  "carbon_emissions_current_per_floor_area": "56",
   "current_energy_efficiency_band":"e",
   "current_energy_efficiency_rating":50,
   "dwelling_type":null,
