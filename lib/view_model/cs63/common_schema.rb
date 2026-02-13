@@ -134,11 +134,11 @@ module ViewModel
       end
 
       def target_emission_savings
-        xpath(%w[Target-Savings Target-Emission-Savings])
+        xpath(%w[Target-Savings Target-Emission-Savings])&.to_f
       end
 
       def target_energy_savings
-        xpath(%w[Target-Savings Target-Energy-Savings])
+        xpath(%w[Target-Savings Target-Energy-Savings])&.to_f
       end
 
       def accept_prescriptive_improvements

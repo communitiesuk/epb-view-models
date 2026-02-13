@@ -37,8 +37,10 @@ module Presenter
           },
           owner_commission_report: @view_model.owner_commission_report,
           delegated_person_commission_report: @view_model.delegated_person_commission_report,
-          property_type_short_description: @view_model.property_type_short_description,
-          property_type_long_description: @view_model.property_type_long_description,
+          property_type: {
+            property_type_long_description: @view_model.property_type_long_description,
+            property_type_short_description: @view_model.property_type_short_description,
+          },
           building_improvements: @view_model.building_improvements,
           operational_ratings: @view_model.operational_ratings,
           dec: @view_model.dec,

@@ -27,15 +27,17 @@
   },
   "owner_commission_report": "Y",
   "delegated_person_commission_report": "N",
-  "property_type_short_description": "General Industrial",
-  "property_type_long_description": "B2 to B7 General Industrial and Special Industrial Groups",
+  "property_type": {
+    "property_type_short_description": "General Industrial",
+    "property_type_long_description": "B2 to B7 General Industrial and Special Industrial Groups"
+  },
   "building_improvements": "N",
   "operational_ratings": "Y",
   "dec": "N",
   "planned_completion_date": "2028-12-12",
   "actual_completion_date": null,
-  "target_emission_savings": "1.61",
-  "target_energy_savings": "10.11",
+  "target_emission_savings": 1.61,
+  "target_energy_savings": 10.11,
   "accept_prescriptive_improvements": "Y",
   "prescriptive_improvements": [
     {
