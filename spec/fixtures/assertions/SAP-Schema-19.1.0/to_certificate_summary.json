@@ -15,11 +15,11 @@
   "assessor":{
     "scheme_assessor_id":"SPEC000000",
     "name":"Mr Test Boi TST",
-    "assessor_contact_address": "27 High Street, Central District, Fallowham, ND14 3YY",
     "company_name": "ABC Energy Ratings Ltd",
     "contact_details":{
       "email":"a@b.c",
-      "telephone":"111222333"
+      "telephone":"111222333",
+      "address": "27 High Street, Central District, Fallowham, ND14 3YY"
     }
   },
   "current_carbon_emission":2.4,

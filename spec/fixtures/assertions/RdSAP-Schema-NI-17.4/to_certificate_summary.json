@@ -15,11 +15,11 @@
   "assessor":{
     "scheme_assessor_id":"SPEC000000",
     "name":"Testa Sessor",
-    "assessor_contact_address": "12 Epc Street, AB1C 2DE",
     "company_name": "Test EPCs 4U",
     "contact_details":{
       "email":"a@b.c",
-      "telephone":"0555 497 2848"
+      "telephone":"0555 497 2848",
+      "address": "12 Epc Street, AB1C 2DE"
     }
   },
   "current_carbon_emission":2.4,

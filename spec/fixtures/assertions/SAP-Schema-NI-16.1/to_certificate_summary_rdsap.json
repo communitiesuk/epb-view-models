@@ -15,11 +15,11 @@
   "assessor":{
     "scheme_assessor_id":"SPEC000000",
     "name":"Mr Test Boi TST",
-    "assessor_contact_address": "Y Gwinwydd Llangwstenin, Llandudno Junction, Conwy, LL31 9JF",
     "company_name": "CLB Energy Consultants",
     "contact_details":{
       "email":"a@b.c",
-      "telephone":"111222333"
+      "telephone":"111222333",
+      "address": "Y Gwinwydd Llangwstenin, Llandudno Junction, Conwy, LL31 9JF"
     }
   },
   "current_carbon_emission":2.4,

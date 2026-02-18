@@ -15,11 +15,11 @@
   "assessor":{
     "scheme_assessor_id":"SPEC000000",
     "name":"Mr Test Boi TST",
-    "assessor_contact_address": "321 Some Street, Whitbury, A0 0AA",
     "company_name": null,
     "contact_details":{
       "email":"a@b.c",
-      "telephone":"111222333"
+      "telephone":"111222333",
+      "address": "321 Some Street, Whitbury, A0 0AA"
     }
   },
   "current_carbon_emission":2.4,
