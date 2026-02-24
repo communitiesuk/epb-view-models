@@ -63,9 +63,9 @@ module Presenter
           date_of_registration: @view_model.date_of_registration,
           address: {
             address_line1: @view_model.address_line1,
-            address_line2: @view_model.address_line2,
-            address_line3: @view_model.address_line3,
-            address_line4: @view_model.address_line4,
+            address_line2: @view_model.address_line2.to_s,
+            address_line3: @view_model.address_line3.to_s,
+            address_line4: @view_model.address_line4.to_s,
             town: @view_model.town,
             postcode: @view_model.postcode,
           },

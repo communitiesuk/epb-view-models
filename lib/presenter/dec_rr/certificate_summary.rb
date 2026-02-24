@@ -5,7 +5,7 @@ module Presenter
         @view_model = view_model
       end
 
-      def to_hash
+      def to_certificate_summary
         {
           type_of_assessment: @view_model&.type_of_assessment,
           assessment_id: @view_model.assessment_id,

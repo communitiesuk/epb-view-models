@@ -13,7 +13,7 @@
                 "postcode": "EH14 2SP"
         },
         "type_of_assessment": "DEC",
-        "schema_version": 7,
+        "schema_version": 7.0,
         "report_type": "1",
         "current_assessment": {
                 "date": "2025-03-19",
@@ -42,15 +42,15 @@
         "technical_information": {
                 "main_heating_fuel": "Natural Gas",
                 "building_environment": "Heating and Natural Ventilation",
-                "floor_area": "1194.47",
+                "floor_area": 1194.47,
                 "occupier": "Industrial Estate",
                 "asset_rating": 46,
-                "annual_energy_use_fuel_thermal": "2",
-                "annual_energy_use_electrical": "22",
-                "typical_thermal_use": "68",
-                "typical_electrical_use": "35",
-                "renewables_fuel_thermal": "0",
-                "renewables_electrical": "0"
+                "annual_energy_use_fuel_thermal": 2,
+                "annual_energy_use_electrical": 22,
+                "typical_thermal_use": 68,
+                "typical_electrical_use": 35,
+                "renewables_fuel_thermal": 0,
+                "renewables_electrical": 0
         },
         "assessor": {
                 "scheme_assessor_id": "SPEC000000",

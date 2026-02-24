@@ -10,7 +10,7 @@
     "address_line1":"Non-dom Property",
     "address_line2":"Some Street",
     "address_line3":"Bigger Line",
-    "address_line4":null,
+    "address_line4": "",
     "town":"Town",
     "postcode":"FK1 1XE"
   },

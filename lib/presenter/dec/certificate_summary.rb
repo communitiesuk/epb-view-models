@@ -8,7 +8,7 @@ module Presenter
         @schema_type = schema_type.to_s
       end
 
-      def to_hash
+      def to_certificate_summary
         {
           assessment_id: @view_model.assessment_id,
           date_of_assessment: @view_model.date_of_assessment,
@@ -24,7 +24,7 @@ module Presenter
             postcode: @view_model.postcode,
           },
           type_of_assessment: TYPE_OF_ASSESSMENT,
-          schema_version: @schema_type.gsub(/[a-zA-Z-]/, "").to_f,
+          schema_version: @schema_type.gsub(/[a-zA-Z-]/, ""),
           report_type: @view_model.report_type,
           current_assessment: {
             date: @view_model.current_assessment_date,

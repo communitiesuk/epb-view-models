@@ -51,8 +51,8 @@
   "potential_energy_efficiency_band": "c",
   "potential_energy_efficiency_rating": 79,
   "potential_energy_saving": "0.00",
-  "primary_energy_use": "145",
-  "energy_consumption_potential": "145",
+  "primary_energy_use": 145,
+  "energy_consumption_potential": 145,
   "property_age_band": "J",
   "property_summary": [
     {

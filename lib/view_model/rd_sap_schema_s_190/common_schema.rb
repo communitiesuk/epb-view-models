@@ -238,11 +238,11 @@ module ViewModel
       end
 
       def primary_energy_use
-        xpath(%w[Energy-Consumption-Current])
+        xpath(%w[Energy-Consumption-Current])&.to_f
       end
 
       def energy_consumption_potential
-        xpath(%w[Energy-Consumption-Potential])
+        xpath(%w[Energy-Consumption-Potential])&.to_f
       end
 
       def all_roof_descriptions
@@ -308,7 +308,7 @@ module ViewModel
       end
 
       def co2_emissions_current_per_floor_area
-        xpath(%w[CO2-Emissions-Current-Per-Floor-Area])
+        xpath(%w[CO2-Emissions-Current-Per-Floor-Area])&.to_f
       end
 
       def mains_gas

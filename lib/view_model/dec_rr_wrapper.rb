@@ -23,7 +23,7 @@ module ViewModel
     end
 
     def to_certificate_summary
-      @certificate_summary.to_hash
+      @certificate_summary.to_certificate_summary
     end
 
     def get_view_model

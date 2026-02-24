@@ -121,7 +121,7 @@
   ],
   "technical_information": {
     "building_environment": "Mixed-mode with Natural Ventilation",
-    "floor_area": "178.3",
+    "floor_area": 178.3,
     "occupier": "Business name",
     "property_type": "General office",
     "renewable_sources": null,
@@ -132,15 +132,15 @@
   },
   "site_service_one": {
     "description": "Electricity",
-    "quantity": "26914"
+    "quantity": 26914
   },
   "site_service_two": {
     "description": "Natural Gas",
-    "quantity": "1204"
+    "quantity": 1204
   },
   "site_service_three": {
     "description": "Not used",
-    "quantity": "0"
+    "quantity": 0
   },
   "related_rrn": null
 }

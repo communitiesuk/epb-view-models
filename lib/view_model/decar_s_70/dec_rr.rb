@@ -38,7 +38,7 @@ module ViewModel
         {
           description:
             @xml_doc.at("Site-Services/#{service}/Description").content,
-          quantity: @xml_doc.at("Site-Services/#{service}/Quantity").content,
+          quantity: @xml_doc.at("Site-Services/#{service}/Quantity").content&.to_i,
         }
       end
 
@@ -71,7 +71,7 @@ module ViewModel
       end
 
       def floor_area
-        xpath(%w[Advisory-Report Technical-Information Floor-Area])
+        xpath(%w[Advisory-Report Technical-Information Floor-Area])&.to_f
       end
 
       def building_environment

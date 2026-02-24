@@ -8,7 +8,7 @@
     "address_line1": "1 LOVELY ROAD",
     "address_line2": "NICE ESTATE",
     "address_line3": "",
-    "address_line4": null,
+    "address_line4": "",
     "town": "TOWN",
     "postcode": "EH1 2NG"
   },
@@ -23,7 +23,7 @@
     }
   },
   "current_carbon_emission": 0.22e1,
-  "carbon_emissions_current_per_floor_area": "12.1",
+  "carbon_emissions_current_per_floor_area": 12.1,
   "current_energy_efficiency_band": "b",
   "current_energy_efficiency_rating": 91,
   "dwelling_type": "Detached house",
@@ -114,7 +114,7 @@
   "status": "ENTERED",
   "environmental_impact_current": 88,
   "environmental_impact_potential": 88,
-  "primary_energy_use": "63",
+  "primary_energy_use": 63,
   "addendum": null,
   "gas_smart_meter_present": true,
   "electricity_smart_meter_present": true

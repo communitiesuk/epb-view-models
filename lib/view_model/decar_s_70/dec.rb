@@ -88,7 +88,7 @@ module ViewModel
       end
 
       def floor_area
-        xpath(%w[Technical-Information Floor-Area])
+        xpath(%w[Technical-Information Floor-Area])&.to_f
       end
 
       def asset_rating
@@ -96,27 +96,27 @@ module ViewModel
       end
 
       def annual_energy_use_fuel_thermal
-        xpath(%w[Annual-Energy-Use-Fuel-Thermal])
+        xpath(%w[Annual-Energy-Use-Fuel-Thermal])&.to_i
       end
 
       def annual_energy_use_electrical
-        xpath(%w[DEC-Annual-Energy-Summary Annual-Energy-Use-Electrical])
+        xpath(%w[DEC-Annual-Energy-Summary Annual-Energy-Use-Electrical])&.to_i
       end
 
       def typical_thermal_use
-        xpath(%w[DEC-Annual-Energy-Summary Typical-Thermal-Use])
+        xpath(%w[DEC-Annual-Energy-Summary Typical-Thermal-Use])&.to_i
       end
 
       def typical_electrical_use
-        xpath(%w[DEC-Annual-Energy-Summary Typical-Electrical-Use])
+        xpath(%w[DEC-Annual-Energy-Summary Typical-Electrical-Use])&.to_i
       end
 
       def renewables_fuel_thermal
-        xpath(%w[DEC-Annual-Energy-Summary Renewables-Fuel-Thermal])
+        xpath(%w[DEC-Annual-Energy-Summary Renewables-Fuel-Thermal])&.to_i
       end
 
       def renewables_electrical
-        xpath(%w[DEC-Annual-Energy-Summary Renewables-Electrical])
+        xpath(%w[DEC-Annual-Energy-Summary Renewables-Electrical])&.to_i
       end
 
       def dec_status

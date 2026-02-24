@@ -25,7 +25,7 @@ module Presenter
             address_line1: @view_model.address_line1,
             address_line2: @view_model.address_line2,
             address_line3: @view_model.address_line3,
-            address_line4: nil,
+            address_line4: "",
             town: @view_model.town,
             postcode: @view_model.postcode,
           },

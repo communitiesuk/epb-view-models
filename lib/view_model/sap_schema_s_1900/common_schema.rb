@@ -171,17 +171,17 @@ module ViewModel
       end
 
       def primary_energy_use
-        xpath(%w[Energy-Consumption-Current])
+        xpath(%w[Energy-Consumption-Current])&.to_f
       end
 
       def energy_consumption_potential
-        xpath(%w[Energy-Consumption-Potential])
+        xpath(%w[Energy-Consumption-Potential])&.to_f
       end
 
       def estimated_energy_cost; end
 
       def total_floor_area
-        xpath(%w[Property-Summary Total-Floor-Area])&.to_i
+        xpath(%w[Property-Summary Total-Floor-Area])&.to_f
       end
 
       def total_roof_area
@@ -352,7 +352,7 @@ module ViewModel
       end
 
       def co2_emissions_current_per_floor_area
-        xpath(%w[CO2-Emissions-Current-Per-Floor-Area])
+        xpath(%w[CO2-Emissions-Current-Per-Floor-Area])&.to_f
       end
 
       def main_heating_controls

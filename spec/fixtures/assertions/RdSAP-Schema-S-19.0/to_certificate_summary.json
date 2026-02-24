@@ -8,7 +8,7 @@
     "address_line1": "1 Some Street",
     "address_line2": "",
     "address_line3": "",
-    "address_line4": null,
+    "address_line4": "",
     "town": "Newkirk",
     "postcode": "FK1 1XE"
   },
@@ -23,7 +23,7 @@
     }
   },
   "current_carbon_emission": 0.17e1,
-  "carbon_emissions_current_per_floor_area": "25",
+  "carbon_emissions_current_per_floor_area": 25,
   "current_energy_efficiency_band": "c",
   "current_energy_efficiency_rating": 79,
   "dwelling_type": "Top-floor flat",
@@ -112,7 +112,7 @@
   "status": "ENTERED",
   "environmental_impact_current": 80,
   "environmental_impact_potential": 80,
-  "primary_energy_use": "145",
+  "primary_energy_use": 145,
   "addendum": null,
   "gas_smart_meter_present": null,
   "electricity_smart_meter_present": null

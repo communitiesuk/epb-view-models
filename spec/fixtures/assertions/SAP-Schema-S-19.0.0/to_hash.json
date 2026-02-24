@@ -52,8 +52,8 @@
   "potential_energy_efficiency_band": "b",
   "potential_energy_efficiency_rating": 91,
   "potential_energy_saving": "0.00",
-  "primary_energy_use": "63",
-  "energy_consumption_potential": "63",
+  "primary_energy_use": 63,
+  "energy_consumption_potential": 63,
   "property_age_band": "2024",
   "property_summary": [
     {
@@ -130,7 +130,7 @@
   "status": "ENTERED",
   "environmental_impact_current": 88,
   "environmental_impact_potential": 88,
-  "co2_emissions_current_per_floor_area": "12.1",
+  "co2_emissions_current_per_floor_area": 12.1,
   "mains_gas": null,
   "level": null,
   "top_storey": "N",
