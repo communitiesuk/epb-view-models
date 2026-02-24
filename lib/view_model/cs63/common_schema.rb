@@ -25,6 +25,10 @@ module ViewModel
         xpath(%w[Report-Header Plan-Report-Date])
       end
 
+      def delegated_protocol_date
+        xpath(%w[Delegated-Protocol-Date])
+      end
+
       def report_type
         xpath(%w[Report-Header Report-Type])
       end
