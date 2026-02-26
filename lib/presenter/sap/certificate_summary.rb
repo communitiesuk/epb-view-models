@@ -84,7 +84,6 @@ module Presenter
           electricity_smart_meter_present: @view_model.respond_to?(:electricity_smart_meter_present) ? @view_model.electricity_smart_meter_present : nil,
         }
       end
-
     end
   end
 end
