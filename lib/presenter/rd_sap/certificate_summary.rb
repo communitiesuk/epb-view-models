@@ -39,8 +39,7 @@ module Presenter
               address: @view_model.assessor_contact_address,
             },
           },
-          current_carbon_emission:
-            convert_to_big_decimal(@view_model.current_carbon_emission),
+          current_carbon_emission: @view_model.current_carbon_emission.to_f,
           carbon_emissions_current_per_floor_area: @view_model.co2_emissions_current_per_floor_area,
           current_energy_efficiency_band: Helper::EnergyBandCalculator.domestic(@view_model.current_energy_rating),
           current_energy_efficiency_rating: @view_model.current_energy_rating,
@@ -58,8 +57,7 @@ module Presenter
           hot_water_cost_potential: @view_model.hot_water_cost_potential,
           lighting_cost_current: @view_model.lighting_cost_current,
           lighting_cost_potential: @view_model.lighting_cost_potential,
-          potential_carbon_emission:
-            convert_to_big_decimal(@view_model.potential_carbon_emission),
+          potential_carbon_emission: @view_model.potential_carbon_emission.to_f,
           potential_energy_efficiency_band: Helper::EnergyBandCalculator.domestic(@view_model.potential_energy_rating),
           potential_energy_efficiency_rating: @view_model.potential_energy_rating,
           potential_energy_saving:
@@ -78,26 +76,16 @@ module Presenter
             end,
           lzc_energy_sources: @view_model.lzc_energy_sources,
           related_party_disclosure_number: @view_model.respond_to?(:related_party_disclosure_number) ? @view_model.related_party_disclosure_number : nil,
-          related_party_disclosure_text:
-            @view_model.related_party_disclosure_text,
-          total_floor_area: convert_to_big_decimal(@view_model.total_floor_area),
+          related_party_disclosure_text: @view_model.related_party_disclosure_text,
+          total_floor_area: @view_model.total_floor_area.to_i,
           status: @view_model.status,
           environmental_impact_current: @view_model.environmental_impact_current,
-          environmental_impact_potential:
-            @view_model.environmental_impact_potential,
+          environmental_impact_potential: @view_model.environmental_impact_potential,
           primary_energy_use: @view_model.respond_to?(:primary_energy_use) ? @view_model.primary_energy_use : nil,
           addendum: @view_model.addendum,
           gas_smart_meter_present: @view_model.respond_to?(:gas_smart_meter_present) ? @view_model.gas_smart_meter_present : nil,
           electricity_smart_meter_present: @view_model.respond_to?(:electricity_smart_meter_present) ? @view_model.electricity_smart_meter_present : nil,
         }
-      end
-
-    private
-
-      def convert_to_big_decimal(node)
-        return "" unless node
-
-        BigDecimal(node, 0)
       end
     end
   end
