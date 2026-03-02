@@ -57,9 +57,9 @@ module Presenter
         {
           type_of_assessment: TYPE_OF_ASSESSMENT,
           assessment_id: @view_model.assessment_id,
-          date_of_expiry: @view_model.date_of_expiry,
           report_type: @view_model.report_type,
           date_of_assessment: @view_model.date_of_assessment,
+          date_of_expiry: @view_model.date_of_expiry,
           date_of_registration: @view_model.date_of_registration,
           address: {
             address_line1: @view_model.address_line1,
@@ -90,9 +90,9 @@ module Presenter
             floor_area: @view_model.floor_area,
           },
           current_energy_efficiency_rating: @view_model.energy_efficiency_rating,
-          potential_energy_rating: @view_model.potential_energy_rating,
           current_energy_efficiency_band: @view_model.current_energy_efficiency_band,
-          potential_energy_band: @view_model.potential_energy_band,
+          potential_energy_efficiency_rating: @view_model.potential_energy_rating,
+          potential_energy_efficiency_band: @view_model.potential_energy_band,
           new_build_benchmark_rating: @view_model.new_build_rating,
           new_build_benchmark_band: @view_model.new_build_benchmark_band,
           comparative_asset_rating: @view_model.comparative_asset_rating,
@@ -109,40 +109,12 @@ module Presenter
           calculation_tool: @view_model.calculation_tool,
           ter_2002: @view_model.ter_2002,
           ter: @view_model.ter,
-          recommendations: [
-            @view_model.short_payback_recommendations.map do |recommendation|
-              {
-                payback_type: "short",
-                recommendation_code: recommendation[:code],
-                recommendation: recommendation[:text],
-                cO2_Impact: recommendation[:cO2Impact],
-              }
-            end,
-            @view_model.medium_payback_recommendations.map do |recommendation|
-              {
-                payback_type: "medium",
-                recommendation_code: recommendation[:code],
-                recommendation: recommendation[:text],
-                cO2_Impact: recommendation[:cO2Impact],
-              }
-            end,
-            @view_model.long_payback_recommendations.map do |recommendation|
-              {
-                payback_type: "long",
-                recommendation_code: recommendation[:code],
-                recommendation: recommendation[:text],
-                cO2_Impact: recommendation[:cO2Impact],
-              }
-            end,
-            @view_model.other_recommendations.map do |recommendation|
-              {
-                payback_type: "other",
-                recommendation_code: recommendation[:code],
-                recommendation: recommendation[:text],
-                cO2_Impact: recommendation[:cO2Impact],
-              }
-            end,
-          ].flatten,
+          short_payback_recommendations:
+            @view_model.short_payback_recommendations,
+          medium_payback_recommendations:
+            @view_model.medium_payback_recommendations,
+          long_payback_recommendations: @view_model.long_payback_recommendations,
+          other_payback_recommendations: @view_model.other_payback_recommendations,
         }
       end
     end

@@ -48,7 +48,7 @@ module ViewModel
       end
 
       def floor_area
-        xpath(%w[Technical-Information Floor-Area])
+        xpath(%w[Technical-Information Floor-Area])&.to_i
       end
 
       def main_heating_fuel
@@ -124,7 +124,7 @@ module ViewModel
         recommendations("Long-Payback")
       end
 
-      def other_recommendations
+      def other_payback_recommendations
         recommendations("Other-Payback")
       end
 

@@ -10,12 +10,14 @@ module Presenter
 
       def to_certificate_summary
         {
+          type_of_assessment: TYPE_OF_ASSESSMENT,
+          schema_version: @schema_type.gsub(/[a-zA-Z-]/, ""),
           assessment_id: @view_model.assessment_id,
+          report_type: @view_model.report_type,
           date_of_assessment: @view_model.date_of_assessment,
           date_of_expiry: @view_model.date_of_expiry,
           date_of_registration: @view_model.date_of_registration,
           address: {
-            address_id: @view_model.address_id,
             address_line1: @view_model.address_line1,
             address_line2: @view_model.address_line2,
             address_line3: @view_model.address_line3,
@@ -23,9 +25,18 @@ module Presenter
             town: @view_model.town,
             postcode: @view_model.postcode,
           },
-          type_of_assessment: TYPE_OF_ASSESSMENT,
-          schema_version: @schema_type.gsub(/[a-zA-Z-]/, ""),
-          report_type: @view_model.report_type,
+          assessor: {
+            scheme_assessor_id: @view_model.scheme_assessor_id,
+            name: @view_model.assessor_name,
+            contact_details: {
+              email: @view_model.assessor_email,
+              telephone: @view_model.assessor_telephone,
+            },
+            company_details: {
+              name: @view_model.company_name,
+              address: @view_model.company_address,
+            },
+          },
           current_assessment: {
             date: @view_model.current_assessment_date,
             energy_efficiency_rating: @view_model.energy_efficiency_rating,
@@ -65,18 +76,6 @@ module Presenter
             typical_electrical_use: @view_model.typical_electrical_use,
             renewables_fuel_thermal: @view_model.renewables_fuel_thermal,
             renewables_electrical: @view_model.renewables_electrical,
-          },
-          assessor: {
-            scheme_assessor_id: @view_model.scheme_assessor_id,
-            name: @view_model.assessor_name,
-            company_details: {
-              name: @view_model.company_name,
-              address: @view_model.company_address,
-            },
-            contact_details: {
-              email: @view_model.assessor_email,
-              telephone: @view_model.assessor_telephone,
-            },
           },
           administrative_information: {
             issue_date: @view_model.date_of_issue,

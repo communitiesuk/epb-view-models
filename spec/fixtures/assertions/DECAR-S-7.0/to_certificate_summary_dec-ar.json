@@ -3,10 +3,9 @@
   "assessment_id": "0000-0000-0000-0000-0000",
   "report_type": "2",
   "date_of_assessment": "2019-10-21",
-  "date_of_registration": "2019-11-22",
   "date_of_expiry": "2029-11-21",
+  "date_of_registration": "2019-11-22",
   "address": {
-    "address_id": "0000000001",
     "address_line1": "Non-dom Property",
     "address_line2": "Buisness Park",
     "address_line3": "",
@@ -112,7 +111,7 @@
       "cO2Impact": "LOW"
     }
   ],
-  "other_recommendations": [
+  "other_payback_recommendations": [
     {
       "code": "None",
       "text": "There is no seperate electricity metering within the building and thus pro-rata sharing of metered usage may not represent actual usage. Monitoring and bench marking of usage is not possible and therefore improvements in energy efficiency are difficult to quantify.",
@@ -126,9 +125,12 @@
     "property_type": "General office",
     "renewable_sources": null,
     "discounted_energy": null,
-    "date_of_issue": "2019-11-22",
-    "calculation_tool": "BSD, OR Scotland, v1.0.1",
     "inspection_type": "Physical"
+  },
+  "administrative_information": {
+    "issue_date": "2019-11-22",
+    "calculation_tool": "BSD, OR Scotland, v1.0.1",
+    "related_rrn": null
   },
   "site_service_one": {
     "description": "Electricity",
@@ -141,6 +143,5 @@
   "site_service_three": {
     "description": "Not used",
     "quantity": 0
-  },
-  "related_rrn": null
+  }
 }

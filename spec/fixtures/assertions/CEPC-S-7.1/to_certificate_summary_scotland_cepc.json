@@ -1,9 +1,9 @@
 {
   "type_of_assessment":"CEPC",
   "assessment_id":"0000-0000-0000-0000-0000",
-  "date_of_expiry":"2033-08-03",
   "report_type":"3",
   "date_of_assessment":"2023-07-11",
+  "date_of_expiry":"2033-08-03",
   "date_of_registration":"2023-08-04",
   "address":
   {
@@ -35,12 +35,12 @@
   {
     "main_heating_fuel":"LPG",
     "building_environment":"Heating and Natural Ventilation",
-    "floor_area":"109"
+    "floor_area":109
   },
   "current_energy_efficiency_rating":120,
-  "potential_energy_rating":17,
   "current_energy_efficiency_band":"G",
-  "potential_energy_band":"B+",
+  "potential_energy_efficiency_rating":17,
+  "potential_energy_efficiency_band":"B+",
   "new_build_benchmark_rating":56,
   "new_build_benchmark_band":"D",
   "comparative_asset_rating":65,
@@ -57,61 +57,53 @@
   "calculation_tool":"DesignBuilder Software Ltd, DesignBuilder SBEM, v7.2.0, SBEM, v6.1.e.0",
   "ter_2002":118.01,
   "ter":55.93,
-  "recommendations":
-  [
+  "short_payback_recommendations": [
     {
-      "payback_type":"short",
-      "recommendation_code":"EPC-H7",
-      "recommendation":"Add optimum start/stop to the heating system.",
-      "cO2_Impact":"MEDIUM"
+      "code":"EPC-H7",
+      "text":"Add optimum start/stop to the heating system.",
+      "cO2Impact":"MEDIUM"
     },
     {
-      "payback_type":"short",
-      "recommendation_code":"EPC-H8",
-      "recommendation":"Add weather compensation controls to heating system.",
-      "cO2_Impact":"MEDIUM"
+      "code":"EPC-H8",
+      "text":"Add weather compensation controls to heating system.",
+      "cO2Impact":"MEDIUM"
     },
     {
-      "payback_type":"short",
-      "recommendation_code":"EPC-H5",
-      "recommendation":"Add local time control to heating system.",
-      "cO2_Impact":"MEDIUM"
+      "code":"EPC-H5",
+      "text":"Add local time control to heating system.",
+      "cO2Impact":"MEDIUM"
     },
     {
-      "payback_type":"short",
-      "recommendation_code":"EPC-V1",
-      "recommendation":"In some spaces, the solar gain limit defined in the NCM is exceeded, which might cause overheating. Consider solar control measures such as the application of reflective coating or shading devices to windows.",
-      "cO2_Impact":"MEDIUM"
+      "code":"EPC-V1",
+      "text":"In some spaces, the solar gain limit defined in the NCM is exceeded, which might cause overheating. Consider solar control measures such as the application of reflective coating or shading devices to windows.",
+      "cO2Impact":"MEDIUM"
     },
     {
-      "payback_type":"short",
-      "recommendation_code":"EPC-E3",
-      "recommendation":"Some solid walls are poorly insulated - introduce or improve internal wall insulation.",
-      "cO2_Impact":"MEDIUM"
+      "code":"EPC-E3",
+      "text":"Some solid walls are poorly insulated - introduce or improve internal wall insulation.",
+      "cO2Impact":"MEDIUM"
     },
     {
-      "payback_type":"short",
-      "recommendation_code":"EPC-F4",
-      "recommendation":"Consider switching from oil or LPG to biomass.",
-      "cO2_Impact":"HIGH"
+      "code":"EPC-F4",
+      "text":"Consider switching from oil or LPG to biomass.",
+      "cO2Impact":"HIGH"
     },
     {
-      "payback_type":"short",
-      "recommendation_code":"EPC-E7",
-      "recommendation":"Carry out a pressure test, identify and treat identified air leakage. Enter result in EPC calculation.",
-      "cO2_Impact":"MEDIUM"
+      "code":"EPC-E7",
+      "text":"Carry out a pressure test, identify and treat identified air leakage. Enter result in EPC calculation.",
+      "cO2Impact":"MEDIUM"
     },
     {
-      "payback_type":"short",
-      "recommendation_code":"EPC-E8",
-      "recommendation":"Some glazing is poorly insulated. Replace/improve glazing and/or frames. ",
-      "cO2_Impact":"MEDIUM"
-    },
-    {
-      "payback_type":"medium",
-      "recommendation_code":"EPC-E2",
-      "recommendation":"Roof is poorly insulated. Install or improve insulation of roof.",
-      "cO2_Impact":"MEDIUM"
+      "code":"EPC-E8",
+      "text":"Some glazing is poorly insulated. Replace/improve glazing and/or frames. ",
+      "cO2Impact":"MEDIUM"
     }
-  ]
+  ],
+  "medium_payback_recommendations": [    {
+    "code":"EPC-E2",
+    "text":"Roof is poorly insulated. Install or improve insulation of roof.",
+    "cO2Impact":"MEDIUM"
+  }],
+  "long_payback_recommendations": [],
+  "other_payback_recommendations": []
 }

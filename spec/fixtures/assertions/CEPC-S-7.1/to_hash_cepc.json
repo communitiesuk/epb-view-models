@@ -19,7 +19,7 @@
   {
     "main_heating_fuel":"LPG",
     "building_environment":"Heating and Natural Ventilation",
-    "floor_area":"109",
+    "floor_area":109,
     "building_level":null
   },
   "building_emission_rate":null,
