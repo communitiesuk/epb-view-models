@@ -20,7 +20,7 @@ module ViewModel
         sap_building_parts.each do |sap_building_part|
           identifier = sap_building_part.at("Identifier")
           if identifier&.content == "Main Dwelling"
-            return(
+            return (
               sap_building_part.at_xpath(
                 "Construction-Age-Band | Construction-Year",
               )&.content

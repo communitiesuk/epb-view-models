@@ -214,7 +214,7 @@ module ViewModel
 
           # Identifies the Main Dwelling
           if building_part_number&.content == "1"
-            return(
+            return (
               sap_building_part.at_xpath(
                 "Construction-Age-Band | Construction-Year",
               )&.content
@@ -371,12 +371,12 @@ module ViewModel
         @xml_doc
           .search("Fixed-Lights/Fixed-Light")
           .map do |part|
-          {
-            lighting_efficacy:
-              xpath(%w[Lighting-Efficacy], part),
-            lighting_outlets:
-              xpath(%w[Lighting-Outlets], part),
-          }
+            {
+              lighting_efficacy:
+                xpath(%w[Lighting-Efficacy], part),
+              lighting_outlets:
+                xpath(%w[Lighting-Outlets], part),
+            }
         end
       end
 

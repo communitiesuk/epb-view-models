@@ -153,14 +153,14 @@ module ViewModel
         @xml_doc
           .search("Prescriptive-Improvements Prescriptive-Scenario")
           .map do |node|
-          {
-            measure_description_short:
-              xpath(%w[Measure-Description-Short], node),
-            measure_description_long:
-              xpath(%w[Measure-Description-Long], node),
-            measure_valid: xpath(%w[Measure-Valid], node),
-            measure_type: xpath(%w[Measure-Type], node),
-          }
+            {
+              measure_description_short:
+                xpath(%w[Measure-Description-Short], node),
+              measure_description_long:
+                xpath(%w[Measure-Description-Long], node),
+              measure_valid: xpath(%w[Measure-Valid], node),
+              measure_type: xpath(%w[Measure-Type], node),
+            }
         end
       end
 
@@ -168,14 +168,14 @@ module ViewModel
         @xml_doc
           .search("Alternative-Improvements Alternative-Scenario")
           .map do |node|
-          {
-            measure_description_short:
-              xpath(%w[Measure-Description-Short], node),
-            measure_description_long:
-              xpath(%w[Measure-Description-Long], node),
-            measure_valid: xpath(%w[Measure-Valid], node),
-            measure_type: xpath(%w[Measure-Type], node),
-          }
+            {
+              measure_description_short:
+                xpath(%w[Measure-Description-Short], node),
+              measure_description_long:
+                xpath(%w[Measure-Description-Long], node),
+              measure_valid: xpath(%w[Measure-Valid], node),
+              measure_type: xpath(%w[Measure-Type], node),
+            }
         end
       end
 

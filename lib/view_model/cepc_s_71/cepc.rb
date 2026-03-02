@@ -103,11 +103,11 @@ module ViewModel
           @xml_doc
             .search("Recommendations-Report RR-Recommendations/#{payback}")
             .map do |node|
-            {
-              code: node.at("Recommendation-Code").content,
-              text: node.at("Recommendation").content,
-              cO2Impact: node.at("CO2-Impact").content,
-            }
+              {
+                code: node.at("Recommendation-Code").content,
+                text: node.at("Recommendation").content,
+                cO2Impact: node.at("CO2-Impact").content,
+              }
           end
         end
       end

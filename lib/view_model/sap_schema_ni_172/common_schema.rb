@@ -410,7 +410,7 @@ module ViewModel
 
           # Identifies the Main Dwelling
           if building_part_number&.content == "1"
-            return(
+            return (
               sap_building_part.at_xpath(
                 "Construction-Age-Band | Construction-Year",
               )&.content

@@ -492,7 +492,7 @@ module ViewModel
 
           # Identifies the Main Dwelling
           if building_part_number&.content == "1"
-            return(
+            return (
               sap_building_part.at_xpath(
                 "Construction-Age-Band | Construction-Year",
               )&.content
@@ -523,14 +523,14 @@ module ViewModel
         @xml_doc
           .search("Suggested-Improvements Improvement")
           .map do |node|
-          improvement_code = xpath(%w[Improvement-Details Improvement-Number], node)
-          {
-            sequence: xpath(%w[Sequence], node).to_i,
-            improvement_code: xpath(%w[Improvement-Details Improvement-Number], node),
-            improvement_summary: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-17.3", improvement_number: improvement_code).summary : xpath(%w[Improvement-Summary], node),
-            improvement_description: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-17.3", improvement_number: improvement_code).description : xpath(%w[Improvement-Description], node),
-            indicative_cost: xpath(%w[Indicative-Cost], node),
-          }
+            improvement_code = xpath(%w[Improvement-Details Improvement-Number], node)
+            {
+              sequence: xpath(%w[Sequence], node).to_i,
+              improvement_code: xpath(%w[Improvement-Details Improvement-Number], node),
+              improvement_summary: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-17.3", improvement_number: improvement_code).summary : xpath(%w[Improvement-Summary], node),
+              improvement_description: improvement_code ? accessor.fetch_details(schema_version: "RdSAP-Schema-NI-17.3", improvement_number: improvement_code).description : xpath(%w[Improvement-Description], node),
+              indicative_cost: xpath(%w[Indicative-Cost], node),
+            }
         end
       end
     end
