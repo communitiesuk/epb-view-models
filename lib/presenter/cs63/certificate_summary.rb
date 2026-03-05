@@ -17,6 +17,7 @@ module Presenter
           date_of_assessment: @view_model.assessment_date,
           plan_report_date: @view_model.plan_report_date,
           delegated_protocol_date: @view_model.delegated_protocol_date,
+          delegated_protocol_set_up: @view_model.delegated_protocol_set_up,
           address: {
             address_line1: @view_model.address_line1,
             address_line2: @view_model.address_line2,
