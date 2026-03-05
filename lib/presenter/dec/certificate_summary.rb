@@ -81,8 +81,8 @@ module Presenter
             issue_date: @view_model.date_of_issue,
             calculation_tool: @view_model.calculation_tool,
             related_party_disclosure: @view_model.dec_related_party_disclosure,
-            related_rrn: @view_model.related_rrn,
           },
+          related_rrn: @view_model.related_rrn,
         }
       end
     end

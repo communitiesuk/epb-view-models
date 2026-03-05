@@ -51,11 +51,11 @@ module Presenter
           administrative_information: {
             issue_date: @view_model.date_of_issue,
             calculation_tool: @view_model.calculation_tool,
-            related_rrn: @view_model.related_rrn,
           },
           site_service_one: @view_model.site_service_one,
           site_service_two: @view_model.site_service_two,
           site_service_three: @view_model.site_service_three,
+          related_rrn: @view_model.related_rrn,
         }
       end
     end

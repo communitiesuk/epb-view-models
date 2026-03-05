@@ -129,8 +129,7 @@
   },
   "administrative_information": {
     "issue_date": "2019-11-22",
-    "calculation_tool": "BSD, OR Scotland, v1.0.1",
-    "related_rrn": null
+    "calculation_tool": "BSD, OR Scotland, v1.0.1"
   },
   "site_service_one": {
     "description": "Electricity",
@@ -143,5 +142,6 @@
   "site_service_three": {
     "description": "Not used",
     "quantity": 0
-  }
+  },
+  "related_rrn": null
 }
