@@ -53,6 +53,10 @@ module ViewModel
         xpath(%w[Registration-Date])
       end
 
+      def date_of_completion
+        xpath(%w[Completion-Date])
+      end
+
       def address_id
         "LPRN-#{xpath(%w[UPRN])}"
       end
@@ -527,6 +531,33 @@ module ViewModel
 
       def has_cylinder_thermostat
         xpath(%w[Cylinder-Thermostat])
+      end
+
+      def party_wall_construction
+        xpath(%w[SAP-Building-Part Party-Wall-Construction])
+      end
+
+      def party_walls_construction
+        @xml_doc
+          .search("SAP-Building-Part")
+          .map do |node|
+          xpath(%w[Party-Wall-Construction], node)
+        end
+      end
+
+      def walls_thickness
+        @xml_doc
+          .search("SAP-Building-Part")
+          .map do |node|
+          {
+            alternative_wall_thickness: node.at_xpath("SAP-Alternative-Wall/Wall-Thickness")&.content,
+            alternative_wall_thickness_measured: node.at_xpath("SAP-Alternative-Wall/Wall-Thickness-Measured")&.content,
+            alternative_wall_construction: node.at_xpath("SAP-Alternative-Wall/Wall-Construction")&.content,
+            wall_thickness: node.at_xpath("Wall-Thickness")&.content,
+            wall_construction: node.at_xpath("Wall-Construction")&.content,
+            wall_thickness_measured: node.at_xpath("Wall-Thickness-Measured")&.content,
+          }
+        end
       end
     end
   end

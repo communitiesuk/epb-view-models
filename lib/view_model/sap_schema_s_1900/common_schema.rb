@@ -595,6 +595,29 @@ module ViewModel
       def electricity_smart_meter_present
         Helper::ToBool.execute(xpath(%w[Electricity-Smart-Meter-Present]))
       end
+
+      def date_of_completion
+        xpath(%w[Completion-Date])
+      end
+
+      def main_heating_types
+        @xml_doc
+          .search("SAP-Heating/Main-Heating-Details/Main-Heating")
+          .map do |node|
+          {
+            main_heating_code: xpath(%w[Main-Heating-Code]),
+            main_heating_index_number: xpath(%w[Main-Heating-Index-Number]),
+          }
+        end
+      end
+
+      def construction_years
+        @xml_doc
+          .search("SAP-Building-Part")
+          .map do |node|
+          xpath(%w[Construction-Year], node)
+        end
+      end
     end
   end
 end

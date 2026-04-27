@@ -171,6 +171,14 @@ module ViewModel
       def insurer_pi_limit
         xpath(%w[PI-Limit])
       end
+
+      def inspection_date
+        xpath(%w[Inspection-Date])
+      end
+
+      def completion_date
+        xpath(%w[Completion-Date])
+      end
     end
   end
 end
