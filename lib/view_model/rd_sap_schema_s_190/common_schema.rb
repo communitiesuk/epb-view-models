@@ -537,6 +537,8 @@ module ViewModel
         xpath(%w[SAP-Building-Part Party-Wall-Construction])
       end
 
+      # For lodgement rules
+
       def party_walls_construction
         @xml_doc
           .search("SAP-Building-Part")
@@ -553,11 +555,106 @@ module ViewModel
             alternative_wall_thickness: node.at_xpath("SAP-Alternative-Wall/Wall-Thickness")&.content,
             alternative_wall_thickness_measured: node.at_xpath("SAP-Alternative-Wall/Wall-Thickness-Measured")&.content,
             alternative_wall_construction: node.at_xpath("SAP-Alternative-Wall/Wall-Construction")&.content,
+            alternative_wall_u_value: node.at_xpath("SAP-Alternative-Wall/Wall-U-Value")&.content,
+            alternative_wall_insulation_thickness: node.at_xpath("SAP-Alternative-Wall/Wall-Insulation-Thickness")&.content,
             wall_thickness: node.at_xpath("Wall-Thickness")&.content,
             wall_construction: node.at_xpath("Wall-Construction")&.content,
             wall_thickness_measured: node.at_xpath("Wall-Thickness-Measured")&.content,
           }
         end
+      end
+
+      def rooves_construction_and_insulation
+        @xml_doc
+          .search("SAP-Building-Part")
+          .map do |node|
+          {
+            roof_insulation_location: node.at_xpath("Roof-Insulation-Location")&.content,
+            roof_construction: node.at_xpath("Roof-Construction")&.content,
+          }
+        end
+      end
+
+      def rooms_in_roof_insulation
+        @xml_doc
+          .search("SAP-Building-Part")
+          .map do |node|
+          xpath(%w[SAP-Room-In-Roof Insulation])
+        end
+      end
+
+      def floors_insulation
+        @xml_doc
+          .search("SAP-Building-Part")
+          .map do |node|
+          {
+            floor_u_value: node.at_xpath("Floor-U-Value")&.content,
+            floor_insulation_thickness: node.at_xpath("Floor-Insulation-Thickness")&.content,
+          }
+        end
+      end
+
+      def rooves_insulation
+        @xml_doc
+          .search("SAP-Building-Part")
+          .map do |node|
+          {
+            roof_u_value: node.at_xpath("Roof-U-Value")&.content,
+            roof_insulation_thickness: node.at_xpath("Roof-Insulation-Thickness")&.content,
+            rafter_insulation_thickness: node.at_xpath("Rafter-Insulation-Thickness")&.content,
+            flat_roof_insulation_thickness: node.at_xpath("Flat-Roof-Insulation-Thickness")&.content,
+            sloping_ceiling_insulation_thickness: node.at_xpath("Sloping-Ceiling-Insulation-Thickness")&.content,
+          }
+        end
+      end
+
+      def walls_insulation
+        @xml_doc
+          .search("SAP-Building-Part")
+          .map do |node|
+          {
+            wall_u_value: node.at_xpath("Wall-U-Value")&.content,
+            wall_insulation_thickness: node.at_xpath("Wall-Insulation-Thickness")&.content,
+          }
+        end
+      end
+
+      def rooms_in_roof
+        @xml_doc
+          .search("SAP-Building-Part")
+          .map do |node|
+          node.at_xpath("SAP-Room-In-Roof")&.content.to_s
+        end
+      end
+
+      def rooms_in_roof_roof_insulation
+        @xml_doc
+          .search("SAP-Building-Part")
+          .map do |node|
+          {
+            roof_insulation_thickness: xpath(%w[SAP-Room-In-Roof Roof-Insulation-Thickness]),
+            room_in_roof_details: xpath(%w[SAP-Room-In-Roof Room-In-Roof-Details]),
+          }
+        end
+      end
+
+      def main_heating_details
+        @xml_doc
+          .search("Main-Heating")
+          .map do |node|
+          {
+            main_heating_index_number: xpath(%w[Main-Heating-Index-Number]),
+            sap_main_heating_code: xpath(%w[SAP-Main-Heating-Code]),
+            main_fuel_type: xpath(%w[Main-Fuel-Type]),
+          }
+        end
+      end
+
+      def water_heating
+        {
+          water_heating_fuel: xpath(%w[Water-Heating-Fuel]),
+          water_heating_code: xpath(%w[Water-Heating-Code]),
+        }
       end
     end
   end
