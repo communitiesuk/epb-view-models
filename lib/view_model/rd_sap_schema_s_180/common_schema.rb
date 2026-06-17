@@ -1,5 +1,5 @@
 module ViewModel
-  module RdSapSchemaS210
+  module RdSapSchemaS180
     class CommonSchema < ViewModel::DomesticEpcViewModel
       def assessment_id
         xpath(%w[RRN])
@@ -339,44 +339,28 @@ module ViewModel
         xpath(%w[Multiple-Glazed-Proportion])
       end
 
-      def glazed_area; end
+      def glazed_area
+        xpath(%w[Glazed-Area])
+      end
 
       def heated_room_count
         xpath(%w[Heated-Room-Count])&.to_i
       end
 
       def low_energy_lighting
-        if fixed_lighting_outlets_count.zero?
-          return 0
-        end
-
-        ((low_energy_fixed_lighting_outlets_count.to_f / fixed_lighting_outlets_count) * 100).round
+        xpath(%w[Low-Energy-Lighting])
       end
 
       def fixed_lighting_outlets_count
-        fixed_lighting_outlets_count = low_energy_fixed_lighting_outlets_count
-        if xpath(%w[Incandescent-Fixed-Lighting-Bulbs-Count])
-          fixed_lighting_outlets_count += xpath(%w[Incandescent-Fixed-Lighting-Bulbs-Count])&.to_i
-        end
-        fixed_lighting_outlets_count
+        xpath(%w[Fixed-Lighting-Outlets-Count])&.to_i
       end
 
       def low_energy_fixed_lighting_outlets_count
-        low_energy_fixed_lighting_outlets_count = 0
-        if xpath(%w[CFL-Fixed-Lighting-Bulbs-Count])
-          low_energy_fixed_lighting_outlets_count += xpath(%w[CFL-Fixed-Lighting-Bulbs-Count])&.to_i
-        end
-        if xpath(%w[LED-Fixed-Lighting-Bulbs-Count])
-          low_energy_fixed_lighting_outlets_count += xpath(%w[LED-Fixed-Lighting-Bulbs-Count])&.to_i
-        end
-        if xpath(%w[Low-Energy-Fixed-Lighting-Bulbs-Count])
-          low_energy_fixed_lighting_outlets_count += xpath(%w[Low-Energy-Fixed-Lighting-Bulbs-Count])&.to_i
-        end
-        low_energy_fixed_lighting_outlets_count
+        xpath(%w[Low-Energy-Fixed-Lighting-Outlets-Count])&.to_i
       end
 
       def open_fireplaces_count
-        xpath(%w[Open-Chimneys-Count])&.to_i
+        xpath(%w[Open-Fireplaces-Count])&.to_i
       end
 
       def hot_water_description
@@ -471,14 +455,6 @@ module ViewModel
         xpath(%w[Meter-Type])
       end
 
-      def gas_smart_meter_present
-        Helper::ToBool.execute(xpath(%w[Gas-Smart-Meter-Present]))
-      end
-
-      def electricity_smart_meter_present
-        Helper::ToBool.execute(xpath(%w[Electricity-Smart-Meter-Present]))
-      end
-
       def floor_level
         xpath(%w[Flat-Location])
       end
@@ -559,111 +535,6 @@ module ViewModel
 
       def party_wall_construction
         xpath(%w[SAP-Building-Part Party-Wall-Construction])
-      end
-
-      # For lodgement rules
-
-      def party_walls_construction
-        @xml_doc
-          .search("SAP-Building-Part")
-          .map do |node|
-            xpath(%w[Party-Wall-Construction], node)
-        end
-      end
-
-      def walls_thickness
-        @xml_doc
-          .search("SAP-Building-Part")
-          .map do |node|
-            {
-              alternative_wall_thickness: node.at_xpath("SAP-Alternative-Wall/Wall-Thickness")&.content,
-              alternative_wall_thickness_measured: node.at_xpath("SAP-Alternative-Wall/Wall-Thickness-Measured")&.content,
-              alternative_wall_construction: node.at_xpath("SAP-Alternative-Wall/Wall-Construction")&.content,
-              alternative_wall_u_value: node.at_xpath("SAP-Alternative-Wall/Wall-U-Value")&.content,
-              alternative_wall_insulation_thickness: node.at_xpath("SAP-Alternative-Wall/Wall-Insulation-Thickness")&.content,
-              wall_thickness: node.at_xpath("Wall-Thickness")&.content,
-              wall_construction: node.at_xpath("Wall-Construction")&.content,
-              wall_thickness_measured: node.at_xpath("Wall-Thickness-Measured")&.content,
-            }
-        end
-      end
-
-      def rooves_construction_and_insulation
-        @xml_doc
-          .search("SAP-Building-Part")
-          .map do |node|
-            {
-              roof_insulation_location: node.at_xpath("Roof-Insulation-Location")&.content,
-              roof_construction: node.at_xpath("Roof-Construction")&.content,
-            }
-        end
-      end
-
-      def rooms_in_roof_insulation
-        nil
-      end
-
-      def floors_insulation
-        @xml_doc
-          .search("SAP-Building-Part")
-          .map do |node|
-            {
-              floor_u_value: node.at_xpath("Floor-U-Value")&.content,
-              floor_insulation_thickness: node.at_xpath("Floor-Insulation-Thickness")&.content,
-            }
-        end
-      end
-
-      def rooves_insulation
-        @xml_doc
-          .search("SAP-Building-Part")
-          .map do |node|
-            {
-              roof_u_value: node.at_xpath("Roof-U-Value")&.content,
-              roof_insulation_thickness: node.at_xpath("Roof-Insulation-Thickness")&.content,
-              rafter_insulation_thickness: node.at_xpath("Rafter-Insulation-Thickness")&.content,
-              flat_roof_insulation_thickness: node.at_xpath("Flat-Roof-Insulation-Thickness")&.content,
-              sloping_ceiling_insulation_thickness: node.at_xpath("Sloping-Ceiling-Insulation-Thickness")&.content,
-            }
-        end
-      end
-
-      def walls_insulation
-        @xml_doc
-          .search("SAP-Building-Part")
-          .map do |node|
-            {
-              wall_u_value: node.at_xpath("Wall-U-Value")&.content,
-              wall_insulation_thickness: node.at_xpath("Wall-Insulation-Thickness")&.content,
-            }
-        end
-      end
-
-      def rooms_in_roof
-        nil
-      end
-
-      def rooms_in_roof_roof_insulation
-        nil
-      end
-
-      def main_heating_details
-        @xml_doc
-          .search("Main-Heating")
-          .map do |_node|
-            {
-              main_heating_index_number: xpath(%w[Main-Heating-Index-Number]),
-              sap_main_heating_code: xpath(%w[SAP-Main-Heating-Code]),
-              main_fuel_type: xpath(%w[Main-Fuel-Type]),
-            }
-        end
-      end
-
-      def water_heating
-        {
-          water_heating_fuel: xpath(%w[Water-Heating-Fuel]),
-          water_heating_code: xpath(%w[Water-Heating-Code]),
-        }
       end
     end
   end
