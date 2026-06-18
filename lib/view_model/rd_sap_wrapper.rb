@@ -89,6 +89,8 @@ module ViewModel
         ViewModel::RdSapSchemaS210::CommonSchema.new xml_doc
       when :"RdSAP-Schema-S-18.0"
         ViewModel::RdSapSchemaS180::CommonSchema.new xml_doc
+      when :"RdSAP-Schema-S-17.00"
+        ViewModel::RdSapSchemaS1700::CommonSchema.new xml_doc
       else
         raise ArgumentError, "Unsupported schema type"
       end
