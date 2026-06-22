@@ -18,6 +18,7 @@ module ViewModel
       CEPC-5.0
       CEPC-4.0
       CEPC-3.1
+      CEPC-S-7.0
       CEPC-S-7.1
     ].freeze
     TYPES_OF_RD_SAP = %i[

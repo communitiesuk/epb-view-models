@@ -1,0 +1,184 @@
+module ViewModel
+  module CepcS70
+    class Cepc < ViewModel::Cepc71::CommonSchema
+      def date_of_expiry
+        expires_at = (Date.parse(date_of_registration) - 1) >> 12 * 10
+
+        expires_at.to_s
+      end
+
+      def building_environment
+        xpath(%w[Building-Environment])
+      end
+
+      def energy_efficiency_rating
+        xpath(%w[Asset-Rating])&.to_i
+      end
+
+      def current_energy_efficiency_band
+        xpath(%w[Energy-Band])
+      end
+
+      def potential_energy_rating
+        xpath(%w[Potential-Rating])&.to_i
+      end
+
+      def potential_energy_band
+        xpath(%w[Potential-Band])
+      end
+
+      def new_build_benchmark_band
+        xpath(%w[New-Build-Benchmark-Band])
+      end
+
+      def comparative_asset_rating
+        xpath(%w[Comparative-Asset-Rating])&.to_i
+      end
+
+      def comparative_asset_band
+        xpath(%w[Comparative-Energy-Band])
+      end
+
+      def epc_rating_ber
+        xpath(%w[BER])&.to_f
+      end
+
+      def approximate_energy_use
+        xpath(%w[Approximate-Energry-Use])&.to_i
+      end
+
+      def floor_area
+        xpath(%w[Technical-Information Floor-Area])&.to_i
+      end
+
+      def main_heating_fuel
+        xpath(%w[Main-Heating-Fuel])
+      end
+
+      def property_type
+        xpath(%w[Property-Type Long-Description])
+      end
+
+      def property_long_description
+        xpath(%w[Property-Type Long-Description])
+      end
+
+      def property_short_description
+        xpath(%w[Property-Type Short-Description])
+      end
+
+      def compliant_2002
+        nil
+      end
+
+      def renewable_energy_sources
+        @xml_doc.search("Renewable-Energy-Sources").children.search("Renewable-Energy-Source").map(&:content)
+      end
+
+      def electricity_sources
+        @xml_doc.search("Electricity-Sources").children.search("Electricity-Source").map(&:content)
+      end
+
+      def primary_energy_indicator
+        xpath(%w[Primary-Energry-Indicator])&.to_i
+      end
+
+      def calculation_tool
+        xpath(%w[Calculation-Tool])
+      end
+
+      def ter_2002
+        nil
+      end
+
+      def ter
+        xpath(%w[TER])&.to_f
+      end
+
+      def recommendations(payback = "")
+        if payback.empty?
+          # return an enumerable of all nodes
+          @xml_doc.xpath "Recommendations-Report RR-Recommendations"
+        else
+          @xml_doc
+            .search("Recommendations-Report RR-Recommendations/#{payback}")
+            .map do |node|
+              {
+                code: node.at("Recommendation-Code").content,
+                text: node.at("Recommendation").content,
+                cO2Impact: node.at("CO2-Impact").content,
+              }
+          end
+        end
+      end
+
+      def short_payback_recommendations
+        recommendations("Short-Payback")
+      end
+
+      def medium_payback_recommendations
+        recommendations("Medium-Payback")
+      end
+
+      def long_payback_recommendations
+        recommendations("Long-Payback")
+      end
+
+      def other_payback_recommendations
+        recommendations("Other-Payback")
+      end
+
+      def related_rrn
+        nil
+      end
+
+      def new_build_rating
+        xpath(%w[New-Build-Benchmark])&.to_i
+      end
+
+      def existing_build_rating
+        nil
+      end
+
+      def epc_related_party_disclosure
+        nil
+      end
+
+      def trading_address
+        xpath(%w[Trading-Address])
+      end
+
+      def company_name
+        xpath(%w[Company-Name])
+      end
+
+      def insurer
+        xpath(%w[Insurer])
+      end
+
+      def policy_no
+        xpath(%w[Policy-No])
+      end
+
+      def insurer_effective_date
+        xpath(%w[Effective-Date])
+      end
+
+      def insurer_expiry_date
+        xpath(%w[Expiry-Date])
+      end
+
+      def insurer_pi_limit
+        xpath(%w[PI-Limit])
+      end
+
+      def inspection_date
+        xpath(%w[Inspection-Date])
+      end
+
+      def completion_date
+        xpath(%w[Completion-Date])
+      end
+    end
+  end
+end

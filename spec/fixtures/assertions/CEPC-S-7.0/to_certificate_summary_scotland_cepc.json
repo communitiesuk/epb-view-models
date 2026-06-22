@@ -1,0 +1,86 @@
+{
+  "type_of_assessment": "CEPC",
+  "assessment_id": "0000-0000-0000-0000-0000",
+  "report_type": "3",
+  "date_of_assessment": "2015-02-02",
+  "date_of_expiry": "2025-02-04",
+  "date_of_registration": "2015-02-05",
+  "address": {
+    "address_line1": "Non-dom Property",
+    "address_line2": "Some Street",
+    "address_line3": "Bigger Line",
+    "address_line4": "",
+    "town": "Town",
+    "postcode": "FK1 1XE"
+  },
+  "assessor": {
+    "scheme_assessor_id": "SPEC000000",
+    "name": "Testa Sessor",
+    "contact_details": {
+      "email": "sessor@email.co.uk",
+      "telephone": "00000000073",
+      "trading_address": "6 Unit Business Park Town"
+    },
+    "company_name": "EPC R Us Ltd",
+    "insurer": "Insurance Company",
+    "policy_no": "POL000000",
+    "insurer_effective_date": "2022-10-22",
+    "insurer_expiry_date": "2023-10-21",
+    "insurer_pi_limit": "5000000"
+  },
+  "technical_information": {
+    "main_heating_fuel": "Natural Gas",
+    "building_environment": "Heating and Natural Ventilation",
+    "floor_area": 202
+  },
+  "current_energy_efficiency_rating": 119,
+  "current_energy_efficiency_band": "G",
+  "potential_energy_efficiency_rating": 106,
+  "potential_energy_efficiency_band": "G",
+  "new_build_benchmark_rating": 59,
+  "new_build_benchmark_band": "D",
+  "comparative_asset_rating": 57,
+  "epc_rating_ber": 119.37,
+  "approximate_energy_use": 419,
+  "property_type": {
+    "property_type_long_description": "A3/A4/A5 Restaurant and Cafes/Drinking Establishments and Hot Food takeaways",
+    "property_type_short_description": "Restaurant/Cafes/takeaway"
+  },
+  "compliant_2002": null,
+  "renewable_energy_sources": [
+    "Other non-calculated"
+  ],
+  "electricity_sources": [
+    "Grid supplied"
+  ],
+  "primary_energy_indicator": 644,
+  "calculation_tool": "Property Tectonics Ltd, Lifespan SBEM, v4.1.e, SBEM, v4.1.e.5",
+  "ter_2002": null,
+  "ter": 59.43,
+  "short_payback_recommendations": [
+    {
+      "code": "EPC-L5",
+      "text": "Consider replacing T8 lamps with retrofit T5 conversion kit. ",
+      "cO2Impact": "LOW"
+    },
+    {
+      "code": "EPC-L7",
+      "text": "Introduce HF (high frequency) ballasts for fluorescent tubes: Reduced number of fittings required.",
+      "cO2Impact": "LOW"
+    },
+    {
+      "code": "EPC-E7",
+      "text": "Carry out a pressure test, identify and treat identified air leakage. Enter result in EPC calculation.",
+      "cO2Impact": "MEDIUM"
+    }
+  ],
+  "medium_payback_recommendations": [
+    {
+      "code": "EPC-E8",
+      "text": "Some glazing is poorly insulated. Replace/improve glazing and/or frames. ",
+      "cO2Impact": "MEDIUM"
+    }
+  ],
+  "long_payback_recommendations": [],
+  "other_payback_recommendations": []
+}

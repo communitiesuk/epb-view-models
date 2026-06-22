@@ -61,6 +61,8 @@ module ViewModel
         ViewModel::Cepc40::Cepc.new xml_doc
       when :"CEPC-3.1"
         ViewModel::Cepc31::Cepc.new xml_doc
+      when :"CEPC-S-7.0"
+        ViewModel::CepcS70::Cepc.new xml_doc
       when :"CEPC-S-7.1"
         ViewModel::CepcS71::Cepc.new xml_doc
       else
