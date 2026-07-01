@@ -1,0 +1,162 @@
+{
+  "type_of_assessment": "RdSAP",
+  "assessment_id": "0000-0000-0000-0000-0000",
+  "date_of_expiry": "2023-06-19",
+  "date_of_assessment": "2013-06-07",
+  "date_of_registration": "2013-06-20",
+  "date_registered": "2013-06-20",
+  "address_line1": "1 Some Street",
+  "address_line2": "",
+  "address_line3": "",
+  "address_line4": "",
+  "town": "Newkirk",
+  "postcode": "FK1 1XE",
+  "address": {
+    "address_id": "LPRN-0000000000",
+    "address_line1": "1 Some Street",
+    "address_line2": "",
+    "address_line3": "",
+    "address_line4": "",
+    "town": "Newkirk",
+    "postcode": "FK1 1XE"
+  },
+  "assessor": {
+    "scheme_assessor_id": "SPEC000000",
+    "name": "Testa Sessor",
+    "contact_details": {
+      "email": "a@b.co.uk",
+      "telephone": "0555 497 2848"
+    }
+  },
+  "current_carbon_emission": 0.43e1,
+  "current_energy_efficiency_band": "c",
+  "current_energy_efficiency_rating": 74,
+  "dwelling_type": "Mid-floor flat",
+  "estimated_energy_cost": "626.00",
+  "main_fuel_type": "29",
+  "heat_demand": {
+    "current_space_heating_demand": 5478,
+    "current_water_heating_demand": 2125,
+    "impact_of_cavity_insulation": null,
+    "impact_of_loft_insulation": -125,
+    "impact_of_solid_wall_insulation": null
+  },
+  "heating_cost_current": "406",
+  "heating_cost_potential": "363",
+  "hot_water_cost_current": "127",
+  "hot_water_cost_potential": "125",
+  "lighting_cost_current": "93",
+  "lighting_cost_potential": "55",
+  "potential_carbon_emission": 0.4e1,
+  "potential_energy_efficiency_band": "c",
+  "potential_energy_efficiency_rating": 77,
+  "potential_energy_saving": "83.00",
+  "primary_energy_use": 298,
+  "energy_consumption_potential": 279,
+  "property_age_band": "H",
+  "property_summary": [
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "wall",
+      "description": "Granite or whinstone, as built, insulated (assumed)"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "roof",
+      "description": "Pitched, insulated (assumed)"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "roof",
+      "description": "Roof room(s), insulated (assumed)"
+    },
+    {
+      "energy_efficiency_rating": 0,
+      "environmental_efficiency_rating": 0,
+      "name": "floor",
+      "description": "(other premises below)"
+    },
+    {
+      "energy_efficiency_rating": 3,
+      "environmental_efficiency_rating": 3,
+      "name": "window",
+      "description": "Fully double glazed"
+    },
+    {
+      "energy_efficiency_rating": 3,
+      "environmental_efficiency_rating": 1,
+      "name": "main_heating",
+      "description": "Electric storage heaters"
+    },
+    {
+      "energy_efficiency_rating": 2,
+      "environmental_efficiency_rating": 2,
+      "name": "main_heating_controls",
+      "description": "Manual charge control"
+    },
+    {
+      "energy_efficiency_rating": 3,
+      "environmental_efficiency_rating": 1,
+      "name": "hot_water",
+      "description": "Electric immersion, off-peak"
+    },
+    {
+      "energy_efficiency_rating": 3,
+      "environmental_efficiency_rating": 3,
+      "name": "lighting",
+      "description": "Low energy lighting in 29% of fixed outlets"
+    },
+    {
+      "energy_efficiency_rating": 0,
+      "environmental_efficiency_rating": 0,
+      "name": "secondary_heating",
+      "description": "Room heaters, electric"
+    }
+  ],
+  "recommended_improvements": [
+    {
+      "energy_performance_rating_improvement": 75,
+      "environmental_impact_rating_improvement": 59,
+      "green_deal_category_code": "1",
+      "improvement_category": "5",
+      "improvement_code": "35",
+      "improvement_description": null,
+      "improvement_title": "",
+      "improvement_type": "E",
+      "indicative_cost": "£25",
+      "sequence": 1,
+      "typical_saving": "28",
+      "energy_performance_band_improvement": "c"
+    },
+    {
+      "energy_performance_rating_improvement": 77,
+      "environmental_impact_rating_improvement": 61,
+      "green_deal_category_code": "2",
+      "improvement_category": "5",
+      "improvement_code": "24",
+      "improvement_description": null,
+      "improvement_title": "",
+      "improvement_type": "L",
+      "indicative_cost": "£900 - £1,200",
+      "sequence": 2,
+      "typical_saving": "56",
+      "energy_performance_band_improvement": "c"
+    }
+  ],
+  "lzc_energy_sources": null,
+  "related_party_disclosure_number": 2,
+  "related_party_disclosure_text": null,
+  "tenure": "3",
+  "transaction_type": "8",
+  "total_floor_area": 0.81e2,
+  "status": "EXPIRED",
+  "country_code": "SCT",
+  "environmental_impact_current": 58,
+  "environmental_impact_potential": 61,
+  "addendum": null,
+  "gas_smart_meter_present": null,
+  "electricity_smart_meter_present": null
+}
