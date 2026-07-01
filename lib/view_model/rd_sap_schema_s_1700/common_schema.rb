@@ -536,6 +536,21 @@ module ViewModel
       def party_wall_construction
         xpath(%w[SAP-Building-Part Party-Wall-Construction])
       end
+
+      def lzc_energy_sources
+        return nil if xpath(%w[LZC-Energy-Sources]).nil?
+
+        @xml_doc
+          .search("LZC-Energy-Sources/LZC-Energy-Source")
+          .select(&:element?)
+          .map { |n| n.text.to_i }
+      end
+
+      def addendum
+        return nil if xpath(%w[Addendum]).nil?
+
+        fetch_addendum_numbers.merge(fetch_addendum_boolean_nodes)
+      end
     end
   end
 end

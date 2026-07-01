@@ -66,13 +66,20 @@ RSpec.describe Presenter::Xsd do
 
     describe "#unique_enums" do
       it "returns and array of unique enum hashes" do
-        built_form = [{ "1" => "Detached",
-                        "2" => "Semi-Detached",
-                        "3" => "End-Terrace",
-                        "4" => "Mid-Terrace",
-                        "5" => "Enclosed End-Terrace",
-                        "6" => "Enclosed Mid-Terrace",
-                        "NR" => "Not Recorded" }]
+        built_form = [{"1" => "Detached",
+                       "2" => "Semi-Detached",
+                       "3" => "End-Terrace",
+                       "4" => "Mid-Terrace",
+                       "5" => "Enclosed End-Terrace",
+                       "6" => "Enclosed Mid-Terrace",
+                       "NR" => "Not Recorded"},
+                      {"1" => "Detached",
+                       "2" => "Semi-Detached",
+                       "3" => "End-Terrace",
+                       "4" => "Mid-Terrace",
+                       "5" => "Enclosed End-Terrace",
+                       "6" => "Enclosed Mid-Terrace"}]
+
         expect(export.unique_enums(ViewModelDomain::XsdArguments.new(simple_type: "SAP-BuiltFormCode", assessment_type: "RdSAP", xsd_dir_path: "/api/schemas/xml/RdSAP**/RdSAP/UDT/*-Domains.xsd"))).to eq(built_form)
       end
     end

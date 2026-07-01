@@ -1,6 +1,7 @@
 <RdSAP-Report
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns="http://www.epcregister.com/xsd/rdsap" xsi:schemaLocation="http://www.epcregister.com/xsd/rdsap http://www.epcregister.com/xsd/RdSAP/Templates/RdSAP-Report.xsd">
+        xmlns="http://www.epcregister.com/xsd/rdsap"
+        xsi:schemaLocation="http://www.epcregister.com/xsd/rdsap http://www.epcregister.com/xsd/RdSAP/Templates/RdSAP-Report.xsd">
   <Schema-Version-Original>LIG-17.0</Schema-Version-Original>
   <SAP-Version>9.92</SAP-Version>
   <PCDF-Revision-Number>397</PCDF-Revision-Number>

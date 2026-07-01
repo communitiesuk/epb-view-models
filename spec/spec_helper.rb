@@ -15,6 +15,8 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  RSpec::Support::ObjectFormatter.default_instance.max_formatted_output_length = nil
 end
 
 class FakeStdErr

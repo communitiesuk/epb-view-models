@@ -25,15 +25,8 @@ module Presenter
     end
 
     def unique_enums(domain_arguments)
-      uniq_enums = []
       enums = get_enums_by_type(domain_arguments).values
-
-      enums.each_with_index do |_hash, i|
-        if i.positive? && (enums[i].to_a != enums[i + 1].to_a)
-          uniq_enums << enums[i]
-        end
-      end
-      uniq_enums
+      enums.group_by(&:inspect).values.map(&:first)
     end
 
     def variation_between_schema_versions?(enums_hash)
