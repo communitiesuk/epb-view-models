@@ -371,12 +371,12 @@ module ViewModel
         @xml_doc
           .search("Fixed-Lights/Fixed-Light")
           .map do |part|
-            {
-              lighting_efficacy:
-                xpath(%w[Lighting-Efficacy], part),
-              lighting_outlets:
-                xpath(%w[Lighting-Outlets], part),
-            }
+          {
+            lighting_efficacy:
+              xpath(%w[Lighting-Efficacy], part),
+            lighting_outlets:
+              xpath(%w[Lighting-Outlets], part),
+          }
         end
       end
 

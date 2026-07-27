@@ -367,12 +367,12 @@ module ViewModel
         @xml_doc
           .search("Fixed-Lights/Fixed-Light")
           .map do |part|
-            {
-              lighting_efficacy:
-                xpath(%w[Lighting-Efficacy], part),
-              lighting_outlets:
-                xpath(%w[Lighting-Outlets], part),
-            }
+          {
+            lighting_efficacy:
+              xpath(%w[Lighting-Efficacy], part),
+            lighting_outlets:
+              xpath(%w[Lighting-Outlets], part),
+          }
         end
       end
 
@@ -600,10 +600,10 @@ module ViewModel
         @xml_doc
           .search("SAP-Heating/Main-Heating-Details/Main-Heating")
           .map do |_node|
-            {
-              main_heating_code: xpath(%w[Main-Heating-Code]),
-              main_heating_index_number: xpath(%w[Main-Heating-Index-Number]),
-            }
+          {
+            main_heating_code: xpath(%w[Main-Heating-Code]),
+            main_heating_index_number: xpath(%w[Main-Heating-Index-Number]),
+          }
         end
       end
 
@@ -611,7 +611,7 @@ module ViewModel
         @xml_doc
           .search("SAP-Building-Part")
           .map do |node|
-            xpath(%w[Construction-Year], node)
+          xpath(%w[Construction-Year], node)
         end
       end
     end
