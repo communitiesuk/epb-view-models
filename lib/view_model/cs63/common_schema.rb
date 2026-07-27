@@ -198,6 +198,14 @@ module ViewModel
       def related_rrn
         nil
       end
+
+      def total_emission_savings
+      xpath(%w[Total-Emission-Savings])
+      end
+
+      def total_energy_savings
+      xpath(%w[Total-Emission-Savings])
+      end
     end
   end
 end

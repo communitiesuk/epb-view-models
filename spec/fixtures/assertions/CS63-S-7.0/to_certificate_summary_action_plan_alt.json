@@ -3,9 +3,9 @@
   "assessment_id": "0000-0000-0000-0000-0000",
   "epc_assessment_id": "0000-0000-0000-0000-0001",
   "report_type": "9",
-  "sale_lease_date": "2025-06-13",
-  "date_of_assessment": "2025-06-04",
-  "plan_report_date": "2025-06-11",
+  "sale_lease_date": "2021-11-23",
+  "date_of_assessment": "2021-06-30",
+  "plan_report_date": "2021-11-23",
   "delegated_protocol_date": null,
   "delegated_protocol_set_up": null,
   "address": {
@@ -30,17 +30,17 @@
   "owner_commission_report": "Y",
   "delegated_person_commission_report": "N",
   "property_type": {
-    "property_type_short_description": "General Industrial",
-    "property_type_long_description": "B2 to B7 General Industrial and Special Industrial Groups"
+    "property_type_long_description": "B2 to B7 General Industrial and Special Industrial Groups",
+    "property_type_short_description": "General Industrial"
   },
-  "building_improvements": "N",
-  "operational_ratings": "Y",
-  "dec": "N",
-  "planned_completion_date": "2028-12-12",
-  "actual_completion_date": null,
-  "target_emission_savings": 1.61,
-  "target_energy_savings": 10.11,
-  "accept_prescriptive_improvements": "Y",
+  "building_improvements": "Y",
+  "operational_ratings": "N",
+  "dec": null,
+  "planned_completion_date": "2025-04-23",
+  "actual_completion_date": "2025-04-23",
+  "target_emission_savings": 0.4,
+  "target_energy_savings": 0.78,
+  "accept_prescriptive_improvements": "N",
   "prescriptive_improvements": [
     {
       "measure_description_short": "Central time heating control",
@@ -85,7 +85,26 @@
       "measure_type": null
     }
   ],
-  "alternative_improvements": [],
-  "total_emission_savings":null,
-  "total_energy_savings":null
+  "alternative_improvements": [
+    {
+      "measure_description_short": "Lighting controls",
+      "measure_description_long": null,
+      "measure_valid": null,
+      "measure_type": "Prescriptive"
+    },
+    {
+      "measure_description_short": "Draught-stripping windows and doors",
+      "measure_description_long": null,
+      "measure_valid": null,
+      "measure_type": "Prescriptive"
+    },
+    {
+      "measure_description_short": "Solar PV",
+      "measure_description_long": "",
+      "measure_valid": null,
+      "measure_type": "Alternative"
+    }
+  ],
+  "total_emission_savings": "1.61",
+  "total_energy_savings": "1.61"
 }

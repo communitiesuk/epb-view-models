@@ -53,6 +53,8 @@ module Presenter
           accept_prescriptive_improvements: @view_model.accept_prescriptive_improvements,
           prescriptive_improvements: @view_model.prescriptive_improvements,
           alternative_improvements: @view_model.alternative_improvements,
+          total_emission_savings: @view_model.total_emission_savings,
+          total_energy_savings: @view_model.total_energy_savings,
         }
       end
     end

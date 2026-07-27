@@ -1,0 +1,451 @@
+<!-- S63gen version: v5.6.a.1 End Version -->
+<!-- Date: Tue Nov 23 10:14:34 2021 -->
+<CS63:LodgementReportRequest xmlns:CS63="http://www.est.org.uk/s63/estcrV1/DCLG-CS63" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.est.org.uk/s63/estcrV1/DCLG-CS63 CS63-Reports_All.xsd">
+  <!-- This XML message is for a Section 63 Action Plan in Scotland. -->
+  <CS63:Report>
+    <CS63:Report-Header>
+      <CS63:RRN>0000-0000-0000-0000-0000</CS63:RRN>
+      <CS63:EPC-RRN>0000-0000-0000-0000-0001</CS63:EPC-RRN>
+      <CS63:Sale-Lease-Date>2021-11-23</CS63:Sale-Lease-Date>
+      <CS63:Assessment-Date>2021-06-30</CS63:Assessment-Date>
+      <CS63:Plan-Report-Date>2021-11-23</CS63:Plan-Report-Date>
+      <CS63:Report-Type>9</CS63:Report-Type>
+      <CS63:Status>entered</CS63:Status>
+      <CS63:Report-Commission>
+        <CS63:Owner-Commission-Report>Y</CS63:Owner-Commission-Report>
+        <CS63:Owner-Name>Information not provided by the user</CS63:Owner-Name>
+        <CS63:Delegated-Person-Commission-Report>N</CS63:Delegated-Person-Commission-Report>
+      </CS63:Report-Commission>
+      <CS63:Property-Type>
+        <CS63:Short-Description>General Industrial</CS63:Short-Description>
+        <CS63:Long-Description>B2 to B7 General Industrial and Special Industrial Groups</CS63:Long-Description>
+      </CS63:Property-Type>
+      <CS63:Energy-Assessor>
+        <CS63:Membership-Number>SPEC000000</CS63:Membership-Number>
+        <CS63:Name>Testa Sessor</CS63:Name>
+        <CS63:Approved-Organisation-Name>Accreditation schema</CS63:Approved-Organisation-Name>
+        <CS63:Approved-Organisation-Web-Address>Accreditationschema.co.uk</CS63:Approved-Organisation-Web-Address>
+        <CS63:Trading-Address>6 Unit Business Park Town</CS63:Trading-Address>
+        <CS63:Company-Name>EPC R Us Ltd</CS63:Company-Name>
+        <CS63:Status>Registered</CS63:Status>
+        <CS63:E-Mail>sessor@email.co.uk</CS63:E-Mail>
+        <CS63:Telephone-Number>00000000073</CS63:Telephone-Number>
+      </CS63:Energy-Assessor>
+      <CS63:Property>
+        <CS63:Address>
+          <CS63:Address-Line-1>Non-dom Property</CS63:Address-Line-1>
+          <CS63:Address-Line-2 />
+          <CS63:Address-Line-3 />
+          <CS63:Address-Line-4 />
+          <CS63:Post-Town>Town</CS63:Post-Town>
+          <CS63:Postcode>FK1 1XE</CS63:Postcode>
+        </CS63:Address>
+        <CS63:UPRN>0000000001</CS63:UPRN>
+      </CS63:Property>
+      <CS63:Calculation-Details>
+        <CS63:Methodology>SBEM</CS63:Methodology>
+        <CS63:Calculation-Tool>CLG, iSBEM, v5.6.a, SBEM, v5.6.a.2</CS63:Calculation-Tool>
+        <CS63:Output-Engine>S63gen, v5.6.a.1</CS63:Output-Engine>
+        <CS63:Inspection-Type>Physical</CS63:Inspection-Type>
+      </CS63:Calculation-Details>
+    </CS63:Report-Header>
+    <CS63:Summary-Of-Performance>
+      <CS63:Building-Data>
+        <CS63:Analysis-Type>ACTUAL</CS63:Analysis-Type>
+        <CS63:Area>1310.45</CS63:Area>
+        <CS63:Area-Exterior>3446.78</CS63:Area-Exterior>
+        <CS63:Weather>GLA</CS63:Weather>
+        <CS63:Q50-Infiltration>25</CS63:Q50-Infiltration>
+        <CS63:Building-W-K>1539.24</CS63:Building-W-K>
+        <CS63:Building-W-M2K>0.446573</CS63:Building-W-M2K>
+        <CS63:Building-Alpha>15.3268</CS63:Building-Alpha>
+        <CS63:Activities>
+          <CS63:Activity>
+            <CS63:ID>1050</CS63:ID>
+            <CS63:Area>1054.43</CS63:Area>
+          </CS63:Activity>
+          <CS63:Activity>
+            <CS63:ID>1052</CS63:ID>
+            <CS63:Area>181.57</CS63:Area>
+          </CS63:Activity>
+          <CS63:Activity>
+            <CS63:ID>1040</CS63:ID>
+            <CS63:Area>58.45</CS63:Area>
+          </CS63:Activity>
+          <CS63:Activity>
+            <CS63:ID>1049</CS63:ID>
+            <CS63:Area>16</CS63:Area>
+          </CS63:Activity>
+        </CS63:Activities>
+        <CS63:Primary-Energry-Indicator>268</CS63:Primary-Energry-Indicator>
+        <CS63:Approximate-Energry-Use>87</CS63:Approximate-Energry-Use>
+        <CS63:Global-Performance>
+          <CS63:KWH-M2-Heating>22.3909</CS63:KWH-M2-Heating>
+          <CS63:KWH-M2-Cooling>0</CS63:KWH-M2-Cooling>
+          <CS63:KWH-M2-Auxiliary>0.447819</CS63:KWH-M2-Auxiliary>
+          <CS63:KWH-M2-Lighting>52.6144</CS63:KWH-M2-Lighting>
+          <CS63:KWH-M2-DHW>11.7541</CS63:KWH-M2-DHW>
+          <CS63:KWH-M2-Equipment>33.1542</CS63:KWH-M2-Equipment>
+          <CS63:KWH-M2-Natural-Gas>0</CS63:KWH-M2-Natural-Gas>
+          <CS63:KWH-M2-LPG>0</CS63:KWH-M2-LPG>
+          <CS63:KWH-M2-Biogas>0</CS63:KWH-M2-Biogas>
+          <CS63:KWH-M2-Oil>0</CS63:KWH-M2-Oil>
+          <CS63:KWH-M2-Coal>0</CS63:KWH-M2-Coal>
+          <CS63:KWH-M2-Anthracite>0</CS63:KWH-M2-Anthracite>
+          <CS63:KWH-M2-Smokeless>0</CS63:KWH-M2-Smokeless>
+          <CS63:KWH-M2-Dual-Fuel>0</CS63:KWH-M2-Dual-Fuel>
+          <CS63:KWH-M2-Biomass>0</CS63:KWH-M2-Biomass>
+          <CS63:KWH-M2-Supplied>87.2074</CS63:KWH-M2-Supplied>
+          <CS63:KWH-M2-Waste-Heat>0</CS63:KWH-M2-Waste-Heat>
+          <CS63:KWH-M2-District-Heating>0</CS63:KWH-M2-District-Heating>
+          <CS63:KWH-M2-Displaced>0</CS63:KWH-M2-Displaced>
+          <CS63:KWH-M2-PVS>0</CS63:KWH-M2-PVS>
+          <CS63:KWH-M2-Wind>0</CS63:KWH-M2-Wind>
+          <CS63:KWH-M2-CHP>0</CS63:KWH-M2-CHP>
+          <CS63:KWH-M2-SES>0</CS63:KWH-M2-SES>
+        </CS63:Global-Performance>
+        <CS63:HVAC-Systems>
+          <CS63:HVAC-System-Data>
+            <CS63:Area>1054.43</CS63:Area>
+            <CS63:Type>No Heating or Cooling</CS63:Type>
+            <CS63:Heat-Source>LTHW boiler</CS63:Heat-Source>
+            <CS63:Fuel-Type>Oil</CS63:Fuel-Type>
+            <CS63:MJ-M2-Heating-Dem>324.578</CS63:MJ-M2-Heating-Dem>
+            <CS63:MJ-M2-Cooling-Dem>45.419</CS63:MJ-M2-Cooling-Dem>
+            <CS63:KWH-M2-Heating>0</CS63:KWH-M2-Heating>
+            <CS63:KWH-M2-Cooling>0</CS63:KWH-M2-Cooling>
+            <CS63:KWH-M2-Auxiliary>0</CS63:KWH-M2-Auxiliary>
+            <CS63:Heating-SSEFF>0</CS63:Heating-SSEFF>
+            <CS63:Cooling-SSEER>0</CS63:Cooling-SSEER>
+            <CS63:Heating-Gen-SEFF>0</CS63:Heating-Gen-SEFF>
+            <CS63:Cooling-Gen-SEER>0</CS63:Cooling-Gen-SEER>
+            <CS63:Activities>
+              <CS63:Activity>
+                <CS63:ID>1050</CS63:ID>
+                <CS63:Area>1054.43</CS63:Area>
+              </CS63:Activity>
+            </CS63:Activities>
+          </CS63:HVAC-System-Data>
+          <CS63:HVAC-System-Data>
+            <CS63:Area>256.02</CS63:Area>
+            <CS63:Type>Other local room heater - fanned</CS63:Type>
+            <CS63:Heat-Source>Room heater</CS63:Heat-Source>
+            <CS63:Fuel-Type>Grid Supplied Electricity</CS63:Fuel-Type>
+            <CS63:MJ-M2-Heating-Dem>330.074</CS63:MJ-M2-Heating-Dem>
+            <CS63:MJ-M2-Cooling-Dem>125.548</CS63:MJ-M2-Cooling-Dem>
+            <CS63:KWH-M2-Heating>114.609</CS63:KWH-M2-Heating>
+            <CS63:KWH-M2-Cooling>0</CS63:KWH-M2-Cooling>
+            <CS63:KWH-M2-Auxiliary>2.29218</CS63:KWH-M2-Auxiliary>
+            <CS63:Heating-SSEFF>0.8</CS63:Heating-SSEFF>
+            <CS63:Cooling-SSEER>0</CS63:Cooling-SSEER>
+            <CS63:Heating-Gen-SEFF>1</CS63:Heating-Gen-SEFF>
+            <CS63:Cooling-Gen-SEER>0</CS63:Cooling-Gen-SEER>
+            <CS63:Activities>
+              <CS63:Activity>
+                <CS63:ID>1052</CS63:ID>
+                <CS63:Area>181.57</CS63:Area>
+              </CS63:Activity>
+              <CS63:Activity>
+                <CS63:ID>1040</CS63:ID>
+                <CS63:Area>58.45</CS63:Area>
+              </CS63:Activity>
+              <CS63:Activity>
+                <CS63:ID>1049</CS63:ID>
+                <CS63:Area>16</CS63:Area>
+              </CS63:Activity>
+            </CS63:Activities>
+          </CS63:HVAC-System-Data>
+        </CS63:HVAC-Systems>
+      </CS63:Building-Data>
+      <CS63:Building-Data>
+        <CS63:Analysis-Type>PRESCRIPTIVE</CS63:Analysis-Type>
+        <CS63:Area>1310.45</CS63:Area>
+        <CS63:Area-Exterior>3446.78</CS63:Area-Exterior>
+        <CS63:Weather>GLA</CS63:Weather>
+        <CS63:Q50-Infiltration>22.5</CS63:Q50-Infiltration>
+        <CS63:Building-W-K>1539.24</CS63:Building-W-K>
+        <CS63:Building-W-M2K>0.446573</CS63:Building-W-M2K>
+        <CS63:Building-Alpha>15.3268</CS63:Building-Alpha>
+        <CS63:Activities>
+          <CS63:Activity>
+            <CS63:ID>1050</CS63:ID>
+            <CS63:Area>1054.43</CS63:Area>
+          </CS63:Activity>
+          <CS63:Activity>
+            <CS63:ID>1052</CS63:ID>
+            <CS63:Area>181.57</CS63:Area>
+          </CS63:Activity>
+          <CS63:Activity>
+            <CS63:ID>1040</CS63:ID>
+            <CS63:Area>58.45</CS63:Area>
+          </CS63:Activity>
+          <CS63:Activity>
+            <CS63:ID>1049</CS63:ID>
+            <CS63:Area>16</CS63:Area>
+          </CS63:Activity>
+        </CS63:Activities>
+        <CS63:Primary-Energry-Indicator>265</CS63:Primary-Energry-Indicator>
+        <CS63:Approximate-Energry-Use>86</CS63:Approximate-Energry-Use>
+        <CS63:Global-Performance>
+          <CS63:KWH-M2-Heating>21.8063</CS63:KWH-M2-Heating>
+          <CS63:KWH-M2-Cooling>0</CS63:KWH-M2-Cooling>
+          <CS63:KWH-M2-Auxiliary>0.436127</CS63:KWH-M2-Auxiliary>
+          <CS63:KWH-M2-Lighting>52.435</CS63:KWH-M2-Lighting>
+          <CS63:KWH-M2-DHW>11.7541</CS63:KWH-M2-DHW>
+          <CS63:KWH-M2-Equipment>33.1542</CS63:KWH-M2-Equipment>
+          <CS63:KWH-M2-Natural-Gas>0</CS63:KWH-M2-Natural-Gas>
+          <CS63:KWH-M2-LPG>0</CS63:KWH-M2-LPG>
+          <CS63:KWH-M2-Biogas>0</CS63:KWH-M2-Biogas>
+          <CS63:KWH-M2-Oil>0</CS63:KWH-M2-Oil>
+          <CS63:KWH-M2-Coal>0</CS63:KWH-M2-Coal>
+          <CS63:KWH-M2-Anthracite>0</CS63:KWH-M2-Anthracite>
+          <CS63:KWH-M2-Smokeless>0</CS63:KWH-M2-Smokeless>
+          <CS63:KWH-M2-Dual-Fuel>0</CS63:KWH-M2-Dual-Fuel>
+          <CS63:KWH-M2-Biomass>0</CS63:KWH-M2-Biomass>
+          <CS63:KWH-M2-Supplied>86.4314</CS63:KWH-M2-Supplied>
+          <CS63:KWH-M2-Waste-Heat>0</CS63:KWH-M2-Waste-Heat>
+          <CS63:KWH-M2-District-Heating>0</CS63:KWH-M2-District-Heating>
+          <CS63:KWH-M2-Displaced>0</CS63:KWH-M2-Displaced>
+          <CS63:KWH-M2-PVS>0</CS63:KWH-M2-PVS>
+          <CS63:KWH-M2-Wind>0</CS63:KWH-M2-Wind>
+          <CS63:KWH-M2-CHP>0</CS63:KWH-M2-CHP>
+          <CS63:KWH-M2-SES>0</CS63:KWH-M2-SES>
+        </CS63:Global-Performance>
+        <CS63:HVAC-Systems>
+          <CS63:HVAC-System-Data>
+            <CS63:Area>1054.43</CS63:Area>
+            <CS63:Type>No Heating or Cooling</CS63:Type>
+            <CS63:Heat-Source>LTHW boiler</CS63:Heat-Source>
+            <CS63:Fuel-Type>Oil</CS63:Fuel-Type>
+            <CS63:MJ-M2-Heating-Dem>306.988</CS63:MJ-M2-Heating-Dem>
+            <CS63:MJ-M2-Cooling-Dem>46.4603</CS63:MJ-M2-Cooling-Dem>
+            <CS63:KWH-M2-Heating>0</CS63:KWH-M2-Heating>
+            <CS63:KWH-M2-Cooling>0</CS63:KWH-M2-Cooling>
+            <CS63:KWH-M2-Auxiliary>0</CS63:KWH-M2-Auxiliary>
+            <CS63:Heating-SSEFF>0</CS63:Heating-SSEFF>
+            <CS63:Cooling-SSEER>0</CS63:Cooling-SSEER>
+            <CS63:Heating-Gen-SEFF>0</CS63:Heating-Gen-SEFF>
+            <CS63:Cooling-Gen-SEER>0</CS63:Cooling-Gen-SEER>
+            <CS63:Activities>
+              <CS63:Activity>
+                <CS63:ID>1050</CS63:ID>
+                <CS63:Area>1054.43</CS63:Area>
+              </CS63:Activity>
+            </CS63:Activities>
+          </CS63:HVAC-System-Data>
+          <CS63:HVAC-System-Data>
+            <CS63:Area>256.02</CS63:Area>
+            <CS63:Type>Other local room heater - fanned</CS63:Type>
+            <CS63:Heat-Source>Room heater</CS63:Heat-Source>
+            <CS63:Fuel-Type>Grid Supplied Electricity</CS63:Fuel-Type>
+            <CS63:MJ-M2-Heating-Dem>321.456</CS63:MJ-M2-Heating-Dem>
+            <CS63:MJ-M2-Cooling-Dem>128.244</CS63:MJ-M2-Cooling-Dem>
+            <CS63:KWH-M2-Heating>111.617</CS63:KWH-M2-Heating>
+            <CS63:KWH-M2-Cooling>0</CS63:KWH-M2-Cooling>
+            <CS63:KWH-M2-Auxiliary>2.23233</CS63:KWH-M2-Auxiliary>
+            <CS63:Heating-SSEFF>0.8</CS63:Heating-SSEFF>
+            <CS63:Cooling-SSEER>0</CS63:Cooling-SSEER>
+            <CS63:Heating-Gen-SEFF>1</CS63:Heating-Gen-SEFF>
+            <CS63:Cooling-Gen-SEER>0</CS63:Cooling-Gen-SEER>
+            <CS63:Activities>
+              <CS63:Activity>
+                <CS63:ID>1052</CS63:ID>
+                <CS63:Area>181.57</CS63:Area>
+              </CS63:Activity>
+              <CS63:Activity>
+                <CS63:ID>1040</CS63:ID>
+                <CS63:Area>58.45</CS63:Area>
+              </CS63:Activity>
+              <CS63:Activity>
+                <CS63:ID>1049</CS63:ID>
+                <CS63:Area>16</CS63:Area>
+              </CS63:Activity>
+            </CS63:Activities>
+          </CS63:HVAC-System-Data>
+        </CS63:HVAC-Systems>
+      </CS63:Building-Data>
+      <CS63:Building-Data>
+        <CS63:Analysis-Type>ALTERNATIVE</CS63:Analysis-Type>
+        <CS63:Area>1310.45</CS63:Area>
+        <CS63:Area-Exterior>3446.78</CS63:Area-Exterior>
+        <CS63:Weather>GLA</CS63:Weather>
+        <CS63:Q50-Infiltration>22.5</CS63:Q50-Infiltration>
+        <CS63:Building-W-K>1539.24</CS63:Building-W-K>
+        <CS63:Building-W-M2K>0.446573</CS63:Building-W-M2K>
+        <CS63:Building-Alpha>15.3268</CS63:Building-Alpha>
+        <CS63:Activities>
+          <CS63:Activity>
+            <CS63:ID>1050</CS63:ID>
+            <CS63:Area>1054.43</CS63:Area>
+          </CS63:Activity>
+          <CS63:Activity>
+            <CS63:ID>1052</CS63:ID>
+            <CS63:Area>181.57</CS63:Area>
+          </CS63:Activity>
+          <CS63:Activity>
+            <CS63:ID>1040</CS63:ID>
+            <CS63:Area>58.45</CS63:Area>
+          </CS63:Activity>
+          <CS63:Activity>
+            <CS63:ID>1049</CS63:ID>
+            <CS63:Area>16</CS63:Area>
+          </CS63:Activity>
+        </CS63:Activities>
+        <CS63:Primary-Energry-Indicator>265</CS63:Primary-Energry-Indicator>
+        <CS63:Approximate-Energry-Use>86</CS63:Approximate-Energry-Use>
+        <CS63:Global-Performance>
+          <CS63:KWH-M2-Heating>21.8063</CS63:KWH-M2-Heating>
+          <CS63:KWH-M2-Cooling>0</CS63:KWH-M2-Cooling>
+          <CS63:KWH-M2-Auxiliary>0.436127</CS63:KWH-M2-Auxiliary>
+          <CS63:KWH-M2-Lighting>52.435</CS63:KWH-M2-Lighting>
+          <CS63:KWH-M2-DHW>11.7541</CS63:KWH-M2-DHW>
+          <CS63:KWH-M2-Equipment>33.1542</CS63:KWH-M2-Equipment>
+          <CS63:KWH-M2-Natural-Gas>0</CS63:KWH-M2-Natural-Gas>
+          <CS63:KWH-M2-LPG>0</CS63:KWH-M2-LPG>
+          <CS63:KWH-M2-Biogas>0</CS63:KWH-M2-Biogas>
+          <CS63:KWH-M2-Oil>0</CS63:KWH-M2-Oil>
+          <CS63:KWH-M2-Coal>0</CS63:KWH-M2-Coal>
+          <CS63:KWH-M2-Anthracite>0</CS63:KWH-M2-Anthracite>
+          <CS63:KWH-M2-Smokeless>0</CS63:KWH-M2-Smokeless>
+          <CS63:KWH-M2-Dual-Fuel>0</CS63:KWH-M2-Dual-Fuel>
+          <CS63:KWH-M2-Biomass>0</CS63:KWH-M2-Biomass>
+          <CS63:KWH-M2-Supplied>86.4314</CS63:KWH-M2-Supplied>
+          <CS63:KWH-M2-Waste-Heat>0</CS63:KWH-M2-Waste-Heat>
+          <CS63:KWH-M2-District-Heating>0</CS63:KWH-M2-District-Heating>
+          <CS63:KWH-M2-Displaced>2.32501</CS63:KWH-M2-Displaced>
+          <CS63:KWH-M2-PVS>2.32501</CS63:KWH-M2-PVS>
+          <CS63:KWH-M2-Wind>0</CS63:KWH-M2-Wind>
+          <CS63:KWH-M2-CHP>0</CS63:KWH-M2-CHP>
+          <CS63:KWH-M2-SES>0</CS63:KWH-M2-SES>
+        </CS63:Global-Performance>
+        <CS63:HVAC-Systems>
+          <CS63:HVAC-System-Data>
+            <CS63:Area>1054.43</CS63:Area>
+            <CS63:Type>No Heating or Cooling</CS63:Type>
+            <CS63:Heat-Source>LTHW boiler</CS63:Heat-Source>
+            <CS63:Fuel-Type>Oil</CS63:Fuel-Type>
+            <CS63:MJ-M2-Heating-Dem>306.988</CS63:MJ-M2-Heating-Dem>
+            <CS63:MJ-M2-Cooling-Dem>46.4603</CS63:MJ-M2-Cooling-Dem>
+            <CS63:KWH-M2-Heating>0</CS63:KWH-M2-Heating>
+            <CS63:KWH-M2-Cooling>0</CS63:KWH-M2-Cooling>
+            <CS63:KWH-M2-Auxiliary>0</CS63:KWH-M2-Auxiliary>
+            <CS63:Heating-SSEFF>0</CS63:Heating-SSEFF>
+            <CS63:Cooling-SSEER>0</CS63:Cooling-SSEER>
+            <CS63:Heating-Gen-SEFF>0</CS63:Heating-Gen-SEFF>
+            <CS63:Cooling-Gen-SEER>0</CS63:Cooling-Gen-SEER>
+            <CS63:Activities>
+              <CS63:Activity>
+                <CS63:ID>1050</CS63:ID>
+                <CS63:Area>1054.43</CS63:Area>
+              </CS63:Activity>
+            </CS63:Activities>
+          </CS63:HVAC-System-Data>
+          <CS63:HVAC-System-Data>
+            <CS63:Area>256.02</CS63:Area>
+            <CS63:Type>Other local room heater - fanned</CS63:Type>
+            <CS63:Heat-Source>Room heater</CS63:Heat-Source>
+            <CS63:Fuel-Type>Grid Supplied Electricity</CS63:Fuel-Type>
+            <CS63:MJ-M2-Heating-Dem>321.456</CS63:MJ-M2-Heating-Dem>
+            <CS63:MJ-M2-Cooling-Dem>128.244</CS63:MJ-M2-Cooling-Dem>
+            <CS63:KWH-M2-Heating>111.617</CS63:KWH-M2-Heating>
+            <CS63:KWH-M2-Cooling>0</CS63:KWH-M2-Cooling>
+            <CS63:KWH-M2-Auxiliary>2.23233</CS63:KWH-M2-Auxiliary>
+            <CS63:Heating-SSEFF>0.8</CS63:Heating-SSEFF>
+            <CS63:Cooling-SSEER>0</CS63:Cooling-SSEER>
+            <CS63:Heating-Gen-SEFF>1</CS63:Heating-Gen-SEFF>
+            <CS63:Cooling-Gen-SEER>0</CS63:Cooling-Gen-SEER>
+            <CS63:Activities>
+              <CS63:Activity>
+                <CS63:ID>1052</CS63:ID>
+                <CS63:Area>181.57</CS63:Area>
+              </CS63:Activity>
+              <CS63:Activity>
+                <CS63:ID>1040</CS63:ID>
+                <CS63:Area>58.45</CS63:Area>
+              </CS63:Activity>
+              <CS63:Activity>
+                <CS63:ID>1049</CS63:ID>
+                <CS63:Area>16</CS63:Area>
+              </CS63:Activity>
+            </CS63:Activities>
+          </CS63:HVAC-System-Data>
+        </CS63:HVAC-Systems>
+      </CS63:Building-Data>
+    </CS63:Summary-Of-Performance>
+    <CS63:Insurance-Details>
+      <CS63:Insurer>Insurance Company</CS63:Insurer>
+      <CS63:Policy-No>POL000000</CS63:Policy-No>
+      <CS63:Effective-Date>2023-08-02</CS63:Effective-Date>
+      <CS63:Expiry-Date>2024-08-01</CS63:Expiry-Date>
+      <CS63:PI-Limit>500000</CS63:PI-Limit>
+    </CS63:Insurance-Details>
+    <CS63:Action-Plan-Report>
+      <CS63:TER-2002>46.39</CS63:TER-2002>
+      <CS63:Compliant-2002>Y</CS63:Compliant-2002>
+      <CS63:Improvement-Type>
+        <CS63:Building-Improvements>Y</CS63:Building-Improvements>
+        <CS63:Operational-Rating>N</CS63:Operational-Rating>
+      </CS63:Improvement-Type>
+      <CS63:Prescriptive-Improvements>
+        <CS63:Prescriptive-Scenario>
+          <CS63:Measure-Description-Short>Central time heating control</CS63:Measure-Description-Short>
+          <CS63:Measure-Valid>N</CS63:Measure-Valid>
+        </CS63:Prescriptive-Scenario>
+        <CS63:Prescriptive-Scenario>
+          <CS63:Measure-Description-Short>Lighting controls</CS63:Measure-Description-Short>
+          <CS63:Measure-Valid>Y</CS63:Measure-Valid>
+        </CS63:Prescriptive-Scenario>
+        <CS63:Prescriptive-Scenario>
+          <CS63:Measure-Description-Short>Draught-stripping windows and doors</CS63:Measure-Description-Short>
+          <CS63:Measure-Valid>Y</CS63:Measure-Valid>
+        </CS63:Prescriptive-Scenario>
+        <CS63:Prescriptive-Scenario>
+          <CS63:Measure-Description-Short>Hot water storage insulation</CS63:Measure-Description-Short>
+          <CS63:Measure-Valid>N</CS63:Measure-Valid>
+        </CS63:Prescriptive-Scenario>
+        <CS63:Prescriptive-Scenario>
+          <CS63:Measure-Description-Short>Lamp replacement</CS63:Measure-Description-Short>
+          <CS63:Measure-Valid>N</CS63:Measure-Valid>
+        </CS63:Prescriptive-Scenario>
+        <CS63:Prescriptive-Scenario>
+          <CS63:Measure-Description-Short>Boiler replacement</CS63:Measure-Description-Short>
+          <CS63:Measure-Valid>N</CS63:Measure-Valid>
+        </CS63:Prescriptive-Scenario>
+        <CS63:Prescriptive-Scenario>
+          <CS63:Measure-Description-Short>Roof insulation</CS63:Measure-Description-Short>
+          <CS63:Measure-Valid>N</CS63:Measure-Valid>
+        </CS63:Prescriptive-Scenario>
+        <CS63:Target-Savings>
+          <CS63:Target-Emission-Savings>0.4</CS63:Target-Emission-Savings>
+          <CS63:Target-Energy-Savings>0.78</CS63:Target-Energy-Savings>
+        </CS63:Target-Savings>
+        <CS63:Accept-Prescriptive-Improvements>N</CS63:Accept-Prescriptive-Improvements>
+      </CS63:Prescriptive-Improvements>
+      <CS63:Alternative-Improvements>
+        <CS63:Alternative-Scenario>
+          <CS63:Measure-Description-Short>Lighting controls</CS63:Measure-Description-Short>
+          <CS63:Measure-Type>Prescriptive</CS63:Measure-Type>
+        </CS63:Alternative-Scenario>
+        <CS63:Alternative-Scenario>
+          <CS63:Measure-Description-Short>Draught-stripping windows and doors</CS63:Measure-Description-Short>
+          <CS63:Measure-Type>Prescriptive</CS63:Measure-Type>
+        </CS63:Alternative-Scenario>
+        <CS63:Alternative-Scenario>
+          <CS63:Measure-Description-Short>Solar PV</CS63:Measure-Description-Short>
+          <CS63:Measure-Description-Long />
+          <CS63:Measure-Type>Alternative</CS63:Measure-Type>
+        </CS63:Alternative-Scenario>
+        <CS63:Total-Savings>
+          <CS63:Total-Emission-Savings>1.61</CS63:Total-Emission-Savings>
+          <CS63:Total-Energy-Savings>0.78</CS63:Total-Energy-Savings>
+        </CS63:Total-Savings>
+      </CS63:Alternative-Improvements>
+      <CS63:Improvements-Completion>
+        <CS63:Planned-Completion-Date>2025-04-23</CS63:Planned-Completion-Date>
+        <CS63:Actual-Completion-Date>2025-04-23</CS63:Actual-Completion-Date>
+      </CS63:Improvements-Completion>
+    </CS63:Action-Plan-Report>
+  </CS63:Report>
+  <!-- System date: Tue Nov 23 10:14:34 2021  -->
+</CS63:LodgementReportRequest>
+        <!-- Removing this line, S63 message secure hash: 8e602695837883c6b554e743c9afd34e -->
