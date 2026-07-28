@@ -50,6 +50,7 @@ RSpec.describe ViewModel::RdSapWrapper do
         { schema: "RdSAP-Schema-S-17.00", type: "epc", method_called: :to_hash },
         { schema: "RdSAP-Schema-S-16.1", type: "epc", method_called: :to_hash },
         { schema: "RdSAP-Schema-S-16.1", type: "epc_2", method_called: :to_hash },
+        { schema: "RdSAP-Schema-S-14.0", type: "epc", method_called: :to_hash },
       ]
 
       schema_tests.each do |schema|
@@ -103,6 +104,7 @@ RSpec.describe ViewModel::RdSapWrapper do
         { schema: "RdSAP-Schema-S-18.0", type: "epc", method_called: :to_certificate_summary },
         { schema: "RdSAP-Schema-S-17.00", type: "epc", method_called: :to_certificate_summary },
         { schema: "RdSAP-Schema-S-16.1", type: "epc", method_called: :to_certificate_summary },
+        { schema: "RdSAP-Schema-S-14.0", type: "epc", method_called: :to_certificate_summary },
       ]
 
       schema_tests.each do |schema|
