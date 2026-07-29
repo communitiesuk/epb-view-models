@@ -2,9 +2,9 @@ require "digest"
 
 module Helper
   class RrnHelper
-    class RrnNotValid < StandardError
-    end
-    VALID_RRN = "^(\\d{4}-){4}\\d{4}$".freeze
+    class RrnNotValid < StandardError; end
+
+    VALID_RRN = /\A(\d{4}-){4}\d{4}\z/
 
     def self.normalise_rrn_format(rrn)
       # Strip surrounding whitespace
@@ -16,7 +16,7 @@ module Helper
 
       # Add a hyphen every four characters to give desired RRN format
       rrn = rrn.scan(/.{1,4}/).join("-")
-      raise RrnNotValid unless Regexp.new(VALID_RRN).match(rrn)
+      raise RrnNotValid unless VALID_RRN.match?(rrn)
 
       rrn
     end

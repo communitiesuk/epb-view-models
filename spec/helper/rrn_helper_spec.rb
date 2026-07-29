@@ -71,6 +71,14 @@ RSpec.describe Helper::RrnHelper do
         end
       end
 
+      describe "with additional white space" do
+        it "raises an RrnNotValid view_model_boundary" do
+          expect {
+            described_class.normalise_rrn_format " 1234-5678-1234-5678-12 "
+          }.to raise_exception(Helper::RrnHelper::RrnNotValid)
+        end
+      end
+
       describe "Empty" do
         it "raises an RrnNotValid view_model_boundary" do
           expect { described_class.normalise_rrn_format "" }.to raise_error(
