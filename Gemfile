@@ -4,12 +4,10 @@ ruby "3.4.9"
 
 source "https://rubygems.org"
 
-group :test do
-  gem "rake", "~> 13.0.6"
-  gem "rspec", "~> 3.0"
-  gem "rubocop-govuk", "~> 5.0", require: false
-end
+gemspec
 
-gem "nokogiri", ">= 1.18.8"
-gem "rexml", ">= 3.3.9"
-gem "zeitwerk", "~> 2.6"
+group :test do
+  gem "rake"
+  gem "rspec"
+  gem "rubocop-govuk", require: false
+end
