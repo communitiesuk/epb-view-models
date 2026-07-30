@@ -260,7 +260,7 @@
             <Post-Town>Newkirk</Post-Town>
             <Postcode>FK1 1XE</Postcode>
           </Contact-Address>
-          <Web-Site xmlns="http://www.est.org.uk/epc/lodgement/estV20/DCLG-HIP">httos://b.com/a</Web-Site>
+          <Web-Site xmlns="http://www.est.org.uk/epc/lodgement/estV20/DCLG-HIP">https://b.com/a</Web-Site>
           <E-Mail xmlns="http://www.est.org.uk/epc/lodgement/estV20/DCLG-HIP">a@b.com</E-Mail>
           <Fax xmlns="http://www.est.org.uk/epc/lodgement/estV20/DCLG-HIP">0131 496 0001</Fax>
           <Telephone xmlns="http://www.est.org.uk/epc/lodgement/estV20/DCLG-HIP">0131 496 0000</Telephone>
