@@ -41,6 +41,7 @@ module ViewModel
       RdSAP-Schema-S-18.0
       RdSAP-Schema-S-17.00
       RdSAP-Schema-S-16.1
+      RdSAP-Schema-S-15.0
       RdSAP-Schema-S-14.0
       RdSAP-Schema-S-12.0
     ].freeze
