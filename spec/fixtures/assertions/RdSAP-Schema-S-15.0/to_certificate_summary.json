@@ -1,25 +1,25 @@
 {
   "type_of_assessment": "RdSAP",
-  "assessment_id": "0000-9927-0129-8094-1323",
+  "assessment_id": "0000-0000-0000-0000-0000",
   "date_of_expiry": "2022-07-17",
   "date_of_assessment": "2012-07-12",
   "date_of_registration": "2012-07-18",
   "address": {
-    "address_line1": "14 RUTHRIESTON TERRACE",
+    "address_line1": "1 Some Street",
     "address_line2": "",
     "address_line3": "",
     "address_line4": "",
-    "town": "ABERDEEN",
-    "postcode": "AB10 7UG"
+    "town": "Newkirk",
+    "postcode": "FK1 1XE"
   },
   "assessor": {
     "scheme_assessor_id": null,
-    "name": "Mr Andrew Sykes",
-    "company_name": "J & E Shepherd",
+    "name": "Mr Testa Sessor",
+    "company_name": "EPC Centre",
     "contact_details": {
-      "email": "aberdeen@shepherd.co.uk",
-      "telephone": "01224202800",
-      "address": "35, Queens Road, Aberdeen, AB15 4ZN"
+      "email": "a@b.co.uk",
+      "telephone": "055 5497 2282",
+      "address": "35, This Street, Newkirk, FK1 1XE"
     }
   },
   "current_carbon_emission": 1.6,

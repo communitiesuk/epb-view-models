@@ -1,31 +1,31 @@
 {
   "type_of_assessment": "RdSAP",
-  "assessment_id": "0000-9927-0129-8094-1323",
+  "assessment_id": "0000-0000-0000-0000-0000",
   "date_of_expiry": "2022-07-17",
   "date_of_assessment": "2012-07-12",
   "date_of_registration": "2012-07-18",
   "date_registered": "2012-07-18",
-  "address_line1": "14 RUTHRIESTON TERRACE",
+  "address_line1": "1 Some Street",
   "address_line2": "",
   "address_line3": "",
   "address_line4": "",
-  "town": "ABERDEEN",
-  "postcode": "AB10 7UG",
+  "town": "Newkirk",
+  "postcode": "FK1 1XE",
   "address": {
-    "address_id": "LPRN-1000091740",
-    "address_line1": "14 RUTHRIESTON TERRACE",
+    "address_id": "LPRN-0000000000",
+    "address_line1": "1 Some Street",
     "address_line2": "",
     "address_line3": "",
     "address_line4": "",
-    "town": "ABERDEEN",
-    "postcode": "AB10 7UG"
+    "town": "Newkirk",
+    "postcode": "FK1 1XE"
   },
   "assessor": {
     "scheme_assessor_id": null,
-    "name": "Mr Andrew Sykes",
+    "name": "Mr Testa Sessor",
     "contact_details": {
-      "email": "aberdeen@shepherd.co.uk",
-      "telephone": "01224202800"
+      "email": "a@b.co.uk",
+      "telephone": "055 5497 2282"
     }
   },
   "current_carbon_emission": 0.16e1,
