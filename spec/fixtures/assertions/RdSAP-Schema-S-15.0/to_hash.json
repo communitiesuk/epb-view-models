@@ -21,7 +21,7 @@
     "postcode": "FK1 1XE"
   },
   "assessor": {
-    "scheme_assessor_id": null,
+    "scheme_assessor_id": "SPEC000000",
     "name": "Mr Testa Sessor",
     "contact_details": {
       "email": "a@b.co.uk",

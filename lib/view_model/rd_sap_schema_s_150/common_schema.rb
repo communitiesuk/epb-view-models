@@ -30,7 +30,7 @@ module ViewModel
       end
 
       def scheme_assessor_id
-        xpath(%w[Certificate-Number])
+        xpath(%w[Identification-Number Membership-Number]) or xpath(%w[Identification-Number Certificate-Number])
       end
 
       def assessor_name
