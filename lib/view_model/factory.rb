@@ -81,6 +81,7 @@ module ViewModel
       SAP-Schema-NI-12.0
       SAP-Schema-NI-11.2
       SAP-Schema-S-19.0.0
+      SAP-Schema-S-17.0
     ].freeze
     def create(xml, schema_type, filter_results_for = nil, additional_data = {})
       # Hack to use symbols, we need to update all callers to use symbols instead
