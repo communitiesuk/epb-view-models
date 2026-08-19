@@ -1,0 +1,148 @@
+{
+  "type_of_assessment": "SAP",
+  "assessment_id": "0000-0000-0000-0000-0000",
+  "date_of_expiry": "2026-02-01",
+  "date_of_assessment": "2014-01-17",
+  "date_of_registration": "2016-02-02",
+  "address": {
+    "address_line1": "1 Some Street",
+    "address_line2": "",
+    "address_line3": "",
+    "address_line4": "",
+    "town": "Newkirk",
+    "postcode": "FK1 1XE"
+  },
+  "assessor": {
+    "scheme_assessor_id": "SPEC000000",
+    "name": "Testa Sessor",
+    "company_name": "Test EPCs 4U",
+    "contact_details": {
+      "email": "a@b.com",
+      "telephone": "0555 497 2848",
+      "address": "EPC Centre, Business Park, Newkirk, FK1 1XE"
+    }
+  },
+  "current_carbon_emission": 1.9,
+  "carbon_emissions_current_per_floor_area": "14",
+  "current_energy_efficiency_band": "b",
+  "current_energy_efficiency_rating": 84,
+  "dwelling_type": "Detached house",
+  "estimated_energy_cost": "549.00",
+  "heat_demand": {
+    "current_space_heating_demand": 4896,
+    "current_water_heating_demand": 2241
+  },
+  "heating_cost_current": "356",
+  "heating_cost_potential": "356",
+  "hot_water_cost_current": "114",
+  "hot_water_cost_potential": "114",
+  "lighting_cost_current": "79",
+  "lighting_cost_potential": "79",
+  "potential_carbon_emission": 1.9,
+  "potential_energy_efficiency_band": "b",
+  "potential_energy_efficiency_rating": 84,
+  "potential_energy_saving": "0.00",
+  "property_summary": [
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "walls",
+      "description": "Average thermal transmittance 0.25 W/m²K"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "roof",
+      "description": "Average thermal transmittance 0.11 W/m²K"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "floor",
+      "description": "Average thermal transmittance 0.17 W/m²K"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "windows",
+      "description": "High performance glazing"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "main_heating",
+      "description": "Boiler and radiators, mains gas"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "main_heating_controls",
+      "description": "Time and temperature zone control"
+    },
+    {
+      "energy_efficiency_rating": 0,
+      "environmental_efficiency_rating": 0,
+      "name": "secondary_heating",
+      "description": "None"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "hot_water",
+      "description": "From main system"
+    },
+    {
+      "energy_efficiency_rating": 5,
+      "environmental_efficiency_rating": 5,
+      "name": "lighting",
+      "description": "Low energy lighting in all fixed outlets"
+    },
+    {
+      "energy_efficiency_rating": 4,
+      "environmental_efficiency_rating": 4,
+      "name": "air_tightness",
+      "description": "Air permeability 5.0 m³/h.m² (as tested)"
+    }
+  ],
+  "recommended_improvements": [
+    {
+      "energy_performance_rating_improvement": 85,
+      "environmental_impact_rating_improvement": 87,
+      "green_deal_category_code": null,
+      "improvement_category": "3",
+      "improvement_code": "19",
+      "improvement_description": null,
+      "improvement_title": "",
+      "improvement_type": "N",
+      "indicative_cost": "£4,000 - £6,000",
+      "sequence": 1,
+      "typical_saving": "41",
+      "energy_performance_band_improvement": "b"
+    },
+    {
+      "energy_performance_rating_improvement": 92,
+      "environmental_impact_rating_improvement": 94,
+      "green_deal_category_code": null,
+      "improvement_category": "3",
+      "improvement_code": "34",
+      "improvement_description": null,
+      "improvement_title": "",
+      "improvement_type": "U",
+      "indicative_cost": "£11,000 - £20,000",
+      "sequence": 2,
+      "typical_saving": "263",
+      "energy_performance_band_improvement": "a"
+    }
+  ],
+  "lzc_energy_sources": null,
+  "related_party_disclosure_number": 1,
+  "related_party_disclosure_text": null,
+  "total_floor_area": 136,
+  "status": "EXPIRED",
+  "environmental_impact_current": 86,
+  "environmental_impact_potential": 86,
+  "primary_energy_use": "75",
+  "addendum": null,
+  "gas_smart_meter_present": null,
+  "electricity_smart_meter_present": null
+}
