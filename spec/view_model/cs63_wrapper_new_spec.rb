@@ -7,6 +7,9 @@ RSpec.describe ViewModel::Cs63Wrapper do
         { schema: "CS63-S-7.0", type: "action_plan", method_called: :to_hash },
         { schema: "CS63-S-7.0", type: "action_plan", method_called: :to_certificate_summary },
         { schema: "CS63-S-7.0", type: "action_plan_alt", method_called: :to_certificate_summary },
+        { schema: "CS63-S-8.0.0", type: "action_plan", method_called: :to_hash },
+        { schema: "CS63-S-8.0.0", type: "action_plan", method_called: :to_certificate_summary },
+        { schema: "CS63-S-8.0.0", type: "action_plan_alt", method_called: :to_certificate_summary },
       ]
 
       schema_tests.each do |schema|

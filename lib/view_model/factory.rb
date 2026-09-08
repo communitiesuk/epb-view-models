@@ -7,6 +7,7 @@ module ViewModel
     ].freeze
     TYPES_OF_CS63 = %i[
       CS63-S-7.0
+      CS63-S-8.0.0
     ].freeze
     TYPES_OF_CEPC = %i[
       CEPC-8.0.0

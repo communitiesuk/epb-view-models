@@ -1,7 +1,7 @@
 require "date"
 
 module ViewModel
-  module Cs63
+  module Cs63800
     class CommonSchema < ViewModel::DomesticEpcViewModel
       THRESHOLD_LOW_ENERGY_LIGHTING_EFFICACY = 65
 

@@ -2,9 +2,8 @@ module ViewModel
   class Cs63Wrapper
     attr_reader :view_model
 
-    def initialize(xml_doc, _schema_type, _additional_data = {})
-      @view_model = ViewModel::Cs63::CommonSchema.new xml_doc
-      # @view_model = build_view_model(xml_doc, schema_type)
+    def initialize(xml_doc, schema_type, _additional_data = {})
+      @view_model = build_view_model(xml_doc, schema_type)
       @summary = Presenter::Cs63::Summary.new(view_model)
       @certificate_summary = Presenter::Cs63::CertificateSummary.new(view_model)
     end
@@ -23,6 +22,19 @@ module ViewModel
 
     def get_view_model
       view_model
+    end
+
+  private
+
+    def build_view_model(xml_doc, schema_type)
+      case schema_type
+      when :"CS63-S-7.0"
+        ViewModel::Cs6370::CommonSchema.new xml_doc
+      when :"CS63-S-8.0.0"
+        ViewModel::Cs63800::CommonSchema.new xml_doc
+      else
+        raise ArgumentError, "Unsupported schema type"
+      end
     end
   end
 end
