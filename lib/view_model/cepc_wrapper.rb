@@ -65,6 +65,8 @@ module ViewModel
         ViewModel::CepcS70::Cepc.new xml_doc
       when :"CEPC-S-7.1"
         ViewModel::CepcS71::Cepc.new xml_doc
+      when :"CEPC-S-8.0.0"
+        ViewModel::CepcS800::Cepc.new xml_doc
       else
         raise ArgumentError, "Unsupported schema type"
       end

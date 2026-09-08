@@ -13,9 +13,11 @@ RSpec.describe ViewModel::CepcWrapper do
         { schema: "CEPC-5.0", type: "cepc", method_called: :to_hash },
         { schema: "CEPC-4.0", type: "cepc", method_called: :to_hash },
         { schema: "CEPC-3.1", type: "cepc", method_called: :to_hash },
+        { schema: "CEPC-S-8.0.0", type: "cepc", method_called: :to_hash },
         { schema: "CEPC-S-7.1", type: "cepc", method_called: :to_hash },
         { schema: "CEPC-S-7.0", type: "cepc", method_called: :to_hash },
         { schema: "CEPC-8.0.0", type: "cepc", method_called: :to_certificate_summary },
+        { schema: "CEPC-S-8.0.0", type: "cepc", method_called: :to_certificate_summary_scotland },
         { schema: "CEPC-S-7.1", type: "cepc", method_called: :to_certificate_summary_scotland },
         { schema: "CEPC-S-7.0", type: "cepc", method_called: :to_certificate_summary_scotland },
       ]

@@ -1,0 +1,109 @@
+{
+  "type_of_assessment":"CEPC",
+  "assessment_id":"0000-0000-0000-0000-0000",
+  "report_type":"3",
+  "date_of_assessment":"2023-07-11",
+  "date_of_expiry":"2033-08-03",
+  "date_of_registration":"2023-08-04",
+  "address":
+  {
+    "address_line1":"Non-dom Property",
+    "address_line2":"Some Street",
+    "address_line3":"Bigger Line",
+    "address_line4": "",
+    "town":"Town",
+    "postcode":"FK1 1XE"
+  },
+  "assessor":
+  {
+    "scheme_assessor_id":"SPEC000000",
+    "name":"Testa Sessor",
+    "contact_details":
+    {
+      "email": "sessor@email.co.uk",
+      "telephone": "00000000073",
+      "trading_address": "6 Unit Business Park Town"
+    },
+    "company_name": "EPC R Us Ltd",
+    "insurer": "Insurance Company",
+    "insurer_effective_date": "2022-10-22",
+    "insurer_expiry_date": "2023-10-21",
+    "insurer_pi_limit": "5000000",
+    "policy_no": "POL000000"
+  },
+  "technical_information":
+  {
+    "main_heating_fuel":"LPG",
+    "building_environment":"Heating and Natural Ventilation",
+    "floor_area":109
+  },
+  "current_energy_efficiency_rating":120,
+  "current_energy_efficiency_band":"G",
+  "potential_energy_efficiency_rating":17,
+  "potential_energy_efficiency_band":"B+",
+  "new_build_benchmark_rating":56,
+  "new_build_benchmark_band":"D",
+  "comparative_asset_rating":65,
+  "epc_rating_ber":120.47,
+  "approximate_energy_use":523,
+  "property_type": {
+    "property_type_long_description": "Hotels",
+    "property_type_short_description":"Hotel"
+  },
+  "compliant_2002":"N",
+  "renewable_energy_sources": ["None", "Another"],
+  "electricity_sources":["Grid supplied"],
+  "primary_energy_indicator":616,
+  "calculation_tool":"DesignBuilder Software Ltd, DesignBuilder SBEM, v7.2.0, SBEM, v6.1.e.0",
+  "ter_2002":118.01,
+  "ter":55.93,
+  "short_payback_recommendations": [
+    {
+      "code":"EPC-H7",
+      "text":"Add optimum start/stop to the heating system.",
+      "cO2Impact":"MEDIUM"
+    },
+    {
+      "code":"EPC-H8",
+      "text":"Add weather compensation controls to heating system.",
+      "cO2Impact":"MEDIUM"
+    },
+    {
+      "code":"EPC-H5",
+      "text":"Add local time control to heating system.",
+      "cO2Impact":"MEDIUM"
+    },
+    {
+      "code":"EPC-V1",
+      "text":"In some spaces, the solar gain limit defined in the NCM is exceeded, which might cause overheating. Consider solar control measures such as the application of reflective coating or shading devices to windows.",
+      "cO2Impact":"MEDIUM"
+    },
+    {
+      "code":"EPC-E3",
+      "text":"Some solid walls are poorly insulated - introduce or improve internal wall insulation.",
+      "cO2Impact":"MEDIUM"
+    },
+    {
+      "code":"EPC-F4",
+      "text":"Consider switching from oil or LPG to biomass.",
+      "cO2Impact":"HIGH"
+    },
+    {
+      "code":"EPC-E7",
+      "text":"Carry out a pressure test, identify and treat identified air leakage. Enter result in EPC calculation.",
+      "cO2Impact":"MEDIUM"
+    },
+    {
+      "code":"EPC-E8",
+      "text":"Some glazing is poorly insulated. Replace/improve glazing and/or frames. ",
+      "cO2Impact":"MEDIUM"
+    }
+  ],
+  "medium_payback_recommendations": [    {
+    "code":"EPC-E2",
+    "text":"Roof is poorly insulated. Install or improve insulation of roof.",
+    "cO2Impact":"MEDIUM"
+  }],
+  "long_payback_recommendations": [],
+  "other_payback_recommendations": []
+}

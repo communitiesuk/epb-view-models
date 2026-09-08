@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+  xmlns="https://epbr.digital.communities.gov.uk/xsd/cepc-s"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="https://epbr.digital.communities.gov.uk/xsd/cepc-s"
+  elementFormDefault="qualified"
+  version="CEPC-S-8.0.0"
+>
+	<xs:element name="Input-Data" type="Input-Data"/>
+	<xs:complexType name="Input-Data" abstract="true">
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:element name="Unstructured-Data" type="Unstructured-Data"/>
+	<xs:complexType name="Unstructured-Data">
+		<xs:annotation>
+			<xs:documentation>These are the specific data-items collected by the HI / EA needed to perform the SAP calculation.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Data-Blob" type="Data-Blob" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Data-Blob" type="Data-Blob"/>
+	<xs:complexType name="Data-Blob">
+		<xs:sequence>
+			<xs:element name="File-Location" type="xs:string" minOccurs="0"/>
+			<xs:element name="File-Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="File-Type" type="xs:string" minOccurs="0"/>
+			<xs:element name="Secure-Hash" type="xs:string" minOccurs="0"/>
+			<xs:element name="Data" type="xs:base64Binary" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="UsableFloorAreaDataType" type="UsableFloorAreaDataType"/>
+	<xs:complexType name="UsableFloorAreaDataType">
+		<xs:all>
+			<xs:element name="Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="Floor-Area" type="xs:decimal" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>
