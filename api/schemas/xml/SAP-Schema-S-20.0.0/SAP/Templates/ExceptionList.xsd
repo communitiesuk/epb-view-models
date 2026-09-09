@@ -1,0 +1,23 @@
+<xs:schema
+  xmlns="https://epbr.digital.communities.gov.uk/xsd/sap-s"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="https://epbr.digital.communities.gov.uk/xsd/sap-s"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified"
+  version="S-20.0.0"
+>
+    <xs:element name="ExceptionList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="Exception">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="ErrorCode" type="xs:int"/>
+                            <xs:element name="ErrorMessage" type="xs:string"/>
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

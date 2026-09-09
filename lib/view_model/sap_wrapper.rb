@@ -243,6 +243,8 @@ module ViewModel
         when "3"
           return ViewModel::SapSchemaNi112::Sap.new(xml_doc)
         end
+      when :"SAP-Schema-S-20.0.0"
+        return ViewModel::SapSchemaS2000::CommonSchema.new xml_doc
       when :"SAP-Schema-S-19.0.0"
         return ViewModel::SapSchemaS1900::CommonSchema.new xml_doc
       when :"SAP-Schema-S-17.0"
