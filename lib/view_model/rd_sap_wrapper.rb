@@ -83,10 +83,12 @@ module ViewModel
         ViewModel::RdSapSchemaNi174::CommonSchema.new xml_doc
       when :"RdSAP-Schema-NI-17.3"
         ViewModel::RdSapSchemaNi173::CommonSchema.new xml_doc
-      when :"RdSAP-Schema-S-19.0"
-        ViewModel::RdSapSchemaS190::CommonSchema.new xml_doc
+      when :"RdSAP-Schema-S-22.0.0"
+        ViewModel::RdSapSchemaS2200::CommonSchema.new xml_doc
       when :"RdSAP-Schema-S-21.0"
         ViewModel::RdSapSchemaS210::CommonSchema.new xml_doc
+      when :"RdSAP-Schema-S-19.0"
+        ViewModel::RdSapSchemaS190::CommonSchema.new xml_doc
       when :"RdSAP-Schema-S-18.0"
         ViewModel::RdSapSchemaS180::CommonSchema.new xml_doc
       when :"RdSAP-Schema-S-17.00"

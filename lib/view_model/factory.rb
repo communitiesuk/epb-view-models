@@ -39,8 +39,9 @@ module ViewModel
       RdSAP-Schema-NI-18.0
       RdSAP-Schema-NI-17.4
       RdSAP-Schema-NI-17.3
-      RdSAP-Schema-S-19.0
+      RdSAP-Schema-S-22.0.0
       RdSAP-Schema-S-21.0
+      RdSAP-Schema-S-19.0
       RdSAP-Schema-S-18.0
       RdSAP-Schema-S-17.00
       RdSAP-Schema-S-16.1
