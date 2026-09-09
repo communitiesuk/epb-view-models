@@ -3,6 +3,7 @@
 module ViewModel
   class Factory
     TYPES_OF_DECAR = %i[
+      DECAR-S-8.0.0
       DECAR-S-7.0
     ].freeze
     TYPES_OF_CS63 = %i[

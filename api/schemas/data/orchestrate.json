@@ -282,5 +282,8 @@
   },
   "DECAR-S-7.0": {
     "schema_path": "api/schemas/xml/DECAR-S-7.0/Messages/LodgeReportRequest.xsd"
+  },
+  "DECAR-S-8.0.0": {
+    "schema_path": "api/schemas/xml/DECAR-S-8.0.0/Reports/CEPC-Reports.xsd"
   }
 }
