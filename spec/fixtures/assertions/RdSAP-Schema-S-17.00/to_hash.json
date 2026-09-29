@@ -146,7 +146,7 @@
   "tenure": "1",
   "transaction_type": "5",
   "total_floor_area": 0.72e2,
-  "status": "ENTERED",
+  "status": "EXPIRED",
   "country_code": "SCT",
   "environmental_impact_current": 68,
   "environmental_impact_potential": 79,

@@ -48,7 +48,7 @@ module ViewModel
       end
 
       def floor_area
-        xpath(%w[Technical-Information Floor-Area])&.to_i
+        xpath(%w[Technical-Information Floor-Area])&.to_f
       end
 
       def main_heating_fuel
