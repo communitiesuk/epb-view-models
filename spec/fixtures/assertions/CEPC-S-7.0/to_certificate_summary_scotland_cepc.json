@@ -40,6 +40,7 @@
   "new_build_benchmark_rating": 59,
   "new_build_benchmark_band": "D",
   "comparative_asset_rating": 57,
+  "comparative_asset_band": "C",
   "epc_rating_ber": 119.37,
   "approximate_energy_use": 419,
   "property_type": {
