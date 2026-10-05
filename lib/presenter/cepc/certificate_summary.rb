@@ -96,6 +96,7 @@ module Presenter
           new_build_benchmark_rating: @view_model.new_build_rating,
           new_build_benchmark_band: @view_model.new_build_benchmark_band,
           comparative_asset_rating: @view_model.comparative_asset_rating,
+          comparative_asset_band: @view_model.comparative_asset_band,
           epc_rating_ber: @view_model.epc_rating_ber,
           approximate_energy_use: @view_model.approximate_energy_use,
           property_type: {
