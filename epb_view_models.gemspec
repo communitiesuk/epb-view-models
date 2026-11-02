@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/communitiesuk/epb-view-models"
   spec.license       = "MIT"
 
-  spec.required_ruby_version = ">= 3.4"
+  spec.required_ruby_version = ">= 4.0"
   spec.metadata["rubygems_mfa_required"] = "true"
 
   spec.files = Dir[
