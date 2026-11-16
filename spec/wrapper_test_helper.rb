@@ -22,6 +22,18 @@ def test_wrapper(schema_case)
   expect(assertion.keys).to eq(source_hash.keys)
 end
 
+def test_xml_wrapper(schema_case)
+  schema_case[:type] = "dec" unless schema_case[:type]
+
+  sample = Samples.xml(schema_case[:schema], schema_case[:type])
+
+  validate_xml(sample, schema_case)
+  result_xml = ViewModel::DecSummaryWrapper.new(sample, schema_case[:schema]).to_xml
+  assertion = fetch_xml_assertion(schema_case[:schema], schema_case[:method_called], schema_case[:type])
+
+  expect(result_xml).to eq(assertion)
+end
+
 def validate_xml(sample, schema_case)
   schema_path = Helper::SchemaListHelper.new(schema_case[:schema]).schema_path
 
@@ -55,4 +67,15 @@ def fetch_assertion(assertion, method_called, type)
 
   json_assertion = File.read assertion_path
   JSON.parse(json_assertion, symbolize_names: true)
+end
+
+def fetch_xml_assertion(assertion, method_called, type)
+  assertion_path = File.join Dir.pwd, "spec/fixtures/assertions/#{assertion}/#{method_called}_#{type}.xml"
+
+  unless File.exist? assertion_path
+    raise ArgumentError,
+          "No assertion found for schema #{assertion}, create one at #{assertion_path}"
+  end
+
+  File.read assertion_path
 end
