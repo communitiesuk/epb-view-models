@@ -225,6 +225,11 @@ RSpec.describe ViewModel::RdSapWrapper do
 
     it "returns the expected assertion for the to_recommendation_report method", :aggregate_failures do
       schema_tests = [
+        { schema: "RdSAP-Schema-20.0.0", type: "epc", method_called: :to_recommendation_report },
+        { schema: "RdSAP-Schema-19.0", type: "epc", method_called: :to_recommendation_report },
+        { schema: "RdSAP-Schema-18.0", type: "epc", method_called: :to_recommendation_report },
+        { schema: "RdSAP-Schema-17.1", type: "epc", method_called: :to_recommendation_report },
+        { schema: "RdSAP-Schema-17.0", type: "epc", method_called: :to_recommendation_report },
         { schema: "RdSAP-Schema-NI-21.0.1", type: "epc", method_called: :to_recommendation_report },
         { schema: "RdSAP-Schema-NI-21.0.0", type: "epc", method_called: :to_recommendation_report },
         { schema: "RdSAP-Schema-NI-20.0.0", type: "epc", method_called: :to_recommendation_report },
@@ -238,6 +243,19 @@ RSpec.describe ViewModel::RdSapWrapper do
         expect { test_wrapper(schema) }.not_to raise_error
       end
     end
+
+    it "gives a deprecation warning when calling the deprecated to_hera_hash method" do
+      sample = Samples.xml("RdSAP-Schema-20.0.0", "epc")
+      view_model = ViewModel::Factory.new.create(sample, "RdSAP-Schema-20.0.0", nil)
+
+      expect { view_model.to_hera_hash }.to output(/deprecated/).to_stderr
+    end
+  end
+
+  it "returns the expect view_model_boundary without a valid schema type" do
+    expect { described_class.new("", "invalid", {}) }.to raise_error(
+      ArgumentError,
+    ).with_message "Unsupported schema type"
   end
 end
 

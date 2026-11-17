@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    {
+      "sequence": 1,
+      "improvement_summary": "Solar water heating",
+      "improvement_description": "Solar water heating",
+      "improvement_code": "19",
+      "indicative_cost": "£4,000 - £6,000",
+      "assessment_id": "0000-0000-0000-0000-0000"
+    },
+    {
+      "sequence": 2,
+      "improvement_summary": "Solar photovoltaic panels, 2.5 kWp",
+      "improvement_description": "Solar photovoltaic panels",
+      "improvement_code": "34",
+      "indicative_cost": "£9,000 - £14,000",
+      "assessment_id": "0000-0000-0000-0000-0000"
+    }
+  ]
+}

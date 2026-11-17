@@ -32,13 +32,22 @@ RSpec.describe ViewModel::DecRrWrapper do
 
     it "returns the expected assertion for the to_report method", :aggregate_failures do
       schema_tests = [
+        { schema: "CEPC-8.0.0", type: "dec-rr", method_called: :to_report },
+        { schema: "CEPC-8.0.0", type: "dec-rr-large-building", method_called: :to_report },
         { schema: "CEPC-NI-8.0.0", type: "dec-rr", method_called: :to_report },
+        { schema: "CEPC-7.1", type: "dec-rr", method_called: :to_report },
         { schema: "CEPC-7.1", type: "dec-rr-ni", method_called: :to_report },
+        { schema: "CEPC-7.0", type: "dec-rr", method_called: :to_report },
         { schema: "CEPC-7.0", type: "dec-rr-ni", method_called: :to_report },
+        { schema: "CEPC-6.0", type: "dec-rr", method_called: :to_report },
         { schema: "CEPC-6.0", type: "dec-rr-ni", method_called: :to_report },
+        { schema: "CEPC-5.1", type: "dec-rr", method_called: :to_report },
         { schema: "CEPC-5.1", type: "dec-rr-ni", method_called: :to_report },
+        { schema: "CEPC-5.0", type: "dec-rr", method_called: :to_report },
         { schema: "CEPC-5.0", type: "dec-rr-ni", method_called: :to_report },
+        { schema: "CEPC-4.0", type: "dec-rr", method_called: :to_report },
         { schema: "CEPC-4.0", type: "dec-rr-ni", method_called: :to_report },
+        { schema: "CEPC-3.1", type: "dec-rr", method_called: :to_report },
         { schema: "CEPC-3.1", type: "dec-rr-ni", method_called: :to_report },
       ]
 
@@ -57,5 +66,11 @@ RSpec.describe ViewModel::DecRrWrapper do
         expect { test_wrapper(schema) }.not_to raise_error
       end
     end
+  end
+
+  it "returns the expect view_model_boundary without a valid schema type" do
+    expect { described_class.new "", "invalid" }.to raise_error(
+      ArgumentError,
+    ).with_message "Unsupported schema type"
   end
 end
