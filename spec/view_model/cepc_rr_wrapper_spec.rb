@@ -1,215 +1,41 @@
-require_relative "../xml_view_test_helper"
+require_relative "../wrapper_test_helper"
 
 RSpec.describe ViewModel::CepcRrWrapper do
-  context "when calling to_hash" do
-    let(:schemas) do
-      [
-        {
-          schema: "CEPC-8.0.0",
-          type: "cepc-rr",
-          different_buried_fields: {
-            address: {
-              address_id: "UPRN-000000000000",
-            },
-          },
-        },
-        {
-          schema: "CEPC-NI-8.0.0",
-          type: "cepc-rr",
-          different_buried_fields: {
-            address: {
-              address_id: "UPRN-000000000000",
-            },
-          },
-        },
-        { schema: "CEPC-7.1", type: "cepc-rr" },
-        { schema: "CEPC-7.0", type: "cepc-rr" },
-        { schema: "CEPC-6.0", type: "cepc-rr" },
-        { schema: "CEPC-5.1", type: "cepc-rr" },
-        { schema: "CEPC-5.0", type: "cepc-rr" },
-        {
-          schema: "CEPC-4.0",
-          type: "cepc-rr",
-          different_buried_fields: {
-            technical_information: {
-              building_environment: "Air Conditioning",
-            },
-          },
-        },
-        {
-          schema: "CEPC-3.1",
-          type: "cepc-rr",
-          different_buried_fields: {
-            technical_information: {
-              building_environment: "Air Conditioning",
-            },
-          },
-        },
+  context "when calling the CEPC-RR wrapper for a valid schema" do
+    it "returns the expected assertion for the to_hash method", :aggregate_failures do
+      schema_tests = [
+        { schema: "CEPC-8.0.0", type: "cepc-rr", method_called: :to_hash },
+        { schema: "CEPC-NI-8.0.0", type: "cepc-rr", method_called: :to_hash },
+        { schema: "CEPC-7.1", type: "cepc-rr", method_called: :to_hash },
+        { schema: "CEPC-7.0", type: "cepc-rr", method_called: :to_hash },
+        { schema: "CEPC-6.0", type: "cepc-rr", method_called: :to_hash },
+        { schema: "CEPC-5.1", type: "cepc-rr", method_called: :to_hash },
+        { schema: "CEPC-5.0", type: "cepc-rr", method_called: :to_hash },
+        { schema: "CEPC-4.0", type: "cepc-rr", method_called: :to_hash },
+        { schema: "CEPC-3.1", type: "cepc-rr", method_called: :to_hash },
       ]
+
+      schema_tests.each do |schema|
+        expect { test_wrapper(schema) }.not_to raise_error
+      end
     end
 
-    let(:assertion) do
-      {
-        assessment_id: "0000-0000-0000-0000-0000",
-        report_type: "4",
-        type_of_assessment: "CEPC-RR",
-        date_of_expiry: "2021-05-03",
-        date_of_registration: "2020-05-05",
-        address: {
-          address_id: "LPRN-000000000000",
-          address_line1: "Some Unit",
-          address_line2: "2 Lonely Street",
-          address_line3: "Some Area",
-          address_line4: "Some County",
-          town: "Fulchester",
-          postcode: "A0 0AA",
-        },
-        assessor: {
-          scheme_assessor_id: "SPEC000000",
-          name: "Mrs Report Writer",
-          company_details: {
-            name: "Trillian Certificates Plc",
-            address: "123 My Street, My City, AB3 4CD",
-          },
-          contact_details: {
-            email: "a@b.c",
-            telephone: "012345",
-          },
-        },
-        technical_information: {
-          floor_area: "10",
-          building_environment: "Natural Ventilation Only",
-          calculation_tool: "CEPC Compute v0.2",
-        },
-        related_party_disclosure: "Related to the owner",
-        short_payback_recommendations: [
-          {
-            code: "ECP-L5",
-            text:
-              "Consider replacing T8 lamps with retrofit T5 conversion kit.",
-            cO2Impact: "HIGH",
-          },
-          {
-            code: "EPC-L7",
-            text:
-              "Introduce HF (high frequency) ballasts for fluorescent tubes: Reduced number of fittings required.",
-            cO2Impact: "LOW",
-          },
-        ],
-        medium_payback_recommendations: [
-          {
-            code: "EPC-H7",
-            text: "Add optimum start/stop to the heating system.",
-            cO2Impact: "MEDIUM",
-          },
-        ],
-        long_payback_recommendations: [
-          {
-            code: "EPC-R5",
-            text: "Consider installing an air source heat pump.",
-            cO2Impact: "HIGH",
-          },
-        ],
-        other_recommendations: [
-          { code: "EPC-R4", text: "Consider installing PV.", cO2Impact: "HIGH" },
-        ],
-      }
-    end
-
-    it "reads the appropriate values" do
-      expect { test_xml_doc(schemas, assertion) }.not_to raise_error
-    end
-  end
-
-  context "when calling to_report" do
-    let(:schemas) do
-      [
-        {
-          schema: "CEPC-8.0.0",
-          type: "cepc-rr",
-          different_buried_fields: {
-            address: {
-              address_id: "UPRN-000000000000",
-            },
-          },
-        },
-        {
-          schema: "CEPC-NI-8.0.0",
-          type: "cepc-rr",
-          different_buried_fields: {
-            address: {
-              address_id: "UPRN-000000000000",
-            },
-          },
-        },
-        { schema: "CEPC-7.1", type: "cepc-rr" },
-        { schema: "CEPC-7.0", type: "cepc-rr" },
-        { schema: "CEPC-6.0", type: "cepc-rr" },
-        { schema: "CEPC-5.1", type: "cepc-rr" },
-        { schema: "CEPC-5.0", type: "cepc-rr" },
-        {
-          schema: "CEPC-4.0",
-          type: "cepc-rr",
-          different_buried_fields: {
-            technical_information: {
-              building_environment: "Air Conditioning",
-            },
-          },
-        },
-        {
-          schema: "CEPC-3.1",
-          type: "cepc-rr",
-          different_buried_fields: {
-            technical_information: {
-              building_environment: "Air Conditioning",
-            },
-          },
-        },
+    it "returns the expected assertion for the to_report method", :aggregate_failures do
+      schema_tests = [
+        { schema: "CEPC-8.0.0", type: "cepc-rr", method_called: :to_report },
+        { schema: "CEPC-NI-8.0.0", type: "cepc-rr", method_called: :to_report },
+        { schema: "CEPC-7.1", type: "cepc-rr-ni", method_called: :to_report },
+        { schema: "CEPC-7.0", type: "cepc-rr-ni", method_called: :to_report },
+        { schema: "CEPC-6.0", type: "cepc-rr-ni", method_called: :to_report },
+        { schema: "CEPC-5.1", type: "cepc-rr-ni", method_called: :to_report },
+        { schema: "CEPC-5.0", type: "cepc-rr-ni", method_called: :to_report },
+        { schema: "CEPC-4.0", type: "cepc-rr-ni", method_called: :to_report },
+        { schema: "CEPC-3.1", type: "cepc-rr-ni", method_called: :to_report },
       ]
-    end
 
-    let(:assertion) do
-      {
-        assessment_id: "0000-0000-0000-0000-0000",
-        recommendations: [
-          {
-            payback_type: "short",
-            recommendation_code: "ECP-L5",
-            recommendation:
-              "Consider replacing T8 lamps with retrofit T5 conversion kit.",
-            cO2_Impact: "HIGH",
-          },
-          {
-            payback_type: "short",
-            recommendation_code: "EPC-L7",
-            recommendation:
-              "Introduce HF (high frequency) ballasts for fluorescent tubes: Reduced number of fittings required.",
-            cO2_Impact: "LOW",
-          },
-          {
-            payback_type: "medium",
-            recommendation_code: "EPC-H7",
-            recommendation: "Add optimum start/stop to the heating system.",
-            cO2_Impact: "MEDIUM",
-          },
-          {
-            payback_type: "long",
-            recommendation_code: "EPC-R5",
-            recommendation: "Consider installing an air source heat pump.",
-            cO2_Impact: "HIGH",
-          },
-          {
-            payback_type: "other",
-            recommendation_code: "EPC-R4",
-            recommendation: "Consider installing PV.",
-            cO2_Impact: "HIGH",
-          },
-        ],
-      }
-    end
-
-    it "reads the appropriate values" do
-      expect { test_xml_doc(schemas, assertion, :to_report) }.not_to raise_error
+      schema_tests.each do |schema|
+        expect { test_wrapper(schema) }.not_to raise_error
+      end
     end
   end
 

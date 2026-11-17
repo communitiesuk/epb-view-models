@@ -1,0 +1,28 @@
+{
+  "recommendations": [
+    {
+      "sequence": 1,
+      "improvement_summary": null,
+      "improvement_description": null,
+      "improvement_code": "5",
+      "indicative_cost": "£100 - £350",
+      "assessment_id": "0000-0000-0000-0000-0000"
+    },
+    {
+      "sequence": 2,
+      "improvement_summary": null,
+      "improvement_description": null,
+      "improvement_code": "1",
+      "indicative_cost": "2000",
+      "assessment_id": "0000-0000-0000-0000-0000"
+    },
+    {
+      "sequence": 3,
+      "improvement_summary": null,
+      "improvement_description": "Improvement desc",
+      "improvement_code": null,
+      "indicative_cost": "1000",
+      "assessment_id": "0000-0000-0000-0000-0000"
+    }
+  ]
+}
