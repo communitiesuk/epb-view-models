@@ -7,6 +7,7 @@ source "https://rubygems.org"
 gemspec
 
 group :test do
+  gem "debug"
   gem "rake"
   gem "rspec"
   gem "rubocop-govuk", require: false
